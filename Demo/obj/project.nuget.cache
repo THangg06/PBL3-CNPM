@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VGUcZR30Troa97Uh1RU6fyc/j5cowIenLlac5rneQUAW43H2ZR7MzwduEGO9nrKu11cZ/ZZhmT3yr7clhDCttg==",
+  "dgSpecHash": "LMBUznhEzQR77jZdVlUds1FSUz7HSY9GqRJiAlymWqQRXDIIroEC8EaTBD2fZe66Q3LgnIx0DhEGj7uX87kb6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\PBL3-CNPM\\Demo\\Demo.csproj",
+  "projectFilePath": "C:\\ProjectWF\\PBL3\\Demo\\Demo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

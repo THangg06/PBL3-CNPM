@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\PBL3-CNPM\\Demo\\Demo.csproj": {}
+    "C:\\ProjectWF\\PBL3\\Demo\\Demo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\PBL3-CNPM\\Demo\\Demo.csproj": {
+    "C:\\ProjectWF\\PBL3\\Demo\\Demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\PBL3-CNPM\\Demo\\Demo.csproj",
+        "projectUniqueName": "C:\\ProjectWF\\PBL3\\Demo\\Demo.csproj",
         "projectName": "Demo",
-        "projectPath": "C:\\Users\\ASUS\\PBL3-CNPM\\Demo\\Demo.csproj",
+        "projectPath": "C:\\ProjectWF\\PBL3\\Demo\\Demo.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\PBL3-CNPM\\Demo\\obj\\",
+        "outputPath": "C:\\ProjectWF\\PBL3\\Demo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
