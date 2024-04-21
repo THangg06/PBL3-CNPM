@@ -1,5 +1,7 @@
-﻿
-
+﻿@{
+    ViewData["Title"] = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -7,13 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-   
-    <link rel="stylesheet"  href="c:\projectwf\demo\demo\wwwroot\css\aboutus.css" />
+    <link href="~/css/aboutus.css" rel="stylesheet" />
+    
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- /* Monda Font */ -->
@@ -24,8 +25,8 @@
 </head>
 
 <body>
+    
 
- 
     <section class="section2">
         <div class="group">
             <div class="rect1"></div>
@@ -49,7 +50,7 @@
     </section>
 
     <section class="section3">
-        <img class="image_section3" src="~/assets/AboutUs.png" alt="alt text" />
+        <img class="image_section3" src=".~/assets/AboutUs.png" alt="alt text" />
         <h3 class="subtitle_box">
             <span class="subtitle">
                 <span class="subtitle_span0">SỨ MỆNH<br /></span><span class="subtitle_span1"><br />Tất cả những gì mà chúng tôi phải làm là mang đến những hương vị tuyệt vời trong từng món ăn, mang lại niềm vui ẩm thực cho tất cả mọi người.<br /><br /></span><span class="subtitle_span2">CÁC TIÊU CHUẨN FSC<br /></span><span class="subtitle_span3">
@@ -61,18 +62,43 @@
             </span>
         </h3>
     </section>
-
-    <section class="section4">
-        <div class="wrapper6_S4">
-            <div class="flex_row">
-                <img class="image1" src="~/assets/animated_character_with_cape.png" alt="alt text" />
-                <h2 class="medium_title">CỬA HÀNG THỨC ĂN NHANH HEE-HO VIỆT NAM<br />Địa chỉ: 01-03 Nguyen Duy Trinh St., Da Nang,Vietnam<br />Điện thoại: +84315577310<br />Tổng đài: 2010-0503<br />Mã số thuế: 0393103266</h2>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Danh mục</h4>
+                    <ul>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Liện hệ</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="#">Vận chuyển</a></li>
+                        <li><a href="#">Đơn hàng</a></li>
+                        <li><a href="#">thanh toán</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Danh mục món ăn</h4>
+                    <ul>
+                        <li><a href="#">Gà rán</a></li>
+                        <li><a href="#">Burger</a></li>
+                        <li><a href="#">Mì Ý</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Theo dõi</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fa-envelope fas"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-
-
-
+    </footer>
 </body>
 </html>
-
