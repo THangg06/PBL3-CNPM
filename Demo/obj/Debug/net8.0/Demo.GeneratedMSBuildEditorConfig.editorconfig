@@ -17,71 +17,71 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Demo
 build_property.RootNamespace = Demo
-build_property.ProjectDir = C:\ProjectWF\PBL3\Demo\
+build_property.ProjectDir = C:\A2\LTNet\Pbl3\Demo\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\ProjectWF\PBL3\Demo
+build_property.MSBuildProjectDirectory = C:\A2\LTNet\Pbl3\Demo
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/ProjectWF/PBL3/Demo/Areas/Admin/Views/Shared/Error.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Areas/Admin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Views/Accounts/Register.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Views/Accounts/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Views/Home/About.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Views/Home/Contact.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Views/Home/Index.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Views/Home/Privacy.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Views/Shared/Error.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Views/_ViewImports.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Views/_ViewStart.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-e663r6pwz7
 
-[C:/ProjectWF/PBL3/Demo/Views/Shared/_Layout.cshtml]
+[C:/A2/LTNet/Pbl3/Demo/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-xwylo3ageb
