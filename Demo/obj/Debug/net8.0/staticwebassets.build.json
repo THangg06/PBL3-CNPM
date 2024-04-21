@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OxwRgq9V0TTY1NMkQ/Pu6nZesNNLh+TjOJFhD6Uu9bQ=",
+  "Hash": "/upX2MJyuGtbvwDNGhFy3s9dAv9urWQJlxuGkm4ZJb4=",
   "Source": "Demo",
   "BasePath": "_content/Demo",
   "Mode": "Default",
@@ -1402,6 +1402,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ContactUs.html"
+    },
+    {
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\_header.css",
+      "SourceId": "Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
+      "BasePath": "_content/Demo",
+      "RelativePath": "css/_header.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\_header.css"
     },
     {
       "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\AboutUs.css",

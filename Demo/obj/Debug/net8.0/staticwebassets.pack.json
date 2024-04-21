@@ -461,6 +461,10 @@
       "PackagePath": "staticwebassets\\css\\Registerpage.css"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\_header.css",
+      "PackagePath": "staticwebassets\\css\\_header.css"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\css",
       "PackagePath": "staticwebassets\\css"
     },
