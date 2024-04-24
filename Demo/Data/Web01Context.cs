@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Demo.ModelViews;
 
 namespace Demo.Data;
 
@@ -272,4 +273,6 @@ public partial class Web01Context : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+public DbSet<Demo.ModelViews.RegisterViewModel> RegisterViewModel { get; set; } = default!;
 }

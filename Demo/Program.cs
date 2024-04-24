@@ -1,4 +1,7 @@
+using Demo.Controllers;
 using Demo.Data;
+using Demo.Helper;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +12,25 @@ builder.Services.AddDbContext<Web01Context>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("WebDemo"));
 });
+
+
+
+
+    builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+builder.Services.AddSession(options =>
+{
+  
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian timeout của session
+    options.Cookie.HttpOnly = true; // Tùy chọn bảo mật
+    options.Cookie.IsEssential = true; // Đảm bảo cookie session được sử dụng
+});
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(p =>
+    {
+        p.LoginPath = "/Login.html";
+        p.AccessDeniedPath = "/";
+    } 
+    );
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -21,9 +43,9 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseSession();
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/upX2MJyuGtbvwDNGhFy3s9dAv9urWQJlxuGkm4ZJb4=",
+  "Hash": "5ApidlbblfymxytsI9Y/9cQ4kg+0OjvAHy0rmHx3MTM=",
   "Source": "Demo",
   "BasePath": "_content/Demo",
   "Mode": "Default",
@@ -1402,25 +1402,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ContactUs.html"
-    },
-    {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\_header.css",
-      "SourceId": "Demo",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
-      "BasePath": "_content/Demo",
-      "RelativePath": "css/_header.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\_header.css"
     },
     {
       "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\AboutUs.css",
@@ -2829,12 +2810,12 @@
       "OriginalItemSpec": "wwwroot\\Menu.html"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Daco_4553104.png",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Daco_4553104.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Daco_4553104.png",
+      "RelativePath": "MenuCss/Daco_4553104.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2845,15 +2826,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Daco_4553104.png"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Daco_4553104.png"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Dessert\\10-620x620-7.jpg",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Dessert\\10-620x620-7.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Dessert/10-620x620-7.jpg",
+      "RelativePath": "MenuCss/Dessert/10-620x620-7.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2864,15 +2845,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Dessert\\10-620x620-7.jpg"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Dessert\\10-620x620-7.jpg"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Dessert\\2w_ckscl-608x416f.jpg",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Dessert\\2w_ckscl-608x416f.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Dessert/2w_ckscl-608x416f.jpg",
+      "RelativePath": "MenuCss/Dessert/2w_ckscl-608x416f.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2883,15 +2864,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Dessert\\2w_ckscl-608x416f.jpg"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Dessert\\2w_ckscl-608x416f.jpg"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Dessert\\Cupcake dau tay.jpg",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Dessert\\Cupcake dau tay.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Dessert/Cupcake dau tay.jpg",
+      "RelativePath": "MenuCss/Dessert/Cupcake dau tay.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2902,15 +2883,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Dessert\\Cupcake dau tay.jpg"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Dessert\\Cupcake dau tay.jpg"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Dessert\\kem-matcha-thumbnail-1.jpg",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Dessert\\kem-matcha-thumbnail-1.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Dessert/kem-matcha-thumbnail-1.jpg",
+      "RelativePath": "MenuCss/Dessert/kem-matcha-thumbnail-1.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2921,15 +2902,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Dessert\\kem-matcha-thumbnail-1.jpg"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Dessert\\kem-matcha-thumbnail-1.jpg"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Dessert\\Khoai_tay_chien_co_lon.png",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Dessert\\Khoai_tay_chien_co_lon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Dessert/Khoai_tay_chien_co_lon.png",
+      "RelativePath": "MenuCss/Dessert/Khoai_tay_chien_co_lon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2940,15 +2921,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Dessert\\Khoai_tay_chien_co_lon.png"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Dessert\\Khoai_tay_chien_co_lon.png"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Dessert\\Vanilla ice cream.jpg",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Dessert\\Vanilla ice cream.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Dessert/Vanilla ice cream.jpg",
+      "RelativePath": "MenuCss/Dessert/Vanilla ice cream.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2959,15 +2940,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Dessert\\Vanilla ice cream.jpg"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Dessert\\Vanilla ice cream.jpg"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Dessert\\Vanilla-Cupcakes-G-scaled.jpg",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Dessert\\Vanilla-Cupcakes-G-scaled.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Dessert/Vanilla-Cupcakes-G-scaled.jpg",
+      "RelativePath": "MenuCss/Dessert/Vanilla-Cupcakes-G-scaled.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2978,15 +2959,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Dessert\\Vanilla-Cupcakes-G-scaled.jpg"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Dessert\\Vanilla-Cupcakes-G-scaled.jpg"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\drinks\\images.jfif",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\images.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/drinks/images.jfif",
+      "RelativePath": "MenuCss/drinks/images.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2997,15 +2978,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\drinks\\images.jfif"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\drinks\\images.jfif"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\drinks\\mirinda-cam-330ml-sleek-lon-2-org.jpg",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\mirinda-cam-330ml-sleek-lon-2-org.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/drinks/mirinda-cam-330ml-sleek-lon-2-org.jpg",
+      "RelativePath": "MenuCss/drinks/mirinda-cam-330ml-sleek-lon-2-org.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3016,15 +2997,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\drinks\\mirinda-cam-330ml-sleek-lon-2-org.jpg"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\drinks\\mirinda-cam-330ml-sleek-lon-2-org.jpg"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/drinks/nuoc-ngot-7-up-vi-chanh-320ml.jpg",
+      "RelativePath": "MenuCss/drinks/nuoc-ngot-7-up-vi-chanh-320ml.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3035,15 +3016,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\drinks\\tra-sua-tran-chau-vno.png",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\tra-sua-tran-chau-vno.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/drinks/tra-sua-tran-chau-vno.png",
+      "RelativePath": "MenuCss/drinks/tra-sua-tran-chau-vno.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3054,15 +3035,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\drinks\\tra-sua-tran-chau-vno.png"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\drinks\\tra-sua-tran-chau-vno.png"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\drinks\\unnamed.png",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\unnamed.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/drinks/unnamed.png",
+      "RelativePath": "MenuCss/drinks/unnamed.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3073,15 +3054,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\drinks\\unnamed.png"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\drinks\\unnamed.png"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\fried chicken\\cheese fried chicken.jfif",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\fried chicken\\cheese fried chicken.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/fried chicken/cheese fried chicken.jfif",
+      "RelativePath": "MenuCss/fried chicken/cheese fried chicken.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3092,15 +3073,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\fried chicken\\cheese fried chicken.jfif"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\fried chicken\\cheese fried chicken.jfif"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\fried chicken\\Ga ran.jfif",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\fried chicken\\Ga ran.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/fried chicken/Ga ran.jfif",
+      "RelativePath": "MenuCss/fried chicken/Ga ran.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3111,15 +3092,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\fried chicken\\Ga ran.jfif"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\fried chicken\\Ga ran.jfif"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\fried chicken\\grilled-chicken-horizontal-1532030541.jpg",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\fried chicken\\grilled-chicken-horizontal-1532030541.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/fried chicken/grilled-chicken-horizontal-1532030541.jpg",
+      "RelativePath": "MenuCss/fried chicken/grilled-chicken-horizontal-1532030541.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3130,15 +3111,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\fried chicken\\grilled-chicken-horizontal-1532030541.jpg"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\fried chicken\\grilled-chicken-horizontal-1532030541.jpg"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\fried chicken\\soybean chicken.jfif",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\fried chicken\\soybean chicken.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/fried chicken/soybean chicken.jfif",
+      "RelativePath": "MenuCss/fried chicken/soybean chicken.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3149,15 +3130,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\fried chicken\\soybean chicken.jfif"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\fried chicken\\soybean chicken.jfif"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\fried chicken\\Spicy Fried chicken.jfif",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\fried chicken\\Spicy Fried chicken.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/fried chicken/Spicy Fried chicken.jfif",
+      "RelativePath": "MenuCss/fried chicken/Spicy Fried chicken.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3168,15 +3149,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\fried chicken\\Spicy Fried chicken.jfif"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\fried chicken\\Spicy Fried chicken.jfif"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Hamburger\\Beef_Burger.jfif",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\Beef_Burger.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Hamburger/Beef_Burger.jfif",
+      "RelativePath": "MenuCss/Hamburger/Beef_Burger.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3187,15 +3168,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Hamburger\\Beef_Burger.jfif"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Hamburger\\Beef_Burger.jfif"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Hamburger\\Hamburger_ca.jfif",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\Hamburger_ca.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Hamburger/Hamburger_ca.jfif",
+      "RelativePath": "MenuCss/Hamburger/Hamburger_ca.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3206,15 +3187,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Hamburger\\Hamburger_ca.jfif"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Hamburger\\Hamburger_ca.jfif"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Hamburger\\Hamburger_ga.jfif",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\Hamburger_ga.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Hamburger/Hamburger_ga.jfif",
+      "RelativePath": "MenuCss/Hamburger/Hamburger_ga.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3225,15 +3206,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Hamburger\\Hamburger_ga.jfif"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Hamburger\\Hamburger_ga.jfif"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Hamburger\\Mozzarella_Burger.jpg",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\Mozzarella_Burger.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Hamburger/Mozzarella_Burger.jpg",
+      "RelativePath": "MenuCss/Hamburger/Mozzarella_Burger.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3244,15 +3225,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Hamburger\\Mozzarella_Burger.jpg"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Hamburger\\Mozzarella_Burger.jpg"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Hamburger\\Shrimp_Burger.jfif",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\Shrimp_Burger.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Hamburger/Shrimp_Burger.jfif",
+      "RelativePath": "MenuCss/Hamburger/Shrimp_Burger.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3263,15 +3244,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Hamburger\\Shrimp_Burger.jfif"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Hamburger\\Shrimp_Burger.jfif"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Hamburger\\Vegan burger.jfif",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\Vegan burger.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Hamburger/Vegan burger.jfif",
+      "RelativePath": "MenuCss/Hamburger/Vegan burger.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3282,15 +3263,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Hamburger\\Vegan burger.jfif"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Hamburger\\Vegan burger.jfif"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Spagetti\\IMG_2987-scaled.jpg",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Spagetti\\IMG_2987-scaled.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Spagetti/IMG_2987-scaled.jpg",
+      "RelativePath": "MenuCss/Spagetti/IMG_2987-scaled.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3301,15 +3282,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Spagetti\\IMG_2987-scaled.jpg"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Spagetti\\IMG_2987-scaled.jpg"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Spagetti\\spaghetti bo bam.jfif",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Spagetti\\spaghetti bo bam.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Spagetti/spaghetti bo bam.jfif",
+      "RelativePath": "MenuCss/Spagetti/spaghetti bo bam.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3320,15 +3301,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Spagetti\\spaghetti bo bam.jfif"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Spagetti\\spaghetti bo bam.jfif"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Spagetti\\Spaghetti Veggie.jfif",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Spagetti\\Spaghetti Veggie.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Spagetti/Spaghetti Veggie.jfif",
+      "RelativePath": "MenuCss/Spagetti/Spaghetti Veggie.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3339,15 +3320,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Spagetti\\Spaghetti Veggie.jfif"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Spagetti\\Spaghetti Veggie.jfif"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Spagetti\\spaghetti-boscaiola-74422-1.jpeg",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Spagetti\\spaghetti-boscaiola-74422-1.jpeg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Spagetti/spaghetti-boscaiola-74422-1.jpeg",
+      "RelativePath": "MenuCss/Spagetti/spaghetti-boscaiola-74422-1.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3358,15 +3339,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Spagetti\\spaghetti-boscaiola-74422-1.jpeg"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Spagetti\\spaghetti-boscaiola-74422-1.jpeg"
     },
     {
-      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuAccess\\Spagetti\\spaghetti-with-tuna-sauce-13068-1.jpeg",
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Spagetti\\spaghetti-with-tuna-sauce-13068-1.jpeg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
-      "RelativePath": "MenuAccess/Spagetti/spaghetti-with-tuna-sauce-13068-1.jpeg",
+      "RelativePath": "MenuCss/Spagetti/spaghetti-with-tuna-sauce-13068-1.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3377,7 +3358,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MenuAccess\\Spagetti\\spaghetti-with-tuna-sauce-13068-1.jpeg"
+      "OriginalItemSpec": "wwwroot\\MenuCss\\Spagetti\\spaghetti-with-tuna-sauce-13068-1.jpeg"
     },
     {
       "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\README.md",

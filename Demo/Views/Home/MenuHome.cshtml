@@ -1,19 +1,25 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    ViewData["Title"] = "MenuHome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
 <html lang="vi">
 <head>
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <link href="~/css/menu.css" rel="stylesheet" />
+   @*  <link rel="stylesheet" href="./css/Menu.css"> *@
+    <link href="c:\projectwf\pbl3\demo\wwwroot\css\menu.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Menu</title>
 </head>
 
 <body>
-   @*  <header class="header">
+    <header class="header">
         <a href="./Homepage.html" class="logo">
-            <img src=".~/assets/animated_character_blue.png" alt="res-logo">
+            <img src="./assets/animated_character_blue.png" alt="res-logo">
             <h1 class="txt">HEE-HO</h1>
         </a>
 
@@ -39,7 +45,7 @@
         <div class="cart-items-container">
             <div class="cart-item">
                 <span class="fas fa-times"></span>
-                <img src=".~/assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
+                <img src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
                 <div class="content">
                     <h3>Cart-item 01</h3>
                     <div class="price">$15.99</div>
@@ -48,7 +54,7 @@
 
             <div class="cart-item">
                 <span class="fas fa-times"></span>
-                <img src=".~/assets/MenuAccess/Hamburger/Shrimp_Burger.jfif" alt="Beef Burger">
+                <img src="./assets/MenuAccess/Hamburger/Shrimp_Burger.jfif" alt="Beef Burger">
                 <div class="content">
                     <h3>Cart-item 02</h3>
                     <div class="price">$14.99</div>
@@ -57,7 +63,7 @@
 
             <div class="cart-item">
                 <span class="fas fa-times"></span>
-                <img src=".~/assets/MenuAccess/Hamburger/Hamburger_ca.jfif" alt="Beef Burger">
+                <img src="./assets/MenuAccess/Hamburger/Hamburger_ca.jfif" alt="Beef Burger">
                 <div class="content">
                     <h3>Cart-item 03</h3>
                     <div class="price">$10.99</div>
@@ -65,7 +71,7 @@
             </div>
             <button href="#" class="btn">Xem ngay</button>
         </div>
-    </header> *@
+    </header>
 
 
 
@@ -82,7 +88,7 @@
                 <button>Explore Food</button>
             </div>
             <div class="content-right">
-                <img src=".~/assets/MenuAccess/Daco_4553104.png" />
+                <img src="./assets/MenuAccess/Daco_4553104.png" />
             </div>
         </div>
     </section>
@@ -98,7 +104,7 @@
     <section>
         <div class="product_row" id="Burger">
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Burger Bò</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -107,7 +113,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Hamburger/Hamburger_ca.jfif" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Hamburger/Hamburger_ca.jfif" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Burger Cá</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -116,7 +122,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Hamburger/Hamburger_ga.jfif" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Hamburger/Hamburger_ga.jfif" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Burger Gà</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -125,7 +131,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Hamburger/Shrimp_Burger.jfif" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Hamburger/Shrimp_Burger.jfif" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Burger Tôm</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -135,7 +141,7 @@
             </div>
 
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Hamburger/Vegan burger.jfif" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Hamburger/Vegan burger.jfif" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Burger Chay</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -145,7 +151,7 @@
             </div>
 
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Hamburger/Mozzarella_Burger.jpg" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Hamburger/Mozzarella_Burger.jpg" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Mozzarella Burger</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -159,7 +165,7 @@
 
         <div class="product_row" id="Spaghetti">
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Spagetti/spaghetti bo bam.jfif" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Spagetti/spaghetti bo bam.jfif" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Spaghetti Bò Băm</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -168,7 +174,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Spagetti/Spaghetti Veggie.jfif" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Spagetti/Spaghetti Veggie.jfif" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Spaghetti Chay</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -177,7 +183,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Spagetti/spaghetti-boscaiola-74422-1.jpeg" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Spagetti/spaghetti-boscaiola-74422-1.jpeg" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Spaghetti Boscaiola</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -186,7 +192,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Spagetti/spaghetti-with-tuna-sauce-13068-1.jpeg" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Spagetti/spaghetti-with-tuna-sauce-13068-1.jpeg" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Spaghetti Tuna</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -196,7 +202,7 @@
             </div>
 
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Spagetti/IMG_2987-scaled.jpg" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Spagetti/IMG_2987-scaled.jpg" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Spaghetti Hải Sản</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -210,7 +216,7 @@
 
         <div class="product_row" id="Dessert">
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Dessert/kem-matcha-thumbnail-1.jpg" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Dessert/kem-matcha-thumbnail-1.jpg" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Kem Macha</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -219,7 +225,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Dessert/Vanilla ice cream.jpg" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Dessert/Vanilla ice cream.jpg" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Kem Vanilla</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -228,7 +234,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Dessert/Cupcake dau tay.jpg" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Dessert/Cupcake dau tay.jpg" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Cupcake Dâu Tây</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -237,7 +243,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Dessert/2w_ckscl-608x416f.jpg" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Dessert/2w_ckscl-608x416f.jpg" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Cupcake Socola</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -247,7 +253,7 @@
             </div>
 
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/Dessert/10-620x620-7.jpg" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/Dessert/10-620x620-7.jpg" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Kem Socola</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -261,7 +267,7 @@
 
         <div class="product_row" id="Fried_Chicken">
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/fried chicken/cheese fried chicken.jfif" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/fried chicken/cheese fried chicken.jfif" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Ga Rán Sốt Phô Mai</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -270,7 +276,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/fried chicken/Ga ran.jfif" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/fried chicken/Ga ran.jfif" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Gà Rán</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -279,7 +285,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/fried chicken/grilled-chicken-horizontal-1532030541.jpg" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/fried chicken/grilled-chicken-horizontal-1532030541.jpg" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Gà Nướng</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -288,7 +294,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/fried chicken/soybean chicken.jfif" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/fried chicken/soybean chicken.jfif" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Gà Rán Sốt Đậu</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -298,7 +304,7 @@
             </div>
 
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/fried chicken/Spicy Fried chicken.jfif" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/fried chicken/Spicy Fried chicken.jfif" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Gà Rán Sốt Cay</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -312,7 +318,7 @@
 
         <div class="product_row" id="Drinks">
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/drinks/mirinda-cam-330ml-sleek-lon-2-org.jpg" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/drinks/mirinda-cam-330ml-sleek-lon-2-org.jpg" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Mirinda</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -321,7 +327,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/drinks/nuoc-ngot-7-up-vi-chanh-320ml.jpg" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/drinks/nuoc-ngot-7-up-vi-chanh-320ml.jpg" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">7 UP</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -330,7 +336,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/drinks/tra-sua-tran-chau-vno.png" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/drinks/tra-sua-tran-chau-vno.png" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Trà Sữa</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -339,7 +345,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/drinks/unnamed.png" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/drinks/unnamed.png" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Trà Đào</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
@@ -349,7 +355,7 @@
             </div>
 
             <div class="item">
-                <img class="image" src=".~/assets/MenuAccess/drinks/images.jfif" alt="alt text" />
+                <img class="image" src="./assets/MenuAccess/drinks/images.jfif" alt="alt text" />
                 <div class="product_card">
                     <h4 class="food_title">Pepsi</h4>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>

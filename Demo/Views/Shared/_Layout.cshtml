@@ -49,10 +49,20 @@
               <div class="icons">
                 <div class="fas fa-user" id="user-btn">
                   <div class="dropdown-content">
-                    <a href="./Profile.html" id="HasLogin">Profile</a>
-                    <a href="./OrderDetail.html">Xem Hóa Đơn</a>
-                    <a asp-controller="Accounts" asp-action="Login" id="HasNotLogin">Đăng Nhập</a>
-                    <a href="./Homepage.html" id="HasLogin">Đăng Xuất</a>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a asp-controller="Accounts" asp-action="TaiKhoancuatoi" id="HasLogin">Profile</a>
+                        <a href="./OrderDetail.html">Xem Hóa Đơn</a>
+
+                        <a asp-controller="Home" asp-action="Index" id="HasLogin">Đăng Xuất</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Accounts" asp-action="DangKyTaiKhoan" id="HasNotRegister">Đăng ký</a>
+                        <a asp-controller="Accounts" asp-action="Login" id="HasNotLogin">Đăng Nhập</a>
+                        
+                    }
+                   
                   </div>
                 </div>
                 <div class="fas fa-search" id="search-btn"></div>
@@ -117,7 +127,7 @@
                   <h1 class="big_title">YOUR BEST FAST FOOD IS HERE</h1>
                   <h2 class="medium_title">Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn. Lorem Ipsum đã được sử dụng như một văn bản chuẩn cho ngành công nghiệp in ấn từ những năm 1500.</h2>
                 </div>
-                <button class="btn">ĐẶT HÀNG NGAY</button>
+                <button asp-controller="Home" asp-action="MenuHome" class="btn">ĐẶT HÀNG NGAY</button>
               </div>
             </div>
           </section>

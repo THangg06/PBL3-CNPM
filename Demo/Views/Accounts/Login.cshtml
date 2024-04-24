@@ -1,47 +1,39 @@
-﻿
+﻿@model Demo.ModelViews.LoginViewModel
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Đăng nhập";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="utf-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <link href="c:\projectwf\pbl3\demo\wwwroot\css\loginpage.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <!-- /* Monda Font */ -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
-
-</head>
-<body>
-    <div class="partial-code root">
-        <h1 class="hero_title">ĐĂNG NHẬP</h1>
-        <img class="image" src=".~/assets/Homepage/Login.png" alt="alt text" />
-        <div class="flex_col">
-            <input type="text" placeholder="Tài khoản" name="un" />
-            <input type="password" placeholder="Mật khẩu" name="pw" />
-            <button> Đăng nhập </button>
-            <div class="account">
-                <a asp-controller="Accounts" asp-action="Register">Chưa có tài khoản? Đăng ký</a>
-                <a href="#">Quên mật khẩu</a>
+<div class="partial-code root">
+    <div style="align-content:center" class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+             <img class="image" src="~/assets/fast_food_combo_meal.png" alt="Combo Meal" />
+            <h4 class="login-title"> Đăng nhập </h4>
+           
+            <div class="form-group">
+               @*  @Html.TextBoxFor(x => x.Email, new{class="form-control", placeholder = "Username", required = "required"  ,autofocus = "autofocus" }) *@
+                <label asp-for="Email" class="control-label">UserName*</label>
+                <input asp-for="Email" class="form-control" type="email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-
-
-            <br>
-        </div>
+           
+            
+            <div class="form-group">
+                <label asp-for="Password" class="control-label">Mật khẩu*</label>
+                <input asp-for="Password" class="form-control" type="password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Đăng nhập" class="btn btn-primary" />
+                <a asp-controller="Accounts" asp-action="DangKyTaiKhoan"> <p>Chưa có tài khoản? Đăng ký </p></a>
+            </div>
+        </form>
     </div>
-</body>
+</div>
 
+<div>
+    <a asp-controller="Home" asp-action="Index">Trở về trang chính</a>
+</div>
 

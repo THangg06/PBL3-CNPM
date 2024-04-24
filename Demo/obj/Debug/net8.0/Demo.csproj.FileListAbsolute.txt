@@ -767,3 +767,5 @@ C:\ProjectWF\PBL3\Demo\obj\Debug\net8.0\refint\Demo.dll
 C:\ProjectWF\PBL3\Demo\obj\Debug\net8.0\Demo.pdb
 C:\ProjectWF\PBL3\Demo\obj\Debug\net8.0\Demo.genruntimeconfig.cache
 C:\ProjectWF\PBL3\Demo\obj\Debug\net8.0\ref\Demo.dll
+C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\AutoMapper.dll
+C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

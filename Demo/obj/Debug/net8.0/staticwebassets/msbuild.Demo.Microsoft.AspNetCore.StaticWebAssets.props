@@ -1280,22 +1280,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\site.css))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\_header.css))">
-      <SourceType>Package</SourceType>
-      <SourceId>Demo</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Demo</BasePath>
-      <RelativePath>css/_header.css</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\_header.css))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Demo.bundle.scp.css))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
@@ -2352,12 +2336,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Menu.html))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Daco_4553104.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Daco_4553104.png))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Daco_4553104.png</RelativePath>
+      <RelativePath>MenuCss/Daco_4553104.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2366,14 +2350,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Daco_4553104.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Daco_4553104.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Dessert\10-620x620-7.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Dessert\10-620x620-7.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Dessert/10-620x620-7.jpg</RelativePath>
+      <RelativePath>MenuCss/Dessert/10-620x620-7.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2382,14 +2366,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Dessert\10-620x620-7.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Dessert\10-620x620-7.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Dessert\2w_ckscl-608x416f.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Dessert\2w_ckscl-608x416f.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Dessert/2w_ckscl-608x416f.jpg</RelativePath>
+      <RelativePath>MenuCss/Dessert/2w_ckscl-608x416f.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2398,14 +2382,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Dessert\2w_ckscl-608x416f.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Dessert\2w_ckscl-608x416f.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Dessert\Cupcake dau tay.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Dessert\Cupcake dau tay.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Dessert/Cupcake dau tay.jpg</RelativePath>
+      <RelativePath>MenuCss/Dessert/Cupcake dau tay.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2414,14 +2398,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Dessert\Cupcake dau tay.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Dessert\Cupcake dau tay.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Dessert\kem-matcha-thumbnail-1.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Dessert\kem-matcha-thumbnail-1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Dessert/kem-matcha-thumbnail-1.jpg</RelativePath>
+      <RelativePath>MenuCss/Dessert/kem-matcha-thumbnail-1.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2430,14 +2414,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Dessert\kem-matcha-thumbnail-1.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Dessert\kem-matcha-thumbnail-1.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Dessert\Khoai_tay_chien_co_lon.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Dessert\Khoai_tay_chien_co_lon.png))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Dessert/Khoai_tay_chien_co_lon.png</RelativePath>
+      <RelativePath>MenuCss/Dessert/Khoai_tay_chien_co_lon.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2446,14 +2430,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Dessert\Khoai_tay_chien_co_lon.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Dessert\Khoai_tay_chien_co_lon.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Dessert\Vanilla ice cream.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Dessert\Vanilla ice cream.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Dessert/Vanilla ice cream.jpg</RelativePath>
+      <RelativePath>MenuCss/Dessert/Vanilla ice cream.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2462,14 +2446,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Dessert\Vanilla ice cream.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Dessert\Vanilla ice cream.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Dessert\Vanilla-Cupcakes-G-scaled.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Dessert\Vanilla-Cupcakes-G-scaled.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Dessert/Vanilla-Cupcakes-G-scaled.jpg</RelativePath>
+      <RelativePath>MenuCss/Dessert/Vanilla-Cupcakes-G-scaled.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2478,14 +2462,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Dessert\Vanilla-Cupcakes-G-scaled.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Dessert\Vanilla-Cupcakes-G-scaled.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\drinks\images.jfif))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\drinks\images.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/drinks/images.jfif</RelativePath>
+      <RelativePath>MenuCss/drinks/images.jfif</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2494,14 +2478,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\drinks\images.jfif))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\drinks\images.jfif))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\drinks\mirinda-cam-330ml-sleek-lon-2-org.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\drinks\mirinda-cam-330ml-sleek-lon-2-org.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/drinks/mirinda-cam-330ml-sleek-lon-2-org.jpg</RelativePath>
+      <RelativePath>MenuCss/drinks/mirinda-cam-330ml-sleek-lon-2-org.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2510,14 +2494,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\drinks\mirinda-cam-330ml-sleek-lon-2-org.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\drinks\mirinda-cam-330ml-sleek-lon-2-org.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\drinks\nuoc-ngot-7-up-vi-chanh-320ml.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\drinks\nuoc-ngot-7-up-vi-chanh-320ml.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/drinks/nuoc-ngot-7-up-vi-chanh-320ml.jpg</RelativePath>
+      <RelativePath>MenuCss/drinks/nuoc-ngot-7-up-vi-chanh-320ml.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2526,14 +2510,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\drinks\nuoc-ngot-7-up-vi-chanh-320ml.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\drinks\nuoc-ngot-7-up-vi-chanh-320ml.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\drinks\tra-sua-tran-chau-vno.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\drinks\tra-sua-tran-chau-vno.png))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/drinks/tra-sua-tran-chau-vno.png</RelativePath>
+      <RelativePath>MenuCss/drinks/tra-sua-tran-chau-vno.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2542,14 +2526,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\drinks\tra-sua-tran-chau-vno.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\drinks\tra-sua-tran-chau-vno.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\drinks\unnamed.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\drinks\unnamed.png))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/drinks/unnamed.png</RelativePath>
+      <RelativePath>MenuCss/drinks/unnamed.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2558,14 +2542,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\drinks\unnamed.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\drinks\unnamed.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\fried chicken\cheese fried chicken.jfif))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\fried chicken\cheese fried chicken.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/fried chicken/cheese fried chicken.jfif</RelativePath>
+      <RelativePath>MenuCss/fried chicken/cheese fried chicken.jfif</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2574,14 +2558,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\fried chicken\cheese fried chicken.jfif))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\fried chicken\cheese fried chicken.jfif))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\fried chicken\Ga ran.jfif))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\fried chicken\Ga ran.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/fried chicken/Ga ran.jfif</RelativePath>
+      <RelativePath>MenuCss/fried chicken/Ga ran.jfif</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2590,14 +2574,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\fried chicken\Ga ran.jfif))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\fried chicken\Ga ran.jfif))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\fried chicken\grilled-chicken-horizontal-1532030541.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\fried chicken\grilled-chicken-horizontal-1532030541.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/fried chicken/grilled-chicken-horizontal-1532030541.jpg</RelativePath>
+      <RelativePath>MenuCss/fried chicken/grilled-chicken-horizontal-1532030541.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2606,14 +2590,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\fried chicken\grilled-chicken-horizontal-1532030541.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\fried chicken\grilled-chicken-horizontal-1532030541.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\fried chicken\soybean chicken.jfif))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\fried chicken\soybean chicken.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/fried chicken/soybean chicken.jfif</RelativePath>
+      <RelativePath>MenuCss/fried chicken/soybean chicken.jfif</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2622,14 +2606,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\fried chicken\soybean chicken.jfif))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\fried chicken\soybean chicken.jfif))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\fried chicken\Spicy Fried chicken.jfif))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\fried chicken\Spicy Fried chicken.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/fried chicken/Spicy Fried chicken.jfif</RelativePath>
+      <RelativePath>MenuCss/fried chicken/Spicy Fried chicken.jfif</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2638,14 +2622,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\fried chicken\Spicy Fried chicken.jfif))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\fried chicken\Spicy Fried chicken.jfif))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Hamburger\Beef_Burger.jfif))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Hamburger\Beef_Burger.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Hamburger/Beef_Burger.jfif</RelativePath>
+      <RelativePath>MenuCss/Hamburger/Beef_Burger.jfif</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2654,14 +2638,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Hamburger\Beef_Burger.jfif))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Hamburger\Beef_Burger.jfif))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Hamburger\Hamburger_ca.jfif))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Hamburger\Hamburger_ca.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Hamburger/Hamburger_ca.jfif</RelativePath>
+      <RelativePath>MenuCss/Hamburger/Hamburger_ca.jfif</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2670,14 +2654,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Hamburger\Hamburger_ca.jfif))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Hamburger\Hamburger_ca.jfif))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Hamburger\Hamburger_ga.jfif))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Hamburger\Hamburger_ga.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Hamburger/Hamburger_ga.jfif</RelativePath>
+      <RelativePath>MenuCss/Hamburger/Hamburger_ga.jfif</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2686,14 +2670,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Hamburger\Hamburger_ga.jfif))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Hamburger\Hamburger_ga.jfif))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Hamburger\Mozzarella_Burger.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Hamburger\Mozzarella_Burger.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Hamburger/Mozzarella_Burger.jpg</RelativePath>
+      <RelativePath>MenuCss/Hamburger/Mozzarella_Burger.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2702,14 +2686,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Hamburger\Mozzarella_Burger.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Hamburger\Mozzarella_Burger.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Hamburger\Shrimp_Burger.jfif))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Hamburger\Shrimp_Burger.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Hamburger/Shrimp_Burger.jfif</RelativePath>
+      <RelativePath>MenuCss/Hamburger/Shrimp_Burger.jfif</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2718,14 +2702,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Hamburger\Shrimp_Burger.jfif))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Hamburger\Shrimp_Burger.jfif))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Hamburger\Vegan burger.jfif))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Hamburger\Vegan burger.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Hamburger/Vegan burger.jfif</RelativePath>
+      <RelativePath>MenuCss/Hamburger/Vegan burger.jfif</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2734,14 +2718,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Hamburger\Vegan burger.jfif))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Hamburger\Vegan burger.jfif))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Spagetti\IMG_2987-scaled.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Spagetti\IMG_2987-scaled.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Spagetti/IMG_2987-scaled.jpg</RelativePath>
+      <RelativePath>MenuCss/Spagetti/IMG_2987-scaled.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2750,14 +2734,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Spagetti\IMG_2987-scaled.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Spagetti\IMG_2987-scaled.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Spagetti\spaghetti bo bam.jfif))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Spagetti\spaghetti bo bam.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Spagetti/spaghetti bo bam.jfif</RelativePath>
+      <RelativePath>MenuCss/Spagetti/spaghetti bo bam.jfif</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2766,14 +2750,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Spagetti\spaghetti bo bam.jfif))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Spagetti\spaghetti bo bam.jfif))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Spagetti\Spaghetti Veggie.jfif))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Spagetti\Spaghetti Veggie.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Spagetti/Spaghetti Veggie.jfif</RelativePath>
+      <RelativePath>MenuCss/Spagetti/Spaghetti Veggie.jfif</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2782,14 +2766,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Spagetti\Spaghetti Veggie.jfif))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Spagetti\Spaghetti Veggie.jfif))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Spagetti\spaghetti-boscaiola-74422-1.jpeg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Spagetti\spaghetti-boscaiola-74422-1.jpeg))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Spagetti/spaghetti-boscaiola-74422-1.jpeg</RelativePath>
+      <RelativePath>MenuCss/Spagetti/spaghetti-boscaiola-74422-1.jpeg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2798,14 +2782,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Spagetti\spaghetti-boscaiola-74422-1.jpeg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Spagetti\spaghetti-boscaiola-74422-1.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Spagetti\spaghetti-with-tuna-sauce-13068-1.jpeg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Spagetti\spaghetti-with-tuna-sauce-13068-1.jpeg))">
       <SourceType>Package</SourceType>
       <SourceId>Demo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Demo</BasePath>
-      <RelativePath>MenuAccess/Spagetti/spaghetti-with-tuna-sauce-13068-1.jpeg</RelativePath>
+      <RelativePath>MenuCss/Spagetti/spaghetti-with-tuna-sauce-13068-1.jpeg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2814,7 +2798,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuAccess\Spagetti\spaghetti-with-tuna-sauce-13068-1.jpeg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MenuCss\Spagetti\spaghetti-with-tuna-sauce-13068-1.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\README.md))">
       <SourceType>Package</SourceType>

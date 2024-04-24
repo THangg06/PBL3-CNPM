@@ -1,21 +1,4 @@
 
-:root{
-  --main-color: #fef2d0;
-  --green-color: #3cb815;
-  --light-green-color: #c0eb7b;
-  --black: black;
-  --bg: #010103;
-  --border:.1rem solid rgba(255, 255, 255, .3);
-}
-  *{
-    margin:0; padding:0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: .2s linear;
-  }
   html{
     font-size: 62.5%;
     overflow-x: hidden;

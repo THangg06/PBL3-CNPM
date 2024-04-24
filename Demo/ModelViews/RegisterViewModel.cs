@@ -6,40 +6,43 @@ namespace Demo.ModelViews
 {
     public class RegisterViewModel
     {
-        public int CustomerId { get; set; }
-        [MaxLength(50)]
-        [Required(ErrorMessage = "Vui lòng nhập Họ tên")]
+        [Key]
+        public string CustomerId { get; set; }
+        [MaxLength(50, ErrorMessage = "Tối đa 50 kí tự")]
+        [Required(ErrorMessage = "*")]
         [Display(Name = "Họ tên")]
-        public string Name { get; set; }
+        public string FullName { get; set; }
 
         [MaxLength(150)]
-        [DataType(DataType.EmailAddress)]
-        [Remote(action: "ValidateEmail", controller: "Accounts ")]
-        [Required(ErrorMessage = "Vui lòng nhập Email")]
-        
+        [EmailAddress(ErrorMessage = "Chưa đúng định dạng email")]
+        [Remote(action: "ValidateEmail", controller: "Accounts")]
+        [Display(Name = "Email")]
+
         public string Email { get; set; }
 
-        [MaxLength(10)]
-        [Required(ErrorMessage = "Vui lòng nhập Số điện thoại")]
+        [MaxLength(10, ErrorMessage = "Tối đa 10 kí tự")]
+        [Required(ErrorMessage = "*")]
         [Display(Name = "Điện thoại")]
         [RegularExpression(@"0[9875]\d{8}", ErrorMessage ="Chưa đúng định dạng di động Việt Nam")]
         [DataType(DataType.PhoneNumber)]
         [Remote(action: "ValidatePhone", controller: "Accounts")]
         public string Phone { get; set; }
 
-        [MaxLength(10)]
-        [Required(ErrorMessage = "Vui lòng nhập ngày sinh của bạn")]
+       
+        [DataType(DataType.Date)]
         [Display(Name = "Ngày sinh")]
         public DateTime? Date { get; set; }
 
         [MinLength(5, ErrorMessage = "Bạn cần nhập mật khẩu tối thiểu 5 kí tự")]
-        [Required(ErrorMessage = "Vui lòng nhập mật khẩu")]
+        [Required(ErrorMessage = "*")]
         [Display(Name = "Mật Khẩu")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
         [MinLength(5, ErrorMessage = "Bạn cần nhập mật khẩu tối thiểu 5 kí tự")]
         [Display(Name = "Nhập lại mật Khẩu")]
         [Compare("Password",ErrorMessage ="Vui lòng nhập mật khẩu giống nhau" )]
+        [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
     }
 }

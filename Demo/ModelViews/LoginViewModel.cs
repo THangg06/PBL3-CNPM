@@ -5,9 +5,10 @@ namespace Demo.ModelViews
 {
     public class LoginViewModel
     {
+        [Key]
         [MaxLength(150)]
         [DataType(DataType.EmailAddress)]
-        [Remote(action: "ValidateEmail", controller: "Accounts ")]
+        [EmailAddress]
         [Required(ErrorMessage = "Vui lòng nhập Email")]
         public string Email { get; set; }
 
