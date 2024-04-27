@@ -11,6 +11,7 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Data\" />
+    <Folder Include="Views\Account\" />
     <Folder Include="wwwroot\.github\workflows\" />
   </ItemGroup>
 

@@ -1,711 +1,711 @@
 {
   "Files": [
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Demo.bundle.scp.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Demo.bundle.scp.css",
       "PackagePath": "staticwebassets\\Demo.bundle.scp.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\AboutUs.html",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\AboutUs.html",
       "PackagePath": "staticwebassets\\AboutUs.html"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\ContactUs.html",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\ContactUs.html",
       "PackagePath": "staticwebassets\\ContactUs.html"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\Footer.html",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\Footer.html",
       "PackagePath": "staticwebassets\\Footer.html"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\Homepage.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\Homepage.css",
       "PackagePath": "staticwebassets\\Homepage.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\Homepage.html",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\Homepage.html",
       "PackagePath": "staticwebassets\\Homepage.html"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\Loginpage.html",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\Loginpage.html",
       "PackagePath": "staticwebassets\\Loginpage.html"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\Menu.html",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\Menu.html",
       "PackagePath": "staticwebassets\\Menu.html"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Daco_4553104.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Daco_4553104.png",
       "PackagePath": "staticwebassets\\MenuCss\\Daco_4553104.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Dessert\\10-620x620-7.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Dessert\\10-620x620-7.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\Dessert\\10-620x620-7.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Dessert\\2w_ckscl-608x416f.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Dessert\\2w_ckscl-608x416f.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\Dessert\\2w_ckscl-608x416f.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Dessert\\Cupcake dau tay.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Dessert\\Cupcake dau tay.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\Dessert\\Cupcake dau tay.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Dessert\\Khoai_tay_chien_co_lon.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Dessert\\Khoai_tay_chien_co_lon.png",
       "PackagePath": "staticwebassets\\MenuCss\\Dessert\\Khoai_tay_chien_co_lon.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Dessert\\Vanilla ice cream.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Dessert\\Vanilla ice cream.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\Dessert\\Vanilla ice cream.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Dessert\\Vanilla-Cupcakes-G-scaled.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Dessert\\Vanilla-Cupcakes-G-scaled.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\Dessert\\Vanilla-Cupcakes-G-scaled.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Dessert\\kem-matcha-thumbnail-1.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Dessert\\kem-matcha-thumbnail-1.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\Dessert\\kem-matcha-thumbnail-1.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\Beef_Burger.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Hamburger\\Beef_Burger.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\Hamburger\\Beef_Burger.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\Hamburger_ca.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Hamburger\\Hamburger_ca.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\Hamburger\\Hamburger_ca.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\Hamburger_ga.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Hamburger\\Hamburger_ga.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\Hamburger\\Hamburger_ga.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\Mozzarella_Burger.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Hamburger\\Mozzarella_Burger.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\Hamburger\\Mozzarella_Burger.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\Shrimp_Burger.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Hamburger\\Shrimp_Burger.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\Hamburger\\Shrimp_Burger.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\Vegan burger.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Hamburger\\Vegan burger.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\Hamburger\\Vegan burger.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Spagetti\\IMG_2987-scaled.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Spagetti\\IMG_2987-scaled.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\Spagetti\\IMG_2987-scaled.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Spagetti\\Spaghetti Veggie.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Spagetti\\Spaghetti Veggie.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\Spagetti\\Spaghetti Veggie.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Spagetti\\spaghetti bo bam.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Spagetti\\spaghetti bo bam.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\Spagetti\\spaghetti bo bam.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Spagetti\\spaghetti-boscaiola-74422-1.jpeg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Spagetti\\spaghetti-boscaiola-74422-1.jpeg",
       "PackagePath": "staticwebassets\\MenuCss\\Spagetti\\spaghetti-boscaiola-74422-1.jpeg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Spagetti\\spaghetti-with-tuna-sauce-13068-1.jpeg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\Spagetti\\spaghetti-with-tuna-sauce-13068-1.jpeg",
       "PackagePath": "staticwebassets\\MenuCss\\Spagetti\\spaghetti-with-tuna-sauce-13068-1.jpeg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\images.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\drinks\\images.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\drinks\\images.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\mirinda-cam-330ml-sleek-lon-2-org.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\drinks\\mirinda-cam-330ml-sleek-lon-2-org.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\drinks\\mirinda-cam-330ml-sleek-lon-2-org.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\tra-sua-tran-chau-vno.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\drinks\\tra-sua-tran-chau-vno.png",
       "PackagePath": "staticwebassets\\MenuCss\\drinks\\tra-sua-tran-chau-vno.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\unnamed.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\drinks\\unnamed.png",
       "PackagePath": "staticwebassets\\MenuCss\\drinks\\unnamed.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\fried chicken\\Ga ran.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\fried chicken\\Ga ran.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\fried chicken\\Ga ran.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\fried chicken\\Spicy Fried chicken.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\fried chicken\\Spicy Fried chicken.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\fried chicken\\Spicy Fried chicken.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\fried chicken\\cheese fried chicken.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\fried chicken\\cheese fried chicken.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\fried chicken\\cheese fried chicken.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\fried chicken\\grilled-chicken-horizontal-1532030541.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\fried chicken\\grilled-chicken-horizontal-1532030541.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\fried chicken\\grilled-chicken-horizontal-1532030541.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\fried chicken\\soybean chicken.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\MenuCss\\fried chicken\\soybean chicken.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\fried chicken\\soybean chicken.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\README.md",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\README.md",
       "PackagePath": "staticwebassets\\README.md"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\Registerpage.html",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\Registerpage.html",
       "PackagePath": "staticwebassets\\Registerpage.html"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\2457cc4df05f93de2ace1dbfac19bfd6.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\2457cc4df05f93de2ace1dbfac19bfd6.png",
       "PackagePath": "staticwebassets\\assets\\2457cc4df05f93de2ace1dbfac19bfd6.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\360_F_624387296_5mfhHfkovWS8WX6XhLT9egGIHJK9ArcB.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\360_F_624387296_5mfhHfkovWS8WX6XhLT9egGIHJK9ArcB.jpg",
       "PackagePath": "staticwebassets\\assets\\360_F_624387296_5mfhHfkovWS8WX6XhLT9egGIHJK9ArcB.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\AboutUs.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\AboutUs.png",
       "PackagePath": "staticwebassets\\assets\\AboutUs.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\ContactUs_email.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\ContactUs_email.png",
       "PackagePath": "staticwebassets\\assets\\ContactUs_email.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\ContactUs_phone.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\ContactUs_phone.png",
       "PackagePath": "staticwebassets\\assets\\ContactUs_phone.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\ContactUs_pin.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\ContactUs_pin.png",
       "PackagePath": "staticwebassets\\assets\\ContactUs_pin.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Homepage\\Login.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\Homepage\\Login.png",
       "PackagePath": "staticwebassets\\assets\\Homepage\\Login.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Homepage\\cheeseburger_with_bacon.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\Homepage\\cheeseburger_with_bacon.png",
       "PackagePath": "staticwebassets\\assets\\Homepage\\cheeseburger_with_bacon.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Homepage\\fast_food_banner.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\Homepage\\fast_food_banner.png",
       "PackagePath": "staticwebassets\\assets\\Homepage\\fast_food_banner.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Homepage\\fast_food_combo_meal.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\Homepage\\fast_food_combo_meal.png",
       "PackagePath": "staticwebassets\\assets\\Homepage\\fast_food_combo_meal.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Homepage\\fast_food_meal_top_view.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\Homepage\\fast_food_meal_top_view.png",
       "PackagePath": "staticwebassets\\assets\\Homepage\\fast_food_meal_top_view.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Homepage\\man_enjoying_burger.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\Homepage\\man_enjoying_burger.png",
       "PackagePath": "staticwebassets\\assets\\Homepage\\man_enjoying_burger.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Homepage\\output-onlinepngtools.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\Homepage\\output-onlinepngtools.png",
       "PackagePath": "staticwebassets\\assets\\Homepage\\output-onlinepngtools.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Homepage\\spaghetti_bolognese_plate.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\Homepage\\spaghetti_bolognese_plate.png",
       "PackagePath": "staticwebassets\\assets\\Homepage\\spaghetti_bolognese_plate.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Homepage\\spicy_chicken_wings_plate.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\Homepage\\spicy_chicken_wings_plate.png",
       "PackagePath": "staticwebassets\\assets\\Homepage\\spicy_chicken_wings_plate.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\How-Many-Types-of-Fast-Food-Are-There.webp",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\How-Many-Types-of-Fast-Food-Are-There.webp",
       "PackagePath": "staticwebassets\\assets\\How-Many-Types-of-Fast-Food-Are-There.webp"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Login.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\Login.png",
       "PackagePath": "staticwebassets\\assets\\Login.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Daco_4553104.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Daco_4553104.png",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Daco_4553104.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\10-620x620-7.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\10-620x620-7.jpg",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Dessert\\10-620x620-7.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\2w_ckscl-608x416f.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\2w_ckscl-608x416f.jpg",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Dessert\\2w_ckscl-608x416f.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Cupcake dau tay.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Cupcake dau tay.jpg",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Dessert\\Cupcake dau tay.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Khoai_tay_chien_co_lon.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Khoai_tay_chien_co_lon.png",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Dessert\\Khoai_tay_chien_co_lon.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Vanilla ice cream.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Vanilla ice cream.jpg",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Dessert\\Vanilla ice cream.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Vanilla-Cupcakes-G-scaled.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Vanilla-Cupcakes-G-scaled.jpg",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Dessert\\Vanilla-Cupcakes-G-scaled.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\kem-matcha-thumbnail-1.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\kem-matcha-thumbnail-1.jpg",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Dessert\\kem-matcha-thumbnail-1.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Beef_Burger.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Beef_Burger.jfif",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Hamburger\\Beef_Burger.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Hamburger_ca.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Hamburger_ca.jfif",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Hamburger\\Hamburger_ca.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Hamburger_ga.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Hamburger_ga.jfif",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Hamburger\\Hamburger_ga.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Mozzarella_Burger.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Mozzarella_Burger.jpg",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Hamburger\\Mozzarella_Burger.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Shrimp_Burger.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Shrimp_Burger.jfif",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Hamburger\\Shrimp_Burger.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Vegan burger.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Vegan burger.jfif",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Hamburger\\Vegan burger.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\IMG_2987-scaled.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\IMG_2987-scaled.jpg",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Spagetti\\IMG_2987-scaled.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\Spaghetti Veggie.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\Spaghetti Veggie.jfif",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Spagetti\\Spaghetti Veggie.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti bo bam.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti bo bam.jfif",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Spagetti\\spaghetti bo bam.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti-boscaiola-74422-1.jpeg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti-boscaiola-74422-1.jpeg",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Spagetti\\spaghetti-boscaiola-74422-1.jpeg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti-with-tuna-sauce-13068-1.jpeg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti-with-tuna-sauce-13068-1.jpeg",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\Spagetti\\spaghetti-with-tuna-sauce-13068-1.jpeg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\images.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\images.jfif",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\drinks\\images.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\mirinda-cam-330ml-sleek-lon-2-org.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\mirinda-cam-330ml-sleek-lon-2-org.jpg",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\drinks\\mirinda-cam-330ml-sleek-lon-2-org.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\tra-sua-tran-chau-vno.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\tra-sua-tran-chau-vno.png",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\drinks\\tra-sua-tran-chau-vno.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\unnamed.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\unnamed.png",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\drinks\\unnamed.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\Ga ran.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\Ga ran.jfif",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\fried chicken\\Ga ran.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\Spicy Fried chicken.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\Spicy Fried chicken.jfif",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\fried chicken\\Spicy Fried chicken.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\cheese fried chicken.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\cheese fried chicken.jfif",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\fried chicken\\cheese fried chicken.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\grilled-chicken-horizontal-1532030541.jpg",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\grilled-chicken-horizontal-1532030541.jpg",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\fried chicken\\grilled-chicken-horizontal-1532030541.jpg"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\soybean chicken.jfif",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\soybean chicken.jfif",
       "PackagePath": "staticwebassets\\assets\\MenuAccess\\fried chicken\\soybean chicken.jfif"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\add_to_shopping_cart_icon.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\add_to_shopping_cart_icon.png",
       "PackagePath": "staticwebassets\\assets\\add_to_shopping_cart_icon.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\animated_character_blue.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\animated_character_blue.png",
       "PackagePath": "staticwebassets\\assets\\animated_character_blue.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\animated_character_with_cape.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\animated_character_with_cape.png",
       "PackagePath": "staticwebassets\\assets\\animated_character_with_cape.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\checked_shopping_cart_icon.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\checked_shopping_cart_icon.png",
       "PackagePath": "staticwebassets\\assets\\checked_shopping_cart_icon.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\cheeseburger_with_bacon.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\cheeseburger_with_bacon.png",
       "PackagePath": "staticwebassets\\assets\\cheeseburger_with_bacon.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\fast_delivery_truck_icon.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\fast_delivery_truck_icon.png",
       "PackagePath": "staticwebassets\\assets\\fast_delivery_truck_icon.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\fast_food_combo_meal.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\fast_food_combo_meal.png",
       "PackagePath": "staticwebassets\\assets\\fast_food_combo_meal.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\fast_food_meal_top_view.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\fast_food_meal_top_view.png",
       "PackagePath": "staticwebassets\\assets\\fast_food_meal_top_view.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\gold_star_award_icon.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\gold_star_award_icon.png",
       "PackagePath": "staticwebassets\\assets\\gold_star_award_icon.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\icon\\2457cc4df05f93de2ace1dbfac19bfd6.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\icon\\2457cc4df05f93de2ace1dbfac19bfd6.png",
       "PackagePath": "staticwebassets\\assets\\icon\\2457cc4df05f93de2ace1dbfac19bfd6.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\icon\\add_to_shopping_cart_icon.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\icon\\add_to_shopping_cart_icon.png",
       "PackagePath": "staticwebassets\\assets\\icon\\add_to_shopping_cart_icon.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\icon\\checked_shopping_cart_icon.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\icon\\checked_shopping_cart_icon.png",
       "PackagePath": "staticwebassets\\assets\\icon\\checked_shopping_cart_icon.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\icon\\checkout.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\icon\\checkout.png",
       "PackagePath": "staticwebassets\\assets\\icon\\checkout.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\icon\\fast-delivery.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\icon\\fast-delivery.png",
       "PackagePath": "staticwebassets\\assets\\icon\\fast-delivery.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\icon\\fast_delivery_truck_icon.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\icon\\fast_delivery_truck_icon.png",
       "PackagePath": "staticwebassets\\assets\\icon\\fast_delivery_truck_icon.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\icon\\medal.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\icon\\medal.png",
       "PackagePath": "staticwebassets\\assets\\icon\\medal.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\icon\\shopping-cart.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\icon\\shopping-cart.png",
       "PackagePath": "staticwebassets\\assets\\icon\\shopping-cart.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\icon\\single_gold_star_icon.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\icon\\single_gold_star_icon.png",
       "PackagePath": "staticwebassets\\assets\\icon\\single_gold_star_icon.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\man_enjoying_burger.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\man_enjoying_burger.png",
       "PackagePath": "staticwebassets\\assets\\man_enjoying_burger.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\single_gold_star_icon.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\single_gold_star_icon.png",
       "PackagePath": "staticwebassets\\assets\\single_gold_star_icon.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\spaghetti_bolognese_plate.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\spaghetti_bolognese_plate.png",
       "PackagePath": "staticwebassets\\assets\\spaghetti_bolognese_plate.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\spicy_chicken_wings_plate.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\spicy_chicken_wings_plate.png",
       "PackagePath": "staticwebassets\\assets\\spicy_chicken_wings_plate.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\user_profile_icon.png",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\assets\\user_profile_icon.png",
       "PackagePath": "staticwebassets\\assets\\user_profile_icon.png"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\AboutUs.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\css\\AboutUs.css",
       "PackagePath": "staticwebassets\\css\\AboutUs.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\ContactUs.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\css\\ContactUs.css",
       "PackagePath": "staticwebassets\\css\\ContactUs.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Footer.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\css\\Footer.css",
       "PackagePath": "staticwebassets\\css\\Footer.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Homepage.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\css\\Homepage.css",
       "PackagePath": "staticwebassets\\css\\Homepage.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Loginpage.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\css\\Loginpage.css",
       "PackagePath": "staticwebassets\\css\\Loginpage.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Menu.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\css\\Menu.css",
       "PackagePath": "staticwebassets\\css\\Menu.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Registerpage.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\css\\Registerpage.css",
       "PackagePath": "staticwebassets\\css\\Registerpage.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\css\\css",
       "PackagePath": "staticwebassets\\css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\site.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\favicon.ico",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\js\\site.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\main.js",
+      "Id": "C:\\A2\\LTNet\\pbl3DEMO\\Demo\\wwwroot\\main.js",
       "PackagePath": "staticwebassets\\main.js"
     },
     {
