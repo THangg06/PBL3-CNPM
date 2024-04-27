@@ -7,7 +7,11 @@ namespace Demo.ModelViews
     public class RegisterViewModel
     {
         [Key]
+        [Display(Name = "Tên đăng nhập")]
+        [Required(ErrorMessage = "*")]
+        [MaxLength(20, ErrorMessage = "Tối đa 20 kí tự")]
         public string CustomerId { get; set; }
+
         [MaxLength(50, ErrorMessage = "Tối đa 50 kí tự")]
         [Required(ErrorMessage = "*")]
         [Display(Name = "Họ tên")]
@@ -31,7 +35,7 @@ namespace Demo.ModelViews
        
         [DataType(DataType.Date)]
         [Display(Name = "Ngày sinh")]
-        public DateTime? Date { get; set; }
+        public DateTime? Birthday { get; set; }
 
         [MinLength(5, ErrorMessage = "Bạn cần nhập mật khẩu tối thiểu 5 kí tự")]
         [Required(ErrorMessage = "*")]
@@ -41,7 +45,7 @@ namespace Demo.ModelViews
 
         [MinLength(5, ErrorMessage = "Bạn cần nhập mật khẩu tối thiểu 5 kí tự")]
         [Display(Name = "Nhập lại mật Khẩu")]
-        [Compare("Password",ErrorMessage ="Vui lòng nhập mật khẩu giống nhau" )]
+        [Compare("Password", ErrorMessage = "Vui lòng nhập mật khẩu giống nhau")]
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
     }

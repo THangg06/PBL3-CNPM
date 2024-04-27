@@ -5,7 +5,7 @@ namespace Demo.Data;
 
 public partial class Customer
 {
-    public int CustomerId { get; set; }
+    public string CustomerId { get; set; }
 
     public string? FullName { get; set; }
 

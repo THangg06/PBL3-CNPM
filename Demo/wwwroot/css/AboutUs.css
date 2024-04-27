@@ -1,4 +1,4 @@
-:root{
+/*:root{
   --main-color: #fef2d0;
   --green-color: #3cb815;
   --light-green-color: #c0eb7b;
@@ -30,7 +30,7 @@
   html::-webkit-scrollbar-thumb{
     background: #fff;
     border-radius: 5rem;
-  }
+  }*/
   body{
     background-color: var(--main-color);
 }

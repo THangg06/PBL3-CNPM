@@ -5,7 +5,7 @@ namespace Demo.Data;
 
 public partial class Product
 {
-    public int ProductId { get; set; }
+    public string ProductId { get; set; }
 
     public string? ProductName { get; set; }
 
@@ -13,11 +13,11 @@ public partial class Product
 
     public string? Description { get; set; }
 
-    public int? CatId { get; set; }
+    public string? CatId { get; set; }
 
-    public int? Price { get; set; }
+    public double? Price { get; set; }
 
-    public int? Discount { get; set; }
+    public string? Unit { get; set; }
 
     public string? Thumb { get; set; }
 

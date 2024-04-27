@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using System.Security.Claims;
 
@@ -28,20 +30,22 @@ namespace Demo.Controllers
         }
         [HttpGet]
         [AllowAnonymous]
-        public IActionResult ValidatePhone(string Phone){
+        public IActionResult ValidatePhone(string Phone)
+        {
             try
             {
                 var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.Phone.ToLower() == Phone.ToLower());
                 if (khachhang == null)
                 {
                     return Json(data: "Số điện thoại : " + Phone + " Đã được sử dụng");
-                    
+
                 }
                 return Json(data: true);
-            } catch
+            }
+            catch
             {
                 return Json(data: true);
-            }    
+            }
         }
         [HttpGet]
         [AllowAnonymous]
@@ -49,7 +53,7 @@ namespace Demo.Controllers
         {
             try
             {
-                var khachhang = _context.Customers.AsNoTracking() .SingleOrDefault(x => x.Email.ToLower() == Email.ToLower());
+                var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.Email.ToLower() == Email.ToLower());
                 if (khachhang == null)
                 {
                     return Json(data: "Số điện thoại : " + Email + " Đã được sử dụng");
@@ -68,15 +72,15 @@ namespace Demo.Controllers
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
             if (taikhoanID != null)
             {
-               var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x=>x.CustomerId==Convert.ToInt32(taikhoanID));
-                if(khachhang!=null)
+                var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.CustomerId == taikhoanID);
+                if (khachhang != null)
                 {
                     return View(khachhang);
-                }    
+                }
             }
             return RedirectToAction("Login");
         }
-        
+
         [AllowAnonymous]
         [Route("Login.html", Name = "Login")]
         public IActionResult Login()
@@ -95,62 +99,42 @@ namespace Demo.Controllers
         {
             return View();
         }
+
+
+
         [HttpPost]
         [AllowAnonymous]
         [Route("Register.html", Name = "Register")]
-
         public async Task<IActionResult> DangKyTaiKhoan(RegisterViewModel model)
         {
-            try
-            {
-                if(ModelState.IsValid)
-                {
-                    string salt = MyUtil.GenerateRandomKey();
-                    Customer khachhang = new Customer
-                    {
-                        FullName = model.FullName,
-                        Email = model.Email.Trim().ToLower(),
-                        Phone = model.Phone.Trim().ToLower(),
-                        Birthday = model.Date,
-                        Password = (model.Password + salt.Trim()).ToMD5(),
-                        Active = true,
-                        Salt = salt,
-                        CreateDate= DateTime.Now
-
-                    };
-                    try
-                    {
-                        _context.Add(khachhang);
-                        await _context.SaveChangesAsync();
-                        
-                        HttpContext.Session.SetString("CustomerId", khachhang.CustomerId.ToString());
-                        var taikhoanID = HttpContext.Session.GetString("CustomerId");
-                        var claims = new List<Claim>
-                        {
-                            new Claim(ClaimTypes.Name, khachhang.FullName),
-                            new Claim("CustomerId", khachhang.CustomerId.ToString())
-                        };
-                        ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "login");
-                        ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-                        await HttpContext.SignInAsync(claimsPrincipal);
-                        return RedirectToAction("Dashboard", "Accounts");
-                    }
-                    catch 
-                    {
-                        return RedirectToAction("DangKyTaiKhoan", "Accounts");
-                    };
-
-                }    
-                else
-                {
-                    return View(model);
-                }
-            } catch
+            if (!ModelState.IsValid)
             {
                 return View(model);
             }
-        
+
+            try
+            {
+                var khachHang = _mapper.Map<Customer>(model);
+                string salt = MyUtil.GenerateRandomKey();
+                khachHang.Salt = salt;
+                khachHang.Password = (model.Password + salt.Trim()).ToMD5();
+                khachHang.Active = true;
+                khachHang.CreateDate = DateTime.Now;
+
+                  _context.Customers.Add(khachHang);
+                    await _context.SaveChangesAsync();
+                    return View("Login");
+              
+                
+
+            }
+            catch (Exception ex)
+            {
+                return View("DangKyTaiKhoan");
+            }
+            
         }
+
         [HttpPost]
         [AllowAnonymous]
         [Route("Login.html", Name = "Login")]
