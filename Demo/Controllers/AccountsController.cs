@@ -237,7 +237,10 @@ namespace Demo.Controllers
         //    }
         //    return View(model);
         //}
-        public async Task<IActionResult> DangNhap(LoginViewModel model, string? ReturnUrl)
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("Login.html", Name = "Login")]
+        public async Task<IActionResult> Login(LoginViewModel model, string? ReturnUrl)
         {
             ViewBag.ReturnUrl = ReturnUrl;
 
