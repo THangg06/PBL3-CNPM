@@ -7,11 +7,10 @@
     height: 690px;
     background-color: rgb(252, 210, 99);
     overflow: hidden;
-    .hero_title
-
-{
+  
+  .hero_title {
     position: absolute;
-    top: 0px;
+    top: 20px;
     right: 243.5px;
     bottom: 605.5px;
     left: 67%;
@@ -19,38 +18,19 @@
     justify-content: center;
     align-items: center;
     width: 289px;
-    height: 100px;
-    font: 0 46px/1.41 "Piazzolla", Helvetica, Arial, serif;
-    color: #a54224;
-    text-align: center;
-}
-.backToHome {
-    position: absolute;
-    top: 10px;
-    left: 51%;
+    height: 65px;
     font: 600 46px/1.41 "Piazzolla", Helvetica, Arial, serif;
-    font-size: 15px;
-    color: #a54224;
-}
-
-.image {
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+  .image {
     position: relative;
     width: 50%;
     height: 100%;
     aspect-ratio: 0.8;
     object-fit: cover;
-}
-
-.backToHome {
-    position: absolute;
-    top: 10px;
-    left: 51%;
-    font: 600 46px/1.41 "Piazzolla", Helvetica, Arial, serif;
-    font-size: 25px;
-    color: #000000;
-}
-
-.flex_col {
+  }
+  .flex_col {
     position: absolute;
     top: 150px;
     right: 113px;
@@ -62,36 +42,36 @@
     gap: 30px 0px;
     width: 550px;
     height: 300px;
-}
-
-    .flex_col button {
+    button {
         font-family: "Roboto", sans-serif;
         outline: 0;
         background: #ad3d1b;
-        width: 80%;
+        width: 83%;
         border: 0;
         padding: 15px;
         color: #FFFFFF;
         font-size: 14px;
         cursor: pointer;
-    }
-
-    .flex_col a {
+      }
+      a {
         text-align: left;
         font-size: 20px;
         color: #3498db;
         margin-left: -43%;
         margin-top: -3%;
         line-height: 10px;
+        p {
+          padding-bottom: 10px;
+        }     
+        }
     }
-
     .flex_col input[type="text"],
     .flex_col input[type="password"] {
-        width: 80%;
-        line-height: 3em;
-        font-family: 'Ubuntu', sans-serif;
-        border: 2px solid #f2f2f2;
-        outline: none;
-        padding-left: 10px;
+      width: 80%;
+      line-height:3em;
+      font-family: 'Ubuntu', sans-serif;
+      border:2px solid #f2f2f2;
+      outline:none;
+      padding-left:10px;
     }
 }

@@ -35,6 +35,7 @@
     <None Include="C:\ProjectWF\Demo\Demo\.editorconfig" />
     <None Include="wwwroot\assets\How-Many-Types-of-Fast-Food-Are-There.webp" />
     <None Include="wwwroot\css\css" />
+    <None Include="wwwroot\js\site.js" />
   </ItemGroup>
 
 </Project>

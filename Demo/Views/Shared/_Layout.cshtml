@@ -51,15 +51,15 @@
                   <div class="dropdown-content">
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <a asp-controller="Accounts" asp-action="TaiKhoancuatoi" id="HasLogin">Profile</a>
-                        <a href="./OrderDetail.html">Xem Hóa Đơn</a>
+                        <a href="/profile" id="HasLogin">Profile</a>
+                        <a href="./OrderDetail.html">Lịch sử mua hàng</a>
 
-                        <a asp-controller="Home" asp-action="Index" id="HasLogin">Đăng Xuất</a>
+                        <a href="/logout" id="HasLogin">Đăng Xuất</a>
                     }
                     else
                     {
-                        <a asp-controller="Accounts" asp-action="DangKyTaiKhoan" id="HasNotRegister">Đăng ký</a>
-                        <a asp-controller="Accounts" asp-action="Login" id="HasNotLogin">Đăng Nhập</a>
+                        <a href="/Register.html" id="HasNotRegister">Đăng ký</a>
+                        <a href="/Login.html" id="HasNotLogin">Đăng Nhập</a>
                         
                     }
                    
@@ -67,8 +67,8 @@
                 </div>
                 <div class="fas fa-search" id="search-btn"></div>
                 
-                <div class="fas fa-shopping-cart" id="cart-btn">
-                  <div class="cart-items-container">
+                 <div class="fas fa-shopping-cart" id="cart-btn">
+               @*   <div class="cart-items-container">
                     <div class="cart-item">
                       <span class="fas fa-times"></span>
                       <img src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
@@ -98,7 +98,7 @@
                     </div>
                     <button href="./OrderDetail.html" class="btn">Xem ngay</button>
                     
-                  </div>
+                  </div> *@
                 </div>
                 <div class="fas fa-bars" id="menu-btn"></div>
                 

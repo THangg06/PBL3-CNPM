@@ -9,8 +9,24 @@
       "PackagePath": "staticwebassets\\AboutUs.html"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\BaoCao.html",
+      "PackagePath": "staticwebassets\\BaoCao.html"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\BaoCao1(EditForm).html",
+      "PackagePath": "staticwebassets\\BaoCao1(EditForm).html"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\BaoCao2(XemDonHang).html",
+      "PackagePath": "staticwebassets\\BaoCao2(XemDonHang).html"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\ContactUs.html",
       "PackagePath": "staticwebassets\\ContactUs.html"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\DashBoardAd.html",
+      "PackagePath": "staticwebassets\\DashBoardAd.html"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\Footer.html",
@@ -23,6 +39,10 @@
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\Homepage.html",
       "PackagePath": "staticwebassets\\Homepage.html"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\Info.html",
+      "PackagePath": "staticwebassets\\Info.html"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\Loginpage.html",
@@ -149,6 +169,10 @@
       "PackagePath": "staticwebassets\\MenuCss\\fried chicken\\soybean chicken.jfif"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\QLNV.html",
+      "PackagePath": "staticwebassets\\QLNV.html"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\README.md",
       "PackagePath": "staticwebassets\\README.md"
     },
@@ -167,6 +191,46 @@
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\AboutUs.png",
       "PackagePath": "staticwebassets\\assets\\AboutUs.png"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Admin\\iconsocialnotifications1_x2.svg",
+      "PackagePath": "staticwebassets\\assets\\Admin\\iconsocialnotifications1_x2.svg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Admin\\image.jfif",
+      "PackagePath": "staticwebassets\\assets\\Admin\\image.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Admin\\ioniconsSvgMdChatbubbles3_x2.svg",
+      "PackagePath": "staticwebassets\\assets\\Admin\\ioniconsSvgMdChatbubbles3_x2.svg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Admin\\sheet2_x2.svg",
+      "PackagePath": "staticwebassets\\assets\\Admin\\sheet2_x2.svg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Admin\\topBarBg5_x2.svg",
+      "PackagePath": "staticwebassets\\assets\\Admin\\topBarBg5_x2.svg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Admin\\vector14_x2.svg",
+      "PackagePath": "staticwebassets\\assets\\Admin\\vector14_x2.svg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Admin\\vector24_x2.svg",
+      "PackagePath": "staticwebassets\\assets\\Admin\\vector24_x2.svg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Admin\\vector26_x2.svg",
+      "PackagePath": "staticwebassets\\assets\\Admin\\vector26_x2.svg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Admin\\vector35_x2.svg",
+      "PackagePath": "staticwebassets\\assets\\Admin\\vector35_x2.svg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Admin\\vector42_x2.svg",
+      "PackagePath": "staticwebassets\\assets\\Admin\\vector42_x2.svg"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\ContactUs_email.png",
@@ -437,8 +501,16 @@
       "PackagePath": "staticwebassets\\css\\AboutUs.css"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Cart.css",
+      "PackagePath": "staticwebassets\\css\\Cart.css"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\ContactUs.css",
       "PackagePath": "staticwebassets\\css\\ContactUs.css"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\DashBoardAd.css",
+      "PackagePath": "staticwebassets\\css\\DashBoardAd.css"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Footer.css",
@@ -449,6 +521,10 @@
       "PackagePath": "staticwebassets\\css\\Homepage.css"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Info.css",
+      "PackagePath": "staticwebassets\\css\\Info.css"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Loginpage.css",
       "PackagePath": "staticwebassets\\css\\Loginpage.css"
     },
@@ -457,8 +533,16 @@
       "PackagePath": "staticwebassets\\css\\Menu.css"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\QLNV.css",
+      "PackagePath": "staticwebassets\\css\\QLNV.css"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Registerpage.css",
       "PackagePath": "staticwebassets\\css\\Registerpage.css"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Report.css",
+      "PackagePath": "staticwebassets\\css\\Report.css"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\css",
@@ -471,6 +555,10 @@
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\js\\site.js",
