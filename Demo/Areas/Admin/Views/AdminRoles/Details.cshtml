@@ -1,0 +1,60 @@
+﻿@model Demo.Data.Role
+
+@{
+    ViewData["Title"] = "Thông tin quyền truy cập";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Data Table</title>
+   
+
+    <style>
+        /* Định dạng bổ sung cho bảng */
+        .data-table th, .data-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .data-table th {
+            background-color: #f8f9fa;
+        }
+        .data-table tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Thông tin qyền truy cập</h2>
+        <div class="table-responsive">
+            <table class="table data-table">
+                
+                <tbody>
+                   
+                            <tr>
+                                <td>ID:</td>
+                                <td>@Model.RoleId</td>
+                            </tr>
+
+                            </tr>
+                                 <td>Tên quyền truy cập:</td>
+                                 <td>@Model.RoleName</td>
+                            </tr>
+
+                            </tr>
+                                  <td>Mô tả:</td>
+                                  <td>@Model.Description</td>
+                                
+                            </tr>
+                        
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

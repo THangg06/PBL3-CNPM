@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pDHjhHtFJF2waEqAb1iMB03u35HbAPPYyWSC2U/gcbSFW1cbRI/GkvEQMOKJurYP3GggkpZuPGFXULiEhx3UjQ==",
+  "dgSpecHash": "uXXPvXVXJZJgVCaE96BYzkdWAx+y72mX+tzt4ILwCNmytX6k0BDjak8qo0IZDOXKMnRkxPtb30EaGnMd2jl86g==",
   "success": true,
   "projectFilePath": "C:\\ProjectWF\\PBL3\\Demo\\Demo.csproj",
   "expectedPackageFiles": [
@@ -73,6 +73,8 @@
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.4\\microsoft.aspnetcore.metadata.8.0.4.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.0\\microsoft.aspnetcore.mvc.razor.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\8.0.4\\microsoft.aspnetcore.mvc.razor.runtimecompilation.8.0.4.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.24\\microsoft.aspnetcore.razor.language.6.0.24.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.session\\2.2.0\\microsoft.aspnetcore.session.2.2.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
