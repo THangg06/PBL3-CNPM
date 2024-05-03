@@ -1064,3 +1064,7 @@ C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\refs\WindowsBase.dll
 C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 C:\ProjectWF\PBL3\Demo\obj\Debug\net8.0\Demo.MvcApplicationPartsAssemblyInfo.cs
+C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\AspNetCoreHero.ToastNotification.Views.dll
+C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\AspNetCoreHero.ToastNotification.dll
+C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\PagedList.Core.dll
+C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\PagedList.Core.Mvc.dll

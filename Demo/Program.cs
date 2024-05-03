@@ -1,3 +1,4 @@
+using AspNetCoreHero.ToastNotification;
 using Demo.Controllers;
 using Demo.Data;
 using Demo.Helper;
@@ -24,6 +25,7 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true; // Tùy chọn bảo mật
     options.Cookie.IsEssential = true; // Đảm bảo cookie session được sử dụng
 });
+builder.Services.AddNotyf(config => { config.DurationInSeconds = 3; config.IsDismissable = true; config.Position = NotyfPosition.TopRight; });
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(p =>
     {

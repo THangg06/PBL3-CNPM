@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\BaoCao2(XemDonHang).html"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\Changepassword.html",
+      "PackagePath": "staticwebassets\\Changepassword.html"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\ContactUs.html",
       "PackagePath": "staticwebassets\\ContactUs.html"
     },
@@ -167,6 +171,18 @@
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\fried chicken\\soybean chicken.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\fried chicken\\soybean chicken.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\OrderDetail.html",
+      "PackagePath": "staticwebassets\\OrderDetail.html"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\OrderProductDetail.html",
+      "PackagePath": "staticwebassets\\OrderProductDetail.html"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\Profile.html",
+      "PackagePath": "staticwebassets\\Profile.html"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\QLNV.html",
@@ -505,6 +521,10 @@
       "PackagePath": "staticwebassets\\css\\Cart.css"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Changepassword.css",
+      "PackagePath": "staticwebassets\\css\\Changepassword.css"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\ContactUs.css",
       "PackagePath": "staticwebassets\\css\\ContactUs.css"
     },
@@ -531,6 +551,10 @@
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Menu.css",
       "PackagePath": "staticwebassets\\css\\Menu.css"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\OrderProductDetail.css",
+      "PackagePath": "staticwebassets\\css\\OrderProductDetail.css"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\QLNV.css",

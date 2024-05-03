@@ -6,7 +6,7 @@ namespace Demo.Data;
 public partial class Account
 {
     public string AccountId { get; set; }
-
+    public string? FullName { get; set; }
     public string? Phone { get; set; }
 
     public string? Email { get; set; }

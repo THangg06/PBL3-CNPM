@@ -1,0 +1,75 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<Demo.Data.Product>
+
+@{
+    int CurrentPage = ViewBag.CurrentPage;
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<br />
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Quản lý sản phẩm > </a>
+            <span class="breadcrumb-item active">Danh sách sản phẩm : page @CurrentPage </span <br />
+        </nav>
+    </div>
+
+</div>
+
+<div class="mb-3">
+    <a asp-action="Create" class="btn btn-primary">Tạo sản phẩm mới</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>ID Product</th>
+            <th width="50">ProductName</th>
+            <th width="100">ShortDesc</th>
+
+            <th width="200">Description</th>
+            <th width="20">Price</th>
+            <th width ="10">Unit</th>
+            <th>BestSellers</th>
+            <th width="5">Active</th>
+          
+            <th>Category</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.ProductId)</td>
+                <td>@Html.DisplayFor(modelItem => item.ProductName)</td>
+                <td>@Html.DisplayFor(modelItem => item.ShortDesc)</td>
+                <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                <td>@Html.DisplayFor(modelItem => item.Unit)</td>
+             
+                <td>@Html.DisplayFor(modelItem => item.BestSellers)</td>
+
+                <td>@Html.DisplayFor(modelItem => item.Active)</td>
+   
+                <td>@Html.DisplayFor(modelItem => item.Cat.CatId)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ProductId" class="text-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <pager class="page-item" list="@Model" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index"></pager>
+                    </ul>
+
+                </div>

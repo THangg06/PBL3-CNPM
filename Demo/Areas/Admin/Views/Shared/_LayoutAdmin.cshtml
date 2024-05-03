@@ -34,7 +34,7 @@
     <header class="header">
         <div class="admin-box">
             <img src="~/assets/admin/image.jfif" alt="">
-            <h3>Admin</h3>
+            <h3>Hello, Admin</h3>
             <div class="fas fa-caret-down"></div>
         </div>
 
@@ -61,11 +61,11 @@
                 <li class="nav-item dropdown"> 
                 <div class="option-box">
                     <div class="fa-solid fa-user-group"></div>
-                    <a href="/">Quản lý hệ thống</a>
+                    <a href="#">Quản lý hệ thống</a>
                 </div>
                 <ul class="dropdown-menu">
                     <li> 
-                        <a href="/">Quản lý danh mục</a>
+                        <a href="#">Quản lý danh mục</a>
 
                     </li>
                     <li> 
@@ -73,14 +73,25 @@
                     </li>
                     </ul>
                 </li>
-                <div class="option-box">
-                    <div class="fa-solid fa-user-group"></div>
-                    <a href="/">Quản lý khách hàng</a>
-                </div>
+                <li class="nav-item dropdown">
+                    <div class="option-box">
+                        <div class="fa-solid fa-user-group"></div>
+                        <a href="#">Quản lý khách hàng</a>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index">Danh sách khách hàng</a>
+
+                        </li>
+                        <li>
+                            <a asp-area="Admin" asp-controller="AdminRoles" asp-action="Index">Tìm kiếm khách hàng</a>
+                        </li>
+                    </ul>
+                </li>
 
                 <div class="option-box">
                     <div class="fa-solid fa-message"></div>
-                    <a href="/">Quản lý sản phẩm</a>
+                    <a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Quản lý sản phẩm</a>
                 </div>
 
                 <div class="option-box">
@@ -95,7 +106,7 @@
 
                 <div class="option-box">
                     <div class="fa-solid fa-user-tie"></div>
-                    <a href="/">Quản lý tài khoản</a>
+                    <a asp-area="Admin" asp-controller="AdminAccounts" asp-action="Index">Quản lý tài khoản</a>
                 </div>
             </div>
             @RenderBody()
@@ -105,6 +116,7 @@
 
     </section>
 
-
+    @await Component.InvokeAsync("Notyf")
+    @await RenderSectionAsync("Scrips", required: false)
 </body>
 </html>

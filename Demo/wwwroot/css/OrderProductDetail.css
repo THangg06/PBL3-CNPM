@@ -1,0 +1,411 @@
+.go-back{
+    font-size: 1.5rem;
+    width: auto;
+  }
+  .go-back a{
+    text-decoration: none;
+    color:#1f88f8;
+    font-weight: 600;
+  }
+
+.orderProductDetailContainer {
+    position: relative;
+    display: flex;
+    gap: 0px 24px;
+    margin: 2rem auto;
+    margin-bottom: 0.5rem;
+    width: 90%;
+    max-width: 1600px; 
+  }
+
+  @media (max-width: 1200px) and (min-width: 900px) {
+    .orderProductDetailContainer{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px 24px;
+    }
+    .orderProductDetailContainer img{
+        margin-top: unset;
+        margin-bottom: unset;
+        width: 100%;
+        min-width: unset;
+        max-width: 556px;
+    }
+
+    .productInfoContainer {
+        margin-top: unset;
+        margin-bottom: unset;
+        width: 100%;
+        min-width: unset;
+    }
+} 
+
+  .orderProductDetailContainer img {
+    position: relative;
+    margin: 2px 0px 0px;
+    width: 50%;
+    height: 50%;
+    min-width: 0px;
+    object-fit: cover;
+    /* @include lg {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+      min-width: unset;
+      max-width: 556px;
+    } */
+  }
+
+  .productInfoContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 163px;
+    width: 50%;
+    min-width: 0px;
+    /* @include lg {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+      min-width: unset;
+    } */
+  }
+  
+  .nameProduct {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0px 8px;
+    /* @include tn {
+      flex-direction: column;
+      gap: 30px 8px;
+    } */
+  }
+  .nameProduct h1 {
+    position: relative;
+    font: 600 36px/1.2 "Poppins", Helvetica, Arial, serif;
+    color: rgb(26, 26, 26);
+    /* @include md {
+      align-items: flex-start;
+      font-size: 32px;
+    }
+    @include xxs {
+      font-size: 30px;
+    }
+    @include tn {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    } */
+  }
+  .nameProduct .status {
+    position: relative;
+    width: auto;
+    background-color: rgb(32,181,38, 0.2);
+    padding: 1rem;
+    text-align: center;
+    font: 500 14px/1.2 "Poppins", Helvetica, Arial, serif;
+    color: #2C742F;
+    /* @include tn {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    } */
+  }
+
+
+
+  .review {
+    position: relative;
+    display: flex;
+    width: 100%;
+    gap: 0px 2px;
+    margin: 11px 2px 0px;
+  }
+  .review .ratingStar {
+    position: relative;
+    display: flex;
+    color: #FF8A00;
+    gap: 0px 4px;
+    margin: 3px 0px 4px;
+    width: 86px;
+    min-width: 0px;
+  }
+  .review .num-of-review {
+    position: relative;
+    margin-left: 1.5rem;
+    font: 400 16px/1.5 "Poppins", Helvetica, Arial, serif;
+    color: rgb(102, 102, 102);
+  }
+
+
+
+  
+  
+  .price {
+    position: relative;
+    display: flex;
+    gap: 0px 8px;
+
+    margin: 20px 0px 0px;
+  }
+  
+  .original_price {
+    position: relative;
+    text-decoration: line-through;
+    margin: 3px 0px;
+    font: 400 20px/1.5 "Poppins", Helvetica, Arial, serif;
+    color: rgb(179, 179, 179);
+    
+    /* @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+    @include xxs {
+      font-size: 16px;
+    } */
+  }
+  .price span.new_price {
+    margin-left: .5rem;
+    position: relative;
+    text-decoration: none;
+    font: 500 24px/1.5 "Poppins", Helvetica, Arial, serif;
+    color: rgb(44, 116, 47);
+    /* @include md {
+      align-items: flex-start;
+      font-size: 22px;
+    }
+    @include xxs {
+      font-size: 20px;
+    } */
+  }
+  .discount {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding:.5rem;
+    font: 500 14px/1.5 "Poppins", Helvetica, Arial, serif;
+    color: rgb(234, 75, 72);
+    text-align: center;
+    background-color: rgba(234, 75, 72, 0.098);
+    border-radius: 13.5px;
+  }
+  
+  hr {
+    position: relative;
+    margin: 20px 0px 0px;
+    width: auto;
+    height: 1px;
+    min-height: 1px; 
+    background-color: rgb(128, 128, 128);
+  }
+  .productDescribe {
+    position: relative;
+    margin: 23px 0px 0px;
+    width: 87.79%;
+    font: 400 1.1rem/1.5 "Poppins", Helvetica, Arial, serif;
+    color: rgb(128, 128, 128);
+  }
+  .changingBox {
+    position: relative;
+    display: flex;
+    gap: 0px 12px;
+    margin: 1rem;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    padding: 18px 0px 18px 0px;
+    outline: 1px solid rgb(255, 255, 255);
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px 12px;
+    }
+  }
+  .addItemContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0px 14px;
+    width: auto;
+    height: 50px;
+    min-width: 0px;
+    padding: 0px .5rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    border: 1px solid rgb(230, 230, 230);
+    @include sm {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+      min-width: unset;
+    }
+    @include tn {
+      column-gap: 8px;
+    }
+  }
+  .addItemContainer i{
+    font-size: 1.4rem;
+  }
+  .addItemContainer h5 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font: 400 1.2rem/1.5 "Poppins", Helvetica, Arial, serif;
+    color: rgb(26, 26, 26);
+    text-align: center;
+  }
+  .btn {
+    position: relative;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    min-width: 200px;
+    font: 600 16px/1.2 "Poppins", Helvetica, Arial, serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: rgb(0, 178, 7);
+    border-radius: 25.5px 25.5px 25.5px 25.5px;
+    padding: .8rem;
+    @include sm {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+      min-width: unset;
+    }
+  }
+
+
+
+  .categoryContainer {
+    position: relative;
+    display: flex;
+    gap: 0px 6px;
+    margin: 24px 0px 0px;
+  }
+  .categoryContainer .label {
+    position: relative;
+    font: 500 1rem/1.5 "Poppins", Helvetica, Arial, serif;
+    color: rgb(26, 26, 26);
+  }
+  .categoryContainer .type {
+    position: relative;
+    font: 500 1rem/1.5 "Poppins", Helvetica, Arial, serif;
+    color: rgb(128, 128, 128);
+  }
+
+
+
+
+/* =====================Reviewer */
+.customerContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 75.4%;
+  }
+
+  .btn-menu{
+    display: flex;
+  }
+  .btn1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    max-width: 100%;
+    font: 500 16px/1.5 "Poppins", Helvetica, Arial, serif;
+    color: rgb(26, 26, 26);
+    text-align: center;
+    background-color: rgba(250, 205, 118, 0.2);
+    padding: 16px 12px 16px 12px;
+    box-shadow: inset 0px -2px 0px 0px rgb(32, 180, 38);
+  }
+  .UserFeedback {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 57px 0px 0px 40px;
+  }
+  .userReviewContainer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px 10px;
+  }
+  .userReviewerBox {
+    position: relative;
+    display: flex;
+    gap: 0px 12px;
+    width: auto;
+    min-width: 0px;
+  }
+  .user-image {
+    position: relative;
+    width: 40px;
+    min-width: 0px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .user_review {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    min-width: 120px;
+  }
+  .username {
+    position: relative;
+    font: 500 14px/1.5 "Poppins", Helvetica, Arial, serif;
+    color: rgb(26, 26, 26);
+  }
+  .star {
+    position: relative;
+    display: flex;
+    gap: 0px 3px;
+    margin: 0px 1px;
+  }
+  .image1 {
+    position: relative;
+    width: 13px;
+    min-width: 0px;
+    height: 13px;
+  }
+  .time-comment {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    min-width: 0px;
+    font: 400 14px/1.5 "Poppins", Helvetica, Arial, serif;
+    color: rgb(153, 153, 153);
+    text-align: right;
+  }
+  .userCommentReview p{
+    position: relative;
+    font: 400 14px/1.5 "Poppins", Helvetica, Arial, serif;
+    color: rgb(128, 128, 128);
+  }
+  .userCommentReview {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0px;
+    margin: .5rem 0px 0px;
+  }
+  
+  .btn1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 54px 0px 0px 40px;
+    width: 200px;
+    max-width: 100%;
+    font: 600 14px/1.2 "Poppins", Helvetica, Arial, serif;
+    color: rgb(0, 178, 7);
+    text-align: center;
+    background-color: rgba(250, 205, 118, 0.2);
+    border-radius: 22.4px 22.4px 22.4px 22.4px;
+    padding: 1rem;
+  }
+

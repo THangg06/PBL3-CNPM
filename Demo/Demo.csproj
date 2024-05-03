@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNetCoreHero.ToastNotification" Version="1.1.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.4" />
@@ -25,6 +26,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageReference Include="PagedList.Core.Mvc" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,8 +35,18 @@
 
   <ItemGroup>
     <None Include="C:\ProjectWF\Demo\Demo\.editorconfig" />
+    <None Include="wwwroot\assets\Admin\iconsocialnotifications1_x2.svg" />
+    <None Include="wwwroot\assets\Admin\ioniconsSvgMdChatbubbles3_x2.svg" />
+    <None Include="wwwroot\assets\Admin\sheet2_x2.svg" />
+    <None Include="wwwroot\assets\Admin\topBarBg5_x2.svg" />
+    <None Include="wwwroot\assets\Admin\vector14_x2.svg" />
+    <None Include="wwwroot\assets\Admin\vector24_x2.svg" />
+    <None Include="wwwroot\assets\Admin\vector26_x2.svg" />
+    <None Include="wwwroot\assets\Admin\vector35_x2.svg" />
+    <None Include="wwwroot\assets\Admin\vector42_x2.svg" />
     <None Include="wwwroot\assets\How-Many-Types-of-Fast-Food-Are-There.webp" />
     <None Include="wwwroot\css\css" />
+    <None Include="wwwroot\js\main.js" />
     <None Include="wwwroot\js\site.js" />
   </ItemGroup>
 

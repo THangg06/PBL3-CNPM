@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Demo.Data;
+using AspNetCoreHero.ToastNotification.Abstractions;
 
 namespace Demo.Areas.Admin.Controllers
 {
@@ -13,10 +14,12 @@ namespace Demo.Areas.Admin.Controllers
     public class AdminRolesController : Controller
     {
         private readonly Web01Context _context;
+        public INotyfService _notyfService { get;  }
 
-        public AdminRolesController(Web01Context context)
+        public AdminRolesController(Web01Context context, INotyfService notyfService)
         {
             _context = context;
+            _notyfService = notyfService;
         }
 
         // GET: Admin/AdminRoles
@@ -59,6 +62,7 @@ namespace Demo.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(role);
+                _notyfService.Success("Tạo mới thành công");
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -99,11 +103,13 @@ namespace Demo.Areas.Admin.Controllers
                 {
                     _context.Update(role);
                     await _context.SaveChangesAsync();
+                    _notyfService.Success("Cập nhật thành công");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!RoleExists(role.RoleId))
                     {
+                        _notyfService.Success("Có lỗi xảy ra");
                         return NotFound();
                     }
                     else
@@ -146,6 +152,7 @@ namespace Demo.Areas.Admin.Controllers
             }
 
             await _context.SaveChangesAsync();
+            _notyfService.Success("Xóa quyền truy cập thành công");
             return RedirectToAction(nameof(Index));
         }
 
