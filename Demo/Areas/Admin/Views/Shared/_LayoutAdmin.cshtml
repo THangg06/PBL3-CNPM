@@ -76,7 +76,7 @@
                 <li class="nav-item dropdown">
                     <div class="option-box">
                         <div class="fa-solid fa-user-group"></div>
-                        <a href="#">Quản lý khách hàng</a>
+                        <a >Quản lý khách hàng</a>
                     </div>
                     <ul class="dropdown-menu">
                         <li>
@@ -89,10 +89,40 @@
                     </ul>
                 </li>
 
-                <div class="option-box">
-                    <div class="fa-solid fa-message"></div>
-                    <a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Quản lý sản phẩm</a>
-                </div>
+               
+                <li class="nav-item dropdown">
+                    <div class="option-box">
+                        <div class="fa-solid fa-message"></div>
+                        <a >Quản lý sản phẩm</a>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li>
+                           
+                            <div class="fa-solid fa-message"></div>
+                            <a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Danh sách sản phẩm</a>
+                        </li>
+                        <li>
+                            <a asp-area="Admin" asp-controller="AdminRoles" asp-action="Index">Tìm kiếm sản phẩm</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <div class="option-box">
+                        <div class="fa-solid fa-message"></div>
+                        <a>Quản lý Pages</a>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li>
+
+                            <div class="fa-solid fa-message"></div>
+                            <a asp-area="Admin" asp-controller="AdminPages" asp-action="Index">Danh sách Pages</a>
+                        </li>
+                        <li>
+                            <a asp-area="Admin" asp-controller="AdminRoles" asp-action="Index">Tìm kiếm sản phẩm</a>
+                        </li>
+                    </ul>
+                </li>
 
                 <div class="option-box">
                     <div class="fa-solid fa-message"></div>
@@ -117,6 +147,6 @@
     </section>
 
     @await Component.InvokeAsync("Notyf")
-    @await RenderSectionAsync("Scrips", required: false)
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

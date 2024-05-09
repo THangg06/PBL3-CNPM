@@ -7,32 +7,57 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Demo.Data;
 using PagedList.Core;
+using Demo.Helper;
+using AspNetCoreHero.ToastNotification.Abstractions;
+
 
 namespace Demo.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class AdminProductsController : Controller
     {
+        public INotyfService _notyfService { get; }
         private readonly Web01Context _context;
 
-        public AdminProductsController(Web01Context context)
+        public AdminProductsController(Web01Context context, INotyfService notyfService)
         {
             _context = context;
+            _notyfService = notyfService;
         }
 
         // GET: Admin/AdminProducts
-     
-        public IActionResult Index(int? page)
+
+        public IActionResult Index(int page = 1, string CatID = "")
         {
-            var pageNumber = page == null || page <= 0 ? 1 : page.Value;
+            var pageNumber = page;
             var pageSize = 20;
-            var IsProducts = _context.Products.AsNoTracking().
-                Include(x => x.Cat);
-               
-            PagedList<Product> models = new PagedList<Product>(IsProducts, pageNumber, pageSize);
+
+            IQueryable<Product> query = _context.Products.AsNoTracking().Include(x => x.Cat);
+
+            // Sử dụng so sánh với CatID
+            if (!string.IsNullOrEmpty(CatID))
+            {
+                query = query.Where(x => x.CatId == CatID);
+            }
+
+            var models = new PagedList<Product>(query, pageNumber, pageSize);
+
+            ViewBag.CurrentCatID = CatID;
             ViewBag.CurrentPage = pageNumber;
+
+            ViewData["Danhmuc"] = new SelectList(_context.Categories, "CatId", "CatName", CatID);
+
             return View(models);
         }
+
+        public IActionResult Filtter(string CatID = "")
+        {
+            // Xây dựng URL dựa trên CatID
+            var url = string.IsNullOrEmpty(CatID) || CatID == "0" ? "/Admin/AdminProducts" : $"/Admin/AdminProducts?CatID={CatID}";
+
+            return Json(new { status = "success", redirectUrl = url });
+        }
+
 
         // GET: Admin/AdminProducts/Details/5
         public async Task<IActionResult> Details(string id)
@@ -56,7 +81,8 @@ namespace Demo.Areas.Admin.Controllers
         // GET: Admin/AdminProducts/Create
         public IActionResult Create()
         {
-            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatId");
+            ViewData["Danhmuc"] = new SelectList(_context.Categories, "CatId", "CatName");
+
             return View();
         }
 
@@ -65,14 +91,57 @@ namespace Demo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ShortDesc,Description,CatId,Price,Unit,Thumb,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Tags,Title,Alias,MetaDesc,MetaKey")] Product product)
+        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ShortDesc,Description,CatId,Price,Unit,Thumb,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Tags,Title,Alias,MetaDesc,MetaKey")] Product product, IFormFile fThumb)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(product);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    // Chuyển đổi ProductName thành dạng tiêu đề
+                    product.ProductName = MyUtil.ToTitleCase(product.ProductName);
+
+                    // Xử lý tải lên tệp hình ảnh
+                    if (fThumb != null && fThumb.Length > 0)
+                    {
+                        string extension = Path.GetExtension(fThumb.FileName);
+                        string imageName = MyUtil.SEOUrl(product.ProductName) + extension.ToLower();
+
+                        string uploadedFile = await MyUtil.UploadFile(fThumb, "LoadH", imageName);
+
+
+                        if (uploadedFile != null)
+                        {
+                            product.Thumb = uploadedFile;
+                        }
+                    }
+
+                    // Kiểm tra và đặt Thumb nếu không có
+                    if (string.IsNullOrEmpty(product.Thumb))
+                    {
+                        product.Thumb = "default.jpg";
+                    }
+
+                    // Thiết lập các trường còn lại
+                    product.Alias = MyUtil.SEOUrl(product.ProductName);
+                    product.DateCreated = DateTime.Now;
+                    product.DateModified = DateTime.Now;
+
+                    // Thêm sản phẩm vào cơ sở dữ liệu
+                    _context.Add(product);
+                    _notyfService.Success("Tạo mới thành công");
+                    await _context.SaveChangesAsync();
+
+                    // Chuyển hướng về danh sách
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex)
+                {
+                    // Xử lý lỗi nếu có
+                    ModelState.AddModelError("", "Có lỗi xảy ra trong quá trình tạo sản phẩm: " + ex.Message);
+                }
             }
+
+            // Nếu ModelState không hợp lệ, trả về View cùng với dữ liệu hiện có
             ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatId", product.CatId);
             return View(product);
         }
@@ -99,7 +168,7 @@ namespace Demo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("ProductId,ProductName,ShortDesc,Description,CatId,Price,Unit,Thumb,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Tags,Title,Alias,MetaDesc,MetaKey")] Product product)
+        public async Task<IActionResult> Edit(string id, [Bind("ProductId,ProductName,ShortDesc,Description,CatId,Price,Unit,Thumb,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Tags,Title,Alias,MetaDesc,MetaKey")] Product product, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
             if (id != product.ProductId)
             {
@@ -110,6 +179,20 @@ namespace Demo.Areas.Admin.Controllers
             {
                 try
                 {
+                    product.ProductName = MyUtil.ToTitleCase(product.ProductName);
+                    if (fThumb != null)
+                    {
+                        string extension = Path.GetExtension(fThumb.FileName);
+                        string image = MyUtil.SEOUrl(product.ProductName) + extension;
+                        product.Thumb = await MyUtil.UploadFile(fThumb, @"products", image.ToLower());
+
+                    }
+                    if (string.IsNullOrEmpty(product.Thumb)) product.Thumb = "default.jpg";
+                    product.Alias = MyUtil.SEOUrl(product.ProductName);
+                    product.DateModified = DateTime.Now;
+
+
+                    _notyfService.Success("Cập nhật thành công");
                     _context.Update(product);
                     await _context.SaveChangesAsync();
                 }
@@ -117,6 +200,7 @@ namespace Demo.Areas.Admin.Controllers
                 {
                     if (!ProductExists(product.ProductId))
                     {
+                        _notyfService.Success("Có lỗi xảy ra");
                         return NotFound();
                     }
                     else
@@ -161,6 +245,7 @@ namespace Demo.Areas.Admin.Controllers
             }
 
             await _context.SaveChangesAsync();
+            _notyfService.Success("Xóa thành công");
             return RedirectToAction(nameof(Index));
         }
 

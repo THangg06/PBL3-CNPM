@@ -13,14 +13,20 @@
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
             <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Quản lý sản phẩm > </a>
-            <span class="breadcrumb-item active">Danh sách sản phẩm : page @CurrentPage </span <br />
+            <span class="breadcrumb-item active">Danh sách sản phẩm : page @CurrentPage </span> <br />
         </nav>
     </div>
 
 </div>
+<div class="filter-group" id="editcbb">
+ <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
+        <option selected>Chọn Danh Mục</option>
+     <option value="0" >Chọn tất cả</option>
+    </select>
+    </div>
 
 <div class="mb-3">
-    <a asp-action="Create" class="btn btn-primary">Tạo sản phẩm mới</a>
+    <a asp-action="Create" class="btn btn-primary">Thêm sản phẩm</a>
 </div>
 
 <table class="table">
@@ -69,7 +75,39 @@
 
 <div aria-label="Page navigation example">
                     <ul class="pagination">
-                        <pager class="page-item" list="@Model" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index"></pager>
+                        <pager class="page-item" list="@Model" asp-area="Admin" asp-controller="AdminProducts"  asp-route-CatID="@ViewBag.CurrentCateID"  asp-action="Index"></pager>
                     </ul>
 
                 </div>
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#txtCatID").change(function () {
+                var selectedCatID = $(this).val(); // Lấy giá trị đã chọn (CatID)
+
+                $.ajax({
+                    url: '/Admin/AdminProducts/Filtter',
+                    dataType: "json",
+                    type: "GET",
+                    data: {
+                        CatID: selectedCatID
+                    },
+                    async: true,
+                    success: function (results) {
+                        if (results.status === "success") {
+                            window.location.href = results.redirectUrl;
+                        }
+                    },
+                    error: function (xhr) {
+                        alert('Đã xảy ra lỗi');
+                    }
+                });
+            });
+
+        });
+    </script>
+}
+
+

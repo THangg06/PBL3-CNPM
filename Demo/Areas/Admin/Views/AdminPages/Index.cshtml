@@ -1,0 +1,76 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<Demo.Data.Page>
+
+@{
+    int CurrentPage = ViewBag.CurrentPage;
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
+                <i class="anticon anticon-home m-r-5"></i> Home >
+            </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminPages asp-action="Index">Quản lý tin tức> </a>
+            <span class="breadcrumb-item active">Danh sách khách hàng: page @ViewBag.CurrentPage </span>
+        </nav>
+    </div>
+</div>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Tạo mới</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th width="10">PageID</th>
+            <th width="150">PageName</th>
+          
+            <th width="10">Published</th>
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.PageId)</td>
+                <td>@Html.DisplayFor(modelItem => item.PageName)</td>
+               
+
+                <td>
+                    @if (item.Published ==true)
+                    {
+                        <div class ="d-flex align-items-center">
+                            <div class="badge badge-success badge-dot m-r-10"> </div>
+                            <div>Public</div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="d-flex align-items-center">
+                            <div class="badge badge-success badge-dot m-r-10"> </div>
+                            <div>Non-Public</div>
+                        </div>
+                    }
+                </td>
+               
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.PageId">Chỉnh sửa</a> |
+                    <a asp-action="Details" asp-route-id="@item.PageId">Chi tiết</a> |
+                    <a asp-action="Delete" asp-route-id="@item.PageId" class="text-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div aria-label="Phân trang">
+    <ul class="pagination">
+        <pager list="@Model" asp-area="Admin" asp-controller="AdminPages" asp-action="Index" asp-route-page="@CurrentPage"></pager>
+    </ul>
+</div>

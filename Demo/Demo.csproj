@@ -11,6 +11,7 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Data\" />
     <Folder Include="wwwroot\.github\workflows\" />
+    <Folder Include="wwwroot\MenuCss\LoadH\" />
   </ItemGroup>
 
   <ItemGroup>
