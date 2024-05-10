@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QwMWuaq+XouCuIT8v4zVJeOHDDduBZpGM25+pDge3F8=",
+  "Hash": "2nUL0h6RUAOWmyLJQ/iAuNvu7iec7+RvkdZVKQ+Dkmg=",
   "Source": "Demo",
   "BasePath": "_content/Demo",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Demo\\wwwroot",
       "Source": "Demo",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Demo.styles.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Demo.styles.css",
       "SourceId": "Demo",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Demo.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\A2\\LTNet\\TestPBL\\Demo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Demo.styles.css"
+      "OriginalItemSpec": "C:\\A2\\LTNet\\MD\\Demo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Demo.styles.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Demo.bundle.scp.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Demo.bundle.scp.css",
       "SourceId": "Demo",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Demo.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\A2\\LTNet\\TestPBL\\Demo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Demo.bundle.scp.css"
+      "OriginalItemSpec": "C:\\A2\\LTNet\\MD\\Demo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Demo.bundle.scp.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\AboutUs.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\AboutUs.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "AboutUs.html",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\AboutUs.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\2457cc4df05f93de2ace1dbfac19bfd6.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\2457cc4df05f93de2ace1dbfac19bfd6.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/2457cc4df05f93de2ace1dbfac19bfd6.png",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\2457cc4df05f93de2ace1dbfac19bfd6.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\360_F_624387296_5mfhHfkovWS8WX6XhLT9egGIHJK9ArcB.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\360_F_624387296_5mfhHfkovWS8WX6XhLT9egGIHJK9ArcB.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/360_F_624387296_5mfhHfkovWS8WX6XhLT9egGIHJK9ArcB.jpg",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\360_F_624387296_5mfhHfkovWS8WX6XhLT9egGIHJK9ArcB.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\AboutUs.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\AboutUs.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/AboutUs.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\AboutUs.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\add_to_shopping_cart_icon.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\add_to_shopping_cart_icon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/add_to_shopping_cart_icon.png",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\add_to_shopping_cart_icon.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Admin\\iconsocialnotifications1_x2.svg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Admin\\iconsocialnotifications1_x2.svg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Admin/iconsocialnotifications1_x2.svg",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Admin\\iconsocialnotifications1_x2.svg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Admin\\image.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Admin\\image.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Admin/image.jfif",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Admin\\image.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Admin\\ioniconsSvgMdChatbubbles3_x2.svg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Admin\\ioniconsSvgMdChatbubbles3_x2.svg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Admin/ioniconsSvgMdChatbubbles3_x2.svg",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Admin\\ioniconsSvgMdChatbubbles3_x2.svg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Admin\\sheet2_x2.svg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Admin\\sheet2_x2.svg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Admin/sheet2_x2.svg",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Admin\\sheet2_x2.svg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Admin\\topBarBg5_x2.svg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Admin\\topBarBg5_x2.svg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Admin/topBarBg5_x2.svg",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Admin\\topBarBg5_x2.svg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Admin\\vector14_x2.svg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Admin\\vector14_x2.svg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Admin/vector14_x2.svg",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Admin\\vector14_x2.svg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Admin\\vector24_x2.svg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Admin\\vector24_x2.svg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Admin/vector24_x2.svg",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Admin\\vector24_x2.svg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Admin\\vector26_x2.svg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Admin\\vector26_x2.svg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Admin/vector26_x2.svg",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Admin\\vector26_x2.svg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Admin\\vector35_x2.svg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Admin\\vector35_x2.svg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Admin/vector35_x2.svg",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Admin\\vector35_x2.svg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Admin\\vector42_x2.svg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Admin\\vector42_x2.svg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Admin/vector42_x2.svg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Admin\\vector42_x2.svg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\animated_character_blue.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\animated_character_blue.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/animated_character_blue.png",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\animated_character_blue.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\animated_character_with_cape.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\animated_character_with_cape.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/animated_character_with_cape.png",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\animated_character_with_cape.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\ContactUs_email.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\ContactUs_email.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/ContactUs_email.png",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\ContactUs_email.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\ContactUs_pin.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\ContactUs_pin.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/ContactUs_pin.png",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\ContactUs_pin.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\ContactUs_phone.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\ContactUs_phone.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/ContactUs_phone.png",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\ContactUs_phone.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\checked_shopping_cart_icon.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\checked_shopping_cart_icon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/checked_shopping_cart_icon.png",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\checked_shopping_cart_icon.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\cheeseburger_with_bacon.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\cheeseburger_with_bacon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/cheeseburger_with_bacon.png",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\cheeseburger_with_bacon.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\fast_delivery_truck_icon.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\fast_delivery_truck_icon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/fast_delivery_truck_icon.png",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fast_delivery_truck_icon.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\fast_food_combo_meal.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\fast_food_combo_meal.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/fast_food_combo_meal.png",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fast_food_combo_meal.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\fast_food_meal_top_view.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\fast_food_meal_top_view.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/fast_food_meal_top_view.png",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\fast_food_meal_top_view.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\gold_star_award_icon.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\gold_star_award_icon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/gold_star_award_icon.png",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\gold_star_award_icon.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Homepage\\cheeseburger_with_bacon.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Homepage\\cheeseburger_with_bacon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Homepage/cheeseburger_with_bacon.png",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Homepage\\cheeseburger_with_bacon.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Homepage\\fast_food_banner.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Homepage\\fast_food_banner.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Homepage/fast_food_banner.png",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Homepage\\fast_food_banner.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Homepage\\fast_food_combo_meal.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Homepage\\fast_food_combo_meal.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Homepage/fast_food_combo_meal.png",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Homepage\\fast_food_combo_meal.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Homepage\\fast_food_meal_top_view.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Homepage\\fast_food_meal_top_view.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Homepage/fast_food_meal_top_view.png",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Homepage\\fast_food_meal_top_view.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Homepage\\Login.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Homepage\\Login.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Homepage/Login.png",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Homepage\\Login.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Homepage\\man_enjoying_burger.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Homepage\\man_enjoying_burger.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Homepage/man_enjoying_burger.png",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Homepage\\man_enjoying_burger.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Homepage\\output-onlinepngtools.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Homepage\\output-onlinepngtools.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Homepage/output-onlinepngtools.png",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Homepage\\output-onlinepngtools.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Homepage\\spaghetti_bolognese_plate.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Homepage\\spaghetti_bolognese_plate.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Homepage/spaghetti_bolognese_plate.png",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Homepage\\spaghetti_bolognese_plate.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Homepage\\spicy_chicken_wings_plate.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Homepage\\spicy_chicken_wings_plate.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Homepage/spicy_chicken_wings_plate.png",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Homepage\\spicy_chicken_wings_plate.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\How-Many-Types-of-Fast-Food-Are-There.webp",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\How-Many-Types-of-Fast-Food-Are-There.webp",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/How-Many-Types-of-Fast-Food-Are-There.webp",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\How-Many-Types-of-Fast-Food-Are-There.webp"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\icon\\2457cc4df05f93de2ace1dbfac19bfd6.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\icon\\2457cc4df05f93de2ace1dbfac19bfd6.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/icon/2457cc4df05f93de2ace1dbfac19bfd6.png",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icon\\2457cc4df05f93de2ace1dbfac19bfd6.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\icon\\add_to_shopping_cart_icon.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\icon\\add_to_shopping_cart_icon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/icon/add_to_shopping_cart_icon.png",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icon\\add_to_shopping_cart_icon.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\icon\\checked_shopping_cart_icon.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\icon\\checked_shopping_cart_icon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/icon/checked_shopping_cart_icon.png",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icon\\checked_shopping_cart_icon.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\icon\\checkout.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\icon\\checkout.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/icon/checkout.png",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icon\\checkout.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\icon\\fast_delivery_truck_icon.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\icon\\fast_delivery_truck_icon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/icon/fast_delivery_truck_icon.png",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icon\\fast_delivery_truck_icon.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\icon\\fast-delivery.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\icon\\fast-delivery.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/icon/fast-delivery.png",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icon\\fast-delivery.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\icon\\medal.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\icon\\medal.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/icon/medal.png",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icon\\medal.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\icon\\shopping-cart.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\icon\\shopping-cart.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/icon/shopping-cart.png",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icon\\shopping-cart.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\icon\\single_gold_star_icon.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\icon\\single_gold_star_icon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/icon/single_gold_star_icon.png",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icon\\single_gold_star_icon.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\Login.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\Login.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/Login.png",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Login.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\man_enjoying_burger.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\man_enjoying_burger.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/man_enjoying_burger.png",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\man_enjoying_burger.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\10-620x620-7.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\10-620x620-7.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/10-620x620-7.jpg",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\10-620x620-7.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\2w_ckscl-608x416f.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\2w_ckscl-608x416f.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/2w_ckscl-608x416f.jpg",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\2w_ckscl-608x416f.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Beef_Burger.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Beef_Burger.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Beef_Burger.jfif",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Beef_Burger.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Cupcake dau tay.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Cupcake dau tay.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Cupcake dau tay.jpg",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Cupcake dau tay.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\cheese fried chicken.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\cheese fried chicken.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/cheese fried chicken.jfif",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\cheese fried chicken.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Daco_4553104.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Daco_4553104.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Daco_4553104.png",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Daco_4553104.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\10-620x620-7.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\10-620x620-7.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Dessert/10-620x620-7.jpg",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Dessert\\10-620x620-7.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\2w_ckscl-608x416f.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\2w_ckscl-608x416f.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Dessert/2w_ckscl-608x416f.jpg",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Dessert\\2w_ckscl-608x416f.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Cupcake dau tay.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Cupcake dau tay.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Dessert/Cupcake dau tay.jpg",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Dessert\\Cupcake dau tay.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\kem-matcha-thumbnail-1.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\kem-matcha-thumbnail-1.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Dessert/kem-matcha-thumbnail-1.jpg",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Dessert\\kem-matcha-thumbnail-1.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Khoai_tay_chien_co_lon.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Khoai_tay_chien_co_lon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Dessert/Khoai_tay_chien_co_lon.png",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Dessert\\Khoai_tay_chien_co_lon.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Vanilla ice cream.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Vanilla ice cream.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Dessert/Vanilla ice cream.jpg",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Dessert\\Vanilla ice cream.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Vanilla-Cupcakes-G-scaled.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Dessert\\Vanilla-Cupcakes-G-scaled.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Dessert/Vanilla-Cupcakes-G-scaled.jpg",
       "AssetKind": "All",
@@ -1195,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Dessert\\Vanilla-Cupcakes-G-scaled.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\images.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\images.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/drinks/images.jfif",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\drinks\\images.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\mirinda-cam-330ml-sleek-lon-2-org.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\mirinda-cam-330ml-sleek-lon-2-org.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/drinks/mirinda-cam-330ml-sleek-lon-2-org.jpg",
       "AssetKind": "All",
@@ -1233,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\drinks\\mirinda-cam-330ml-sleek-lon-2-org.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/drinks/nuoc-ngot-7-up-vi-chanh-320ml.jpg",
       "AssetKind": "All",
@@ -1252,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\tra-sua-tran-chau-vno.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\tra-sua-tran-chau-vno.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/drinks/tra-sua-tran-chau-vno.png",
       "AssetKind": "All",
@@ -1271,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\drinks\\tra-sua-tran-chau-vno.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\unnamed.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\drinks\\unnamed.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/drinks/unnamed.png",
       "AssetKind": "All",
@@ -1290,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\drinks\\unnamed.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\cheese fried chicken.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\cheese fried chicken.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/fried chicken/cheese fried chicken.jfif",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\fried chicken\\cheese fried chicken.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\Ga ran.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\Ga ran.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/fried chicken/Ga ran.jfif",
       "AssetKind": "All",
@@ -1328,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\fried chicken\\Ga ran.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\grilled-chicken-horizontal-1532030541.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\grilled-chicken-horizontal-1532030541.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/fried chicken/grilled-chicken-horizontal-1532030541.jpg",
       "AssetKind": "All",
@@ -1347,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\fried chicken\\grilled-chicken-horizontal-1532030541.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\soybean chicken.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\soybean chicken.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/fried chicken/soybean chicken.jfif",
       "AssetKind": "All",
@@ -1366,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\fried chicken\\soybean chicken.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\Spicy Fried chicken.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\fried chicken\\Spicy Fried chicken.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/fried chicken/Spicy Fried chicken.jfif",
       "AssetKind": "All",
@@ -1385,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\fried chicken\\Spicy Fried chicken.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Ga ran.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Ga ran.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Ga ran.jfif",
       "AssetKind": "All",
@@ -1404,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Ga ran.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\grilled-chicken-horizontal-1532030541.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\grilled-chicken-horizontal-1532030541.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/grilled-chicken-horizontal-1532030541.jpg",
       "AssetKind": "All",
@@ -1423,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\grilled-chicken-horizontal-1532030541.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Beef_Burger.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Beef_Burger.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Hamburger/Beef_Burger.jfif",
       "AssetKind": "All",
@@ -1442,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Hamburger\\Beef_Burger.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Hamburger_ca.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Hamburger_ca.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Hamburger/Hamburger_ca.jfif",
       "AssetKind": "All",
@@ -1461,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Hamburger\\Hamburger_ca.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Hamburger_ga.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Hamburger_ga.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Hamburger/Hamburger_ga.jfif",
       "AssetKind": "All",
@@ -1480,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Hamburger\\Hamburger_ga.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Mozzarella_Burger.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Mozzarella_Burger.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Hamburger/Mozzarella_Burger.jpg",
       "AssetKind": "All",
@@ -1499,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Hamburger\\Mozzarella_Burger.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Shrimp_Burger.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Shrimp_Burger.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Hamburger/Shrimp_Burger.jfif",
       "AssetKind": "All",
@@ -1518,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Hamburger\\Shrimp_Burger.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Vegan burger.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger\\Vegan burger.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Hamburger/Vegan burger.jfif",
       "AssetKind": "All",
@@ -1537,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Hamburger\\Vegan burger.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger_ca.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger_ca.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Hamburger_ca.jfif",
       "AssetKind": "All",
@@ -1556,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Hamburger_ca.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger_ga.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Hamburger_ga.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Hamburger_ga.jfif",
       "AssetKind": "All",
@@ -1575,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Hamburger_ga.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\images.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\images.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/images.jfif",
       "AssetKind": "All",
@@ -1594,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\images.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\IMG_2987-scaled.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\IMG_2987-scaled.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/IMG_2987-scaled.jpg",
       "AssetKind": "All",
@@ -1613,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\IMG_2987-scaled.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\kem-matcha-thumbnail-1.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\kem-matcha-thumbnail-1.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/kem-matcha-thumbnail-1.jpg",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\kem-matcha-thumbnail-1.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Khoai_tay_chien_co_lon.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Khoai_tay_chien_co_lon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Khoai_tay_chien_co_lon.png",
       "AssetKind": "All",
@@ -1651,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Khoai_tay_chien_co_lon.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\mirinda-cam-330ml-sleek-lon-2-org.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\mirinda-cam-330ml-sleek-lon-2-org.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/mirinda-cam-330ml-sleek-lon-2-org.jpg",
       "AssetKind": "All",
@@ -1670,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\mirinda-cam-330ml-sleek-lon-2-org.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Mozzarella_Burger.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Mozzarella_Burger.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Mozzarella_Burger.jpg",
       "AssetKind": "All",
@@ -1689,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Mozzarella_Burger.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\nuoc-ngot-7-up-vi-chanh-320ml.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\nuoc-ngot-7-up-vi-chanh-320ml.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/nuoc-ngot-7-up-vi-chanh-320ml.jpg",
       "AssetKind": "All",
@@ -1708,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\nuoc-ngot-7-up-vi-chanh-320ml.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Shrimp_Burger.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Shrimp_Burger.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Shrimp_Burger.jfif",
       "AssetKind": "All",
@@ -1727,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Shrimp_Burger.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\soybean chicken.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\soybean chicken.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/soybean chicken.jfif",
       "AssetKind": "All",
@@ -1746,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\soybean chicken.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\IMG_2987-scaled.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\IMG_2987-scaled.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Spagetti/IMG_2987-scaled.jpg",
       "AssetKind": "All",
@@ -1765,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Spagetti\\IMG_2987-scaled.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti bo bam.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti bo bam.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Spagetti/spaghetti bo bam.jfif",
       "AssetKind": "All",
@@ -1784,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti bo bam.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\Spaghetti Veggie.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\Spaghetti Veggie.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Spagetti/Spaghetti Veggie.jfif",
       "AssetKind": "All",
@@ -1803,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Spagetti\\Spaghetti Veggie.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti-boscaiola-74422-1.jpeg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti-boscaiola-74422-1.jpeg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Spagetti/spaghetti-boscaiola-74422-1.jpeg",
       "AssetKind": "All",
@@ -1822,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti-boscaiola-74422-1.jpeg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti-with-tuna-sauce-13068-1.jpeg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti-with-tuna-sauce-13068-1.jpeg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Spagetti/spaghetti-with-tuna-sauce-13068-1.jpeg",
       "AssetKind": "All",
@@ -1841,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Spagetti\\spaghetti-with-tuna-sauce-13068-1.jpeg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\spaghetti bo bam.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\spaghetti bo bam.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/spaghetti bo bam.jfif",
       "AssetKind": "All",
@@ -1860,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\spaghetti bo bam.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Spaghetti Veggie.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Spaghetti Veggie.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Spaghetti Veggie.jfif",
       "AssetKind": "All",
@@ -1879,10 +1879,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Spaghetti Veggie.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\spaghetti-boscaiola-74422-1.jpeg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\spaghetti-boscaiola-74422-1.jpeg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/spaghetti-boscaiola-74422-1.jpeg",
       "AssetKind": "All",
@@ -1898,10 +1898,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\spaghetti-boscaiola-74422-1.jpeg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\spaghetti-with-tuna-sauce-13068-1.jpeg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\spaghetti-with-tuna-sauce-13068-1.jpeg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/spaghetti-with-tuna-sauce-13068-1.jpeg",
       "AssetKind": "All",
@@ -1917,10 +1917,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\spaghetti-with-tuna-sauce-13068-1.jpeg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Spicy Fried chicken.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Spicy Fried chicken.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Spicy Fried chicken.jfif",
       "AssetKind": "All",
@@ -1936,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Spicy Fried chicken.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\tra-sua-tran-chau-vno.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\tra-sua-tran-chau-vno.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/tra-sua-tran-chau-vno.png",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\tra-sua-tran-chau-vno.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\unnamed.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\unnamed.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/unnamed.png",
       "AssetKind": "All",
@@ -1974,10 +1974,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\unnamed.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Vanilla ice cream.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Vanilla ice cream.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Vanilla ice cream.jpg",
       "AssetKind": "All",
@@ -1993,10 +1993,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Vanilla ice cream.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Vanilla-Cupcakes-G-scaled.jpg",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Vanilla-Cupcakes-G-scaled.jpg",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Vanilla-Cupcakes-G-scaled.jpg",
       "AssetKind": "All",
@@ -2012,10 +2012,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Vanilla-Cupcakes-G-scaled.jpg"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\MenuAccess\\Vegan burger.jfif",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\MenuAccess\\Vegan burger.jfif",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/MenuAccess/Vegan burger.jfif",
       "AssetKind": "All",
@@ -2031,10 +2031,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\MenuAccess\\Vegan burger.jfif"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\single_gold_star_icon.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\single_gold_star_icon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/single_gold_star_icon.png",
       "AssetKind": "All",
@@ -2050,10 +2050,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\single_gold_star_icon.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\spaghetti_bolognese_plate.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\spaghetti_bolognese_plate.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/spaghetti_bolognese_plate.png",
       "AssetKind": "All",
@@ -2069,10 +2069,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\spaghetti_bolognese_plate.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\spicy_chicken_wings_plate.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\spicy_chicken_wings_plate.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/spicy_chicken_wings_plate.png",
       "AssetKind": "All",
@@ -2088,10 +2088,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\spicy_chicken_wings_plate.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\assets\\user_profile_icon.png",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\assets\\user_profile_icon.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "assets/user_profile_icon.png",
       "AssetKind": "All",
@@ -2107,10 +2107,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\user_profile_icon.png"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\BaoCao.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\BaoCao.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "BaoCao.html",
       "AssetKind": "All",
@@ -2126,10 +2126,10 @@
       "OriginalItemSpec": "wwwroot\\BaoCao.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\BaoCao1(EditForm).html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\BaoCao1(EditForm).html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "BaoCao1(EditForm).html",
       "AssetKind": "All",
@@ -2145,10 +2145,10 @@
       "OriginalItemSpec": "wwwroot\\BaoCao1(EditForm).html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\BaoCao2(XemDonHang).html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\BaoCao2(XemDonHang).html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "BaoCao2(XemDonHang).html",
       "AssetKind": "All",
@@ -2164,10 +2164,10 @@
       "OriginalItemSpec": "wwwroot\\BaoCao2(XemDonHang).html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\ContactUs.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\ContactUs.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "ContactUs.html",
       "AssetKind": "All",
@@ -2183,10 +2183,10 @@
       "OriginalItemSpec": "wwwroot\\ContactUs.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\AboutUs.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\AboutUs.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/AboutUs.css",
       "AssetKind": "All",
@@ -2202,10 +2202,10 @@
       "OriginalItemSpec": "wwwroot\\css\\AboutUs.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\Cart.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\Cart.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/Cart.css",
       "AssetKind": "All",
@@ -2221,10 +2221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Cart.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\ContactUs.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\ContactUs.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/ContactUs.css",
       "AssetKind": "All",
@@ -2240,10 +2240,10 @@
       "OriginalItemSpec": "wwwroot\\css\\ContactUs.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/css",
       "AssetKind": "All",
@@ -2259,10 +2259,10 @@
       "OriginalItemSpec": "wwwroot\\css\\css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\Changepassword.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\Changepassword.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/Changepassword.css",
       "AssetKind": "All",
@@ -2278,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Changepassword.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\Check.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\Check.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/Check.css",
       "AssetKind": "All",
@@ -2297,10 +2297,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Check.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\DashBoardAd.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\DashBoardAd.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/DashBoardAd.css",
       "AssetKind": "All",
@@ -2316,10 +2316,10 @@
       "OriginalItemSpec": "wwwroot\\css\\DashBoardAd.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\Footer.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\Footer.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/Footer.css",
       "AssetKind": "All",
@@ -2335,10 +2335,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Footer.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\Forgotpassword.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\Forgotpassword.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/Forgotpassword.css",
       "AssetKind": "All",
@@ -2354,10 +2354,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Forgotpassword.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\header.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\header.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/header.css",
       "AssetKind": "All",
@@ -2373,10 +2373,10 @@
       "OriginalItemSpec": "wwwroot\\css\\header.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\Homepage.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\Homepage.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/Homepage.css",
       "AssetKind": "All",
@@ -2392,10 +2392,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Homepage.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\Info.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\Info.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/Info.css",
       "AssetKind": "All",
@@ -2411,10 +2411,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Info.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\Loginpage.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\Loginpage.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/Loginpage.css",
       "AssetKind": "All",
@@ -2430,10 +2430,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Loginpage.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\Menu.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\Menu.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/Menu.css",
       "AssetKind": "All",
@@ -2449,10 +2449,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Menu.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\Newpassword.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\Newpassword.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/Newpassword.css",
       "AssetKind": "All",
@@ -2468,10 +2468,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Newpassword.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\OrderProductDetail.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\OrderProductDetail.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/OrderProductDetail.css",
       "AssetKind": "All",
@@ -2487,10 +2487,10 @@
       "OriginalItemSpec": "wwwroot\\css\\OrderProductDetail.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\Payment.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\Payment.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/Payment.css",
       "AssetKind": "All",
@@ -2506,10 +2506,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Payment.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\QLNV.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\QLNV.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/QLNV.css",
       "AssetKind": "All",
@@ -2525,10 +2525,10 @@
       "OriginalItemSpec": "wwwroot\\css\\QLNV.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\Registerpage.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\Registerpage.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/Registerpage.css",
       "AssetKind": "All",
@@ -2544,10 +2544,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Registerpage.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\css\\Report.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\css\\Report.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "css/Report.css",
       "AssetKind": "All",
@@ -2563,10 +2563,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Report.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\Changepassword.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\Changepassword.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Changepassword.html",
       "AssetKind": "All",
@@ -2582,10 +2582,10 @@
       "OriginalItemSpec": "wwwroot\\Changepassword.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\DashBoardAd.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\DashBoardAd.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "DashBoardAd.html",
       "AssetKind": "All",
@@ -2601,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\DashBoardAd.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\Footer.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\Footer.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Footer.html",
       "AssetKind": "All",
@@ -2620,10 +2620,10 @@
       "OriginalItemSpec": "wwwroot\\Footer.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\header(DaDangNhap).html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\header(DaDangNhap).html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "header(DaDangNhap).html",
       "AssetKind": "All",
@@ -2639,10 +2639,10 @@
       "OriginalItemSpec": "wwwroot\\header(DaDangNhap).html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\Homepage.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\Homepage.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Homepage.html",
       "AssetKind": "All",
@@ -2658,10 +2658,10 @@
       "OriginalItemSpec": "wwwroot\\Homepage.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\js\\main.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\js\\main.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "js/main.js",
       "AssetKind": "All",
@@ -2677,10 +2677,10 @@
       "OriginalItemSpec": "wwwroot\\js\\main.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\js\\site.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\js\\site.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -2696,10 +2696,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -2715,10 +2715,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -2734,10 +2734,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -2753,10 +2753,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -2772,10 +2772,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -2791,10 +2791,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -2810,10 +2810,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -2829,10 +2829,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -2848,10 +2848,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -2867,10 +2867,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -2886,10 +2886,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -2905,10 +2905,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -2924,10 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -2943,10 +2943,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -2962,10 +2962,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -2981,10 +2981,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -3000,10 +3000,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -3019,10 +3019,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -3038,10 +3038,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -3057,10 +3057,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -3076,10 +3076,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -3095,10 +3095,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -3114,10 +3114,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -3133,10 +3133,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -3152,10 +3152,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -3171,10 +3171,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -3190,10 +3190,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -3209,10 +3209,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -3228,10 +3228,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -3247,10 +3247,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -3266,10 +3266,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -3285,10 +3285,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -3304,10 +3304,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -3323,10 +3323,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -3342,10 +3342,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -3361,10 +3361,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -3380,10 +3380,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -3399,10 +3399,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -3418,10 +3418,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -3437,10 +3437,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -3456,10 +3456,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -3475,10 +3475,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -3494,10 +3494,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -3513,10 +3513,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -3532,10 +3532,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -3551,10 +3551,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -3570,10 +3570,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -3589,10 +3589,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -3608,10 +3608,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -3627,10 +3627,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -3646,10 +3646,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -3665,10 +3665,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -3684,10 +3684,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -3703,10 +3703,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -3722,10 +3722,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -3741,10 +3741,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -3760,10 +3760,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -3779,10 +3779,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\Login\\Check.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\Login\\Check.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Login/Check.html",
       "AssetKind": "All",
@@ -3798,10 +3798,10 @@
       "OriginalItemSpec": "wwwroot\\Login\\Check.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\Login\\Forgotpassword.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\Login\\Forgotpassword.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Login/Forgotpassword.html",
       "AssetKind": "All",
@@ -3817,10 +3817,10 @@
       "OriginalItemSpec": "wwwroot\\Login\\Forgotpassword.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\Login\\Loginpage.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\Login\\Loginpage.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Login/Loginpage.html",
       "AssetKind": "All",
@@ -3836,10 +3836,10 @@
       "OriginalItemSpec": "wwwroot\\Login\\Loginpage.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\Login\\Newpassword.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\Login\\Newpassword.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Login/Newpassword.html",
       "AssetKind": "All",
@@ -3855,10 +3855,10 @@
       "OriginalItemSpec": "wwwroot\\Login\\Newpassword.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\Login\\Registerpage.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\Login\\Registerpage.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Login/Registerpage.html",
       "AssetKind": "All",
@@ -3874,10 +3874,10 @@
       "OriginalItemSpec": "wwwroot\\Login\\Registerpage.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\Loginpage.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\Loginpage.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Loginpage.html",
       "AssetKind": "All",
@@ -3893,10 +3893,10 @@
       "OriginalItemSpec": "wwwroot\\Loginpage.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\main.js",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\main.js",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "main.js",
       "AssetKind": "All",
@@ -3912,10 +3912,10 @@
       "OriginalItemSpec": "wwwroot\\main.js"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\Menu.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\Menu.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Menu.html",
       "AssetKind": "All",
@@ -3931,10 +3931,10 @@
       "OriginalItemSpec": "wwwroot\\Menu.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\OrderDetail.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\OrderDetail.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "OrderDetail.html",
       "AssetKind": "All",
@@ -3950,10 +3950,10 @@
       "OriginalItemSpec": "wwwroot\\OrderDetail.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\OrderProductDetail.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\OrderProductDetail.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "OrderProductDetail.html",
       "AssetKind": "All",
@@ -3969,10 +3969,10 @@
       "OriginalItemSpec": "wwwroot\\OrderProductDetail.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\Payment.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\Payment.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Payment.html",
       "AssetKind": "All",
@@ -3988,10 +3988,10 @@
       "OriginalItemSpec": "wwwroot\\Payment.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\Profile.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\Profile.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Profile.html",
       "AssetKind": "All",
@@ -4007,10 +4007,10 @@
       "OriginalItemSpec": "wwwroot\\Profile.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\QLNV.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\QLNV.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "QLNV.html",
       "AssetKind": "All",
@@ -4026,10 +4026,10 @@
       "OriginalItemSpec": "wwwroot\\QLNV.html"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\README.md",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\README.md",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "README.md",
       "AssetKind": "All",
@@ -4045,10 +4045,10 @@
       "OriginalItemSpec": "wwwroot\\README.md"
     },
     {
-      "Identity": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\Registerpage.html",
+      "Identity": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\Registerpage.html",
       "SourceId": "Demo",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\A2\\LTNet\\TestPBL\\Demo\\wwwroot\\",
+      "ContentRoot": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\",
       "BasePath": "_content/Demo",
       "RelativePath": "Registerpage.html",
       "AssetKind": "All",
