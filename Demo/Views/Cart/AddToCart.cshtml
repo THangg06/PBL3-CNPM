@@ -1,0 +1,52 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Demo.ModelViews.CartItem>
+@{
+	ViewData["Title"] = "Giohang";
+	//Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<tbody>
+	@foreach (var item in Model)
+	{
+				<div class="wrapper">
+				<h1> Giỏ hàng </h1>
+				<div class="project">
+					<div class="shop">
+						<div class="box">
+								<img src="~/assets/MenuAccess/@item.Hinh">
+							<div class="content">
+								<h3>@item.TenHH</h3>
+								<h4>40</h4>
+								<p class="unit">Số lượng: <input name="" value="@item.SoLuong"></p>
+								<p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i> <span class="btn2">Xóa</span></p>
+							</div>
+						</div>
+
+						<div class = "giamgia">
+						<p class="voucher">Mã giảm giá <input name="" ></p>
+						<p class="btn-voucher"><i aria-hidden="true" ></i> <span class="btn2">Thêm voucher</span></p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+	}
+</tbody>
+<div class="right-bar">
+					<p><span>Tổng giá</span> <span>120000</span></p>
+					<hr>
+					<p><span>Phí vận chuyển</span> <span>10000</span></p>
+					<hr>
+					<p><span>Giảm giá</span> <span>10000</span></p>
+					<hr>
+					<p><span>Tổng thanh toán</span> <span>120000</span></p><a href="#"><i class="fa fa-shopping-cart"></i>Thanh toán</a>
+				</div>
+
+
+
+
+

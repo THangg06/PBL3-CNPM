@@ -1,0 +1,291 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Demo.ModelViews.HangHoaVM> 
+<H3>Co<b>@Model.Count()</b>sanpham</H3>
+ @* <div class="product_row" id="Burger"> 
+    @foreach (var item in Model)
+    {
+
+        <div class="item">
+            <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="">
+             <a asp-action="Detail" asp-controller="HangHoa" asp-route-id=""> <img class="image" src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="alt text" />
+                </a>
+        <div class="product_card"></a>
+
+            <a asp-action="Detail" asp-controller="HangHoa" asp-route-id=""><a asp-action="Detail" asp-controller="HangHoa" asp-route-id=""><h4 class="food_title">@item.TenHH</h4></a></a>
+        <p class="desc_food">@item.MoTaNgan</p>
+        <h5 class="price_tag">$@item.Dongia</h5>
+      <a asp-action="AddToCart" asp-controller="Cart" asp-route-id=""> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+        </div>
+        </div>
+    }
+    </div> *@
+
+
+     <div class="product_row" id="Burger">
+
+                <div class="item">
+                   <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P1"> <img class="image" src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="alt text" />
+                  <div class="product_card"></a>
+                    <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P1"><h4 class="food_title">Burger Bò</h4></a>
+                    <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                    <h5 class="price_tag">40.000 Đ</h5>
+                  <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P1"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                  </div>
+                </div>
+                <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P2"> <img class="image" src="./assets/MenuAccess/Hamburger/Hamburger_ca.jfif" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P2"><h4 class="food_title">Burger Cá</h4></a></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">40.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P2"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P3"> <img class="image" src="./assets/MenuAccess/Hamburger/Hamburger_ga.jfif" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P3"><h4 class="food_title">Burger Gà</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">40.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P3"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P4"> <img class="image" src="./assets/MenuAccess/Hamburger/Shrimp_Burger.jfif" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P4"><h4 class="food_title">Burger Tôm</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">40.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P4"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P5"> <img class="image" src="./assets/MenuAccess/Hamburger/Vegan burger.jfif" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P5"><h4 class="food_title">Burger Chay</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">40.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P5"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P6"> <img class="image" src="./assets/MenuAccess/Hamburger/Mozzarella_Burger.jpg" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P6"><h4 class="food_title">Mozzarella Burger</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">50.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P6"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+              </div>
+<!-- ---------------------------------------------------- --------------------------------------------------------------->
+
+
+              <div class="product_row" id="Spaghetti">
+                <div class="item">
+                   <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P7"> <img class="image" src="./assets/MenuAccess/Spagetti/spaghetti bo bam.jfif" alt="alt text" />
+                  <div class="product_card"></a>
+                    <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P7"><h4 class="food_title">Spaghetti Bò Băm</h4></a>
+                    <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                    <h5 class="price_tag">45.000 Đ</h5>
+                  <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P7"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                  </div>
+                </div>
+                <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P8"> <img class="image" src="./assets/MenuAccess/Spagetti/Spaghetti Veggie.jfif" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P8"><h4 class="food_title">Spaghetti Chay</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">30.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P8"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P9"> <img class="image" src="./assets/MenuAccess/Spagetti/spaghetti-boscaiola-74422-1.jpeg" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P9"><h4 class="food_title">Spaghetti Boscaiola</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">35.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P09"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P10"> <img class="image" src="./assets/MenuAccess/Spagetti/spaghetti-with-tuna-sauce-13068-1.jpeg" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P10"><h4 class="food_title">Spaghetti Tuna</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">35.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P10"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P11"> <img class="image" src="./assets/MenuAccess/Spagetti/IMG_2987-scaled.jpg" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P11"><h4 class="food_title">Spaghetti Hải Sản</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">40.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P11"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+              </div>
+<!-- ---------------------------------------------------- --------------------------------------------------------------->
+
+
+              <div class="product_row" id="Dessert">
+                <div class="item">
+                   <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P12"> <img class="image" src="./assets/MenuAccess/Dessert/kem-matcha-thumbnail-1.jpg" alt="alt text" />
+                  <div class="product_card"></a>
+                    <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P12"><h4 class="food_title">Kem Macha</h4></a>
+                    <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                    <h5 class="price_tag">50.000 Đ</h5>
+                  <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P12"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                  </div>
+                </div>
+                <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P13"> <img class="image" src="./assets/MenuAccess/Dessert/Vanilla ice cream.jpg" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P13"><h4 class="food_title">Kem Vanilla</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">30.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P13"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P14"> <img class="image" src="./assets/MenuAccess/Dessert/Cupcake dau tay.jpg" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P14"><h4 class="food_title">Cupcake Dâu Tây</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">35.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P14"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P15"> <img class="image" src="./assets/MenuAccess/Dessert/2w_ckscl-608x416f.jpg" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P15"><h4 class="food_title">Cupcake Socola</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">35.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P15"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P16"> <img class="image" src="./assets/MenuAccess/Dessert/10-620x620-7.jpg" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P16"><h4 class="food_title">Kem Socola</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">30.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P16"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+              </div>
+<!-- ---------------------------------------------------- --------------------------------------------------------------->
+
+
+              <div class="product_row" id="Fried_Chicken">
+                <div class="item">
+                   <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P17"> <img class="image" src="./assets/MenuAccess/fried chicken/cheese fried chicken.jfif" alt="alt text" />
+                  <div class="product_card"></a>
+                    <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P17"><h4 class="food_title">Ga Rán Sốt Phô Mai</h4></a>
+                    <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                    <h5 class="price_tag">60.000 Đ</h5>
+                  <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P17"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                  </div>
+                </div>
+                <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P18"> <img class="image" src="./assets/MenuAccess/fried chicken/Ga ran.jfif" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P18"><h4 class="food_title">Gà Rán</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">70.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P18"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P19"> <img class="image" src="./assets/MenuAccess/fried chicken/grilled-chicken-horizontal-1532030541.jpg" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P19"><h4 class="food_title">Gà Nướng</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">99.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P19"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P20"> <img class="image" src="./assets/MenuAccess/fried chicken/soybean chicken.jfif" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P20"><h4 class="food_title">Gà Rán Sốt Đậu</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">75.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P20"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P21"> <img class="image" src="./assets/MenuAccess/fried chicken/Spicy Fried chicken.jfif" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P21"><h4 class="food_title">Gà Rán Sốt Cay</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">55.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P21"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+              </div>
+              <!-- ---------------------------------------------------- --------------------------------------------------------------->
+
+
+              <div class="product_row" id="Drinks">
+                <div class="item">
+                   <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P22"> <img class="image" src="./assets/MenuAccess/drinks/mirinda-cam-330ml-sleek-lon-2-org.jpg" alt="alt text" />
+                  <div class="product_card"></a>
+                    <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="22"><h4 class="food_title">Mirinda</h4></a>
+                    <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                    <h5 class="price_tag">10.000 Đ</h5>
+                  <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P22"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                  </div>
+                </div>
+                <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="23"> <img class="image" src="./assets/MenuAccess/drinks/nuoc-ngot-7-up-vi-chanh-320ml.jpg" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="23"><h4 class="food_title">7 UP</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">10.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P23"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="24"> <img class="image" src="./assets/MenuAccess/drinks/tra-sua-tran-chau-vno.png" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="24"><h4 class="food_title">Trà Sữa</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">30.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P24"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="25"> <img class="image" src="./assets/MenuAccess/drinks/unnamed.png" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="25"><h4 class="food_title">Trà Đào</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">30.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P25"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                     <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="26"> <img class="image" src="./assets/MenuAccess/drinks/images.jfif" alt="alt text" />
+                    <div class="product_card"></a>
+                      <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="26"><h4 class="food_title">Pepsi</h4></a>
+                      <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+                      <h5 class="price_tag">25.000 Đ</h5>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P26"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
+                    </div>
+                  </div>
+
+              </div>

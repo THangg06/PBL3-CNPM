@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Demo.ModelViews.CartItem>
+@{
+	ViewData["Title"] = "Giohang";
+	//Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/Cart.css" rel="stylesheet">
+</head>
+<body>
+
+
+	<a class="backToHome" href=""><b>Trở về</b></a>
+	<div class="wrapper">
+		<h1> Giỏ hàng </h1>
+		<div class="project">
+			<div class="shop">
+				@foreach (var item in Model)
+				{
+					<div class="box">
+									<img src="~/assets/MenuAccess/@item.Hinh">
+						<div class="content">
+							<h3>@item.TenHH</h3>
+								<h4>@item.Dongia.ToString("0.000")</h4>
+							<p class="unit">Số lượng: <input name="" value=@item.SoLuong></p>
+									<p class="mb-0 mt-4">@item.ThanhTien.ToString("0.000")</p>
+								<a asp-action="RemoveCart" asp-controller="Cart" asp-route-id="@item.MaHh"><p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i> <span class="btn2">Xóa</span></p></a>
+						</div>
+					</div>
+				}
+				@* <div class="box">
+					<img src="2.jpg">
+					<div class="content">
+						<h3>Gà xốt cay</h3>
+						<h4>Giá: 40000</h4>
+						<p class="unit">Số lượng: <input name="" value="1"></p>
+						<p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i> <span class="btn2">Xóa</span></p>
+					</div>
+				</div>
+				<div class="box">
+					<img src="3.jpg">
+					<div class="content">
+						<h3>Mì ý</h3>
+						<h4>Giá: 40000</h4>
+						<p class="unit">Số lượng: <input name="" value="1"></p>
+						<p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i> <span class="btn2">Xóa</span></p>
+					</div>
+				</div> *@
+				@* <div class = "giamgia">
+				<p class="voucher">Mã giảm giá <input name="" ></p>
+				<p class="btn-voucher"><i aria-hidden="true" ></i> <span class="btn2">Thêm voucher</span></p>
+				</div> *@
+			</div>
+			<div class="right-bar">
+				<p><span>Tổng giá</span> <span>@Model.Sum(p => p.ThanhTien).ToString("0.000")</span></p>
+				<hr>
+				<p><span>Phí vận chuyển</span> <span>@((Model.Sum(p => p.ThanhTien) * 0.2m).ToString("0.000"))</span></p>
+				<hr>
+				<p><span></span> <span></span></p>
+				<hr>
+				<p><span>Tổng thanh toán</span> <span>@Model.Sum(p => p.ThanhTien).ToString("0.000")</span></p>
+				@* <a href="/Cart/Checkout"><i class="fa fa-shopping-cart"></i>Thanh toán</a> *@
+
+				@*  <a asp-action="Checkout" asp-controller="Cart"><i class="fa fa-shopping-cart"></i>Thanh toán</a>  *@
+				<a class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4  ms-4" asp-action="Checkout" asp-controller="Cart">ThanhToan</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

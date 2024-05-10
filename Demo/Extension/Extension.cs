@@ -1,3 +1,11 @@
+//<<<<<<< HEAD
+//﻿namespace Demo.Extension
+//{
+//    public class Extension
+//    {
+//    }
+//}
+//=======
 ﻿using System.Text.RegularExpressions;
 
 namespace Demo.Extension
@@ -37,3 +45,4 @@ namespace Demo.Extension
     
     }
 }
+

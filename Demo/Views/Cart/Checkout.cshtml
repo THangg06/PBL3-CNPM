@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Demo.ModelViews.CartItem>
+@{
+    ViewData["Title"] = "Checkout";
+   Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (TempData["OrderSuccess"] != null && (bool)TempData["OrderSuccess"])
+{
+        <div class="alert alert-success" role="alert">
+            Đơn hàng của bạn đã được đặt thành công!
+        </div>
+}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="./css/Payment.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="go-back">
+        <a href="Cart.html">Về giỏ hàng</a>
+    </div>
+    <div class="wrapper">
+    <h2>Thanh toán đơn hàng</h2>
+    <form action="" method="post" onsubmit="return validatePaymentMethod()">
+        <h4>Thông tin người nhận</h4>
+        <div class="input_group">
+            <div class="input_box">
+                <input type="text" name="FullName" placeholder="Họ và tên" required class="name">
+                <i class="fa fa-user icon"></i>
+            </div>
+        </div>
+        <div class="input_group">
+            <div class="input_box">
+                <input type="text" name="Phone" placeholder="Số điện thoại" required class="name">
+                <i class="fa fa-phone icon"></i>
+            </div>
+        </div>
+        <div class="input_group">
+            <div class="input_box">
+                <input type="text" name="Address" placeholder="Địa chỉ" required class="name">
+                <i class="fa fa-map-marker icon" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <h4>Phương thức thanh toán</h4>
+        <div class="input_group">
+            <div class="input_box">
+                <input type="radio" name="paymentMethod" value="CreditCard" id="creditCard">
+                <label for="creditCard"><span><i class="fa fa-credit-card"></i> Thẻ tín dụng</span></label>
+                <input type="radio" name="paymentMethod" value="Cash" id="cash" required>
+                <label for="cash"><span><i class="fa fa-money"></i> Tiền mặt</span></label>
+            </div>
+        </div>
+
+        <div class="input_group detail" id="creditCardDetails">
+            <div class="input_box">
+                <!-- Phần nhập thông tin thẻ tín dụng -->
+            </div>
+        </div>
+
+        <div class="input_group">
+            <div class="input_box">
+                <button type="submit">Thanh toán</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+    </script>
+    @section Scripts {
+        <script>
+            $(document).ready(function () {
+                $("#GiongKhachHang").change(function () {
+                    if ($(this).prop("checked")) {
+                        $(this).val(true);
+                        $(".delivery-info").addClass("d-none");
+                    } else {
+                        $(this).val(false);
+                        $(".delivery-info").removeClass("d-none");
+                    }
+                });
+            });
+        </script>
+    }
+</body>
+

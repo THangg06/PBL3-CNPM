@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="./css/Homepage.css" />
+        <link rel="stylesheet" type="text/css" href="./css/Footer.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/header.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <!-- /* Monda Font */ -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
+        
+        
+        
+        <title>Homepage</title> 
+    </head>
+
+    <body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="./js/site.js" charset="utf-8"></script>
+<!-------------------------- Section 1- -------------------------------------->
+       
+          <!-- <section class = "section1"> -->
+            <header class="header">
+              <a href="./Homepage.html" class="logo">
+                <img src="./assets/animated_character_blue.png" alt="res-logo">
+                <h1 class="txt">HEE-HO</h1>
+              </a>
+              
+              <nav class="navbar">
+                <a href="./Homepage.html" class="menu-active">Trang chủ</a>
+                <a href="./Menu.html">Menu</a>
+                <a href="./AboutUs.html">Về chúng tôi</a>
+                <a href="./ContactUs.html">Liên hệ</a>
+                
+              </nav>
+
+              <div class="icons">
+                <div id="user-btn" class="for_all_user">
+                    <div class="user_img">
+                        <a href="./Profile.html"><img src="https://cdn.donmai.us/original/79/a7/79a79361d05ca22563d95241362d6dcc.png" alt=""></a>
+                        <span>Skadi</span>
+                    </div>   
+                  <div class="dropdown-content">
+                    <a href="./Profile.html">Profile</a>
+                    <a href="./OrderDetail.html">Xem Hóa Đơn</a>
+                    <a href="./Homepage.html">Đăng Xuất</a>
+                  </div>
+                </div>
+                <div class="fas fa-search" id="search-btn"></div>
+                
+                <a href="./OrderDetail.html">
+                  <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                </a>
+                <div class="fas fa-bars" id="menu-btn"></div>
+                
+                
+              </div>
+
+              <div class="search-form">
+                <input type="search" id="search-box" placeholder="Tìm kiếm tại đây">
+                <label for="search-box" class="fas fa-search"></label>
+              </div>
+
+              
+              </div>
+            </header>
+            <script>
+              document.getElementById('menu-btn').addEventListener('click', function() {
+                document.querySelector('.navbar').classList.toggle('show');
+              });
+            </script>
+    </body>
+</html>

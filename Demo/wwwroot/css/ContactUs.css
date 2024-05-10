@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+
+
+
+ .contact .row{
+=======
 :root{
   --main-color: #fef2d0;
   --green-color: #3cb815;
@@ -260,6 +266,7 @@ input{
 
 
 .contact .row{
+>>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
   margin-top: 15rem;
   display: flex;
   align-items: center;
@@ -336,9 +343,17 @@ input{
   width: 100%;
   padding: 1.5rem;
   font-size: 1.7rem;
+<<<<<<< HEAD
+  min-height: 120px;
+  font-family: sans-serif;
+}
+
+/* .container{
+=======
 }
 
 .container{
+>>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
   max-width: 1170px;
   margin:auto;
 }
@@ -410,7 +425,11 @@ ul{
 }
 
 /*responsive*/
+<<<<<<< HEAD
+/* @media(max-width: 767px){
+=======
 @media(max-width: 767px){
+>>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
   .footer-col{
     width: 50%;
     margin-bottom: 30px;
@@ -420,4 +439,8 @@ ul{
   .footer-col{
     width: 100%;
 }
+<<<<<<< HEAD
+} */
+=======
 }
+>>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228

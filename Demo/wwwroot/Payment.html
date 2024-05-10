@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="./css/Payment2.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="go-back">
+        <a href="Cart.html">Về giỏ hàng</a>
+    </div>
+    <div class="wrapper">
+        <h2>Thanh toán đơn hàng</h2>
+        <form action="" method="post">
+            <!--Account Information Start-->
+            <h4>Thông tin người nhận</h4>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Họ và tên" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+                
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Số điện thoại" required class="name">
+                    <i class="fa fa-phone icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Địa chỉ" required class="name">
+                    <i class="fa fa-map-marker icon" aria-hidden="true"></i>
+                </div>
+            </div>
+            <!-- <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Phường" required class="name">
+                    <i class="fa fa-institution icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Quận" required class="name">
+                    <i class="fa fa-institution icon"></i>
+                </div>
+            </div> -->
+            <!--Payment Details Start-->
+            <div class="input_group">
+                <div class="input_box">
+                    <h4>Payment Details</h4>
+                    <input type="radio" name="pay" class="radio" id="bc1" checked>
+                    <label for="bc1"><span>
+                            <i class="fa fa-cc-visa"></i>Credit Card</span></label>
+                    <input type="radio" name="pay" class="radio" id="bc2">
+                    <label for="bc2"><span>
+                            <i class=""></i>Tiền mặt</span></label>
+                </div>
+            </div>
+            <div class ="detail">
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="tel" name="" class="name" placeholder="1111-2222-3333-4444" required>
+                        <i class="fa fa-credit-card icon"></i>
+                    </div>
+                </div>
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="text" placeholder="Tên chủ thẻ" required class="name">
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                </div>
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="tel" name="" class="name" placeholder="CCV 632" required>
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                </div>
+                <div class="input_group">
+                    <div class="input_box">
+                        <div class="input_box">
+                            <input type="month" placeholder="MM-YYYY" required class="name">
+                            <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Payment Details End-->
+
+            <div class="input_group">
+                <div class="input_box">
+                    <button type="submit">Thanh toán</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var creditCardRadio = document.getElementById("bc1");
+            var cashRadio = document.getElementById("bc2");
+            var paymentDetail = document.querySelector(".detail");
+
+            function handleRadioChange() {
+                if (cashRadio.checked) {
+                    paymentDetail.style.display = "none";
+                } else {
+                    paymentDetail.style.display = "block";
+                }
+            }
+
+            creditCardRadio.addEventListener("change", handleRadioChange);
+            cashRadio.addEventListener("change", handleRadioChange);
+
+            if (cashRadio.checked) {
+                paymentDetail.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
