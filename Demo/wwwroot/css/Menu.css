@@ -1,0 +1,181 @@
+.content{
+  display: grid;
+  grid-template-columns: 50% auto;
+  gap: 30px;
+  margin-top: 10rem;
+  margin-left: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+/* #Content TEXT*/
+/* -------------------LEFT-SIDE-------------*/
+.content .content-left{
+  display: block;
+  width: 100%;
+}
+
+.content .content-left .info{
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content .content-left .info h2{
+  font-size: 6vh;
+  font-family: sans-serif;
+  margin-bottom: 30px;
+}
+
+.content .content-left .info p{
+  font-size: 20px;
+  line-height: 2pc;
+  margin-bottom: 30px;
+  font-family: sans-serif;
+}
+/**/
+
+.content .content-left button{
+  padding: 10px;
+  background-color: #ff511c;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+/* #Content Image*/
+/*----------------RIGHT-SIDE-------------*/
+
+.content .content-right{
+  display: block;
+  width: 100%;
+}
+
+.content .content-right img{
+  width: 400px;
+  height: auto;
+  position: relative;
+  
+}
+
+/*------------------Choosing Food---------------------*/
+
+.menu_set {
+  display: flex;
+  align-items: flex-start;
+  gap: 0px 15px;
+  margin-top: 50px;
+  margin-left: 1rem;
+}
+.choose_food {
+  font-size: 14px;
+  font-weight: 600;
+  width: 110px;
+  height: 50px;
+  min-height: 50px;
+  padding: .5rem;
+  background-color: rgb(251, 154, 65);
+  border-radius: 20px 20px 20px 20px;
+  cursor: pointer;
+}
+/*-------------Display Food Card----------------*/
+
+
+.product_row {
+  display: grid;
+  align-content: start;
+  row-gap: 8rem;
+  column-gap: 10rem;
+  margin: 96px 14px 37px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  grid-row: span 1;
+  grid-column: span 1;
+  min-width: 0px;
+  width: 230px;
+}
+
+#burger{
+  display: flex;
+}
+.image {
+  position: absolute;
+  border-radius: 50%;
+  top: -50px;
+  left: 50%;
+  z-index: 9999;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  transform: translate(-50%, 0);
+}
+.product_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 56px 15px 11px 12px;
+  outline: 1px solid rgb(19, 18, 18);
+  outline-offset: -1px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.247);
+}
+.food_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 600 18px/1.22 "Inter", Helvetica, Arial, serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.desc_food {
+  display: flex;
+  align-items: center;
+  margin: 8.5px 0px 0px;
+  font: 500 12px/1.25 "Inter", Helvetica, Arial, serif;
+  color: rgb(0, 0, 0);
+}
+.price_tag {
+  display: flex;
+  align-items: center;
+  margin: 8.5px 0px 0px;
+  width: 100%;
+  font: 600 16px/1.18 "Inter", Helvetica, Arial, serif;
+  color: rgb(242, 5, 5);
+  letter-spacing: -0.2px;
+}
+.product_row .item .product_card .btn {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0px 0px;
+  width: 100%;
+  background-color: rgb(251, 154, 65);
+  border-radius: 20px 20px 20px 20px;
+}
+.product_row .item .product_card .btn:hover{
+  background-color: rgb(144, 214, 39);
+}
+.product_row .item .product_card .btn h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15.5px 0px;
+  width: 100%;
+  height: 19px;
+  font: 600 16px/1.18 "Inter", Helvetica, Arial, serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+@media(max-width: 980px){
+  .product_row{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+  
+  
+

@@ -1,0 +1,10 @@
+﻿<a asp-controller="Cart" asp-action="Index" style="position: relative; display: inline-block;">
+    <div class="fas fa-shopping-cart" id="cart-btn">
+        <!-- Nội dung giỏ hàng -->
+        @if (User.Identity.IsAuthenticated)
+        {
+                <!-- Hiển thị số lượng mặt hàng trong giỏ hàng -->
+                <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -20px; left: -8px; height: 20px; min-width: 10px; font-size: 12px;">@Model.Quantity</span>
+        }
+    </div>
+</a>

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Demo.ModelViews.MenuloaiVM> 
+
+<div class="menu_set">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <div class="d-flex justify-content-between food-name">
+                    <a asp-controller="HangHoa" asp-action="Index" asp-route-loai =" @item.CatId">
+                        <i class="fas fa-food-alt me-2"></i>
+                        @item.CatName
+                    </a>
+                    <span>(@item.SoLuong)</span> 
+                </div>
+            </li>
+        }
+    </ul>
+</div>
