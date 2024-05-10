@@ -20,7 +20,7 @@
 //        }
 //    }
 //}
-=======
+//=======
 ﻿using Demo.Data;
 using Demo.ModelViews;
 using Microsoft.AspNetCore.Mvc;
@@ -42,4 +42,4 @@ namespace Demo.ViewComponents
         }
     }
 }
->>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
+//>>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228

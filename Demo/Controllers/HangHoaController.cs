@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+//<<<<<<< HEAD
 ﻿using Demo.Data;
 using Demo.ModelViews;
 using Microsoft.AspNetCore.Mvc;
@@ -150,7 +150,7 @@ namespace Demo.Controllers
 //        //}
 //    }
 //}
-=======
+//=======
 //﻿using Demo.Data;
 //using Demo.ModelViews;
 //using Microsoft.AspNetCore.Mvc;

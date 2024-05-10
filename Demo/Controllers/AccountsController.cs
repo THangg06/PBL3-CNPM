@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+//<<<<<<< HEAD
 ﻿using AutoMapper;
 using Demo.Data;
 using Demo.Extension;
@@ -323,7 +323,7 @@ namespace Demo.Controllers
 
     }
 }
-=======
+//=======
 //﻿using AutoMapper;
 //using Demo.Data;
 //using Demo.Extension;

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+//<<<<<<< HEAD
 using Demo.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;

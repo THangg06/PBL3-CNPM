@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //﻿using Microsoft.AspNetCore.Mvc;
 //using System.Collections;
 //using System.ComponentModel.DataAnnotations;
@@ -104,4 +104,4 @@ namespace Demo.ModelViews
         public string ConfirmPassword { get; set; }
     }
 }
->>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
+

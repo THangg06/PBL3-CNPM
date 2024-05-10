@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ﻿using System;
 using System.Collections.Generic;
 
@@ -26,7 +26,7 @@ public partial class OrderDetail
 
     public virtual Product? Product { get; set; }
 }
-=======
+
 //﻿using System;
 //using System.Collections.Generic;
 

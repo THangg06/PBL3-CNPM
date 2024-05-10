@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+//<<<<<<< HEAD
 ﻿namespace Demo.ModelViews
 {
     public class HangHoaVM
@@ -25,7 +26,7 @@
         public int SoLuongTon {  get; set; }
     }
 }
-=======
+//=======
 //﻿namespace Demo.ModelViews
 //{
 //    public class HangHoaVM

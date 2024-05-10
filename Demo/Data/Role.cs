@@ -1,3 +1,4 @@
+
 //<<<<<<< HEAD
 //﻿using System;
 //using System.Collections.Generic;
@@ -16,7 +17,7 @@
 
 //    public virtual ICollection<Staff> Staff { get; set; } = new List<Staff>();
 //}
-=======
+
 ﻿using System;
 using System.Collections.Generic;
 
@@ -34,4 +35,4 @@ public partial class Role
 
     public virtual ICollection<Staff> Staff { get; set; } = new List<Staff>();
 }
->>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
+

@@ -8,7 +8,7 @@
 //        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 //    }
 //}
-=======
+//=======
 namespace Demo.Models
 {
     public class ErrorViewModel
@@ -18,4 +18,4 @@ namespace Demo.Models
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }
 }
->>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
+//>>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228

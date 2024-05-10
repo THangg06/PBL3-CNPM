@@ -556,4 +556,4 @@ public partial class Web01Context : DbContext
 
 public DbSet<Demo.ModelViews.RegisterViewModel> RegisterViewModel { get; set; } = default!;
 }
->>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
+

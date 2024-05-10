@@ -54,4 +54,4 @@ public partial class Account
 
     public virtual Role? Role { get; set; }
 }
->>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
+

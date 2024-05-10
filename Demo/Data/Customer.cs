@@ -31,7 +31,7 @@
 //    public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
     
 //}
-=======
+
 ﻿using System;
 using System.Collections.Generic;
 
@@ -64,4 +64,4 @@ public partial class Customer
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
     
 }
->>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
+
