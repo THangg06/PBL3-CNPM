@@ -1,3 +1,9 @@
+
 ﻿16/4/2024
 layout người dùng
-haizz
+30/4/2024
+xử lí list
+thêm thanh lịch sử
+thêm thông báo thay đổi
+xử lí giao diện
+>>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228

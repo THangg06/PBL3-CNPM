@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
   margin: 0;
@@ -137,3 +138,85 @@ form .pass-link a:hover,
 form .signup-link a:hover{
   text-decoration: underline;
 }
+=======
+
+  .root {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 1510px;
+    height: 690px;
+    background-color: rgb(252, 210, 99);
+    overflow: hidden;
+  }
+  .hero_title {
+    position: absolute;
+    top: 129.5px;
+    right: 243.5px;
+    bottom: 605.5px;
+    left: 67%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 289px;
+    height: 65px;
+    font: 600 46px/1.41 "Piazzolla", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+  .image {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    aspect-ratio: 0.8;
+    object-fit: cover;
+  }
+  .flex_col {
+    position: absolute;
+    top: 251px;
+    right: 113px;
+    bottom: 340px;
+    left: 58%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 0px;
+    width: 550px;
+    height: 300px;
+    
+    }
+    button {
+      font-family: "Roboto", sans-serif;
+      outline: 0;
+      background: #ad3d1b;
+      width: 83%;
+      border: 0;
+      padding: 15px;
+      color: #FFFFFF;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    
+    a {
+      display: block;
+      margin: 1rem;
+      margin-right: 14rem;
+      padding: .5rem;
+      font-size: 1.3rem;
+      text-align: left;
+      color: #3498db;
+
+      line-height: 0.1rem;
+      text-decoration: none;    
+    }
+    .flex_col input[type="text"],
+    .flex_col input[type="password"] {
+      width: 80%;
+      line-height:3em;
+      font-family: 'Ubuntu', sans-serif;
+      border:2px solid #f2f2f2;
+      outline:none;
+      padding-left:10px;
+    }
+>>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228

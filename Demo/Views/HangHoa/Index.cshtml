@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@* @model Demo.ViewComponents.MenuLoaiViewComponent *@
 @model IEnumerable<Demo.ModelViews.HangHoaVM> 
 @{
@@ -402,3 +403,123 @@
 </body>
 </html>
 
+=======
+﻿@* @model Demo.ViewComponents.MenuLoaiViewComponent *@
+@model IEnumerable<Demo.ModelViews.HangHoaVM> 
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+@{
+    ViewData["Title"] = "MenuHome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+
+    <link href="~/css/menu.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    @* <title>Menu</title> *@
+</head>
+
+<body>
+   
+    <button href="#" class="btn">Xem ngay</button>
+
+
+    <section class="grid">
+        <div class="content">
+            <div class="content-left">
+                <div class="info">
+                    <h2>Order Your Best <br>Food anytime</h2>
+                    <p>
+                        Hey, Our delicious food is waiting for you,<br>
+                        We are always near to you with fresh item of food
+                    </p>
+                </div>
+                <button>Explore Food</button>
+            </div>
+            <div class="content-right">
+                <img src="./assets/MenuAccess/Daco_4553104.png" />
+            </div>
+        </div>
+    </section>
+       @await Component.InvokeAsync("MenuLoai")
+
+
+
+
+
+    <div class="product_row" id="Burger">
+    @foreach (var item in Model)
+    {
+    
+    <div class="item">
+    <img class="image" src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="alt text" />
+    <div class="product_card">
+    <h4 class="food_title">Burger Bò</h4>
+    <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
+    <h5 class="price_tag">40.000 Đ</h5>
+    <button class="btn"><h5 class="highlight2">Add to cart</h5></button>
+    </div>
+    </div>
+    }
+    </div>
+
+    
+ 
+    <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Danh mục</h4>
+                        <ul>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Liện hệ</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Hỗ trợ</h4>
+                        <ul>
+                            <li><a href="#">Vận chuyển</a></li>
+                           
+                            <li><a href="#">Đơn hàng</a></li>
+                            <li><a href="#">thanh toán</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Danh mục món ăn</h4>
+                        <ul>
+                            <li><a href="#">Gà rán</a></li>
+                            <li><a href="#">Burger</a></li>
+                            <li><a href="#">Mì Ý</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Theo dõi</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fa-envelope fas"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!------------------------------ Scripts ------------------------------------------------>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./js/main.js" charset="utf-8"></script>
+
+  
+</body>
+</html>
+
+>>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228

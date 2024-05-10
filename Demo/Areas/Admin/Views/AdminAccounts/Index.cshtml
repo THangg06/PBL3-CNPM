@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Demo.Data.Account>
+
+@{
+    ViewData["Title"] = "Danh sách tài khoản quản trị";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<br />
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminAccounts" asp-action="Index">Danh sách tài khoản </a>
+          
+        </nav>
+    </div>
+
+</div>
+
+<div class="mb-3">
+    <a asp-action="Create" class="btn btn-primary">Tạo tài khoản mới</a>
+    <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminAccounts" asp-action="Index"> > Tạo tài khoản mới </a>
+</div>
+
+<div class="filter-group" id="editcbb">
+
+    <label for="category">Lọc theo: </label>
+    <select class="custom-select" id="idrole" name="idrole" style="min-width: 200px" asp-items="ViewBag.QuyenTruyCap">
+        <option value="" disabled selected>Chọn quyền truy cập</option>
+    </select>
+    <select class="custom-select" id="idstatus" name="idstatus" style="min-width: 200px" asp-items="ViewBag.IsTrangThai">
+        <option value="" disabled selected>Chọn trạng thái</option>
+    </select>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FullName</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Lần đăng nhập cuối</th>
+                <th>Quyền truy cập</th>
+                <th>Trạng thái</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.AccountId</td>
+                        <td>
+                            <div class="row">
+                                <div class="col-md-6"><strong>FullName:</strong></div>
+                                <div class="col-md-6">@item.FullName</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6"><strong>Email:</strong></div>
+                                <div class="col-md-6">@item.Email</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6"><strong>Phone:</strong></div>
+                                <div class="col-md-6">@item.Phone</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6"><strong>Phone:</strong></div>
+                                <div class="col-md-6">@item.LastLogin</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-md-6"><strong>Password:</strong></div>
+                                <div class="col-md-6">@item.Role.RoleName</div>
+                            </div>
+                          
+                        </td>
+                        <td>
+                            @if(item.Active==true)
+                            {
+                                <div class="row">
+                                    <div class="col-md-6"><strong>Active:</strong></div>
+                                    <div class="col-md-6">Active</div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="row">
+                                    <div class="col-md-6"><strong>Active:</strong></div>
+                                    <div class="col-md-6">Block</div>
+                                </div>
+                            }
+
+                        <td>
+                        <td>
+                        
+                            <a asp-action="Edit" asp-route-id="@item.AccountId" class="btn btn-warning btn-sm">Sửa</a>
+                            <a asp-action="Details" asp-route-id="@item.AccountId" class="btn btn-info btn-sm">Chi tiết</a>
+                            <a asp-action="Delete" asp-route-id="@item.AccountId" class="btn btn-danger btn-sm">Xóa</a>
+                        </td>
+                    </tr>
+                }
+
+            }
+        </tbody>
+    </table>
+</div>

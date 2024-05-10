@@ -1,6 +1,48 @@
-﻿namespace Demo.Extension
+//<<<<<<< HEAD
+//﻿namespace Demo.Extension
+//{
+//    public class Extension
+//    {
+//    }
+//}
+//=======
+﻿using System.Text.RegularExpressions;
+
+namespace Demo.Extension
 {
-    public class Extension
+    public static class Extension
     {
+       
+        public static string ToVnd(this double donGia)
+        {
+
+            return donGia.ToString("#,##0" + " VNĐ");
+            
+        }
+        public static string ToTitleCase(string str)
+        {
+
+            string result = str;
+            if(!string.IsNullOrEmpty(str))
+            {
+                var words = str.Split(' ');
+                for(int index =0; index < words.Length; index++)
+                {
+                    var s = words[index];
+                    if(s.Length> 0)
+                    {
+                        words[index] = s[0].ToString().ToUpper() + s.Substring(1);
+                    }    
+                }
+                result = string.Join("", words);
+
+            }
+            return result;
+
+        }
+        
+
+    
     }
 }
+>>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
