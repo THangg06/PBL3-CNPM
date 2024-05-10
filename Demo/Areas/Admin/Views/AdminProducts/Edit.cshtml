@@ -4,7 +4,16 @@
     ViewData["Title"] = "Chỉnh sửa sản phẩm";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Danh sách sản phẩm > </a>
+            <span  class="breadcrumb-item active">Chỉnh sửa sản phẩm </span <br />
+        </nav>
+    </div>
 
+</div>
 <div class="container mt-4">
     <h2>Chỉnh sửa sản phẩm</h2>
     <form asp-action="Edit" method="post" enctype="multipart/form-data" class="forms-sample">

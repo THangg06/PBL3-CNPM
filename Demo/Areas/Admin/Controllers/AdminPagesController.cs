@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Demo.Data;
 using PagedList.Core;
+using Demo.Helper;
+using AspNetCoreHero.ToastNotification.Abstractions;
+using AspNetCoreHero.ToastNotification.Notyf;
 
 namespace Demo.Areas.Admin.Controllers
 {
@@ -14,10 +17,11 @@ namespace Demo.Areas.Admin.Controllers
     public class AdminPagesController : Controller
     {
         private readonly Web01Context _context;
-
-        public AdminPagesController(Web01Context context)
+        public INotyfService _notyfService { get; }
+        public AdminPagesController(Web01Context context, INotyfService notyfService)
         {
             _context = context;
+            _notyfService = notyfService;
         }
 
         // GET: Admin/AdminPages
@@ -61,12 +65,37 @@ namespace Demo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PageId,PageName,Contents,Thumb,Published,Title,MetaDesc,MetaKey,Alias,CreateDate,Ordering")] Page page)
+        public async Task<IActionResult> Create([Bind("PageId,PageName,Contents,Thumb,Published,Title,MetaDesc,MetaKey,Alias,CreateDate,Ordering")] Page page, IFormFile fThumb)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(page);
+                if (fThumb != null && fThumb.Length > 0)
+                {
+                    string extension = Path.GetExtension(fThumb.FileName);
+
+                    string imageName = MyUtil.SEOUrl(page.PageName) + extension.ToLower();
+
+
+                    string uploadedFile = await MyUtil.UploadFile(fThumb, "ThumbPage", imageName);
+
+
+                    if (uploadedFile != null)
+                    {
+                        page.Thumb = uploadedFile;
+                    }
+                }
+            
+
+                // Kiểm tra và đặt Thumb nếu không có
+                if (string.IsNullOrEmpty(page.Thumb))
+                {
+                    page.Thumb = "default.jpg";
+                }
+            
+                    _context.Add(page);
+                
                 await _context.SaveChangesAsync();
+                _notyfService.Success("Tạo mới thành công");
                 return RedirectToAction(nameof(Index));
             }
             return View(page);
@@ -93,7 +122,7 @@ namespace Demo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PageId,PageName,Contents,Thumb,Published,Title,MetaDesc,MetaKey,Alias,CreateDate,Ordering")] Page page)
+        public async Task<IActionResult> Edit(int id, [Bind("PageId,PageName,Contents,Thumb,Published,Title,MetaDesc,MetaKey,Alias,CreateDate,Ordering")] Page page, IFormFile fThumb)
         {
             if (id != page.PageId)
             {
@@ -104,11 +133,29 @@ namespace Demo.Areas.Admin.Controllers
             {
                 try
                 {
+                    if (fThumb != null && fThumb.Length > 0)
+                    {
+                        string extension = Path.GetExtension(fThumb.FileName);
+
+                        string imageName = MyUtil.SEOUrl(page.PageName) + extension.ToLower();
+
+                        page.Thumb = await MyUtil.UploadFile(fThumb, @"ThumbPage", imageName);
+
+
+                        if (string.IsNullOrEmpty(page.Thumb))
+                        {
+                            page.Thumb = "default.jpg";
+                        }
+                    }
+
                     _context.Update(page);
+                   
                     await _context.SaveChangesAsync();
+                    _notyfService.Success("Chỉnh sửa thành công");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
+                    _notyfService.Success("Chỉnh sửa thất bại");
                     if (!PageExists(page.PageId))
                     {
                         return NotFound();
@@ -151,8 +198,9 @@ namespace Demo.Areas.Admin.Controllers
             {
                 _context.Pages.Remove(page);
             }
-
+           
             await _context.SaveChangesAsync();
+            _notyfService.Success("Xóa thành công");
             return RedirectToAction(nameof(Index));
         }
 

@@ -4,7 +4,16 @@
     ViewData["Title"] = "Delete";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminRoles" asp-action="Index">Danh sách quyền truy cập > </a>
+            <span class="breadcrumb-item active">Xóa quyền truy cập</span <br />
+        </nav>
+    </div>
 
+</div>
 <div class="container mt-5">
     <h2 class="mb-4">Thông tin qyền truy cập</h2>
     <div class="table-responsive">

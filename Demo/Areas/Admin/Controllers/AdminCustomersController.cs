@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Demo.Data;
 using PagedList.Core;
+using AspNetCoreHero.ToastNotification.Abstractions;
 
 namespace Demo.Areas.Admin.Controllers
 {
@@ -14,10 +15,11 @@ namespace Demo.Areas.Admin.Controllers
     public class AdminCustomersController : Controller
     {
         private readonly Web01Context _context;
-
-        public AdminCustomersController(Web01Context context)
+        public INotyfService _notyfService { get; }
+        public AdminCustomersController(Web01Context context, INotyfService notyfService)
         {
             _context = context;
+            _notyfService = notyfService;
         }
 
         // GET: Admin/AdminCustomers
@@ -65,6 +67,7 @@ namespace Demo.Areas.Admin.Controllers
             {
                 _context.Add(customer);
                 await _context.SaveChangesAsync();
+                _notyfService.Success("Tạo mới thành công");
                 return RedirectToAction(nameof(Index));
             }
             return View(customer);
@@ -104,9 +107,11 @@ namespace Demo.Areas.Admin.Controllers
                 {
                     _context.Update(customer);
                     await _context.SaveChangesAsync();
+                    _notyfService.Success("Chỉnh sửa thành công");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
+                    _notyfService.Success("Chỉnh sửa thất bại");
                     if (!CustomerExists(customer.CustomerId))
                     {
                         return NotFound();
@@ -151,6 +156,7 @@ namespace Demo.Areas.Admin.Controllers
             }
 
             await _context.SaveChangesAsync();
+            _notyfService.Success("Xóa thành công");
             return RedirectToAction(nameof(Index));
         }
 

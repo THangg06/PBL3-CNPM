@@ -1,19 +1,28 @@
 ﻿@model Demo.Data.Page
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Chỉnh sửa Page: " + Model.PageName;
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Edit</h1>
-
-<h4>Page</h4>
 <hr />
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminPages" asp-action="Index">Danh sách page > </a>
+            <span class="breadcrumb-item active">Chỉnh sửa Page : @Model.PageName </span <br />
+        </nav>
+    </div>
+
+</div>
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-controller="AdminPages" asp-action="Edit" asp-route-id="@Model.PageId" method="post" enctype="multipart/form-data">
+
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="PageId" />
+            <input type="hidden" asp-for="Thumb" />
             <div class="form-group">
                 <label asp-for="PageName" class="control-label"></label>
                 <input asp-for="PageName" class="form-control" />
@@ -24,11 +33,12 @@
                 <input asp-for="Contents" class="form-control" />
                 <span asp-validation-for="Contents" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Thumb" class="control-label"></label>
-                <input asp-for="Thumb" class="form-control" />
-                <span asp-validation-for="Thumb" class="text-danger"></span>
-            </div>
+          <div class="form-group">
+            <label asp-for="Thumb" class="control-label"></label>
+           @*  <input asp-for="Thumb" class="form-control" required /> *@
+             <input asp-for="Thumb" class="form-control" required />
+            <span asp-validation-for="Thumb" class="text-danger"></span>
+        </div>
             <div class="form-group">
                 <label asp-for="Published" class="control-label"></label>
                 <input asp-for="Published" class="form-control" />

@@ -49,7 +49,6 @@ namespace Demo.Areas.Admin.Controllers
 
             return View(models);
         }
-
         public IActionResult Filtter(string CatID = "")
         {
             // Xây dựng URL dựa trên CatID

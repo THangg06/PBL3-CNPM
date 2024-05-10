@@ -12,6 +12,7 @@
     <Folder Include="Data\" />
     <Folder Include="wwwroot\.github\workflows\" />
     <Folder Include="wwwroot\MenuCss\LoadH\" />
+    <Folder Include="wwwroot\MenuCss\ThumbPage\" />
   </ItemGroup>
 
   <ItemGroup>

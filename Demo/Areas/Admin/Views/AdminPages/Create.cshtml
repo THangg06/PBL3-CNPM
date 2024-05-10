@@ -1,17 +1,24 @@
 ﻿@model Demo.Data.Page
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Taoj mới Page";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Create</h1>
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminPages" asp-action="Index">Danh sách trang > </a>
+            <span class="breadcrumb-item active">Tạo mới trang</span <br />
+        </nav>
+    </div>
 
-<h4>Page</h4>
+</div>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-controller="AdminPages"  asp-action="Create" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="PageId" class="control-label"></label>
@@ -29,8 +36,8 @@
                 <span asp-validation-for="Contents" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Thumb" class="control-label"></label>
-                <input asp-for="Thumb" class="form-control" />
+                <label class="font-weight-semibold" for="productBrand">Ảnh đại diện</label>
+                <input name="fThumb" type="file" class="form-control" asp-for="Thumb" />
                 <span asp-validation-for="Thumb" class="text-danger"></span>
             </div>
             <div class="form-group">

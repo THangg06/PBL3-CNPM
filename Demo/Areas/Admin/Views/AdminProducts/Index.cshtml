@@ -2,88 +2,93 @@
 @model PagedList.Core.IPagedList<Demo.Data.Product>
 
 @{
-    int CurrentPage = ViewBag.CurrentPage;
-    ViewData["Title"] = "Index";
+    int currentPage = ViewBag.CurrentPage ?? 1;  // Default to page 1 if not set
+    ViewData["Title"] = "Product Management";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<br />
+<!-- Breadcrumb Navigation -->
 <div class="page-header">
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
-            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
-            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Quản lý sản phẩm > </a>
-            <span class="breadcrumb-item active">Danh sách sản phẩm : page @CurrentPage </span> <br />
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
+                <i class="anticon anticon-home m-r-5"></i>Home
+            </a>
+            <a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" class="breadcrumb-item">
+                Quản lý sản phẩm
+            </a>
+            <span class="breadcrumb-item active">
+                Danh sách sản phẩm: Page @currentPage
+            </span>
         </nav>
     </div>
-
 </div>
-<div class="filter-group" id="editcbb">
- <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
-        <option selected>Chọn Danh Mục</option>
-     <option value="0" >Chọn tất cả</option>
-    </select>
-    </div>
 
+<!-- Search and Filtering Section -->
+<div class="filter-group">
+    <input type="text" id="keyword" name="keyword"  />
+    <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
+        <option selected>Chọn Danh Mục</option>
+        <option value="0">Chọn tất cả</option>
+    </select>
+</div>
+
+<!-- Add Product Button -->
 <div class="mb-3">
     <a asp-action="Create" class="btn btn-primary">Thêm sản phẩm</a>
 </div>
 
+<!-- Products Table -->
 <table class="table">
     <thead>
         <tr>
-
-            <th>ID Product</th>
-            <th width="50">ProductName</th>
-            <th width="100">ShortDesc</th>
-
-            <th width="200">Description</th>
-            <th width="20">Price</th>
-            <th width ="10">Unit</th>
-            <th>BestSellers</th>
-            <th width="5">Active</th>
-          
+            <th>ID</th>
+            <th>Name</th>
+            <th>Short Description</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Unit</th>
+            <th>Best Sellers</th>
+            <th>Active</th>
             <th>Category</th>
-
+            <th>Actions</th>
         </tr>
     </thead>
-    <tbody>
-        @foreach (var item in Model)
+    <tbody id="records_table">
+        @foreach (var product in Model)
         {
             <tr>
-                <td>@Html.DisplayFor(modelItem => item.ProductId)</td>
-                <td>@Html.DisplayFor(modelItem => item.ProductName)</td>
-                <td>@Html.DisplayFor(modelItem => item.ShortDesc)</td>
-                <td>@Html.DisplayFor(modelItem => item.Description)</td>
-                <td>@Html.DisplayFor(modelItem => item.Price)</td>
-                <td>@Html.DisplayFor(modelItem => item.Unit)</td>
-             
-                <td>@Html.DisplayFor(modelItem => item.BestSellers)</td>
-
-                <td>@Html.DisplayFor(modelItem => item.Active)</td>
-   
-                <td>@Html.DisplayFor(modelItem => item.Cat.CatId)</td>
+                <td>@product.ProductId</td>
+                <td>@product.ProductName</td>
+                <td>@product.ShortDesc</td>
+                <td>@product.Description</td>
+                <td>@product.Price</td>
+                <td>@product.Unit</td>
+                <td>@product.BestSellers</td>
+                <td>@product.Active </td>
+                <td>@product.Cat.CatId</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ProductId" class="text-danger">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@product.ProductId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@product.ProductId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@product.ProductId" class="text-danger">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
 
-<div aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <pager class="page-item" list="@Model" asp-area="Admin" asp-controller="AdminProducts"  asp-route-CatID="@ViewBag.CurrentCateID"  asp-action="Index"></pager>
-                    </ul>
-
-                </div>
+<!-- Pagination Controls -->
+<div aria-label="Page navigation">
+    <ul class="pagination">
+        <pager class="page-item" list="@Model" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" asp-route-CatID="@ViewBag.CurrentCateID"></pager>
+    </ul>
+</div>
 
 
 @section Scripts {
     <script>
         $(document).ready(function () {
+            // Khi chọn danh mục
             $("#txtCatID").change(function () {
                 var selectedCatID = $(this).val(); // Lấy giá trị đã chọn (CatID)
 
@@ -106,7 +111,27 @@
                 });
             });
 
+            // Khi tìm kiếm sản phẩm
+            $("#keyword").keyup(function () {
+                var strkeyword = $("#keyword").val(); // Lấy giá trị tìm kiếm
+
+                $.ajax({
+                    url: '/Admin/Search/FindProduct',
+                    dataType: "html",
+                    type: "POST",
+                    data: { keyword: strkeyword },
+                    async: true,
+                    success: function (results) {
+                        // Chèn kết quả HTML trả về vào `records_table`
+                        $("#records_table").html(results);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(`AJAX Error: ${status} - ${error}`);
+                    }
+                });
+            });
         });
+
     </script>
 }
 
