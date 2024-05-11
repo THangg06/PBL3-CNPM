@@ -16,9 +16,9 @@ public partial class Product
 
     public string? CatId { get; set; }
 
-   // public double? Price { get; set; }
-	public decimal Price { get; set; }
-	public string? Unit { get; set; }
+   //public double? Price { get; set; }
+    public decimal Price { get; set; }
+    public string? Unit { get; set; }
 
     public string? Thumb { get; set; }
 

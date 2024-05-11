@@ -1,26 +1,26 @@
 ﻿<!DOCTYPE html>
 <html lang="vi">
     <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-   
-        <link rel="stylesheet" type="text/css" href="./css/Homepage.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-        <!-- /* Monda Font */ -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./css/Homepage.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- /* Monda Font */ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
          <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/css/site.css">
     @RenderSection("Style", required: false)
@@ -37,7 +37,7 @@
           <!-- <section class = "section1"> -->
             <header class="header">
         <a class="logo" asp-controller="Home" asp-action="Index">
-                <img src="./assets/animated_character_blue.png" alt="res-logo">
+                <img src="~/assets/animated_character_blue.png" alt="res-logo">
                 <h1 class="txt">HEE-HO</h1>
               </a>
               
@@ -73,7 +73,7 @@
                @*   <div class="cart-items-container">
                     <div class="cart-item">
                       <span class="fas fa-times"></span>
-                      <img src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
+                      <img src="~/assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
                       <div class="content">
                         <h3>Cart-item 01</h3>
                         <div class="price">$15.99</div>
@@ -82,7 +82,7 @@
     
                     <div class="cart-item">
                       <span class="fas fa-times"></span>
-                      <img src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
+                      <img src="~/assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
                       <div class="content">
                         <h3>Cart-item 02</h3>
                         <div class="price">$14.99</div>
@@ -92,7 +92,7 @@
                     <div class="cart-item">
                       <span class="fas fa-times"></span>
                       
-                      <img src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
+                      <img src="~/assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
                       <div class="content">
                         <h3>Cart-item 03</h3>
                         <div class="price">$10.99</div>
@@ -161,7 +161,7 @@
 <script>
    $(document).ready(function(){
     $("#search-btn").click(function(){
-        let query = $("#search-box").val().trim(); // Lấy giá trị từ ô nhập liệu
+        let query = $("#search-box").val().trim(); 
         if(query !== "") {
             let url = '/HangHoa/Search?query=' + query;
             window.location.href = url;

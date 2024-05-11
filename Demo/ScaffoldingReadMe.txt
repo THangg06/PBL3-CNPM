@@ -11,4 +11,4 @@ Add the following code to the Configure method in your Application's Startup cla
             pattern : "{area:exists}/{controller=Home}/{action=Index}/{id?}"
           );
         });
->>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
+

@@ -1,4 +1,3 @@
-
 C:\ProjectWF\Demo\Demo\bin\Debug\net8.0\appsettings.Development.json
 C:\ProjectWF\Demo\Demo\bin\Debug\net8.0\appsettings.json
 C:\ProjectWF\Demo\Demo\bin\Debug\net8.0\Demo.staticwebassets.runtime.json
@@ -1604,5 +1603,4 @@ C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\AspNetCoreHero.ToastNotification.Views.d
 C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\AspNetCoreHero.ToastNotification.dll
 C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\PagedList.Core.dll
 C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\PagedList.Core.Mvc.dll
-
 C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\Demo.MvcApplicationPartsAssemblyInfo.cs

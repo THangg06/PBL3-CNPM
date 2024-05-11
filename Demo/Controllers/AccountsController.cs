@@ -246,63 +246,114 @@ namespace Demo.Controllers
             ViewBag.ReturnUrl = ReturnUrl;
 
             // Kiểm tra xem ModelState có hợp lệ không
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                // Tìm khách hàng dựa trên email
-                var khachHang = _context.Customers.SingleOrDefault(kh => kh.Email == model.Email);
+                return View(model);
+            }
 
-                // Nếu không tìm thấy khách hàng, thêm thông báo lỗi
-                if (khachHang == null)
+            // Kiểm tra khách hàng (Customer) dựa trên email
+            Customer? userCustomer = _context.Customers.SingleOrDefault(kh => kh.Email == model.Email);
+
+            if (userCustomer != null)
+            {
+                // Xử lý đăng nhập cho khách hàng
+                if (!userCustomer.Active.HasValue || !userCustomer.Active.Value)
                 {
-                    ModelState.AddModelError("loi", "Không có khách hàng này.");
+                    ModelState.AddModelError("loi", "Tài khoản đã bị khóa.");
+                    return View(model);
+                }
+
+                // Mã hóa mật khẩu và so sánh với mật khẩu đã nhập
+                string hashedPassword = (model.Password + userCustomer.Salt.Trim()).ToMD5();
+                if (userCustomer.Password != hashedPassword)
+                {
+                    ModelState.AddModelError("loi", "Sai thông tin đăng nhập.");
+                    return View(model);
+                }
+
+                // Lấy vai trò của khách hàng
+                Role? userRole = _context.Roles.SingleOrDefault(role => role.RoleId == userCustomer.RoleId);
+
+                // Tạo claims cho phiên đăng nhập
+                var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Email, userCustomer.Email),
+            new Claim(ClaimTypes.Name, userCustomer.FullName),
+            new Claim("CustomerId", userCustomer.CustomerId),
+            new Claim(ClaimTypes.Role, userRole?.RoleName ?? "Customer")
+        };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+                // Đăng nhập vào phiên làm việc
+                await HttpContext.SignInAsync(claimsPrincipal);
+
+                // Chuyển hướng dựa trên vai trò
+                if (Url.IsLocalUrl(ReturnUrl))
+                {
+                    return Redirect(ReturnUrl);
                 }
                 else
                 {
-                    // Kiểm tra trạng thái tài khoản của khách hàng
-                    if (khachHang.Active==false)
-                    {
-                        ModelState.AddModelError("loi", "Tài khoản đã bị khóa. Vui lòng liên hệ Admin.");
-                    }
-                    else
-                    {
-                        // Mã hóa mật khẩu và so sánh với mật khẩu đã nhập
-                        string pass = (model.Password + khachHang.Salt.Trim()).ToMD5();
-                        if (khachHang.Password != pass)
-                        {
-                            ModelState.AddModelError("loi", "Sai thông tin đăng nhập.");
-                        }
-                        else
-                        {
-                            // Thiết lập yêu cầu xác thực và phiên đăng nhập
-                            var claims = new List<Claim>
-                    {
-                        new Claim(ClaimTypes.Email, khachHang.Email),
-                        new Claim(ClaimTypes.Name, khachHang.FullName),
-                        new Claim("CustomerId", khachHang.CustomerId),
-                        new Claim(ClaimTypes.Role, "Customer") // Role động
-                    };
-
-                            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-
-                            await HttpContext.SignInAsync(claimsPrincipal);
-
-                            // Kiểm tra ReturnUrl và chuyển hướng dựa trên URL hợp lệ
-                            if (Url.IsLocalUrl(ReturnUrl))
-                            {
-                                return Redirect(ReturnUrl);
-                            }
-                            else
-                            {
-                                return RedirectToAction("Index", "Home");
-                            }
-                        }
-                    }
+                    return RedirectToAction("Index", "Home");
                 }
             }
 
-            // Nếu có lỗi trong ModelState, trả về trang đăng nhập với thông báo lỗi
-            return View();
+            // Nếu không tìm thấy khách hàng, kiểm tra quản trị viên (Account)
+            Account? userAdmin = _context.Accounts.SingleOrDefault(ac => ac.Email == model.Email);
+
+            if (userAdmin != null)
+            {
+                // Xử lý đăng nhập cho quản trị viên
+                if (!userAdmin.Active.HasValue || !userAdmin.Active.Value)
+                {
+                    ModelState.AddModelError("loi", "Tài khoản đã bị khóa.");
+                    return View(model);
+                }
+
+                // Mã hóa mật khẩu và so sánh với mật khẩu đã nhập
+                string hashedPassword = (model.Password + userAdmin.Salt.Trim()).ToMD5();
+                if (userAdmin.Password != hashedPassword)
+                {
+                    ModelState.AddModelError("loi", "Sai thông tin đăng nhập.");
+                    return View(model);
+                }
+
+                // Lấy vai trò của quản trị viên
+                Role? userRole = _context.Roles.SingleOrDefault(role => role.RoleId == userAdmin.RoleId);
+
+                // Tạo claims cho phiên đăng nhập
+                var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Email, userAdmin.Email),
+            new Claim(ClaimTypes.Name, userAdmin.FullName),
+            new Claim("AccountId", userAdmin.AccountId),
+            new Claim(ClaimTypes.Role, userRole?.RoleName ?? "Admin")
+        };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+                // Đăng nhập vào phiên làm việc
+                await HttpContext.SignInAsync(claimsPrincipal);
+
+                // Chuyển hướng dựa trên vai trò
+                if (claimsPrincipal.IsInRole("Admin"))
+                {
+                    // Chuyển hướng đến trang HomeAdmin trong khu vực Admin
+                    return RedirectToAction("Index", "HomeAdmin", new { area = "Admin" });
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+
+            }
+
+            // Nếu không tìm thấy người dùng
+            ModelState.AddModelError("loi", "Không tìm thấy người dùng.");
+            return View(model);
         }
 
         [HttpGet]
