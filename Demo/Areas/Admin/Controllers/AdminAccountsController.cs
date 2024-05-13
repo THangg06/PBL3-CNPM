@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Demo.Data;
+using AspNetCoreHero.ToastNotification.Abstractions;
 
 namespace Demo.Areas.Admin.Controllers
 {
@@ -13,15 +14,21 @@ namespace Demo.Areas.Admin.Controllers
     public class AdminAccountsController : Controller
     {
         private readonly Web01Context _context;
-
-        public AdminAccountsController(Web01Context context)
+        public INotyfService _notyfService { get; }
+        public AdminAccountsController(Web01Context context, INotyfService notyfService)
         {
             _context = context;
+            _notyfService = notyfService;
         }
 
         // GET: Admin/AdminAccounts
         public async Task<IActionResult> Index()
         {
+            ViewData["QuyenTruyCap"] = new SelectList(_context.Roles, "RoleId", "Description");
+            List<SelectListItem> IsTrangThai = new List<SelectListItem>();
+            IsTrangThai.Add(new SelectListItem() { Text = "Active", Value = "1" });
+            IsTrangThai.Add(new SelectListItem() { Text = "Block", Value = "0" });
+            ViewData["IsTrangThai"] = IsTrangThai;
             var web01Context = _context.Accounts.Include(a => a.Role);
             return View(await web01Context.ToListAsync());
         }
@@ -57,12 +64,13 @@ namespace Demo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AccountId,FullName,Phone,Email,Password,Salt,Active,RoleId,LastLogin,CreateDate")] Account account)
+        public async Task<IActionResult> Create([Bind("AccountId,Phone,Email,Password,Salt,Active,RoleId,LastLogin,CreateDate")] Account account)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(account);
                 await _context.SaveChangesAsync();
+                _notyfService.Success("Tạo mới thành công");
                 return RedirectToAction(nameof(Index));
             }
             ViewData["RoleId"] = new SelectList(_context.Roles, "RoleId", "RoleId", account.RoleId);
@@ -91,7 +99,7 @@ namespace Demo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("AccountId,FullName,Phone,Email,Password,Salt,Active,RoleId,LastLogin,CreateDate")] Account account)
+        public async Task<IActionResult> Edit(string id, [Bind("AccountId,Phone,Email,Password,Salt,Active,RoleId,LastLogin,CreateDate")] Account account)
         {
             if (id != account.AccountId)
             {
@@ -104,11 +112,13 @@ namespace Demo.Areas.Admin.Controllers
                 {
                     _context.Update(account);
                     await _context.SaveChangesAsync();
+                    _notyfService.Success("Cập nhật thành công");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!AccountExists(account.AccountId))
                     {
+                        _notyfService.Success("Có lỗi xảy ra");
                         return NotFound();
                     }
                     else
@@ -153,6 +163,7 @@ namespace Demo.Areas.Admin.Controllers
             }
 
             await _context.SaveChangesAsync();
+            _notyfService.Success("Xóa tài khoản thành công");
             return RedirectToAction(nameof(Index));
         }
 

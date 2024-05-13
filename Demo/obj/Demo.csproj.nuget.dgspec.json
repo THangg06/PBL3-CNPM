@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\A2\\LTNet\\TestPBL\\Demo\\Demo.csproj": {}
+    "C:\\A2\\LTNet\\MD\\Demo\\Demo.csproj": {}
   },
   "projects": {
-    "C:\\A2\\LTNet\\TestPBL\\Demo\\Demo.csproj": {
+    "C:\\A2\\LTNet\\MD\\Demo\\Demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\A2\\LTNet\\TestPBL\\Demo\\Demo.csproj",
+        "projectUniqueName": "C:\\A2\\LTNet\\MD\\Demo\\Demo.csproj",
         "projectName": "Demo",
-        "projectPath": "C:\\A2\\LTNet\\TestPBL\\Demo\\Demo.csproj",
+        "projectPath": "C:\\A2\\LTNet\\MD\\Demo\\Demo.csproj",
         "packagesPath": "C:\\Users\\huynh\\.nuget\\packages\\",
-        "outputPath": "C:\\A2\\LTNet\\TestPBL\\Demo\\obj\\",
+        "outputPath": "C:\\A2\\LTNet\\MD\\Demo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\huynh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -78,6 +78,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "PagedList.Core.Mvc": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             }
           },
           "imports": [

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i225JoD2XagwGUvP/jxm/4upIPhagKvd2gMP5tzcTJIqSyJ1J+oDWqc1cAThUvD1e+p0LYmdu5Sm+Q+Enwa4kg==",
+  "dgSpecHash": "B0uFrN9DDinfB3b8KX+Ms7d+R5t/CTrgrmc9z5r8aegZ8bFQ0sG/30Uv8A2wZvkPW+xQY9v3lBZvs0Ldy78AUQ==",
   "success": true,
-  "projectFilePath": "C:\\A2\\LTNet\\TestPBL\\Demo\\Demo.csproj",
+  "projectFilePath": "C:\\A2\\LTNet\\MD\\Demo\\Demo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\huynh\\.nuget\\packages\\aspnetcorehero.toastnotification\\1.1.0\\aspnetcorehero.toastnotification.1.1.0.nupkg.sha512",
     "C:\\Users\\huynh\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
@@ -147,6 +147,8 @@
     "C:\\Users\\huynh\\.nuget\\packages\\nuget.projectmodel\\6.9.1\\nuget.projectmodel.6.9.1.nupkg.sha512",
     "C:\\Users\\huynh\\.nuget\\packages\\nuget.protocol\\6.9.1\\nuget.protocol.6.9.1.nupkg.sha512",
     "C:\\Users\\huynh\\.nuget\\packages\\nuget.versioning\\6.9.1\\nuget.versioning.6.9.1.nupkg.sha512",
+    "C:\\Users\\huynh\\.nuget\\packages\\pagedlist.core\\1.17.4\\pagedlist.core.1.17.4.nupkg.sha512",
+    "C:\\Users\\huynh\\.nuget\\packages\\pagedlist.core.mvc\\3.0.0\\pagedlist.core.mvc.3.0.0.nupkg.sha512",
     "C:\\Users\\huynh\\.nuget\\packages\\system.codedom\\5.0.0\\system.codedom.5.0.0.nupkg.sha512",
     "C:\\Users\\huynh\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
     "C:\\Users\\huynh\\.nuget\\packages\\system.composition\\7.0.0\\system.composition.7.0.0.nupkg.sha512",
