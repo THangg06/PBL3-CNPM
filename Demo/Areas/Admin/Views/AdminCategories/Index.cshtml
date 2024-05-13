@@ -1,0 +1,65 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<Demo.Data.Category>
+
+@{
+    int currentPage = ViewBag.CurrentPage ?? 1;
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
+                <i class="anticon anticon-home m-r-5"></i>Home
+            </a>
+            <a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" class="breadcrumb-item">
+                Quản lý danh mục sản phẩm
+            </a>
+            <span class="breadcrumb-item active">
+                Danh sách danh mục: Page @currentPage
+            </span>
+        </nav>
+    </div>
+</div>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>CatID</th>
+            <th>CatName</th>
+           
+            <th>Description</th>
+            <th>Published</th>
+            <th>Thumb</th>
+            <th>Title</th>
+            <th>Alias</th>
+          
+        </tr>
+    </thead>
+    <tbody id="records_table">
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.CatId</td>
+                <td>@product.CatName</td>
+               
+                <td>@product.Description</td>
+                <td>@product.Published</td>
+                <td>@product.Thumb</td>
+                <td>@product.Title</td>
+                <td>@product.Alias </td>
+               
+                <td>
+                    <a asp-action="Edit" asp-route-id="@product.CatId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@product.CatId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@product.CatId" class="text-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,4 +1,4 @@
-﻿@using PagedList.Core.Mvc
+﻿﻿@using PagedList.Core.Mvc
 @model PagedList.Core.IPagedList<Demo.Data.Product>
 
 @{
@@ -26,7 +26,7 @@
 
 <!-- Search and Filtering Section -->
 <div class="filter-group">
-    <input type="text" id="keyword" name="keyword"  />
+    <input type="text" id="keyword" name="keyword" />
     <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
         <option selected>Chọn Danh Mục</option>
         <option value="0">Chọn tất cả</option>
@@ -134,5 +134,3 @@
 
     </script>
 }
-
-

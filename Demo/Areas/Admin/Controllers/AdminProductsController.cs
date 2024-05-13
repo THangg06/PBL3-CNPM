@@ -40,7 +40,28 @@ namespace Demo.Areas.Admin.Controllers
                 query = query.Where(x => x.CatId == CatID);
             }
 
-            var models = new PagedList<Product>(query, pageNumber, pageSize);
+            var models = new PagedList<Product>(query.Select(p => new Product
+            {
+                ProductId = p.ProductId,
+                ProductName = p.ProductName,
+                ShortDesc = p.ShortDesc,
+                Description = p.Description,
+                CatId = p.CatId,
+                Price = p.Price,
+                Unit = p.Unit,
+                Thumb = p.Thumb,
+                Video = p.Video,
+                DateCreated = p.DateCreated,
+                DateModified = p.DateModified,
+                BestSellers = p.BestSellers ? p.BestSellers ? true : false : false,
+                HomeFlag = p.HomeFlag ? p.HomeFlag ? true : false : false,
+                Active = p.Active ? p.Active ? true : false : false,
+                Tags = p.Tags,
+                Title = p.Title,
+                Alias = p.Alias,
+                MetaDesc = p.MetaDesc,
+                MetaKey = p.MetaKey
+            }), pageNumber, pageSize);
 
             ViewBag.CurrentCatID = CatID;
             ViewBag.CurrentPage = pageNumber;

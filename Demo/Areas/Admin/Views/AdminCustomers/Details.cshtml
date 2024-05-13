@@ -1,4 +1,4 @@
-﻿@model Demo.Data.Customer
+﻿@model Demo.Data.Product
 
 @{
     ViewData["Title"] = "Details";
@@ -9,76 +9,82 @@
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
-            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index">Danh sách tài khoản khách hàng > </a>
-            <span class="breadcrumb-item active">Xem thông tin tài khoản khách hàng</span <br />
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Danh sách sản phẩm > </a>
+            <span class="breadcrumb-item active">Chi tiết sản phẩm </span <br />
         </nav>
     </div>
 
 </div>
 
 <div>
-    <h4>Customer</h4>
+    
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FullName)
+            @Html.DisplayNameFor(model => model.ProductName)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FullName)
+            @Html.DisplayFor(model => model.ProductName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Birthday)
+            @Html.DisplayNameFor(model => model.ShortDesc)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Birthday)
+            @Html.DisplayFor(model => model.ShortDesc)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Avatar)
+            @Html.DisplayNameFor(model => model.Description)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Avatar)
+            @Html.DisplayFor(model => model.Description)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Address)
+            @Html.DisplayNameFor(model => model.Price)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Address)
+            @Html.DisplayFor(model => model.Price)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
+            @Html.DisplayNameFor(model => model.Unit)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
+            @Html.DisplayFor(model => model.Unit)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Phone)
+            @Html.DisplayNameFor(model => model.Thumb)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Phone)
+            @Html.DisplayFor(model => model.Thumb)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreateDate)
+            @Html.DisplayNameFor(model => model.Video)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreateDate)
+            @Html.DisplayFor(model => model.Video)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Password)
+            @Html.DisplayNameFor(model => model.DateCreated)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Password)
+            @Html.DisplayFor(model => model.DateCreated)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Salt)
+            @Html.DisplayNameFor(model => model.DateModified)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Salt)
+            @Html.DisplayFor(model => model.DateModified)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LastLogin)
+            @Html.DisplayNameFor(model => model.BestSellers)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LastLogin)
+            @Html.DisplayFor(model => model.BestSellers)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HomeFlag)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HomeFlag)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Active)
@@ -86,9 +92,45 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Active)
         </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tags)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tags)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Alias)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Alias)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MetaDesc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MetaDesc)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MetaKey)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MetaKey)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cat.CatId)
+        </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.CustomerId">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.ProductId">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
