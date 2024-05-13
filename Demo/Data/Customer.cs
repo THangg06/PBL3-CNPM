@@ -18,7 +18,7 @@ public partial class Customer
     public string? Email { get; set; }
     public string? Phone { get; set; }
     public DateTime? CreateDate { get; set; }
-
+    public int? RoleId { get; set; }
     public string? Password { get; set; }
 
     public string? Salt { get; set; }
@@ -28,5 +28,5 @@ public partial class Customer
     public bool? Active { get; set; }
     //public object Randomkey { get; internal set; }
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
-    
+
 }
