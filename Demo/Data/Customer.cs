@@ -62,6 +62,11 @@ public partial class Customer
     public bool? Active { get; set; }
     //public object Randomkey { get; internal set; }
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+<<<<<<< HEAD
     
 }
 
+=======
+
+}
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c

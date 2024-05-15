@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*!
  * jQuery Validation Plugin v1.19.5
  *
@@ -1660,6 +1661,8 @@ if ( $.ajaxPrefilter ) {
 }
 return $;
 =======
+=======
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
 /*!
  * jQuery Validation Plugin v1.19.5
  *
@@ -3320,5 +3323,8 @@ if ( $.ajaxPrefilter ) {
 	};
 }
 return $;
+<<<<<<< HEAD
 >>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
+=======
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
 }));

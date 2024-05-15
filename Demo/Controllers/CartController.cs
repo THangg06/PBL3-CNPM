@@ -100,18 +100,18 @@ namespace Demo.Controllers
 			return RedirectToAction("Index");
 
 		}
-        public IActionResult ClearCart()
-        {
-            // Xóa toàn bộ các mục khỏi giỏ hàng trong session
-            HttpContext.Session.Remove(MySetting.CART_KEY);
+		public IActionResult ClearCart()
+		{
+			// Xóa toàn bộ các mục khỏi giỏ hàng trong session
+			HttpContext.Session.Remove(MySetting.CART_KEY);
 
-            // Hoặc nếu bạn muốn xóa giỏ hàng và tạo ra một giỏ hàng mới trống
-            // HttpContext.Session.Set(MySetting.CART_KEY, new List<CartItem>());
+			// Hoặc nếu bạn muốn xóa giỏ hàng và tạo ra một giỏ hàng mới trống
+			// HttpContext.Session.Set(MySetting.CART_KEY, new List<CartItem>());
 
-            // Sau đó chuyển hướng người dùng đến trang chủ hoặc trang giỏ hàng
-            return RedirectToAction("Index", "Home");
-        }
-        [Authorize]
+			// Sau đó chuyển hướng người dùng đến trang chủ hoặc trang giỏ hàng
+			return RedirectToAction("Index", "Home");
+		}
+		[Authorize]
 		[HttpGet]
 		public IActionResult Checkout()
 		{
@@ -121,29 +121,35 @@ namespace Demo.Controllers
 				return Redirect("/");
 			}
 			return View(Cart);
-		}
-		[Authorize]
-		[HttpPost]
+            }
+        [Authorize]
+        [HttpPost]
         public IActionResult Checkout(CheckoutVM model)
         {
             if (ModelState.IsValid)
             {
-                var customerId = HttpContext.User.Claims.SingleOrDefault(p => p.Type == MySetting.CLAIM_CUSTOMERID)?.Value;
+                var customerId = HttpContext.User.Claims.SingleOrDefault(p => p.Type == MySetting.CLAIM_CUSTOMERID).Value;
+                var khachhang = new Customer();
+                if (model.GiongKhachHang)
+                {
+                    khachhang = _db.Customers.SingleOrDefault(kh => kh.CustomerId == customerId);
+                }
+
+                var hoadon = new Order
+                {
+                    CustomerId = customerId,
+                    FullName = model.FullName ?? khachhang.FullName,
+                    Address = model.Address ?? khachhang.Address,
+                    Phone = model.Phone ?? khachhang.Phone,
+                    PaymentDate = DateTime.Now,
+                    OrderDate = DateTime.Now,
+                    CachThanhToan = "COD",
+                };
 
                 _db.Database.BeginTransaction();
-
                 try
                 {
-                    var hoadon = new Order
-                    {
-                        CustomerId = customerId,
-                        Address = model.Address,
-                        Phone = model.Phone,
-                        PaymentDate = DateTime.Now,
-                        CachThanhToan = "COD",
-                        // Các trường khác có thể thêm vào dựa trên model hoặc thông tin khác
-                    };
-
+                    _db.Database.CommitTransaction();
                     _db.Add(hoadon);
                     _db.SaveChanges();
 
@@ -156,37 +162,86 @@ namespace Demo.Controllers
                             Quantity = item.SoLuong,
                             Total = item.Dongia,
                             ProductId = item.MaHh,
-                            // Các trường khác có thể thêm vào dựa trên model hoặc thông tin khác
                         });
                     }
-
                     _db.AddRange(cthds);
                     _db.SaveChanges();
 
                     HttpContext.Session.Set<List<CartItem>>(MySetting.CART_KEY, new List<CartItem>());
-
-                    _db.Database.CommitTransaction();
 
                     return View("Success");
                 }
                 catch
                 {
                     _db.Database.RollbackTransaction();
-                    // Xử lý khi có lỗi xảy ra
                 }
             }
-            else
-            {
-                return View(model);
-            }
-           // ClearCart();
 
-            // Chuyển hướng về trang chủ
-          //  return RedirectToAction("Index", "Home", new { success = true });
-             return View("Success");
             return View(Cart);
         }
-      
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        var customerId = HttpContext.User.Claims.SingleOrDefault(p => p.Type == MySetting.CLAIM_CUSTOMERID)?.Value;
+
+        //        _db.Database.BeginTransaction();
+
+        //        try
+        //        {
+        //            var hoadon = new Order
+        //            {
+        //                CustomerId = customerId,
+        //                Address = model.Address,
+        //                Phone = model.Phone,
+        //                PaymentDate = DateTime.Now,
+        //                CachThanhToan = "COD",
+        //                // Các trường khác có thể thêm vào dựa trên model hoặc thông tin khác
+        //            };
+
+        //            _db.Add(hoadon);
+        //            _db.SaveChanges();
+
+        //            var cthds = new List<OrderDetail>();
+        //            foreach (var item in Cart)
+        //            {
+        //                cthds.Add(new OrderDetail
+        //                {
+        //                    OrderId = hoadon.OrderId,
+        //                    Quantity = item.SoLuong,
+        //                    Total = item.Dongia,
+        //                    ProductId = item.MaHh,
+        //                    // Các trường khác có thể thêm vào dựa trên model hoặc thông tin khác
+        //                });
+        //            }
+
+        //            _db.AddRange(cthds);
+        //            _db.SaveChanges();
+
+        //            HttpContext.Session.Set<List<CartItem>>(MySetting.CART_KEY, new List<CartItem>());
+
+        //            _db.Database.CommitTransaction();
+
+        //            return View("Success");
+        //        }
+        //        catch
+        //        {
+        //            _db.Database.RollbackTransaction();
+        //            // Xử lý khi có lỗi xảy ra
+        //        }
+        //    }
+        //    else
+        //    {
+        //        return View(model);
+        //    }
+        //   // ClearCart();
+
+        //    // Chuyển hướng về trang chủ
+        //  //  return RedirectToAction("Index", "Home", new { success = true });
+        //     return View("Success");
+        //    return View(Cart);
+        //}
+
+
     }
 }
 

@@ -27,11 +27,19 @@ public partial class Product
 
     public DateTime? DateModified { get; set; }
 
+<<<<<<< HEAD
     public bool BestSellers { get; set; } 
 
     public bool HomeFlag { get; set; } 
 
     public bool Active { get; set; } 
+=======
+    public bool BestSellers { get; set; }
+
+    public bool HomeFlag { get; set; }
+
+    public bool Active { get; set; }
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
 
     public string? Tags { get; set; }
 

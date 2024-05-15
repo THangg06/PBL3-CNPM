@@ -239,9 +239,12 @@ namespace Demo.Controllers
         //    }
         //    return View(model);
         //}
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
         //[HttpPost]
         //[AllowAnonymous]
         //[Route("Login.html", Name = "Login")]
@@ -282,7 +285,12 @@ namespace Demo.Controllers
         //            {
         //                new Claim(ClaimTypes.Email, khachHang.Email),
         //                new Claim(ClaimTypes.Name, khachHang.FullName),
+<<<<<<< HEAD
         //                new Claim("CustomerId", khachHang.CustomerId),
+=======
+        //                //new Claim("CustomerId", khachHang.CustomerId),
+        //                new Claim(MySetting.CLAIM_CUSTOMERID, khachHang.CustomerId),
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
         //                new Claim(ClaimTypes.Role, "Customer") // Role động
         //            };
 
@@ -308,8 +316,11 @@ namespace Demo.Controllers
         //    // Nếu có lỗi trong ModelState, trả về trang đăng nhập với thông báo lỗi
         //    return View();
         //}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
         [HttpPost]
         [AllowAnonymous]
         [Route("Login.html", Name = "Login")]
@@ -348,12 +359,22 @@ namespace Demo.Controllers
 
                 // Tạo claims cho phiên đăng nhập
                 var claims = new List<Claim>
+<<<<<<< HEAD
         {
             new Claim(ClaimTypes.Email, userCustomer.Email),
             new Claim(ClaimTypes.Name, userCustomer.FullName ?? ""),
             new Claim("CustomerId", userCustomer.CustomerId),
             new Claim(ClaimTypes.Role, userRole?.RoleName ?? "Customer")
         };
+=======
+{
+    new Claim(ClaimTypes.Email, userCustomer.Email),
+    new Claim(ClaimTypes.Name, userCustomer.FullName ?? ""),
+   // new Claim("CustomerId", userCustomer.CustomerId),
+    new Claim(MySetting.CLAIM_CUSTOMERID, userCustomer.CustomerId),
+    new Claim(ClaimTypes.Role, userRole?.RoleName ?? "Customer")
+};
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
@@ -397,12 +418,21 @@ namespace Demo.Controllers
 
                 // Tạo claims cho phiên đăng nhập
                 var claims = new List<Claim>
+<<<<<<< HEAD
         {
             new Claim(ClaimTypes.Email, userAdmin.Email),
             new Claim(ClaimTypes.Name, userAdmin.FullName ?? ""),
             new Claim("AccountId", userAdmin.AccountId ?? ""),
             new Claim(ClaimTypes.Role, userRole?.RoleName ?? "Admin")
         };
+=======
+{
+    new Claim(ClaimTypes.Email, userAdmin.Email),
+    new Claim(ClaimTypes.Name, userAdmin.FullName ?? ""),
+    new Claim("AccountId", userAdmin.AccountId ?? ""),
+    new Claim(ClaimTypes.Role, userRole?.RoleName ?? "Admin")
+};
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //<<<<<<< HEAD
+=======
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
 //using Demo.Controllers;
 //using Demo.Data;
 //using Demo.Helper;
@@ -28,7 +31,11 @@
 //builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 //builder.Services.AddSession(options =>
 //{
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
 //    options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian timeout của session
 //    options.Cookie.HttpOnly = true; // Tùy chọn bảo mật
 //    options.Cookie.IsEssential = true; // Đảm bảo cookie session được sử dụng
@@ -63,7 +70,10 @@
 //    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 //app.Run();
+<<<<<<< HEAD
 //=======
+=======
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
 using AspNetCoreHero.ToastNotification;
 using AspNetCoreHero.ToastNotification.Notyf;
 using Demo.Controllers;
@@ -87,7 +97,7 @@ builder.Services.AddDbContext<Web01Context>(options =>
     builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 builder.Services.AddSession(options =>
 {
-  
+
     options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian timeout của session
     options.Cookie.HttpOnly = true; // Tùy chọn bảo mật
     options.Cookie.IsEssential = true; // Đảm bảo cookie session được sử dụng
@@ -99,7 +109,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     {
         p.LoginPath = "/Login.html";
         p.AccessDeniedPath = "/";
-    } 
+    }
     );
 var app = builder.Build();
 
@@ -118,6 +128,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+<<<<<<< HEAD
  app.UseEndpoints(endpoints =>
 {
     
@@ -133,3 +144,19 @@ app.UseAuthorization();
 
 app.Run();
 //>>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
+=======
+app.UseEndpoints(endpoints =>
+{
+
+    endpoints.MapControllerRoute(
+        name: "admin",
+        pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+});
+
+app.Run();
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c

@@ -1026,7 +1026,6 @@ C:\A2\LTNet\TestPBL\Demo\obj\Debug\net8.0\staticwebassets\msbuild.build.Demo.pro
 C:\A2\LTNet\TestPBL\Demo\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Demo.props
 C:\A2\LTNet\TestPBL\Demo\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Demo.props
 C:\A2\LTNet\TestPBL\Demo\obj\Debug\net8.0\staticwebassets.pack.json
-C:\A2\LTNet\TestPBL\Demo\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_LayoutAdmin.cshtml.rz.scp.css
 C:\A2\LTNet\TestPBL\Demo\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\A2\LTNet\TestPBL\Demo\obj\Debug\net8.0\scopedcss\bundle\Demo.styles.css
 C:\A2\LTNet\TestPBL\Demo\obj\Debug\net8.0\scopedcss\projectbundle\Demo.bundle.scp.css
@@ -1036,14 +1035,22 @@ C:\A2\LTNet\TestPBL\Demo\obj\Debug\net8.0\refint\Demo.dll
 C:\A2\LTNet\TestPBL\Demo\obj\Debug\net8.0\Demo.pdb
 C:\A2\LTNet\TestPBL\Demo\obj\Debug\net8.0\Demo.genruntimeconfig.cache
 C:\A2\LTNet\TestPBL\Demo\obj\Debug\net8.0\ref\Demo.dll
+C:\A2\LTNet\TestPBL\Demo\bin\Debug\net8.0\libman.json
+C:\A2\LTNet\TestPBL\Demo\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_LayoutAdmin.cshtml.rz.scp.css
+C:\A2\LTNet\TestPBL\Demo\bin\Debug\net8.0\AspNetCoreHero.ToastNotification.Views.dll
+C:\A2\LTNet\TestPBL\Demo\bin\Debug\net8.0\AspNetCoreHero.ToastNotification.dll
+C:\A2\LTNet\TestPBL\Demo\obj\Debug\net8.0\Demo.MvcApplicationPartsAssemblyInfo.cs
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\appsettings.Development.json
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\appsettings.json
+C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\libman.json
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Demo.staticwebassets.runtime.json
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Demo.exe
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Demo.deps.json
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Demo.runtimeconfig.json
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Demo.dll
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Demo.pdb
+C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\AspNetCoreHero.ToastNotification.Views.dll
+C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\AspNetCoreHero.ToastNotification.dll
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\AutoMapper.dll
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Azure.Core.dll
@@ -1282,6 +1289,7 @@ C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\Demo.GeneratedMSBuildEditorConfig.editorcon
 C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\Demo.AssemblyInfoInputs.cache
 C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\Demo.AssemblyInfo.cs
 C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\Demo.csproj.CoreCompileInputs.cache
+C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\Demo.MvcApplicationPartsAssemblyInfo.cs
 C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\Demo.MvcApplicationPartsAssemblyInfo.cache
 C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\Demo.RazorAssemblyInfo.cache
 C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\Demo.RazorAssemblyInfo.cs
@@ -1303,6 +1311,7 @@ C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\refint\Demo.dll
 C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\Demo.pdb
 C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\Demo.genruntimeconfig.cache
 C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\ref\Demo.dll
+<<<<<<< HEAD
 =======
 C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -1604,3 +1613,7 @@ C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\AspNetCoreHero.ToastNotification.dll
 C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\PagedList.Core.dll
 C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\PagedList.Core.Mvc.dll
 C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\Demo.MvcApplicationPartsAssemblyInfo.cs
+=======
+C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\PagedList.Core.dll
+C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\PagedList.Core.Mvc.dll
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c

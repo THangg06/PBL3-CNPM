@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*!
   * Bootstrap v5.1.0 (https://getbootstrap.com/)
   * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
@@ -6780,6 +6781,8 @@
 })));
 //# sourceMappingURL=bootstrap.bundle.js.map
 =======
+=======
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
 /*!
   * Bootstrap v5.1.0 (https://getbootstrap.com/)
   * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
@@ -13560,4 +13563,7 @@
 
 })));
 //# sourceMappingURL=bootstrap.bundle.js.map
+<<<<<<< HEAD
 >>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
+=======
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * @license
  * Unobtrusive validation support library for jQuery and jQuery Validate
@@ -435,6 +436,8 @@
     return $jQval.unobtrusive;
 }));
 =======
+=======
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
 /**
  * @license
  * Unobtrusive validation support library for jQuery and jQuery Validate
@@ -870,4 +873,7 @@
 
     return $jQval.unobtrusive;
 }));
+<<<<<<< HEAD
 >>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
+=======
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿const tableBody = document.querySelector('tbody');
 const paginationUl = document.querySelector('.pagination ul');
 
@@ -242,3 +243,9 @@ fileInput.addEventListener('change', (event) => {
 //   page2.classList.remove('active');
 >>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
 // }
+=======
+﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+// for details on configuring this project to bundle and minify static web assets.
+
+// Write your JavaScript code.
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c

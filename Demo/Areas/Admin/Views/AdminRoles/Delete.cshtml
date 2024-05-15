@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@model Demo.Data.Role
 
 @{
@@ -53,3 +54,60 @@
     </div>
 </div>
 
+=======
+﻿@model Demo.Data.Role
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminRoles" asp-action="Index">Danh sách quyền truy cập > </a>
+            <span class="breadcrumb-item active">Xóa quyền truy cập</span <br />
+        </nav>
+    </div>
+
+</div>
+<div class="container mt-5">
+    <h2 class="mb-4">Thông tin qyền truy cập</h2>
+    <div class="table-responsive">
+        <table class="table data-table">
+
+            <tbody>
+
+                <tr>
+                    <td>ID:</td>
+                    <td>@Model.RoleId</td>
+                </tr>
+
+                </tr>
+            <td>Tên quyền truy cập:</td>
+            <td>@Model.RoleName</td>
+            </tr>
+
+            </tr>
+            <td>Mô tả:</td>
+            <td>@Model.Description</td>
+
+            </tr>
+
+            </tr>
+            <td>Xác nhận xóa:</td>
+            <td>
+                <form asp-action="Delete" asp-route-id="@Model.RoleId">
+                    <input type="hidden" asp-for="RoleId" />
+                    <input type="submit" value="Xác nhận xóa" class="btn btn-danger"/>
+                </form>
+            </td>
+
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@using Demo.Data
 @model List<Product>
 
@@ -22,4 +23,30 @@
             </td>
         </tr>
     }
+=======
+﻿@using Demo.Data
+@model List<Product>
+
+@if (Model != null)
+{
+    @foreach (var product in Model)
+    {
+                <tr>
+                    <td>@product.ProductId</td>
+                    <td>@product.ProductName</td>
+                    <td>@product.ShortDesc</td>
+                    <td>@product.Description</td>
+                    <td>@product.Price</td>
+                    <td>@product.Unit</td>
+                    <td>@product.BestSellers</td>
+                    <td>@product.Active </td>
+                    <td>@product.Cat.CatId</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@product.ProductId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@product.ProductId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@product.ProductId" class="text-danger">Delete</a>
+                    </td>
+                </tr>
+    }
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
 }

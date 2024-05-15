@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@model Demo.Data.Role
 
 @{
@@ -68,3 +69,75 @@
 
 </body>
 </html>
+=======
+﻿@model Demo.Data.Role
+
+@{
+    ViewData["Title"] = "Thông tin quyền truy cập";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Data Table</title>
+   
+
+    <style>
+        /* Định dạng bổ sung cho bảng */
+        .data-table th, .data-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .data-table th {
+            background-color: #f8f9fa;
+        }
+        .data-table tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminRoles" asp-action="Index">Danh sách quyền truy cập > </a>
+            <span class="breadcrumb-item active">Thông tin quyền truy cập</span <br />
+        </nav>
+    </div>
+
+</div>
+    <div class="container mt-5">
+        <h2 class="mb-4">Thông tin qyền truy cập</h2>
+        <div class="table-responsive">
+            <table class="table data-table">
+                
+                <tbody>
+                   
+                            <tr>
+                                <td>ID:</td>
+                                <td>@Model.RoleId</td>
+                            </tr>
+
+                            </tr>
+                                 <td>Tên quyền truy cập:</td>
+                                 <td>@Model.RoleName</td>
+                            </tr>
+
+                            </tr>
+                                  <td>Mô tả:</td>
+                                  <td>@Model.Description</td>
+                                
+                            </tr>
+                        
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c

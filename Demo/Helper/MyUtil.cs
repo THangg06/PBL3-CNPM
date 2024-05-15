@@ -65,6 +65,7 @@ namespace Demo.Helper
         public static string ToTitleCase(string str)
         {
             string result = str;
+<<<<<<< HEAD
             if(!string.IsNullOrEmpty(result))
             {
                 var words = str.Split(' ');
@@ -72,6 +73,15 @@ namespace Demo.Helper
                 {
                     var s = words[i];
                     if (s.Length>0)
+=======
+            if (!string.IsNullOrEmpty(result))
+            {
+                var words = str.Split(' ');
+                for (int i = 0; i < words.Length; i++)
+                {
+                    var s = words[i];
+                    if (s.Length > 0)
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
                     {
                         words[i] = s[0].ToString().ToUpper() + s.Substring(1);
 
@@ -86,6 +96,7 @@ namespace Demo.Helper
             Regex regex = new Regex(@"^[0-9]+$");
             try
             {
+<<<<<<< HEAD
                 if(String.IsNullOrWhiteSpace(str))
                 {
                     return false;
@@ -96,14 +107,26 @@ namespace Demo.Helper
                 }
             }
             catch {  }
+=======
+                if (String.IsNullOrWhiteSpace(str))
+                {
+                    return false;
+                }
+                if (!regex.IsMatch(str))
+                {
+                    return false;
+                }
+            }
+            catch { }
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
             return true;
         }
         public static bool IsValidEmail(string email)
         {
-            if(email.Trim().EndsWith("."))
+            if (email.Trim().EndsWith("."))
             {
                 return false;
-            }    
+            }
             try
             {
                 var addr = new System.Net.Mail.MailAddress(email);
@@ -113,14 +136,21 @@ namespace Demo.Helper
         }
         public static string UploadHinh(IFormFile file, string folder)
         {
+<<<<<<< HEAD
             try {
+=======
+            try
+            {
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
                 var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "MenuCss", folder, file.FileName);
                 using (var myfile = new FileStream(fullPath, FileMode.CreateNew))
                 {
                     file.CopyTo(myfile);
                 }
-            return file.FileName;
-            } catch(Exception e) {
+                return file.FileName;
+            }
+            catch (Exception e)
+            {
                 return string.Empty;
             }
         }
@@ -139,7 +169,11 @@ namespace Demo.Helper
             url = Regex.Replace(url.Trim(), @"[^0-9a-z-\s]", "").Trim();
             url = Regex.Replace(url.Trim(), @"\s+", "-");
             url = Regex.Replace(url, @"\s", "-");
+<<<<<<< HEAD
             while(true)
+=======
+            while (true)
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
             {
                 if (url.IndexOf("--") != -1)
                 {
@@ -183,14 +217,18 @@ namespace Demo.Helper
         public static string GenerateRandomKey(int lenght = 5)
         {
             var pattern = @"qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!!";
-            var sb= new StringBuilder();
+            var sb = new StringBuilder();
             var rd = new Random(lenght);
-            for(int i=0; i < lenght; i++)
+            for (int i = 0; i < lenght; i++)
             {
                 sb.Append(pattern[rd.Next(0, pattern.Length)]);
-            } 
+            }
             return sb.ToString();
         }
     }
+<<<<<<< HEAD
 }
 //>>>>>>> 1ff40e56d8e6dd36d58c1a78e757dc1ed9ee2228
+=======
+}
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c

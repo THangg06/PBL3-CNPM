@@ -18,7 +18,11 @@ public partial class Category
 
     public int Ordering { get; set; }
 
+<<<<<<< HEAD
     public int Published { get; set; }
+=======
+    public bool? Published { get; set; }
+>>>>>>> 06235904bb357cf68a24e145336d06811074051c
 
     public string Thumb { get; set; }
 
