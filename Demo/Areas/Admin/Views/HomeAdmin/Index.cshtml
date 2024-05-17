@@ -1,56 +1,67 @@
-﻿@{
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<div class="grid">
-    <div class="task-box">
-        <h3>Product report</h3>
-        <div class="content">
-            <div class="graph">
-            </div>
-        </div>
-    </div>
+            <div class="content_box">
+                <div class="nav_dir">
+                    <p>
+                        <span>Danh mục sản phẩm</span>
+                    </p>
+                </div>
+                <div class="data_table_container">
+                    <table class="data-table">
+                        <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>Loại danh mục</th>
+                            <th>Số lượng sản phẩm</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Cat01</td>
+                            <td class="name-product">
 
-    <div class="task-box">
-        <h3>Revenue report</h3>
-        <div class="content">
-            <div class="graph-circle">
-            </div>
-        </div>
-    </div>
+                                Hamburger Bò
+                            </td>
+                            <td>6</td>
 
-    <div class="task-box">
-        <h3>Assigned task</h3>
-        <div class="content">
-            <div class="tasks">
-                <img src="~/assets/admin/image.jfif" alt="">
-                <div class="message">
-                    <h4>Assigned Jamie</h4>
-                    <h5>KYS</h5>
+                          </tr>
+                          <tr>
+                            <td>Cat02</td>
+                            <td class="name-product">
+
+                                Hamburger Tôm
+                            </td>
+                            <td>5</td>
+
+                          </tr>
+
+                          <tr>
+                            <td>Cat03</td>
+                            <td class="name-product">
+
+                                Gà rán sốt cay
+                            </td>
+                            <td>6</td>
+
+                          </tr>
+
+                          <tr>
+                            <td>Cat04</td>
+                            <td class="name-product">
+                                Spaghetti Chay
+                            </td>
+                            <td>6</td>
+
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <div class="group_button">
+                    <input type="button" value="Thêm danh mục mới">
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="task-box">
-        <h3>Notification</h3>
-        <div class="content">
-            <div class="tasks">
-                <img src="~/assets/admin/image.jfif" alt="">
-                <div class="message">
-                    <h4>Jamie</h4>
-                    <h5>Ayo PBL suck!!!!</h5>
-                </div>
-            </div>
-
-            <div class="tasks">
-                <img src="~/assets/admin/image.jfif" alt="">
-                <div class="message">
-                    <h4>Jamie</h4>
-                    <h5>Ayo PBL suck!!!!</h5>
-                </div>
-            </div>
         </div>
-    </div>
-</div>
