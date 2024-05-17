@@ -1,4 +1,4 @@
-﻿
+
 ﻿@using PagedList.Core.Mvc
 @model PagedList.Core.IPagedList<Demo.Data.Customer>
 
@@ -8,7 +8,9 @@
     ViewData["Title"] = "Danh sách khách hàng " + CurrentPage;
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-<div class="page-header">
+
+<div class="content_box">
+    <div class="page-header">
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
@@ -20,19 +22,17 @@
 </div>
 <div class="filter-group">
     <input type="text" id="keyword" name="keyword" />
-   @*  <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc"> *@
+        @*  <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc"> *@
         @*  <option selected>Chọn Danh Mục</option> *@
-       @*  <option value="0">Chọn tất cả</option> *@
+        @*  <option value="0">Chọn tất cả</option> *@
     </select>
 </div>
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="tile">
-            <div class="tile-body">
+
+            <div class="data_table_container">
 
 
-                <table class="table table-hover table-bordered table-striped table-sm" id="sampleTable">
+                <table class="data-table" id="sampleTable">
                     <thead>
                         <tr>
 
@@ -43,32 +43,33 @@
                             <th width="200">Address</th>
                             <th width="100">Email</th>
                             <th>Phone</th>
+                            <th></th>
 
                         </tr>
                     </thead>
                     <tbody id="records_table">
-                        @if (Model != null)
-                        {
-                            foreach (var item in Model)
+                            @if (Model != null)
                             {
-                                        <tr>
+                                foreach (var item in Model)
+                                {
+                                                <tr>
 
-                                            <td>@item.CustomerId</td>
-                                            <td>@item.FullName</td>
-                                            <td>@item.Birthday</td>
+                                                    <td>@item.CustomerId</td>
+                                                    <td>@item.FullName</td>
+                                                    <td>@item.Birthday</td>
 
-                                            <td>@item.Address</td>
-                                            <td>@item.Email</td>
-                                            <td>@item.Phone</td>
+                                                    <td>@item.Address</td>
+                                                    <td>@item.Email</td>
+                                                    <td>@item.Phone</td>
 
-                                            <td class="text-center">
-                                        |
-                                                <a asp-action="Details" asp-route-id="@item.CustomerId" class="btn btn-info btn-sm">Chi tiết</a> |
-                                                <a asp-action="Delete" asp-route-id="@item.CustomerId" class="btn btn-danger btn-sm">Xóa</a>
-                                            </td>
-                                        </tr>
+                                                    <td class="text-center">
+                                                |
+                                                        <a asp-action="Details" asp-route-id="@item.CustomerId" class="btn btn-info btn-sm">Chi tiết</a> |
+                                                        <a asp-action="Delete" asp-route-id="@item.CustomerId" class="btn btn-danger btn-sm">Xóa</a>
+                                                    </td>
+                                                </tr>
+                                }
                             }
-                        }
                     </tbody>
                 </table>
                 <div aria-label="Page navigation example">
@@ -78,9 +79,9 @@
 
                 </div>
             </div>
-        </div>
-    </div>
+
 </div>
+
 
                                         
 @section Scripts {
