@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Demo.Data.Account>
+@model IEnumerable<Demo.Data.Account>
 
 @{
     ViewData["Title"] = "Danh sách tài khoản quản trị";
@@ -6,7 +6,8 @@
 }
 
 <br />
-<div class="page-header">
+<div class="content_box">
+    <div class="page-header">
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
@@ -28,8 +29,8 @@
     </select>
 </div>
 
-<div class="table-responsive">
-    <table class="table table-striped table-hover">
+<div class="data_table_container">
+    <table class="data-table">
         <thead>
             <tr>
                 <th>ID</th>
@@ -43,54 +44,56 @@
             </tr>
         </thead>
         <tbody>
-            @if (Model != null)
-            {
-                @foreach (var item in Model)
+                @if (Model != null)
                 {
-                    <tr>
-                        <td>@item.AccountId</td>
-                        <td>
-                            <div class="row">
-                                <div class="col-md-6"><strong>FullName:</strong></div>
-                                <div class="col-md-6">@item.FullName</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6"><strong>Email:</strong></div>
-                                <div class="col-md-6">@item.Email</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6"><strong>Phone:</strong></div>
-                                <div class="col-md-6">@item.Phone</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6"><strong>Phone:</strong></div>
-                                <div class="col-md-6">@item.LastLogin</div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="row">
-                                <div class="col-md-6"><strong>Password:</strong></div>
-                                <div class="col-md-6">@item.Role.RoleName</div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="row">
-                                <div class="col-md-6"><strong>Active:</strong></div>
-                                <div class="col-md-6">@((item.Active.HasValue && item.Active.Value ? "Active" : "Block"))</div>
+                    @foreach (var item in Model)
+                    {
+                            <tr>
+                                <td>@item.AccountId</td>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-md-6"><strong>FullName:</strong></div>
+                                        <div class="col-md-6">@item.FullName</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6"><strong>Email:</strong></div>
+                                        <div class="col-md-6">@item.Email</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6"><strong>Phone:</strong></div>
+                                        <div class="col-md-6">@item.Phone</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6"><strong>Phone:</strong></div>
+                                        <div class="col-md-6">@item.LastLogin</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-md-6"><strong>Password:</strong></div>
+                                        <div class="col-md-6">@item.Role.RoleName</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-md-6"><strong>Active:</strong></div>
+                                        <div class="col-md-6">@((item.Active.HasValue && item.Active.Value ? "Active" : "Block"))</div>
 
-                            </div>
-                        </td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.AccountId" class="btn btn-warning btn-sm">Sửa</a>
-                            <a asp-action="Details" asp-route-id="@item.AccountId" class="btn btn-info btn-sm">Chi tiết</a>
-                            <a asp-action="Delete" asp-route-id="@item.AccountId" class="btn btn-danger btn-sm">Xóa</a>
-                        </td>
-                    </tr>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.AccountId" class="btn btn-warning btn-sm">Sửa</a>
+                                    <a asp-action="Details" asp-route-id="@item.AccountId" class="btn btn-info btn-sm">Chi tiết</a>
+                                    <a asp-action="Delete" asp-route-id="@item.AccountId" class="btn btn-danger btn-sm">Xóa</a>
+                                </td>
+                            </tr>
+                    }
                 }
-            }
         </tbody>
     </table>
 </div>
+</div>
+
 
 @section Scripts {
     <script>
