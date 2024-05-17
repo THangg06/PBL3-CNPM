@@ -11,10 +11,8 @@
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
             <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminAccounts" asp-action="Index">Danh sách tài khoản </a>
-          
         </nav>
     </div>
-
 </div>
 
 <div class="mb-3">
@@ -23,13 +21,10 @@
 </div>
 
 <div class="filter-group" id="editcbb">
-
-    <label for="category">Lọc theo: </label>
-    <select class="custom-select" id="idrole" name="idrole" style="min-width: 200px" asp-items="ViewBag.QuyenTruyCap">
-        <option value="" disabled selected>Chọn quyền truy cập</option>
-    </select>
-    <select class="custom-select" id="idstatus" name="idstatus" style="min-width: 200px" asp-items="ViewBag.IsTrangThai">
+    <select class="custom-select" id="idstatus" name="idstatus" style="min-width: 200px" onchange="filterStatus()">
         <option value="" disabled selected>Chọn trạng thái</option>
+        <option value="true">Active</option>
+        <option value="false">Block</option>
     </select>
 </div>
 
@@ -77,35 +72,47 @@
                                 <div class="col-md-6"><strong>Password:</strong></div>
                                 <div class="col-md-6">@item.Role.RoleName</div>
                             </div>
-                          
                         </td>
                         <td>
-                            @if(item.Active==true)
-                            {
-                                <div class="row">
-                                    <div class="col-md-6"><strong>Active:</strong></div>
-                                    <div class="col-md-6">Active</div>
-                                </div>
-                            }
-                            else
-                            {
-                                <div class="row">
-                                    <div class="col-md-6"><strong>Active:</strong></div>
-                                    <div class="col-md-6">Block</div>
-                                </div>
-                            }
+                            <div class="row">
+                                <div class="col-md-6"><strong>Active:</strong></div>
+                                <div class="col-md-6">@((item.Active.HasValue && item.Active.Value ? "Active" : "Block"))</div>
 
+                            </div>
+                        </td>
                         <td>
-                        <td>
-                        
                             <a asp-action="Edit" asp-route-id="@item.AccountId" class="btn btn-warning btn-sm">Sửa</a>
                             <a asp-action="Details" asp-route-id="@item.AccountId" class="btn btn-info btn-sm">Chi tiết</a>
                             <a asp-action="Delete" asp-route-id="@item.AccountId" class="btn btn-danger btn-sm">Xóa</a>
                         </td>
                     </tr>
                 }
-
             }
         </tbody>
     </table>
 </div>
+
+@section Scripts {
+    <script>
+        function filterStatus() {
+            var selectedStatus = $("#idstatus").val();
+
+            $.ajax({
+                url: '/Admin/AdminAccounts/Filtter',
+                dataType: "json",
+                type: "GET",
+                data: {
+                    active: selectedStatus
+                },
+                success: function (results) {
+                    if (results.status === "success") {
+                        window.location.href = results.redirectUrl;
+                    }
+                },
+                error: function (xhr) {
+                    alert('Đã xảy ra lỗi');
+                }
+            });
+        }
+    </script>
+}

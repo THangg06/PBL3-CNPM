@@ -1,0 +1,25 @@
+﻿@using Demo.Data
+@model List<Customer>
+
+@if (Model != null)
+{
+    @foreach (var cus in Model)
+    {
+                <tr>
+                    <td>@cus.CustomerId</td>
+                    <td>@cus.FullName</td>
+                    <td>@cus.Birthday</td>
+                    <td>@cus.Address</td>
+                    <td>@cus.Email</td>
+                    <td>@cus.Active</td>
+                    <td>@cus.Phone</td>
+
+
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@cus.CustomerId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@cus.CustomerId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@cus.CustomerId"> class="text-danger">Delete</a>
+                    </td>
+                </tr>
+    }
+}

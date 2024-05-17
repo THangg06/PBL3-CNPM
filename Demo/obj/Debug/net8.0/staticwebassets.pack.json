@@ -133,6 +133,18 @@
       "PackagePath": "staticwebassets\\MenuCss\\Hamburger\\Vegan burger.jfif"
     },
     {
+      "Id": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\MenuCss\\LoadH\\10-620x620-7.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\LoadH\\10-620x620-7.jpg"
+    },
+    {
+      "Id": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\MenuCss\\LoadH\\2w_ckscl-608x416f.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\LoadH\\2w_ckscl-608x416f.jpg"
+    },
+    {
+      "Id": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\MenuCss\\LoadH\\Cupcake dau tay.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\LoadH\\Cupcake dau tay.jpg"
+    },
+    {
       "Id": "C:\\A2\\LTNet\\MD\\Demo\\wwwroot\\MenuCss\\Spagetti\\IMG_2987-scaled.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\Spagetti\\IMG_2987-scaled.jpg"
     },

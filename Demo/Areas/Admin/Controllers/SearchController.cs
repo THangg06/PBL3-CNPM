@@ -36,7 +36,28 @@ namespace Demo.Areas.Admin.Controllers
             // Trả về kết quả cho PartialView
             return PartialView("ListProductsSearchPartial", ls);
         }
+        [HttpPost]
+        public IActionResult FindCustomer(string keyword)
+        {
+            // Tạo danh sách sản phẩm rỗng
+            List<Customer> ls = new List<Customer>();
 
+            // Kiểm tra xem từ khóa có hợp lệ không
+            if (string.IsNullOrEmpty(keyword) || keyword.Length < 1)
+            {
+                return PartialView("ListCustomersSearchPartial", null);
+            }
+
+            ls = _context.Customers.AsNoTracking()
+      .Where(x => x.FullName.Contains(keyword))
+      .OrderByDescending(x => x.FullName)
+      .Take(10)
+      .ToList();
+
+
+            // Trả về kết quả cho PartialView
+            return PartialView("ListCustomersSearchPartial", ls);
+        }
 
     }
 }

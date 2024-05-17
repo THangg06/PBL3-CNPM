@@ -108,30 +108,28 @@ namespace Demo.Helper
 
         public static async Task<string> UploadFile(IFormFile file, string directory, string newName)
         {
-            if (file == null || file.Length == 0)
-            {
-                return null;
-            }
-
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Menucss", directory, newName);
-
-            var supportedTypes = new[] { "jpg", "jpeg", "png", "gif", "jfif" };
-            var fileExtension = Path.GetExtension(file.FileName).ToLower().TrimStart('.');
-
-            if (!supportedTypes.Contains(fileExtension))
-            {
-                return null;
-            }
-
             try
             {
-                using (var stream = new FileStream(filePath, FileMode.Create))
+                if (newName == null) { newName = file.FileName; }
+                string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "MenuCss", directory);
+                CreateIfMissing(path);
+                string pathFile = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "MenuCss", directory, newName);
+                var supportedTypes = new[] { "jpg", "jpeg", "png", "gif", "jfif" };
+                var fileExt = System.IO.Path.GetExtension(file.FileName).Substring(1);
+                if (!supportedTypes.Contains(fileExt.ToLower()))
                 {
-                    await file.CopyToAsync(stream);
+                    return null;
                 }
-                return newName;
+                else
+                {
+                    using (var stream = new FileStream(pathFile, FileMode.Create))
+                    {
+                        await file.CopyToAsync(stream);
+                    }
+                    return newName;
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return null;
             }

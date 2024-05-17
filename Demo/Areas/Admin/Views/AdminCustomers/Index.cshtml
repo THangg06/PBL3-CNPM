@@ -18,7 +18,13 @@
     </div>
 
 </div>
-
+<div class="filter-group">
+    <input type="text" id="keyword" name="keyword" />
+   @*  <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc"> *@
+        @*  <option selected>Chọn Danh Mục</option> *@
+       @*  <option value="0">Chọn tất cả</option> *@
+    </select>
+</div>
 
 <div class="row">
     <div class="col-md-12">
@@ -40,7 +46,7 @@
 
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="records_table">
                         @if (Model != null)
                         {
                             foreach (var item in Model)
@@ -56,7 +62,7 @@
                                             <td>@item.Phone</td>
 
                                             <td class="text-center">
-                                                <a asp-action="Edit" asp-route-id="@item.CustomerId" class="btn btn-warning btn-sm">Sửa</a> |
+                                        |
                                                 <a asp-action="Details" asp-route-id="@item.CustomerId" class="btn btn-info btn-sm">Chi tiết</a> |
                                                 <a asp-action="Delete" asp-route-id="@item.CustomerId" class="btn btn-danger btn-sm">Xóa</a>
                                             </td>
@@ -75,3 +81,28 @@
         </div>
     </div>
 </div>
+
+                                        
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+ $("#keyword").keyup(function () {
+                var strkeyword = $("#keyword").val();
+
+                $.ajax({
+                    url: '/Admin/Search/FindCustomer',
+                    dataType: "html",
+                    type: "POST",
+                    data: { keyword: strkeyword },
+                    async: true,
+                    success: function (results) {
+                        $("#records_table").html(results);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(`Lỗi AJAX: ${status} - ${error}`);
+                    }
+                });
+            });
+        });
+    </script>
+}

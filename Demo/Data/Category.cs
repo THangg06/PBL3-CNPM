@@ -5,7 +5,7 @@ namespace Demo.Data;
 
 public partial class Category
 {
-    public string CatId { get; set; }
+    public string? CatId { get; set; }
 
     public string? CatName { get; set; }
 

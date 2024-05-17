@@ -1,8 +1,9 @@
+﻿Index
 ﻿@using PagedList.Core.Mvc
 @model PagedList.Core.IPagedList<Demo.Data.Product>
 
 @{
-    int currentPage = ViewBag.CurrentPage ?? 1;  // Mặc định là trang 1 nếu không có
+    int currentPage = ViewBag.CurrentPage ?? 1;
     ViewData["Title"] = "Quản lý sản phẩm";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
@@ -28,126 +29,151 @@
 <div class="filter-group">
     <input type="text" id="keyword" name="keyword" />
     <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
-        <option selected>Chọn Danh Mục</option>
+        @*  <option selected>Chọn Danh Mục</option> *@
         <option value="0">Chọn tất cả</option>
     </select>
 </div>
-
-<!-- Nút Thêm sản phẩm -->
-<div class="mb-3">
-    <a asp-action="Create" class="btn btn-primary">Thêm sản phẩm</a>
-</div>
-
-<!-- Bảng Sản phẩm -->
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
 <table class="table">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>Tên</th>
-            <th>Mô tả ngắn</th>
-            <th>Mô tả</th>
-            <th>Giá</th>
-            <th>Đơn vị</th>
-            <th>Phổ biến nhất</th>
-            <th>Hoạt động</th>
-            <th>Danh mục</th>
-            <th>Hành động</th>
+            <th>ProductId</th>
+            <th>ProductName</th>
+            
+            <th>Description</th>
+            <th>Price</th>
+            <th>Unit</th>
+            <th>Thumb</th>
+            <th>DateCreated</th>
+            <th>BestSellers</th>
+            <th>HomeFlag</th>
+            <th>Active</th>
+
+
+            <th>Title</th>
+            @* <th>CatID</th> *@
         </tr>
     </thead>
     <tbody id="records_table">
-        @foreach (var product in Model)
+
+        @foreach (var item in Model)
         {
-                <tr>
-                    <td>@product.ProductId</td>
-                    <td>@product.ProductName</td>
-                    <td>@product.ShortDesc</td>
-                    <td>@product.Description</td>
-                    <td>@product.Price</td>
-                    <td>@product.Unit</td>
-                    <td>@product.BestSellers</td>
-                    <td>@product.Active</td>
-                    <td>@product.Cat?.CatId</td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@product.ProductId">Sửa</a> |
-                        <a asp-action="Details" asp-route-id="@product.ProductId">Chi tiết</a> |
-                        <a asp-action="Delete" asp-route-id="@product.ProductId" class="text-danger">Xóa</a>
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                @* <td>
+                    @Html.DisplayFor(modelItem => item.ShortDesc)
+                </td> *@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Unit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Thumb)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateCreated)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.BestSellers)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HomeFlag)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Active)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+
+                @*  <td>
+            @if (item.Cat != null)
+            {
+            @Html.DisplayFor(modelItem => item.Cat.CatId)
+            }
+            else
+            {
+            <span>N/A</span>
+            }
+            </td> *@
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+                </td>
+            </tr>
         }
+
+
     </tbody>
 </table>
 
-<!-- Điều khiển phân trang -->
-<div aria-label="Điều hướng trang">
-    <ul class="pagination">
-        @if (Model.PageCount > 1)
-        {
-                <li class="page-item @(Model.IsFirstPage ? "disabled" : "")">
-                    <a class="page-link" href="@Url.Action("Index", new { page = 1, CatID = ViewBag.CurrentCatID })">Đầu tiên</a>
-                </li>
-                <li class="page-item @(Model.IsFirstPage ? "disabled" : "")">
-                    <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber - 1, CatID = ViewBag.CurrentCatID })">Trước</a>
-                </li>
-            @for (int i = 1; i <= Model.PageCount; i++)
-            {
-                        <li class="page-item @(i == Model.PageNumber ? "active" : "")">
-                            <a class="page-link" href="@Url.Action("Index", new { page = i, CatID = ViewBag.CurrentCatID })">@i</a>
-                        </li>
-            }
-                <li class="page-item @(Model.IsLastPage ? "disabled" : "")">
-                    <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber + 1, CatID = ViewBag.CurrentCatID })">Tiếp</a>
-                </li>
-                <li class="page-item @(Model.IsLastPage ? "disabled" : "")">
-                    <a class="page-link" href="@Url.Action("Index", new { page = Model.PageCount, CatID = ViewBag.CurrentCatID })">Cuối</a>
-                </li>
-        }
-    </ul>
+<!-- Pagination Controls -->
+<div aria-label="Page navigation">
+    <pager class="pagination" list="@Model" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" asp-route-CatID="@ViewBag.CurrentCatID"></pager>
 </div>
 
+
+
 @section Scripts {
-        <script>
-            $(document).ready(function () {
-                // Khi chọn danh mục
-                $("#txtCatID").change(function () {
-                    var selectedCatID = $(this).val();
+    <script>
+        $(document).ready(function () {
+            // Khi chọn danh mục
+            $("#txtCatID").change(function () {
+                var selectedCatID = $(this).val();
 
-                    $.ajax({
-                        url: '/Admin/AdminProducts/Filtter',
-                        dataType: "json",
-                        type: "GET",
-                        data: {
-                            CatID: selectedCatID
-                        },
-                        async: true,
-                        success: function (results) {
-                            if (results.status === "success") {
-                                window.location.href = results.redirectUrl;
-                            }
-                        },
-                        error: function (xhr) {
-                            alert('Đã xảy ra lỗi');
+                $.ajax({
+                    url: '/Admin/AdminProducts/Filtter',
+                    dataType: "json",
+                    type: "GET",
+                    data: {
+                        CatID: selectedCatID
+                    },
+                    async: true,
+                    success: function (results) {
+                        if (results.status === "success") {
+                            window.location.href = results.redirectUrl;
                         }
-                    });
-                });
-
-                // Khi tìm kiếm sản phẩm
-                $("#keyword").keyup(function () {
-                    var strkeyword = $("#keyword").val();
-
-                    $.ajax({
-                        url: '/Admin/Search/FindProduct',
-                        dataType: "html",
-                        type: "POST",
-                        data: { keyword: strkeyword },
-                        async: true,
-                        success: function (results) {
-                            $("#records_table").html(results);
-                        },
-                        error: function (xhr, status, error) {
-                            console.error(`Lỗi AJAX: ${status} - ${error}`);
-                        }
-                    });
+                    },
+                    error: function (xhr) {
+                        alert('Đã xảy ra lỗi');
+                    }
                 });
             });
-        </script>
+
+            // Khi tìm kiếm sản phẩm
+            $("#keyword").keyup(function () {
+                var strkeyword = $("#keyword").val();
+
+                $.ajax({
+                    url: '/Admin/Search/FindProduct',
+                    dataType: "html",
+                    type: "POST",
+                    data: { keyword: strkeyword },
+                    async: true,
+                    success: function (results) {
+                        $("#records_table").html(results);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(`Lỗi AJAX: ${status} - ${error}`);
+                    }
+                });
+            });
+        });
+    </script>
 }

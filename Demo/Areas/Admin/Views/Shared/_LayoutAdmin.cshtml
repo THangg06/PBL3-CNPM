@@ -34,7 +34,7 @@
     <header class="header">
         <div class="admin-box">
             <img src="~/assets/admin/image.jfif" alt="">
-            <h3>Hello, Admin</h3>
+            <h3>Welcom @Context.User.Identity.Name</a></h3>
             <a href="/logout" id="HasLogin">Đăng Xuất</a>
             <div class="fas fa-caret-down"></div>
         </div>
@@ -66,8 +66,7 @@
                         <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index">Quản lý hệ thống</a>
                     </div>
                     <ul class="dropdown-menu">
-                        <li>
-<a asp-area="Admin" asp-controller="AdminCategories" asp-action="Index">Quản lý danh mục</a>
+                        <li><a asp-area="Admin" asp-controller="AdminCategories" asp-action="Index">Quản lý danh mục</a>
 
                         </li>
                         <li>
@@ -109,12 +108,12 @@
                     </ul>
                 </li>
 
-                <li class="nav-item dropdown">
+                @*        <li class="nav-item dropdown">
                     <div class="option-box">
                         <div class="fa-solid fa-message"></div>
                         <a asp-area="Admin" asp-controller="AdminPages" asp-action="Index">Danh sách Pages</a>
-                    </div>
-                    @*  <ul class="dropdown-menu">
+                    </div> *@
+                @*  <ul class="dropdown-menu">
                     <li>
 
                     <div class="fa-solid fa-message"></div>
@@ -126,12 +125,11 @@
 
                 <div class="option-box">
                     <div class="fa-solid fa-message"></div>
-                    <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index">Quản lý tin tức</a>
+                    <a asp-area="Admin" asp-controller="AdminNews" asp-action="Index">Quản lý tin tức</a>
                 </div>
 
                 <div class="option-box">
-                    <div class="fa-solid fa-message"></div>
-<a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index">Thống kê</a>
+                    <div class="fa-solid fa-message"></div><a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index">Thống kê</a>
                 </div>
 
                 <div class="option-box">

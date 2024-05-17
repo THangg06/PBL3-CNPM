@@ -1,80 +1,105 @@
 ﻿@model IEnumerable<Demo.ModelViews.CartItem>
-@{
-	ViewData["Title"] = "Giohang";
-	//Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="css/Cart.css" rel="stylesheet">
-	 <style>
-        /* CSS styles for the header */
+    <meta charset="UTF-8">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/Cart.css" rel="stylesheet">
+    <style>
         body {
             margin-top: 150px; 
-		}
+        }
     </style>
 </head>
 <body>
+    <a class="backToHome" href=""><b>Trở về</b></a>
+    <div class="wrapper">
+        <h1> Giỏ hàng </h1>
+        <div class="project">
+            <div class="shop">
+                @foreach (var item in Model)
+                {
+                        <div class="box">
+                            <img src="~/assets/MenuAccess/@item.Hinh" alt="@item.TenHH" />
+                            <div class="content">
+                                <h3>@item.TenHH</h3>
+                                <h4 class="unit-price" data-unitprice="@item.Dongia">@item.Dongia.ToString("0.000")</h4>
+                                <p class="unit">
+                                    Số lượng: <input name="quantity" type="number" min="1" max="100" value="@item.SoLuong" data-id="@item.MaHh" class="quantity-input" data-unitprice="@item.Dongia" />
+                                </p>
+                                <p class="mb-0 mt-4 item-total">@item.ThanhTien.ToString("0.000")</p>
+                                <a asp-action="RemoveCart" asp-controller="Cart" asp-route-id="@item.MaHh">
+                                    <p class="btn-area">
+                                        <i aria-hidden="true" class="fa fa-trash"></i>
+                                        <span class="btn2">Xóa</span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                }
+            </div>
+            <div class="right-bar">
+                <p><span>Tổng giá</span> <span id="total-price">@Model.Sum(p => p.ThanhTien).ToString("0.000")</span></p>
+                <hr>
+                <p><span>Phí vận chuyển</span> <span id="shipping-fee">@((Model.Sum(p => p.ThanhTien) * 0.2m).ToString("0.000"))</span></p>
+                <hr>
+                <p><span>Tổng thanh toán</span> <span id="final-price">@((Model.Sum(p => p.ThanhTien) * 1.2m).ToString("0.000"))</span></p>
+                <a class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" asp-action="Checkout" asp-controller="Cart">Thanh toán</a>
+            </div>
+        </div>
+    </div>
+ <script>
+    // Đối tượng lưu trữ số lượng của mỗi sản phẩm trong giỏ hàng
+    var cart = {};
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var quantityInputs = document.querySelectorAll(".quantity-input");
+
+        quantityInputs.forEach(function (input, index) {
+            // Lấy số lượng ban đầu từ thuộc tính data-originalquantity của input
+            var originalQuantity = parseInt(input.dataset.originalquantity);
+            cart[index] = originalQuantity;
+
+            input.addEventListener("input", function () {
+                var quantity = parseInt(this.value);
+                var unitPrice = parseFloat(this.dataset.unitprice);
+                var itemTotalElement = this.closest('.content').querySelector('.item-total');
+                var newTotal = (quantity * unitPrice).toFixed(3);
+                itemTotalElement.textContent = newTotal;
+
+                updateTotalPrices();
+
+                // Cập nhật số lượng cho sản phẩm trong giỏ hàng
+                cart[index] = quantity;
+            });
+        });
+    });
+
+    function updateTotalPrices() {
+        var allItemTotals = document.querySelectorAll('.item-total');
+        var totalPrice = 0;
+        allItemTotals.forEach(function (itemTotal) {
+            totalPrice += parseFloat(itemTotal.textContent);
+        });
+
+        document.getElementById("total-price").textContent = totalPrice.toFixed(3);
+        document.getElementById("shipping-fee").textContent = (totalPrice * 0.2).toFixed(3);
+        document.getElementById("final-price").textContent = (totalPrice * 1.2).toFixed(3);
+    }
+
+    function addToCart(index) {
+        var input = document.querySelector(".quantity-input[data-index='" + index + "']");
+        var quantity = parseInt(input.value);
+
+        if (cart[index] !== undefined) {
+            // Nếu sản phẩm đã có trong giỏ hàng, sử dụng số lượng mới
+            cart[index] = quantity;
+        } else {
+            // Nếu chưa có, thêm vào giỏ hàng với số lượng mới
+            cart[index] = quantity;
+        }
+    }
+</script>
 
 
-
-	<a class="backToHome" href=""><b>Trở về</b></a>
-	<div class="wrapper">
-		<h1> Giỏ hàng </h1>
-		<div class="project">
-			<div class="shop">
-				@foreach (var item in Model)
-				{
-					<div class="box">
-									<img src="~/assets/MenuAccess/@item.Hinh">
-						<div class="content">
-							<h3>@item.TenHH</h3>
-								<h4>@item.Dongia.ToString("0.000")</h4>
-							<p class="unit">Số lượng: <input name="" value=@item.SoLuong></p>
-									<p class="mb-0 mt-4">@item.ThanhTien.ToString("0.000")</p>
-								<a asp-action="RemoveCart" asp-controller="Cart" asp-route-id="@item.MaHh"><p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i> <span class="btn2">Xóa</span></p></a>
-						</div>
-					</div>
-				}
-				@* <div class="box">
-					<img src="2.jpg">
-					<div class="content">
-						<h3>Gà xốt cay</h3>
-						<h4>Giá: 40000</h4>
-						<p class="unit">Số lượng: <input name="" value="1"></p>
-						<p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i> <span class="btn2">Xóa</span></p>
-					</div>
-				</div>
-				<div class="box">
-					<img src="3.jpg">
-					<div class="content">
-						<h3>Mì ý</h3>
-						<h4>Giá: 40000</h4>
-						<p class="unit">Số lượng: <input name="" value="1"></p>
-						<p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i> <span class="btn2">Xóa</span></p>
-					</div>
-				</div> *@
-				@* <div class = "giamgia">
-				<p class="voucher">Mã giảm giá <input name="" ></p>
-				<p class="btn-voucher"><i aria-hidden="true" ></i> <span class="btn2">Thêm voucher</span></p>
-				</div> *@
-			</div>
-			<div class="right-bar">
-				<p><span>Tổng giá</span> <span>@Model.Sum(p => p.ThanhTien).ToString("0.000")</span></p>
-				<hr>
-				<p><span>Phí vận chuyển</span> <span>@((Model.Sum(p => p.ThanhTien) * 0.2m).ToString("0.000"))</span></p>
-				<hr>
-				<p><span></span> <span></span></p>
-				<hr>
-				<p><span>Tổng thanh toán</span> <span>@Model.Sum(p => p.ThanhTien).ToString("0.000")</span></p>
-				@* <a href="/Cart/Checkout"><i class="fa fa-shopping-cart"></i>Thanh toán</a> *@
-
-				@*  <a asp-action="Checkout" asp-controller="Cart"><i class="fa fa-shopping-cart"></i>Thanh toán</a>  *@
-				<a class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4  ms-4" asp-action="Checkout" asp-controller="Cart">ThanhToan</a>
-			</div>
-		</div>
-	</div>
 </body>
 </html>

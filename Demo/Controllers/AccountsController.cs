@@ -79,7 +79,7 @@ namespace Demo.Controllers
                 return Json(new { success = false, message = $"Có lỗi xảy ra khi kiểm tra email: {ex.Message}" });
             }
         }
-        
+
         [Route("TaiKhoancuatoi.html", Name = "Dashboard")]
         public IActionResult Dashboard()
         {
@@ -148,7 +148,7 @@ namespace Demo.Controllers
             {
                 return View(model);
             }
-            
+
             // Kiểm tra email và số điện thoại đã sử dụng hay chưa
             if (IsEmailInUse(model.Email))
             {
@@ -437,6 +437,31 @@ namespace Demo.Controllers
         {
             return View();
         }
+
+
+        
+        // [Route("ChangePassword", Name = "Changepassword")]
+        // public IActionResult ChangePassword()
+        // {
+        //     return View();
+        //     //HttpContext.SignOutAsync();
+        //     //HttpContext.Session.Remove("CustomerId");
+        //   //  return RedirectToAction("Index", "Home");
+        // }
+
+        // [HttpPost("ChangePassword", Name = "Changepassword")]
+        //// [Route("ChangePassword", Name = "Changepassword")]
+        // public IActionResult ChangePassword(ChangePasswordCM model)
+        // {
+        //     if(ModelState.IsValid)
+        //     {
+
+        //     }
+        //     return View(model);
+        //     //HttpContext.SignOutAsync();
+        //     //HttpContext.Session.Remove("CustomerId");
+        //     //  return RedirectToAction("Index", "Home");
+        // }
 
     }
 }

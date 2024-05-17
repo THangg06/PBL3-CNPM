@@ -4,10 +4,21 @@
     ViewData["Title"] = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-
-<h1>Edit</h1>
-
-<h4>Category</h4>
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
+                <i class="anticon anticon-home m-r-5"></i>Trang chủ
+            </a>
+            <a asp-area="Admin" asp-controller="AdminCategories" asp-action="Index" class="breadcrumb-item">
+                Quản lý danh mục sản phẩm
+            </a>
+            <span class="breadcrumb-item active">
+                Chỉnh sửa danh mục sản phẩm
+            </span>
+        </nav>
+    </div>
+</div>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -24,29 +35,15 @@
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="ParentId" class="control-label"></label>
-                <input asp-for="ParentId" class="form-control" />
-                <span asp-validation-for="ParentId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Levels" class="control-label"></label>
-                <input asp-for="Levels" class="form-control" />
-                <span asp-validation-for="Levels" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Ordering" class="control-label"></label>
-                <input asp-for="Ordering" class="form-control" />
-                <span asp-validation-for="Ordering" class="text-danger"></span>
-            </div>
+          
             <div class="form-group">
                 <label asp-for="Published" class="control-label"></label>
                 <input asp-for="Published" class="form-control" />
                 <span asp-validation-for="Published" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Thumb" class="control-label"></label>
-                <input asp-for="Thumb" class="form-control" />
+                <label class="font-weight-semibold" for="productBrand">Ảnh đại diện</label>
+                <input name="fThumb" type="file" class="form-control" asp-for="Thumb" />
                 <span asp-validation-for="Thumb" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -54,7 +51,7 @@
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
-            <div class="form-group">
+           @*  <div class="form-group">
                 <label asp-for="Alias" class="control-label"></label>
                 <input asp-for="Alias" class="form-control" />
                 <span asp-validation-for="Alias" class="text-danger"></span>
@@ -78,7 +75,7 @@
                 <label asp-for="SchemaMarkup" class="control-label"></label>
                 <input asp-for="SchemaMarkup" class="form-control" />
                 <span asp-validation-for="SchemaMarkup" class="text-danger"></span>
-            </div>
+            </div> *@
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

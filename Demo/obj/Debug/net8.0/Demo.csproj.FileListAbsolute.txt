@@ -1082,7 +1082,6 @@ C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

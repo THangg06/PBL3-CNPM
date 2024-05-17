@@ -19,12 +19,16 @@
         <form action="" method="post">
             <!--Account Information Start-->
             <h4>Thông tin người nhận</h4>
+            <div class="form-check my-3">
+                <input type="checkbox" name="GiongKhachHang" class="form-check-input" id="GiongKhachHang" value="false">
+                <label class="form-check-label" for="GiongKhachHang">Giống thông tin khách hàng?</label>
+            </div>
             <div class="input_group">
                 <div class="input_box">
                     <input type="text" placeholder="Họ và tên" required class="name">
                     <i class="fa fa-user icon"></i>
                 </div>
-                
+
             </div>
             <div class="input_group">
                 <div class="input_box">
@@ -39,30 +43,36 @@
                 </div>
             </div>
             <!-- <div class="input_group">
-                <div class="input_box">
-                    <input type="text" placeholder="Phường" required class="name">
-                    <i class="fa fa-institution icon"></i>
-                </div>
-            </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="text" placeholder="Quận" required class="name">
-                    <i class="fa fa-institution icon"></i>
-                </div>
-            </div> -->
+        <div class="input_box">
+            <input type="text" placeholder="Phường" required class="name">
+            <i class="fa fa-institution icon"></i>
+        </div>
+    </div>
+    <div class="input_group">
+        <div class="input_box">
+            <input type="text" placeholder="Quận" required class="name">
+            <i class="fa fa-institution icon"></i>
+        </div>
+    </div> -->
             <!--Payment Details Start-->
             <div class="input_group">
                 <div class="input_box">
                     <h4>Payment Details</h4>
                     <input type="radio" name="pay" class="radio" id="bc1" checked>
-                    <label for="bc1"><span>
-                            <i class="fa fa-cc-visa"></i>Credit Card</span></label>
+                    <label for="bc1">
+                        <span>
+                            <i class="fa fa-cc-visa"></i>Credit Card
+                        </span>
+                    </label>
                     <input type="radio" name="pay" class="radio" id="bc2">
-                    <label for="bc2"><span>
-                            <i class=""></i>Tiền mặt</span></label>
+                    <label for="bc2">
+                        <span>
+                            <i class=""></i>Tiền mặt
+                        </span>
+                    </label>
                 </div>
             </div>
-            <div class ="detail">
+            <div class="detail">
                 <div class="input_group">
                     <div class="input_box">
                         <input type="tel" name="" class="name" placeholder="1111-2222-3333-4444" required>
@@ -90,7 +100,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!--Payment Details End-->
 
             <div class="input_group">

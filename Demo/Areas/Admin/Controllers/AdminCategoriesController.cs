@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Demo.Data;
+using AspNetCoreHero.ToastNotification.Abstractions;
+using Demo.Helper;
 
 namespace Demo.Areas.Admin.Controllers
 {
@@ -13,10 +15,11 @@ namespace Demo.Areas.Admin.Controllers
     public class AdminCategoriesController : Controller
     {
         private readonly Web01Context _context;
-
-        public AdminCategoriesController(Web01Context context)
+        public INotyfService _notyfService { get; }
+        public AdminCategoriesController(Web01Context context, INotyfService notyfService)
         {
             _context = context;
+            _notyfService = notyfService;
         }
 
         // GET: Admin/AdminCategories
@@ -54,14 +57,37 @@ namespace Demo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CatId,CatName,Description,ParentId,Levels,Ordering,Published,Thumb,Title,Alias,MetaDesc,MetaKey,Cover,SchemaMarkup")] Category category)
+        public async Task<IActionResult> Create([Bind("CatId,CatName,Description,ParentId,Levels,Ordering,Published,Thumb,Title,Alias,MetaDesc,MetaKey,Cover,SchemaMarkup")] Category category, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
             if (ModelState.IsValid)
             {
+                category.CatName = MyUtil.ToTitleCase(category.CatName);
+
+                // Xử lý tải lên tệp hình ảnh
+                if (fThumb != null)
+                {
+                    string extension = Path.GetExtension(fThumb.FileName);
+                    string image = MyUtil.SEOUrl(category.CatName) + extension;
+
+                    category.Thumb = await MyUtil.UploadFile(fThumb, @"LoadH", image.ToLower());
+                }
+
+
+                // Kiểm tra và đặt Thumb nếu không có
+                if (string.IsNullOrEmpty(category.Thumb))
+                {
+                    category.Thumb = "default.jpg";
+                }
+
+                // Thiết lập các trường còn lại
+
+
                 _context.Add(category);
                 await _context.SaveChangesAsync();
+                _notyfService.Success("Tạo mới thành công");
                 return RedirectToAction(nameof(Index));
             }
+
             return View(category);
         }
 
@@ -74,6 +100,7 @@ namespace Demo.Areas.Admin.Controllers
             }
 
             var category = await _context.Categories.FindAsync(id);
+
             if (category == null)
             {
                 return NotFound();
@@ -86,7 +113,7 @@ namespace Demo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("CatId,CatName,Description,ParentId,Levels,Ordering,Published,Thumb,Title,Alias,MetaDesc,MetaKey,Cover,SchemaMarkup")] Category category)
+        public async Task<IActionResult> Edit(string id, [Bind("CatId,CatName,Description,ParentId,Levels,Ordering,Published,Thumb,Title,Alias,MetaDesc,MetaKey,Cover,SchemaMarkup")] Category category, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
             if (id != category.CatId)
             {
@@ -97,8 +124,27 @@ namespace Demo.Areas.Admin.Controllers
             {
                 try
                 {
+                    category.CatName = MyUtil.ToTitleCase(category.CatName);
+
+                    // Xử lý tải lên tệp hình ảnh
+                    if (fThumb != null)
+                    {
+                        string extension = Path.GetExtension(fThumb.FileName);
+                        string image = MyUtil.SEOUrl(category.CatName) + extension;
+
+                        category.Thumb = await MyUtil.UploadFile(fThumb, @"LoadH", image.ToLower());
+                    }
+
+
+                    // Kiểm tra và đặt Thumb nếu không có
+                    if (string.IsNullOrEmpty(category.Thumb))
+                    {
+                        category.Thumb = "default.jpg";
+                    }
+
                     _context.Update(category);
                     await _context.SaveChangesAsync();
+                    _notyfService.Success("Chỉnh sửa thành công");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -146,6 +192,7 @@ namespace Demo.Areas.Admin.Controllers
             }
 
             await _context.SaveChangesAsync();
+            _notyfService.Success("Xóa thành công");
             return RedirectToAction(nameof(Index));
         }
 

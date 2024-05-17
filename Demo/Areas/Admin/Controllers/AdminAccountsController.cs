@@ -22,16 +22,40 @@ namespace Demo.Areas.Admin.Controllers
         }
 
         // GET: Admin/AdminAccounts
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(bool? active)
         {
             ViewData["QuyenTruyCap"] = new SelectList(_context.Roles, "RoleId", "Description");
+
             List<SelectListItem> IsTrangThai = new List<SelectListItem>();
-            IsTrangThai.Add(new SelectListItem() { Text = "Active", Value = "1" });
-            IsTrangThai.Add(new SelectListItem() { Text = "Block", Value = "0" });
+            IsTrangThai.Add(new SelectListItem() { Text = "Active", Value = "true" });
+            IsTrangThai.Add(new SelectListItem() { Text = "Block", Value = "false" });
             ViewData["IsTrangThai"] = IsTrangThai;
-            var web01Context = _context.Accounts.Include(a => a.Role);
-            return View(await web01Context.ToListAsync());
+
+            var accountsQuery = _context.Accounts.AsNoTracking();
+
+            if (active.HasValue)
+            {
+                accountsQuery = _context.Accounts.Where(a => a.Active == active.Value).Include(a => a.Role);
+            }
+            else
+            {
+                accountsQuery = accountsQuery.Include(a => a.Role);
+            }
+
+            var web01Context = await accountsQuery.ToListAsync();
+            return View(web01Context);
         }
+
+
+
+        public IActionResult Filtter(bool? active)
+        {
+            // Xây dựng URL dựa trên trạng thái
+            var url = active.HasValue ? $"/Admin/AdminAccounts?active={active}" : "/Admin/AdminAccounts";
+
+            return Json(new { status = "success", redirectUrl = url });
+        }
+
 
         // GET: Admin/AdminAccounts/Details/5
         public async Task<IActionResult> Details(string id)
@@ -147,7 +171,6 @@ namespace Demo.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-
             return View(account);
         }
 

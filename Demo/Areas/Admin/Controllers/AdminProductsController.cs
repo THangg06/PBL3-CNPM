@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using Demo.Data;
+using Demo.Helper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Demo.Data;
 using PagedList.Core;
-using Demo.Helper;
-using AspNetCoreHero.ToastNotification.Abstractions;
 
 
 namespace Demo.Areas.Admin.Controllers
@@ -30,7 +26,7 @@ namespace Demo.Areas.Admin.Controllers
         public IActionResult Index(int page = 1, string CatID = "")
         {
             var pageNumber = page;
-            var pageSize = 20;
+            var pageSize = 30;
 
             IQueryable<Product> query = _context.Products.AsNoTracking().Include(x => x.Cat);
 
@@ -87,7 +83,8 @@ namespace Demo.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Products .Include(p => p.Cat)
+            var product = await _context.Products
+                .Include(p => p.Cat)
                 .FirstOrDefaultAsync(m => m.ProductId == id);
             if (product == null)
             {
@@ -110,57 +107,50 @@ namespace Demo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ShortDesc,Description,CatId,Price,Unit,Thumb,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Tags,Title,Alias,MetaDesc,MetaKey")] Product product, IFormFile fThumb)
+        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ShortDesc,Description,CatId,Price,Unit,Thumb,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Tags,Title,Alias,MetaDesc,MetaKey")] Product product, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
             if (ModelState.IsValid)
             {
-                try
+
+                // Chuyển đổi ProductName thành dạng tiêu đề
+                product.ProductName = MyUtil.ToTitleCase(product.ProductName);
+
+                // Xử lý tải lên tệp hình ảnh
+                if (fThumb != null)
                 {
-                    // Chuyển đổi ProductName thành dạng tiêu đề
-                    product.ProductName = MyUtil.ToTitleCase(product.ProductName);
+                    string extension = Path.GetExtension(fThumb.FileName);
+                    string image = MyUtil.SEOUrl(product.ProductName) + extension;
 
-                    // Xử lý tải lên tệp hình ảnh
-                    if (fThumb != null && fThumb.Length > 0)
-                    {
-                        string extension = Path.GetExtension(fThumb.FileName);
-                        string imageName = MyUtil.SEOUrl(product.ProductName) + extension.ToLower();
-
-                        string uploadedFile = await MyUtil.UploadFile(fThumb, "LoadH", imageName);
+                    product.Thumb = await MyUtil.UploadFile(fThumb, @"LoadH", image.ToLower());
 
 
-                        if (uploadedFile != null)
-                        {
-                            product.Thumb = uploadedFile;
-                        }
-                    }
 
-                    // Kiểm tra và đặt Thumb nếu không có
-                    if (string.IsNullOrEmpty(product.Thumb))
-                    {
-                        product.Thumb = "default.jpg";
-                    }
-
-                    // Thiết lập các trường còn lại
-                    product.Alias = MyUtil.SEOUrl(product.ProductName);
-                    product.DateCreated = DateTime.Now;
-                    product.DateModified = DateTime.Now;
-
-                    // Thêm sản phẩm vào cơ sở dữ liệu
-                    _context.Add(product);
-                    _notyfService.Success("Tạo mới thành công");
-                    await _context.SaveChangesAsync();
-
-                    // Chuyển hướng về danh sách
-                    return RedirectToAction(nameof(Index));
                 }
-                catch (Exception ex)
+
+                // Kiểm tra và đặt Thumb nếu không có
+                if (string.IsNullOrEmpty(product.Thumb))
                 {
-                    // Xử lý lỗi nếu có
-                    ModelState.AddModelError("", "Có lỗi xảy ra trong quá trình tạo sản phẩm: " + ex.Message);
+                    product.Thumb = "default.jpg";
                 }
+
+                // Thiết lập các trường còn lại
+                product.Alias = MyUtil.SEOUrl(product.ProductName);
+                product.DateCreated = DateTime.Now;
+                product.DateModified = DateTime.Now;
+
+                // Thêm sản phẩm vào cơ sở dữ liệu
+                _context.Add(product);
+                _notyfService.Success("Tạo mới thành công");
+                await _context.SaveChangesAsync();
+
+                // Chuyển hướng về danh sách
+                return RedirectToAction(nameof(Index));
             }
 
-            // Nếu ModelState không hợp lệ, trả về View cùng với dữ liệu hiện có/-strong/-heart:>:o:-((:-hViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatId", product.CatId);
+
+
+            // Nếu ModelState không hợp lệ, trả về View cùng với dữ liệu hiện có
+            ViewData["Danhmuc"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
             return View(product);
         }
 
@@ -177,7 +167,7 @@ namespace Demo.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatId", product.CatId);
+            ViewData["Danhmuc"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
             return View(product);
         }
 
@@ -228,13 +218,14 @@ namespace Demo.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatId", product.CatId);
+            ViewData["Danhmuc"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
             return View(product);
         }
 
         // GET: Admin/AdminProducts/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
+            if (id == null)
             {
                 return NotFound();
             }
