@@ -3,12 +3,6 @@
     ViewData["Title"] = "Checkout";
    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@if (TempData["OrderSuccess"] != null && (bool)TempData["OrderSuccess"])
-{
-        <div class="alert alert-success" role="alert">
-            Đơn hàng của bạn đã được đặt thành công!
-        </div>
-}
 
 <html lang="en">
 <head>
@@ -16,7 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh toán</title>
-    <link rel="stylesheet" href="./css/Payment.css">
+    <link href="~/css/payment.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -78,19 +73,22 @@
 </div>
 
 </body>
-
-    @section Scripts {
-        <script>
-            $(document).ready(function () {
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+                // Sự kiện change cho checkbox "GiongKhachHang"
                 $("#GiongKhachHang").change(function () {
+                    // Kiểm tra xem checkbox có được chọn hay không
                     if ($(this).prop("checked")) {
+                        // Nếu được chọn, gán giá trị true cho checkbox và ẩn phần giao diện delivery-info
                         $(this).val(true);
                         $(".delivery-info").addClass("d-none");
                     } else {
+                        // Nếu không được chọn, gán giá trị false cho checkbox và hiển thị phần giao diện delivery-info
                         $(this).val(false);
                         $(".delivery-info").removeClass("d-none");
                     }
                 });
             });
         </script>
-    }
+}

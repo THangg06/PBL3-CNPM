@@ -6,7 +6,7 @@ namespace Demo.Data;
 
 public partial class Order
 {
-  //  [Key]
+    //  [Key]
     public int OrderID { get; set; }
 
     public string CustomerId { get; set; }
@@ -28,7 +28,7 @@ public partial class Order
     public int? PaymentId { get; set; }
 
     public string? Note { get; set; }
-
+    // public int TypePayment {  get; set; }
     public virtual Customer? Customer { get; set; }
 
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();

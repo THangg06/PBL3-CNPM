@@ -288,6 +288,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Demo.ModelViews;
+using Demo.Data;
 
 namespace Demo.Data
 {
@@ -381,13 +382,20 @@ namespace Demo.Data
                     .IsFixedLength();
             });
 
+
             modelBuilder.Entity<Order>(entity =>
             {
+
                 entity.HasKey(e => e.OrderID).HasName("PK__Orders__C3905BAFD28E05B5");
 
                 entity.Property(e => e.OrderID)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("OrderID");
+                //entity.HasKey(e => e.OrderID).HasName("PK__Orders__C3905BAFD28E05B5");
+
+                //entity.Property(e => e.OrderID)
+                //    .ValueGeneratedNever()
+                //    .HasColumnName("OrderID");
                 entity.Property(e => e.CustomerId).HasColumnName("CustomerID");
                 entity.Property(e => e.OrderDate).HasColumnType("datetime");
                 entity.Property(e => e.PaymentDate).HasColumnType("datetime");
@@ -405,7 +413,7 @@ namespace Demo.Data
                 entity.HasKey(e => e.OrderDetailId).HasName("PK__OrderDet__D3B9D30C1C354CDE");
 
                 entity.Property(e => e.OrderDetailId)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("OrderDetailID");
                 entity.Property(e => e.OrderID).HasColumnName("OrderID");
                 entity.Property(e => e.ProductId).HasColumnName("ProductID");
@@ -552,5 +560,6 @@ namespace Demo.Data
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        public DbSet<Demo.Data.News> News { get; set; } = default!;
     }
 }

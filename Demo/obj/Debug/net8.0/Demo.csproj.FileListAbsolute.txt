@@ -1312,3 +1312,4 @@ C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\Demo.genruntimeconfig.cache
 C:\A2\LTNet\MD\Demo\obj\Debug\net8.0\ref\Demo.dll
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\PagedList.Core.dll
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\PagedList.Core.Mvc.dll
+C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll

@@ -439,29 +439,29 @@ namespace Demo.Controllers
         }
 
 
-        
+
+        [Route("ChangePassword", Name = "Changepassword")]
+        public IActionResult ChangePassword()
+        {
+            return View();
+            //HttpContext.SignOutAsync();
+            //HttpContext.Session.Remove("CustomerId");
+            //  return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost("ChangePassword", Name = "Changepassword")]
         // [Route("ChangePassword", Name = "Changepassword")]
-        // public IActionResult ChangePassword()
-        // {
-        //     return View();
-        //     //HttpContext.SignOutAsync();
-        //     //HttpContext.Session.Remove("CustomerId");
-        //   //  return RedirectToAction("Index", "Home");
-        // }
+        public IActionResult ChangePassword(ChangePasswordCM model)
+        {
+            if (ModelState.IsValid)
+            {
 
-        // [HttpPost("ChangePassword", Name = "Changepassword")]
-        //// [Route("ChangePassword", Name = "Changepassword")]
-        // public IActionResult ChangePassword(ChangePasswordCM model)
-        // {
-        //     if(ModelState.IsValid)
-        //     {
-
-        //     }
-        //     return View(model);
-        //     //HttpContext.SignOutAsync();
-        //     //HttpContext.Session.Remove("CustomerId");
-        //     //  return RedirectToAction("Index", "Home");
-        // }
+            }
+            return View(model);
+            //HttpContext.SignOutAsync();
+            //HttpContext.Session.Remove("CustomerId");
+            //  return RedirectToAction("Index", "Home");
+        }
 
     }
 }

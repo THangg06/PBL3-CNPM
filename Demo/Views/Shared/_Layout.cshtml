@@ -217,18 +217,18 @@
                 <img src="./assets/animated_character_blue.png" alt="res-logo">
                 <h1 class="txt">HEE-HO</h1>
               </a>
-
+              <a>  Welcom @Context.User.Identity.Name !
+                        </a>
               <nav class="navbar">
             <a class="menu-active" asp-controller="Home" asp-action="Index">Trang chủ</a>
             <a asp-controller="HangHoa" asp-action="Index">Menu</a>
             <a asp-controller="Home" asp-action="About"> Về chúng tôi</a>
             @if (User.Identity.IsAuthenticated)
             {
-                    <a>
-
+                    
+                         
                      <a asp-controller="News" asp-action="Add">Liên hệ</a>
-                        Welcom @Context.User.Identity.Name
-                    </a>
+                     
             }
 
               </nav>
@@ -293,6 +293,8 @@
                         <a href="/profile" id="HasLogin">Profile</a>
                         <a href="./OrderDetail.html">Lịch sử mua hàng</a>
                         <a href="/logout" id="HasLogin">Đăng Xuất</a>
+                                 <a href="/ChangePassword" id="HasLogin">Đổi mật khẩu
+                                 </a>
                         <!-- Hiển thị phần shopping khi đăng nhập -->
 
                     }

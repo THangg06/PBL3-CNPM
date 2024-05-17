@@ -6,7 +6,7 @@ namespace Demo.Data;
 
 public partial class OrderDetail
 {
- //   [Key]
+    //   [Key]
     public int OrderDetailId { get; set; }
 
     public int OrderID { get; set; }
@@ -24,6 +24,6 @@ public partial class OrderDetail
     public DateTime? ShipDate { get; set; }
 
     public virtual Order? Order { get; set; }
-  //  public virtual Order OderID { get; set; } = null;
+    //  public virtual Order OderID { get; set; } = null;
     public virtual Product? Product { get; set; }
 }

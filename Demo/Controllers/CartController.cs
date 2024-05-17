@@ -11,38 +11,37 @@ namespace Demo.Controllers
 {
     public class CartController : Controller
     {
-        private readonly Web01Context db;
+        private readonly Web01Context _db;
 
         public CartController(Web01Context context)
         {
-            db = context;
-        }
-        public List<CartItem> Cart => HttpContext.Session.Get<List<CartItem>>(MySetting.CART_KEY) ?? new List<CartItem>();
-
-        private List<CartItem> GetCartFromSession()
-        {
-            return HttpContext.Session.Get<List<CartItem>>(MySetting.CART_KEY) ?? new List<CartItem>();
+            _db = context;
         }
 
-        private void SaveCartToSession(List<CartItem> cart)
+        private List<CartItem> Cart
         {
-            HttpContext.Session.Set(MySetting.CART_KEY, cart);
+            get => HttpContext.Session.Get<List<CartItem>>(MySetting.CART_KEY) ?? new List<CartItem>();
+            set => HttpContext.Session.Set(MySetting.CART_KEY, value);
+        }
+
+        private void ClearCart()
+        {
+            HttpContext.Session.Remove(MySetting.CART_KEY);
         }
 
         public IActionResult Index()
         {
-            var cart = GetCartFromSession();
-            return View(cart);
+            return View(Cart);
         }
 
         public IActionResult AddToCart(string id, int quantity = 1)
         {
-            var cart = GetCartFromSession();
+            var cart = Cart;
             var item = cart.SingleOrDefault(p => p.MaHh.ToString() == id);
 
             if (item == null)
             {
-                var product = db.Products.SingleOrDefault(p => p.ProductId == id);
+                var product = _db.Products.SingleOrDefault(p => p.ProductId == id);
 
                 if (product == null)
                 {
@@ -65,26 +64,26 @@ namespace Demo.Controllers
                 item.SoLuong += quantity;
             }
 
-            SaveCartToSession(cart);
+            Cart = cart;
             return RedirectToAction("Index");
         }
 
         public IActionResult RemoveCart(string id)
         {
-            var cart = GetCartFromSession();
+            var cart = Cart;
             var item = cart.SingleOrDefault(p => p.MaHh.ToString() == id);
 
             if (item != null)
             {
                 cart.Remove(item);
-                SaveCartToSession(cart);
+                Cart = cart;
             }
             return RedirectToAction("Index");
         }
 
-        public IActionResult ClearCart()
+        public IActionResult ClearCartSession()
         {
-            HttpContext.Session.Remove(MySetting.CART_KEY);
+            ClearCart();
             return RedirectToAction("Index", "Home");
         }
 
@@ -106,55 +105,55 @@ namespace Demo.Controllers
             if (ModelState.IsValid)
             {
                 var customerId = HttpContext.User.Claims.SingleOrDefault(p => p.Type == MySetting.CLAIM_CUSTOMERID)?.Value;
-                var khachhang = new Customer();
-                if (model.GiongKhachHang)
-                {
-                    khachhang = db.Customers.SingleOrDefault(kh => kh.CustomerId == customerId);
-                }
+                var khachhang = model.GiongKhachHang ? _db.Customers.SingleOrDefault(kh => kh.CustomerId == customerId) : null;
 
                 var hoadon = new Order
                 {
                     CustomerId = customerId,
-                    FullName = model.FullName ?? khachhang.FullName,
-                    Address = model.Address ?? khachhang.Address,
-                    Phone = model.Phone ?? khachhang.Phone,
+                    FullName = model.FullName ?? khachhang?.FullName,
+                    Address = model.Address ?? khachhang?.Address,
+                    Phone = model.Phone ?? khachhang?.Phone,
                     PaymentDate = DateTime.Now,
                     OrderDate = DateTime.Now,
                     CachThanhToan = "COD",
                 };
 
-                db.Database.BeginTransaction();
-                try
+                using (var transaction = _db.Database.BeginTransaction())
                 {
-                    db.Add(hoadon);
-                    db.SaveChanges(); // Save the order to get a generated OrderId
-
-                    var cthds = new List<OrderDetail>();
-                    foreach (var item in Cart)
+                    try
                     {
-                        cthds.Add(new OrderDetail
+                        _db.Add(hoadon);
+                        _db.SaveChanges(); // Save the order to get a generated OrderId
+
+                        var orderId = hoadon.OrderID;
+
+                        var cthds = Cart.Select(item => new OrderDetail
                         {
-                            OrderID = hoadon.OrderID, // Set OrderId after saving order
+                            OrderID = orderId,
                             Quantity = item.SoLuong,
                             Total = item.Dongia,
                             ProductId = item.MaHh,
-                        });
+                            // Không thiết lập OrderDetailID, nó sẽ tự động tăng
+                        }).ToList();
+
+                        _db.AddRange(cthds);
+                        _db.SaveChanges(); // Save changes to OrderDetails
+
+                        transaction.Commit(); // Commit the transaction as everything is successful
+                        ClearCart();
+                        return View("Success");
                     }
-                    db.AddRange(cthds);
-                    db.SaveChanges();
-
-                    HttpContext.Session.Set<List<CartItem>>(MySetting.CART_KEY, new List<CartItem>());
-
-                    return View("Success");
-                }
-                catch
-                {
-                    db.Database.RollbackTransaction();
-                    // Handle error (optional)
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback(); // Rollback the transaction if an error occurs
+                        TempData["Error"] = "Có lỗi xảy ra khi thanh toán đơn hàng. Vui lòng thử lại sau.";
+                        Console.WriteLine(ex.Message);
+                    }
                 }
             }
 
             return View(Cart);
         }
+
     }
 }
