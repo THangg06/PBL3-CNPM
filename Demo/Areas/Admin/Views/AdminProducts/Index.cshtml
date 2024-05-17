@@ -1,4 +1,4 @@
-﻿Index
+Index
 ﻿@using PagedList.Core.Mvc
 @model PagedList.Core.IPagedList<Demo.Data.Product>
 
@@ -36,12 +36,13 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<div class="data_table_container">
+    <table class="data-table">
     <thead>
         <tr>
             <th>ProductId</th>
             <th>ProductName</th>
-            
+
             <th>Description</th>
             <th>Price</th>
             <th>Unit</th>
@@ -53,55 +54,55 @@
 
 
             <th>Title</th>
-            @* <th>CatID</th> *@
+                @* <th>CatID</th> *@
         </tr>
     </thead>
     <tbody id="records_table">
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProductId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProductName)
-                </td>
-                @* <td>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    @* <td>
                     @Html.DisplayFor(modelItem => item.ShortDesc)
                 </td> *@
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Unit)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Thumb)
-                </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Unit)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Thumb)
+                    </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateCreated)
-                </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateCreated)
+                    </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.BestSellers)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.HomeFlag)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Active)
-                </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BestSellers)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HomeFlag)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Active)
+                    </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
 
-                @*  <td>
+                    @*  <td>
             @if (item.Cat != null)
             {
             @Html.DisplayFor(modelItem => item.Cat.CatId)
@@ -111,17 +112,19 @@
             <span>N/A</span>
             }
             </td> *@
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
-                </td>
-            </tr>
-        }
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+                    </td>
+                </tr>
+            }
 
 
     </tbody>
 </table>
+</div>
+
 
 <!-- Pagination Controls -->
 <div aria-label="Page navigation">
