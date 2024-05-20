@@ -4,8 +4,8 @@
     ViewData["Title"] = "Details";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-
-<div class="page-header">
+<div class="content_box">
+    <div class="nav_dir">
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
@@ -17,60 +17,106 @@
 </div>
 
 <div>
-    <h4>Account</h4>
+    
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
+    <dl class="form_container">
+        <div class="title">Thông tin tài khoản</div>
+        <div class="content">
+        <div class="user-details">
+           <div class="input-box">
+            <label>Phone</label>
+            <input asp-for="Phone" class="form-control" readonly/>
+          </div>
+
+          <div class="input-box">
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" class="form-control" readonly/>
+          </div>
+
+          <div class="input-box">
+            <label asp-for="Password">Password</label>
+            <input asp-for="Password" class="form-control" readonly/>
+          </div>
+
+          <div class="input-box">
+            <label asp-for="LastLogin">Last Login</label>
+            <input asp-for="LastLogin" class="form-control" readonly/>
+          </div>
+
+           <div class="input-box">
+            <label asp-for="CreateDate">Create Date</label>
+            <input asp-for="CreateDate" class="form-control" readonly/>
+          </div>
+
+          <div class="input-box" id="special">
+            <label asp-for="RoleId" class="control-label">Role Type</label>
+            <input asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId" readonly/>
+          </div>
+@*          <dt class = "input-box">
             @Html.DisplayNameFor(model => model.Phone)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Phone)
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.Phone)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
+        <dt class = "input-box">
+                            @Html.DisplayNameFor(model => model.Email)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.Email)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Password)
+        <dt class = "input-box">
+                            @Html.DisplayNameFor(model => model.Password)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Password)
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.Password)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Salt)
+        <dt class = "input-box">
+                            @Html.DisplayNameFor(model => model.Salt)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Salt)
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.Salt)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Active)
+        <dt class = "input-box">
+                            @Html.DisplayNameFor(model => model.Active)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Active)
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.Active)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LastLogin)
+        <dt class = "input-box">
+                            @Html.DisplayNameFor(model => model.LastLogin)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LastLogin)
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.LastLogin)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreateDate)
+        <dt class = "input-box">
+                            @Html.DisplayNameFor(model => model.CreateDate)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreateDate)
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.CreateDate)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Role)
+        <dt class = "input-box">
+                            @Html.DisplayNameFor(model => model.Role)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Role.RoleId)
-        </dd>
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.Role.RoleId)
+        </dd> *@
+        </div>
+
+        </div>
+
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.AccountId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+<div class="group_button">
+        <input type="button" 
+    onclick="window.location.href='@Url.Action("Index")'" 
+    value="Back to List" class="btn btn-info btn-sm">
+        @{
+            var editUrl = Url.Action("Edit", new { id = Model?.AccountId });
+        }
+
+<input type="button" value="Edit" 
+    onclick="window.location.href='@editUrl'" class="btn btn-primary btn-sm" />
+
+</div>
 </div>

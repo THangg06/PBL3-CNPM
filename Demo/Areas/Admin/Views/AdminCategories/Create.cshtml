@@ -4,93 +4,105 @@
     ViewData["Title"] = "Create";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+<div class="content_box">
+    <div><h1>Create</h1></div>
 
-<h1>Create</h1>
-
-<h4>Category</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
+
+
+
+<div class="form_container">
+    <div class="title">Category</div>
+    <div class="content">
+         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="CatId" class="control-label"></label>
+            <div class="user-details">
+            <div class="input-box">
+                <label asp-for="CatId" class="control-label">CatId</label>
                 <input asp-for="CatId" class="form-control" />
                 <span asp-validation-for="CatId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="CatName" class="control-label"></label>
+            <div class="input-box">
+                <label asp-for="CatName" class="control-label">CatName</label>
                 <input asp-for="CatName" class="form-control" />
                 <span asp-validation-for="CatName" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
+            <div class="input-box">
+                <label asp-for="Description" class="control-label">Description</label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="ParentId" class="control-label"></label>
+            <div class="input-box">
+                <label asp-for="ParentId" class="control-label">ParentId</label>
                 <input asp-for="ParentId" class="form-control" />
                 <span asp-validation-for="ParentId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Levels" class="control-label"></label>
+            <div class="input-box">
+                <label asp-for="Levels" class="control-label">Levels</label>
                 <input asp-for="Levels" class="form-control" />
                 <span asp-validation-for="Levels" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Ordering" class="control-label"></label>
+            <div class="input-box">
+                <label asp-for="Ordering" class="control-label">Ordering</label>
                 <input asp-for="Ordering" class="form-control" />
                 <span asp-validation-for="Ordering" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Published" class="control-label"></label>
+            <div class="input-box">
+                <label asp-for="Published" class="control-label">Published</label>
                 <input asp-for="Published" class="form-control" />
                 <span asp-validation-for="Published" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Thumb" class="control-label"></label>
-                <input asp-for="Thumb" class="form-control" />
+            <div class="input-box">
+                <label asp-for="Thumb" class="control-label">Thumb</label>
+                <input asp-for="Thumb" id="addimage" class="form-control" />
                 <span asp-validation-for="Thumb" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
+            <div class="input-box">
+                <label asp-for="Title" class="control-label">Title</label>
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Alias" class="control-label"></label>
+            <div class="input-box">
+                <label asp-for="Alias" class="control-label">Alias</label>
                 <input asp-for="Alias" class="form-control" />
                 <span asp-validation-for="Alias" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="MetaDesc" class="control-label"></label>
+            <div class="input-box">
+                <label asp-for="MetaDesc" class="control-label">MetaDesc</label>
                 <input asp-for="MetaDesc" class="form-control" />
                 <span asp-validation-for="MetaDesc" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="MetaKey" class="control-label"></label>
+            <div class="input-box">
+                <label asp-for="MetaKey" class="control-label">MetaKey</label>
                 <input asp-for="MetaKey" class="form-control" />
                 <span asp-validation-for="MetaKey" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Cover" class="control-label"></label>
+            <div class="input-box">
+                <label asp-for="Cover" class="control-label">Cover</label>
                 <input asp-for="Cover" class="form-control" />
                 <span asp-validation-for="Cover" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SchemaMarkup" class="control-label"></label>
+            <div class="input-box">
+                <label asp-for="SchemaMarkup" class="control-label">SchemaMarkup</label>
                 <input asp-for="SchemaMarkup" class="form-control" />
                 <span asp-validation-for="SchemaMarkup" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            </div>
+            <div class="button">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
+
+    </div>
+
+
+<div class="group_button">
+        <input type="button" 
+    onclick="window.location.href='@Url.Action("Index")'" 
+    value="Back to List" class="btn btn-info btn-sm">
+
+</div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 

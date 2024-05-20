@@ -4,7 +4,8 @@
     ViewData["Title"] = "Delete";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-<div class="page-header">
+<div class="content_box">
+    <div class="nav_dir">
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
@@ -14,10 +15,9 @@
     </div>
 
 </div>
-<div class="container mt-5">
-    <h2 class="mb-4">Thông tin qyền truy cập</h2>
-    <div class="table-responsive">
-        <table class="table data-table">
+    <h2>Thông tin quyền truy cập</h2>
+<div class="data_table_container" id="small_info_table">
+        <table class="data-table">
 
             <tbody>
 
@@ -42,7 +42,9 @@
             <td>
                 <form asp-action="Delete" asp-route-id="@Model.RoleId">
                     <input type="hidden" asp-for="RoleId" />
-                    <input type="submit" value="Xác nhận xóa" class="btn btn-danger"/>
+                    <div class="group_button another">
+                         <input type="submit" value="Xác nhận xóa" id="delete" class="btn btn-danger"/>
+                    </div>
                 </form>
             </td>
 
@@ -50,6 +52,7 @@
 
             </tbody>
         </table>
-    </div>
 </div>
+</div>
+
 

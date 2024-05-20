@@ -7,11 +7,30 @@
 
 <h1>Details</h1>
 
-<div>
-    <h4>Category</h4>
+<div class="content_box">
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
+        <dl class="form_container">
+        <div class="title">Category</div>
+        <div class="content">
+            <div class="user-details">
+                <div class="input-box">
+                    <label>Tên loại</label>
+                    <input asp-for="CatName" class="form-control" readonly/>
+                  </div>
+
+                  <div class="input-box">
+                    <label asp-for="Title">Title</label>
+                    <input asp-for="Title" class="form-control" readonly/>
+                  </div>
+
+                   <div class="input-box">
+                    <label asp-for="Alias">Alias</label>
+                    <input asp-for="Alias" class="form-control" readonly/>
+                  </div>
+
+            </div>
+        </div>
+        @*         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.CatName)
         </dt>
         <dd class = "col-sm-10">
@@ -88,10 +107,19 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SchemaMarkup)
-        </dd>
-    </dl>
+        </dd>*@
+    </dl> 
+
+    <div class="group_button">
+            <input type="button" 
+    onclick="window.location.href='@Url.Action("Index")'" 
+    value="Back to List" class="btn btn-info btn-sm">
+            @{
+                var editUrl = Url.Action("Edit", new { id = Model?.CatId });
+            }
+
+<input type="button" value="Edit" 
+    onclick="window.location.href='@editUrl'" class="btn btn-primary btn-sm" />
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.CatId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
 </div>
+

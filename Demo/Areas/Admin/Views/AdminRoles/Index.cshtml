@@ -1,17 +1,68 @@
-@model IEnumerable<Demo.Data.Role>
+﻿@model IEnumerable<Demo.Data.Role>
 
 @{
     ViewData["Title"] = "Quản lý quyền truy cập";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<!DOCTYPE html>
+<div class="content_box">
+    <div class="data_table_container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Mô tả</th>
+                    <th>Thao tác</th> 
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@item.RoleId</th>
+                            <td>@item.RoleName</td>
+                            <td>@item.Description</td>
+                            <td>
+                                <div class="group_button another">
+                             <input type="button" class ="mod-btn" 
+                                    onclick="window.location.href='@Url.Action("Edit", new { id = item.RoleId })'" 
+                                    value="Sửa" class="btn btn-info btn-sm">
+
+                            <input type="button" class ="mod-btn" 
+                                    onclick="window.location.href='@Url.Action("Details", new { id = item.RoleId })'" 
+                            value="Chi tiết" class="btn btn-info btn-sm">
+
+                            <input type="button" class ="mod-btn" id="delete" 
+                            onclick="window.location.href='@Url.Action("Delete", new { id = item.RoleId })'" 
+                            value="Xóa" class="btn btn-danger btn-sm">
+                                </div>
+                                
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="group_button">
+         <input type="button"
+        onclick="window.location.href='@Url.Action("Create")'" 
+        value="Tạo phân quyền mới" class="btn btn-info btn-sm">
+    </div>
+</div>
+   
+
+@* <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>Data Table</title>
     <style>
-        
+
         .data-table {
             width: 100%;
             border-collapse: collapse; 
@@ -36,7 +87,7 @@
             }
     </style>
 </head>
-<
+
 <body>
     <p>
         <a asp-action="Create" class="btn btn-primary">Tạo mới</a>
@@ -56,21 +107,21 @@
                 {
                     foreach (var item in Model)
                     {
-                        <tr>
-                            <th scope="row">@item.RoleId</th>
-                            <td>@item.RoleName</td>
-                            <td>@item.Description</td>
-                            <td>
-                                <a class="btn btn-primary btn-tone m-r-5" asp-area="Admin" asp-controller="AdminRoles" asp-action="Details" asp-route-id="@item.RoleId">View</a>
-                                <a class="btn btn-secondary btn-tone m-r-5" asp-area="Admin" asp-controller="AdminRoles" asp-action="Edit" asp-route-id="@item.RoleId">Edit</a>
-                                <a class="btn btn-danger btn-tone m-r-5" asp-area="Admin" asp-controller="AdminRoles" asp-action="Delete" asp-route-id="@item.RoleId">Delete</a> <!-- Đổi màu nút xóa -->
-                            </td>
-                        </tr>
+                                <tr>
+                                    <th scope="row">@item.RoleId</th>
+                                    <td>@item.RoleName</td>
+                                    <td>@item.Description</td>
+                                    <td>
+                                        <a class="btn btn-primary btn-tone m-r-5" asp-area="Admin" asp-controller="AdminRoles" asp-action="Details" asp-route-id="@item.RoleId">View</a>
+                                        <a class="btn btn-secondary btn-tone m-r-5" asp-area="Admin" asp-controller="AdminRoles" asp-action="Edit" asp-route-id="@item.RoleId">Edit</a>
+                                        <a class="btn btn-danger btn-tone m-r-5" asp-area="Admin" asp-controller="AdminRoles" asp-action="Delete" asp-route-id="@item.RoleId">Delete</a> <!-- Đổi màu nút xóa -->
+                                    </td>
+                                </tr>
                     }
                 }
             </tbody>
         </table>
     </div>
 </body>
-</html>
+</html> *@
 
