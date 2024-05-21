@@ -6,3 +6,55 @@
 
 <h1>Success</h1>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt hàng thành công</title>
+   
+    <link href="~/css/success.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Đặt hàng thành công!</h1>
+        <div class="order-info">
+            <h2>Thông tin </h2>
+           
+            <div class="form-group" id="Name">
+                <label for="firstName">Họ và tên:</label>
+                <input type="text" id="firstName" name="firstName" class="form-control" required value="@User.Identity.Name">
+            </div>
+
+            <div class="form-group" id="Contact-info">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required value="@User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Email)?.Value">
+            </div>
+
+            <div class="form-group" id="Contact-info">
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" class="form-control" required maxlength="10" value="@User.Claims.FirstOrDefault(c => c.Type == "PhoneNumber")?.Value">
+            </div>
+
+            <div class="form-group" id="birth">
+                <label for="dateOfBirth">Ngày sinh:</label>
+                <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control" required value="@User.Claims.FirstOrDefault(c => c.Type == "DateOfBirth")?.Value">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Địa chỉ:</label>
+                <input type="text" id="address" name="address" class="form-control" required value="@User.Claims.FirstOrDefault(c => c.Type == "Address")?.Value">
+            </div>
+        </div>
+        <div class="next-steps">
+            <h2>Tiếp theo</h2>
+            <p>Cảm ơn bạn đã đặt hàng! Chúng tôi sẽ xử lý đơn hàng của bạn trong thời gian ngắn nhất.</p>
+            <ul>
+                
+                <li><a asp-controller="HangHoa" asp-action="Index">Tiếp tục mua sắm</a></li>
+                <li><a asp-controller="News" asp-action="Add">Liên hệ hỗ trợ</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

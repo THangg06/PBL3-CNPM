@@ -44,7 +44,7 @@ body {
   }
 
   input[type="text"]{
-    width: 27%;
+    width: 100%;
     padding: 8px;
     margin-right: .6rem;
     border: 1px solid #ccc;
@@ -53,8 +53,13 @@ body {
   input[type="text"]#lastName{
     width: 35%;
   }
-  
-  
+
+/* Thêm vào tệp CSS của bạn (ví dụ: site.css) */
+.form-control {
+    width: 100%; /* Chiều rộng tối đa */
+    max-width: 500px; /* Chiều rộng tối đa tùy ý */
+}
+
   input[type="email"]
    {
     width: 45%;

@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Demo.Data.News>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
+                <i class="anticon anticon-home m-r-5"></i>Trang chủ
+            </a>
+            <a asp-area="Admin" asp-controller="AdminNews" asp-action="Index" class="breadcrumb-item">
+                Danh sách liên hệ
+            </a>
+           
+        </nav>
+    </div>
+</div>
+
+
+<div class="data_table_container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Content</th>
+
+                <th>DatePosted</th>
+                <th>Email</th>
+                <th>Phone</th>
+               
+                @* <th>CatID</th> *@
+            </tr>
+        </thead>
+        <tbody id="records_table">
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NewsID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Content)
+                    </td>
+                    @* <td>
+                @Html.DisplayFor(modelItem => item.ShortDesc)
+                </td> *@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DatePosted)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phone)
+                    </td>
+                   
+                    @*  <td>
+                @if (item.Cat != null)
+                {
+                @Html.DisplayFor(modelItem => item.Cat.CatId)
+                }
+                else
+                {
+                <span>N/A</span>
+                }
+                </td> *@
+                    <td>
+                        
+                        <a asp-action="Details" asp-route-id="@item.NewsID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.NewsID">Delete</a>
+                    </td>
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+</div>
+

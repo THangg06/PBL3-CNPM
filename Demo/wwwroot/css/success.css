@@ -1,0 +1,57 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .order-info {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .order-info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .order-info p {
+    margin-bottom: 5px;
+  }
+  
+  .next-steps {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  .next-steps h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .next-steps ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .next-steps li {
+    margin-bottom: 10px;
+  }
+  
+  .next-steps a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  

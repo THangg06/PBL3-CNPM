@@ -1,8 +1,62 @@
-﻿
-@{
-    ViewData["Title"] = "Profile";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h1>Profile</h1>
-<h2>Welcom @Context.User.Identity.Name</h2>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/Info.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="go-back">
+        <i class="fa-solid fa-arrow-left"></i>
+        <a href="Homepage.html">Back</a>
+    </div>
+    <div class="container">
+        <form id="profileForm">
+            <div class="image-container">
+                <img src="https://i1.sndcdn.com/avatars-5c8vtu1HVvUZDdlY-ZIKYlw-t1080x1080.jpg" alt="Default Image" id="productImage">
+                <input type="file" accept="image/*" id="fileInput" hidden>
+            </div>
+
+            <div class="form-group" id="Name">
+                <label for="firstName">Họ và tên:</label>
+                <input type="text" id="firstName" name="firstName" class="form-control" required value="@User.Identity.Name" readonly>
+            </div>
+
+            <div class="form-group" id="Contact-info">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required value="@User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Email)?.Value" readonly>
+            </div>
+
+            <div class="form-group" id="Contact-info">
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" class="form-control" required maxlength="10" value="@User.Claims.FirstOrDefault(c => c.Type == "PhoneNumber")?.Value" readonly>
+            </div>
+
+            <div class="form-group" id="birth">
+                <label for="dateOfBirth">Ngày sinh:</label>
+                <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control" required value="@User.Claims.FirstOrDefault(c => c.Type == "DateOfBirth")?.Value" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Địa chỉ:</label>
+                <input type="text" id="address" name="address" class="form-control" required value="@(User.Claims.FirstOrDefault(c => c.Type == "Address")?.Value ?? "Trống")" readonly>
+            </div>
+
+            <a asp-controller="Accounts" asp-action="EditProfile" asp-route-id="@((string)Context.Session.GetString("CustomerId"))">Chỉnh sửa tài khoản</a>
+
+        </form>
+    </div>
+
+    <script src="./js/site.js"></script>
+</body>
+</html>

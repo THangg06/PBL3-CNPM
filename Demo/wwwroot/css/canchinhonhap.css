@@ -1,0 +1,5 @@
+/* Thêm vào tệp CSS của bạn (ví dụ: site.css) */
+.form-control {
+    width: 100%; /* Chiều rộng tối đa */
+    max-width: 500px; /* Chiều rộng tối đa tùy ý */
+}
