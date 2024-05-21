@@ -2,7 +2,7 @@
 
 body {
     font-family: sans-serif;
-    margin: 20px;
+    margin: 200px;
     background-image: linear-gradient(#FFE6A7,#F2E677);
   }
   
@@ -10,9 +10,10 @@ body {
     width: 500px;
     margin: 0 auto;
   }
-  .go-back{
+.go-back {
+    margin-bottom: 20px;
     font-size: 1.2rem;
-  }
+}
   .go-back a{
     text-decoration: none;
     color:#007bff;

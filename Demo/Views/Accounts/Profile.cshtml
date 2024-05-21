@@ -18,12 +18,19 @@
 <body>
     <div class="go-back">
         <i class="fa-solid fa-arrow-left"></i>
-        <a href="Homepage.html">Back</a>
+        <a asp-controller="Home" asp-action="Index">Back</a>
     </div>
     <div class="container">
-        <form id="profileForm">
+
+        @if (TempData["UpdateMessage"] != null)
+        {
+            <div class="alert alert-success" role="alert">
+                @TempData["UpdateMessage"]
+            </div>
+        }
+        <form asp-action="UpdateProfile" asp-controller="Accounts" method="post" id="profileForm">
             <div class="image-container">
-                <img src="https://i1.sndcdn.com/avatars-5c8vtu1HVvUZDdlY-ZIKYlw-t1080x1080.jpg" alt="Default Image" id="productImage">
+                <img src="~/assets/avt_cus/@User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value" alt="">
                 <input type="file" accept="image/*" id="fileInput" hidden>
             </div>
 
@@ -31,6 +38,7 @@
                 <label for="firstName">Họ và tên:</label>
                 <input type="text" id="firstName" name="firstName" class="form-control" required value="@User.Identity.Name" readonly>
             </div>
+
 
             <div class="form-group" id="Contact-info">
                 <label for="email">Email:</label>

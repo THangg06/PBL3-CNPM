@@ -168,6 +168,7 @@ namespace Demo.Controllers
             customer.Password = (model.Password + salt.Trim()).ToMD5();
             customer.Active = true;
             customer.CreateDate = DateTime.Now;
+            customer.Avatar = "images.png";
 
             // Thêm khách hàng mới vào cơ sở dữ liệu
             _context.Customers.Add(customer);
@@ -318,8 +319,21 @@ namespace Demo.Controllers
         [Route("profile", Name = "Profile")]
         public IActionResult Profile()
         {
-            return View();
+            var customerId = HttpContext.Session.GetString("CustomerId");
+            if (string.IsNullOrEmpty(customerId))
+            {
+                return RedirectToAction("Login");
+            }
+
+            var existingCustomer = _context.Customers.Find(customerId);
+            if (existingCustomer == null)
+            {
+                return NotFound();
+            }
+
+            return View(existingCustomer);
         }
+
         [HttpGet]
         [Route("EditProfile")]
         public IActionResult EditProfile()
@@ -363,7 +377,7 @@ namespace Demo.Controllers
                 customer.Salt = existingCustomer.Salt;
                 customer.Active = existingCustomer.Active;
                 customer.CreateDate = existingCustomer.CreateDate;
-
+               
                 // Cập nhật thông tin khách hàng
                 _context.Entry(existingCustomer).CurrentValues.SetValues(customer);
                 await _context.SaveChangesAsync();
@@ -380,6 +394,45 @@ namespace Demo.Controllers
         }
 
 
+        [HttpPost]
+        [Route("UpdateProfile")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateProfile(Customer customer)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("Profile", customer);
+            }
+
+            try
+            {
+                var existingCustomer = await _context.Customers.FindAsync(customer.CustomerId);
+                if (existingCustomer == null)
+                {
+                    return NotFound();
+                }
+
+              //  Cập nhật thông tin từ form
+                existingCustomer.FullName = customer.FullName;
+                existingCustomer.Email = customer.Email;
+                existingCustomer.Phone = customer.Phone;
+                existingCustomer.Birthday = customer.Birthday;
+                existingCustomer.Address = customer.Address;
+
+                _context.Update(existingCustomer);
+                await _context.SaveChangesAsync();
+
+                TempData["UpdateMessage"] = "Thông tin của bạn đã được cập nhật thành công.";
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                Console.WriteLine(ex);
+                ModelState.AddModelError("", "Đã xảy ra lỗi khi cập nhật thông tin khách hàng.");
+                return View("Profile", customer);
+            }
+
+            return RedirectToAction("Profile");
+        }
 
         private bool CustomerExists(string id)
         {

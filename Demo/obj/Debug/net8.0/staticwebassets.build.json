@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sFPCzjjVGLi6xYEQiCZUgK7Rq9lkX9u9w9WSEtuw+wI=",
+  "Hash": "/1JBhZu1YzA6rPZJobrDO2b2QVMrB5IxDTWMp1zuo9o=",
   "Source": "Demo",
   "BasePath": "_content/Demo",
   "Mode": "Default",
@@ -547,6 +547,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\Avt_Cus\\download (1).jpg"
+    },
+    {
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Avt_Cus\\images.png",
+      "SourceId": "Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
+      "BasePath": "_content/Demo",
+      "RelativePath": "assets/Avt_Cus/images.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\Avt_Cus\\images.png"
     },
     {
       "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\assets\\Avt_Cus\\photo1653461726100-1653461726595561694937.jpg",

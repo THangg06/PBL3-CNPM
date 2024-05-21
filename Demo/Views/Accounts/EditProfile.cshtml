@@ -26,9 +26,15 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
+        @if (TempData["UpdateMessage"] != null)
+        {
+            <div class="alert alert-success" role="alert">
+                @TempData["UpdateMessage"]
+            </div>
+        }
         <form asp-action="EditProfile" asp-controller="Accounts" method="post">
             <div class="image-container">
-                <img src="https://i1.sndcdn.com/avatars-5c8vtu1HVvUZDdlY-ZIKYlw-t1080x1080.jpg" alt="Default Image" id="productImage">
+                <img src="~/assets/avt_cus/@User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value" alt="">
                 <input type="file" accept="image/*" id="fileInput" hidden>
             </div>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -45,7 +51,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Avatar" class="control-label"></label>
-                <input asp-for="Avatar" class="form-control" />
+              
                 <input asp-for="Avatar" class="form-control" type="file" />
 
                 <span asp-validation-for="Avatar" class="text-danger"></span>
