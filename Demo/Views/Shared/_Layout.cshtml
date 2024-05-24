@@ -77,7 +77,7 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <a href="/profile" id="HasLogin">Profile</a>
-                        <a href="./OrderDetail.html">Lịch sử mua hàng</a>
+                        <a asp-controller="Accounts" asp-action="PurchaseHistory">Lịch sử mua hàng</a>
                         <a href="/logout" id="HasLogin">Đăng Xuất</a>
                         <a asp-controller="Accounts" asp-action="ChangePassword" id="HasLogin">Đổi mật khẩu</a>
                       

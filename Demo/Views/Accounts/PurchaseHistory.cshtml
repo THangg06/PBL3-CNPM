@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Demo.Data.Order>
+
+@{
+    ViewData["Title"] = "PurchaseHistory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lịch sử đơn hàng</h2>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Mã Đơn Hàng</th>
+                <th>Ngày Đặt Hàng</th>
+                <th>Ngày Giao Hàng</th>
+                <th>Tổng Tiền</th>
+                <th>Ghi Chú</th>
+                <th>Chi Tiết Đơn Hàng</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.OrderID</td>
+                    <td>@order.OrderDate</td>
+                    <td>@(order.ShipDate.HasValue ? order.ShipDate.Value.ToString("dd/MM/yyyy") : "")</td>
+                    <td>@order.PaymentId</td>
+                    <td>@order.Note</td>
+                    <td>
+                        @foreach (var orderDetail in order.OrderDetails)
+                        {
+                            <div>
+                                <strong>Mã Sản Phẩm:</strong> @orderDetail.ProductId<br />
+                                <strong>Số Lượng:</strong> @orderDetail.Quantity<br />
+                                <strong>Giảm Giá:</strong> @orderDetail.Discount<br />
+                                <strong>Tổng Tiền:</strong> @orderDetail.Total<br />
+                                <strong>Ngày Giao Hàng:</strong> @(orderDetail.ShipDate.HasValue ? orderDetail.ShipDate.Value.ToString("dd/MM/yyyy") : "")<br />
+                                <hr />
+                            </div>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Không có đơn hàng.</p>
+}

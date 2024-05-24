@@ -14,6 +14,7 @@ using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pag
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using System.Security.Claims;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Identity;
 
 namespace Demo.Controllers
 {
@@ -24,6 +25,8 @@ namespace Demo.Controllers
         //  public INotyfService _notyfService {  get; }
         private readonly IMapper _mapper;
         private readonly ILogger<AccountsController> _logger;
+
+
 
         public AccountsController(Web01Context context, IMapper mapper)
         {
@@ -311,7 +314,7 @@ namespace Demo.Controllers
 
 
 
-      
+
 
         [AllowAnonymous]
         public IActionResult ChangePassword()
@@ -346,10 +349,10 @@ namespace Demo.Controllers
                     Console.WriteLine("ID null hoặc rỗng");
                     return RedirectToAction("DangKyTaiKhoan", "Accounts");
                 }
-              
+
                 if (!ModelState.IsValid)
                 {
-                  
+
 
                     Console.WriteLine("Model state không hợp lệ");
                     foreach (var state in ModelState)
@@ -365,23 +368,23 @@ namespace Demo.Controllers
                 Console.WriteLine("Model state hợp lệ, tìm tài khoản");
 
                 var taikhoan = await _context.Customers.FindAsync(taikhoanID);
-               
+
                 Console.WriteLine("Tài khoản là: " + (taikhoan != null ? taikhoan.CustomerId : "null"));
-            
+
                 if (taikhoan == null)
                 {
-                   
+
                     return RedirectToAction("DangKyTaiKhoan", "Accounts");
                 }
 
                 // Verifying the current password
                 var pass = (model.CurrentPassword.Trim() + taikhoan.Salt.Trim()).ToMD5();
-            
+
 
                 if (pass != taikhoan.Password)
                 {
                     TempData["ErrorMessage"] = "Bạn đã nhập sai mật khẩu.";
-                  
+
                     ModelState.AddModelError(string.Empty, "Current password is incorrect.");
                     return View(model);
                 }
@@ -414,7 +417,7 @@ namespace Demo.Controllers
             HttpContext.Session.Remove("CustomerId");
             return RedirectToAction("Index", "Home");
         }
-       
+
 
         [Authorize]
         [Route("profile", Name = "Profile")]
@@ -483,7 +486,7 @@ namespace Demo.Controllers
                 // Cập nhật thông tin khách hàng
                 _context.Entry(existingCustomer).CurrentValues.SetValues(customer);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction(nameof(Profile));
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -493,7 +496,7 @@ namespace Demo.Controllers
                 return View(customer);
             }
 
-            return RedirectToAction("Login");
+
         }
 
 
@@ -541,6 +544,39 @@ namespace Demo.Controllers
         {
             return _context.Customers.Any(e => e.CustomerId == id);
         }
+
+        [HttpGet]
+        [Route("History")]
+        public async Task<IActionResult> PurchaseHistory(Customer customer)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(customer.CustomerId))
+                {
+                    return BadRequest();
+                }
+
+                var existingCustomer = await _context.Customers.FindAsync(customer.CustomerId);
+                if (existingCustomer == null)
+                {
+                    return NotFound();
+                }
+
+                var orders = await _context.Orders
+                    .Include(o => o.OrderDetails)
+                    .Where(o => o.CustomerId == customer.CustomerId)
+                    .ToListAsync();
+
+                return View(orders);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error retrieving purchase history for customer {CustomerId}", customer.CustomerId);
+                ModelState.AddModelError("", "Đã xảy ra lỗi khi lấy thông tin đơn hàng. Vui lòng thử lại sau.");
+                return View("Error");
+            }
+        }
+
 
     }
 }

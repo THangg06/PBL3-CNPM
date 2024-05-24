@@ -114,7 +114,12 @@
 
     @await Component.InvokeAsync("Notyf")
     @await RenderSectionAsync("Scripts", required: false)
-    <script src="~/content/ckeditor/ckeditor.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.16.2/standard-all/ckeditor.js"></script>
+    <script src="https://cdn.cksource.com/ckfinder/3.7.0/ckfinder.js"></script>
+
+    <!-- Không cần dòng này nếu đã tải CKEditor từ CDN
+    <script src="~/content/ckeditor/ckeditor.js"></script> -->
     <script src="~/content/ckfinder/ckfinder_v1.js"></script>
 </body>
 </html>

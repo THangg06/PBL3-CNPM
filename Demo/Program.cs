@@ -4,14 +4,22 @@ using Demo.Controllers;
 using Demo.Data;
 using Demo.Helper;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
-
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+})
+    .AddJsonOptions(options =>
+    {
+        // Tích hợp chi tiết lỗi vào phản hồi JSON
+        options.JsonSerializerOptions.PropertyNamingPolicy = null; // Optional: để giữ nguyên tên thuộc tính của lớp
+    });
 builder.Services.AddDbContext<Web01Context>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("WebDemo"));
