@@ -6,17 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Demo.Data;
+using AspNetCoreHero.ToastNotification.Abstractions;
 
 namespace Demo.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class AdminNewsController : Controller
     {
+        public INotyfService _notyfService { get; }
         private readonly Web01Context _context;
 
-        public AdminNewsController(Web01Context context)
+        public AdminNewsController(Web01Context context, INotyfService notyfService)
         {
             _context = context;
+            _notyfService = notyfService;
         }
 
         // GET: Admin/AdminNews
@@ -146,6 +149,7 @@ namespace Demo.Areas.Admin.Controllers
             }
 
             await _context.SaveChangesAsync();
+            _notyfService.Success("Xóa thành công");
             return RedirectToAction(nameof(Index));
         }
 

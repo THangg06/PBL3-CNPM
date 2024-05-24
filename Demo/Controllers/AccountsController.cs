@@ -13,6 +13,7 @@ using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using System.Security.Claims;
+using Microsoft.Extensions.Logging;
 
 namespace Demo.Controllers
 {
@@ -20,13 +21,15 @@ namespace Demo.Controllers
     public class AccountsController : Controller
     {
         private readonly Web01Context _context;
-        //public INotyfService _notyfService {  get; }
+        //  public INotyfService _notyfService {  get; }
         private readonly IMapper _mapper;
+        private readonly ILogger<AccountsController> _logger;
 
         public AccountsController(Web01Context context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
+            //     _notyfService = notyfService;
             //_notyfService = notyfService;
         }
         [HttpGet]
@@ -114,7 +117,7 @@ namespace Demo.Controllers
             // Nếu CustomerId tồn tại, chuyển hướng đến trang Dashboard
             if (!string.IsNullOrEmpty(taikhoanID))
             {
-                return RedirectToAction("Profile","Accounts");
+                return RedirectToAction("Dashboard");
             }
 
             // Trả về trang đăng nhập nếu chưa đăng nhập
@@ -178,7 +181,6 @@ namespace Demo.Controllers
             return RedirectToAction("Login");
         }
 
-       
         [HttpPost]
         [AllowAnonymous]
         [Route("Login.html", Name = "Login")]
@@ -215,9 +217,11 @@ namespace Demo.Controllers
                 // Lấy vai trò của khách hàng
                 Role? userRole = _context.Roles.SingleOrDefault(role => role.RoleId == userCustomer.RoleId);
 
+
                 // Tạo claims cho phiên đăng nhập
                 var claims = new List<Claim>
 {
+
     new Claim(ClaimTypes.Email, userCustomer.Email),
     new Claim(ClaimTypes.Name, userCustomer.FullName ?? ""),
 
@@ -230,14 +234,14 @@ namespace Demo.Controllers
     new Claim("Address", userCustomer.Address ?? ""),
      new Claim("Avatar", userCustomer.Avatar ?? "")
 };
-                HttpContext.Session.SetString("CustomerId", userCustomer.CustomerId.ToString());
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
                 // Đăng nhập vào phiên làm việc
                 await HttpContext.SignInAsync(claimsPrincipal);
-
+                HttpContext.Session.SetString("CustomerId", userCustomer.CustomerId);
+                Console.WriteLine("CustomerId cua ban là: " + userCustomer.CustomerId);
                 // Chuyển hướng dựa trên vai trò
                 if (Url.IsLocalUrl(ReturnUrl))
                 {
@@ -276,11 +280,10 @@ namespace Demo.Controllers
                 var claims = new List<Claim>
 {
     new Claim(ClaimTypes.Email, userAdmin.Email),
-    new Claim(ClaimTypes.Name, userAdmin.FullName ?? ""),
-    new Claim("AccountId", userAdmin.AccountId ?? ""),
-    new Claim("Avatar", userAdmin.Avatar ?? ""),
-    new Claim(ClaimTypes.Role, userRole?.RoleName ?? "Admin"),
-
+ new Claim(ClaimTypes.Name, userAdmin.FullName ?? ""),
+ new Claim("AccountId", userAdmin.AccountId ?? ""),
+ new Claim("Avatar", userAdmin.Avatar ?? ""),
+ new Claim(ClaimTypes.Role, userRole?.RoleName ?? "Admin"),
 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -306,6 +309,103 @@ namespace Demo.Controllers
             return View(model);
         }
 
+
+
+      
+
+        [AllowAnonymous]
+        public IActionResult ChangePassword()
+        {
+            // Lấy CustomerId từ session
+            var taikhoanID = HttpContext.Session.GetString("CustomerId");
+            Console.WriteLine("CustomerId cuâ abạn là: " + taikhoanID);
+            // Nếu CustomerId tồn tại, chuyển hướng đến trang Dashboard
+            //if (!string.IsNullOrEmpty(taikhoanID))
+            //{
+            //    return RedirectToAction("DangKyTaiKhoan");
+            //}
+
+            // Trả về trang đăng nhập nếu chưa đăng nhập
+            return View();
+        }
+
+
+        [HttpPost]
+        [Authorize]
+        [AllowAnonymous]
+        //[Route("ChangePassword.html", Name = "ChangePassword")]
+        public async Task<IActionResult> ChangePassword(ChangePasswordCM model)
+        {
+            try
+            {
+                var taikhoanID = HttpContext.Session.GetString("CustomerId");
+                Console.WriteLine("ID lấy từ session: " + taikhoanID);
+
+                if (string.IsNullOrEmpty(taikhoanID))
+                {
+                    Console.WriteLine("ID null hoặc rỗng");
+                    return RedirectToAction("DangKyTaiKhoan", "Accounts");
+                }
+              
+                if (!ModelState.IsValid)
+                {
+                  
+
+                    Console.WriteLine("Model state không hợp lệ");
+                    foreach (var state in ModelState)
+                    {
+                        foreach (var error in state.Value.Errors)
+                        {
+                            Console.WriteLine($"Lỗi: {error.ErrorMessage}");
+                        }
+                    }
+                    return View(model);
+                }
+
+                Console.WriteLine("Model state hợp lệ, tìm tài khoản");
+
+                var taikhoan = await _context.Customers.FindAsync(taikhoanID);
+               
+                Console.WriteLine("Tài khoản là: " + (taikhoan != null ? taikhoan.CustomerId : "null"));
+            
+                if (taikhoan == null)
+                {
+                   
+                    return RedirectToAction("DangKyTaiKhoan", "Accounts");
+                }
+
+                // Verifying the current password
+                var pass = (model.CurrentPassword.Trim() + taikhoan.Salt.Trim()).ToMD5();
+            
+
+                if (pass != taikhoan.Password)
+                {
+                    TempData["ErrorMessage"] = "Bạn đã nhập sai mật khẩu.";
+                  
+                    ModelState.AddModelError(string.Empty, "Current password is incorrect.");
+                    return View(model);
+                }
+
+                // Updating with the new password
+                string passnew = (model.NewPassword.Trim() + taikhoan.Salt.Trim()).ToMD5();
+                taikhoan.Password = passnew;
+                _context.Customers.Update(taikhoan);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Index", "Home");
+                TempData["SuccessMessage"] = "Mật khẩu đã được thay đổi thành công!";
+            }
+            catch (Exception ex)
+            {
+                // Ghi log lỗi
+                Console.WriteLine("Lỗi: " + ex.Message);
+                ModelState.AddModelError(string.Empty, "An error occurred while changing the password. Please try again later.");
+                return View(model);
+            }
+        }
+
+
+
         [HttpGet]
         [Route("logout", Name = "Logout")]
         public IActionResult Logout()
@@ -314,6 +414,7 @@ namespace Demo.Controllers
             HttpContext.Session.Remove("CustomerId");
             return RedirectToAction("Index", "Home");
         }
+       
 
         [Authorize]
         [Route("profile", Name = "Profile")]
@@ -377,10 +478,12 @@ namespace Demo.Controllers
                 customer.Salt = existingCustomer.Salt;
                 customer.Active = existingCustomer.Active;
                 customer.CreateDate = existingCustomer.CreateDate;
-               
+                customer.Avatar = existingCustomer.Avatar;
+
                 // Cập nhật thông tin khách hàng
                 _context.Entry(existingCustomer).CurrentValues.SetValues(customer);
                 await _context.SaveChangesAsync();
+                return RedirectToAction("Index", "Home");
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -411,8 +514,7 @@ namespace Demo.Controllers
                 {
                     return NotFound();
                 }
-
-              //  Cập nhật thông tin từ form
+                //  Cập nhật thông tin từ form
                 existingCustomer.FullName = customer.FullName;
                 existingCustomer.Email = customer.Email;
                 existingCustomer.Phone = customer.Phone;
@@ -423,6 +525,7 @@ namespace Demo.Controllers
                 await _context.SaveChangesAsync();
 
                 TempData["UpdateMessage"] = "Thông tin của bạn đã được cập nhật thành công.";
+                return View(existingCustomer);
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -431,7 +534,7 @@ namespace Demo.Controllers
                 return View("Profile", customer);
             }
 
-            return RedirectToAction("Profile");
+
         }
 
         private bool CustomerExists(string id)

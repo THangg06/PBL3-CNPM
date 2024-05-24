@@ -33,10 +33,10 @@
             </div>
         }
         <form asp-action="EditProfile" asp-controller="Accounts" method="post">
-            <div class="image-container">
+      @*       <div class="image-container">
                 <img src="~/assets/avt_cus/@User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value" alt="">
                 <input type="file" accept="image/*" id="fileInput" hidden>
-            </div>
+            </div> *@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="CustomerId" />
             <div class="form-group">
@@ -49,13 +49,13 @@
                 <input asp-for="Birthday" class="form-control" />
                 <span asp-validation-for="Birthday" class="text-danger"></span>
             </div>
-            <div class="form-group">
+     @*        <div class="form-group">
                 <label asp-for="Avatar" class="control-label"></label>
               
                 <input asp-for="Avatar" class="form-control" type="file" />
 
                 <span asp-validation-for="Avatar" class="text-danger"></span>
-            </div>
+            </div> *@
             <div class="form-group">
                 <label asp-for="Address" class="control-label"></label>
                 <input asp-for="Address" class="form-control" />

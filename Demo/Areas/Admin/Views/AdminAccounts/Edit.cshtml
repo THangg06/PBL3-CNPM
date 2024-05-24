@@ -1,74 +1,71 @@
 ﻿@model Demo.Data.Account
 
+
 @{
     ViewData["Title"] = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+<div class="content_box">
+      <div class="nav_dir">
+      <div class="header-sub-title">
+          <nav class="breadcrumb breadcrumb-dash">
+              <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+              <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminAccounts" asp-action="Index">Danh sách tài khoản quản trị > </a>
+              <span class="breadcrumb-item active">Chỉnh sửa tài khoản</span <br />
+          </nav>
+      </div>
 
-<div class="page-header">
-    <div class="header-sub-title">
-        <nav class="breadcrumb breadcrumb-dash">
-            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
-            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminAccounts" asp-action="Index">Danh sách tài khoản quản trị > </a>
-            <span class="breadcrumb-item active">Chỉnh sửa tài khoản</span <br />
-        </nav>
-    </div>
-
-</div>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+  </div>
+  <hr />
+  <div class="form_container">
+    <div class="title">Thông tin tài khoản</div>
+    <div class="content">
         <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="AccountId" />
-            <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Salt" class="control-label"></label>
-                <input asp-for="Salt" class="form-control" />
-                <span asp-validation-for="Salt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Active" class="control-label"></label>
-                <input asp-for="Active" class="form-control" />
-                <span asp-validation-for="Active" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RoleId" class="control-label"></label>
-                <select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
-                <span asp-validation-for="RoleId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastLogin" class="control-label"></label>
-                <input asp-for="LastLogin" class="form-control" />
-                <span asp-validation-for="LastLogin" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreateDate" class="control-label"></label>
-                <input asp-for="CreateDate" class="form-control" />
-                <span asp-validation-for="CreateDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="AccountId" />
+        <div class="user-details">
 
-<div>
-    <a asp-action="Index">Back to List</a>
+          <div class="input-box">
+            <label>Phone</label>
+            <input asp-for="Phone" class="form-control" />
+            <span asp-validation-for="Phone" class="text-danger"></span>
+          </div>
+
+          <div class="input-box">
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+          </div>
+
+          <div class="input-box">
+            <label asp-for="Password">Password</label>
+            <input asp-for="Password" class="form-control" type="password"/>
+            <span asp-validation-for="Password" class="text-danger"></span>
+          </div>
+
+          <div class="input-box" id="special">
+            <label asp-for="RoleId" class="control-label">Role Type</label>
+            <select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
+            <span asp-validation-for="RoleId" class="text-danger"></span>
+          </div>
+
+
+        </div>
+
+        <div class="button">
+        <input type="submit" value="Save" class="btn btn-primary" />
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+<div class="group_button">
+        <input type="button" 
+    onclick="window.location.href='@Url.Action("Index")'" 
+    value="Back to List" class="btn btn-info btn-sm">
+
+</div>
 </div>
 

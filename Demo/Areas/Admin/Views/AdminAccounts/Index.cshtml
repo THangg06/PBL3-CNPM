@@ -5,8 +5,9 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
+<br />
 <div class="content_box">
-    <div class="page-header">
+    <div class="nav_dir">
         <div class="header-sub-title">
             <nav class="breadcrumb breadcrumb-dash">
                 <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
@@ -15,17 +16,18 @@
         </div>
     </div>
 
-    <div class="mb-3">
-        <a asp-action="Create" class="btn btn-primary">Tạo tài khoản mới</a>
-        <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminAccounts" asp-action="Index"> > Tạo tài khoản mới </a>
-    </div>
 
-    <div class="filter-group" id="editcbb">
+    <div class="filter-box" id="editcbb">
         <select class="custom-select" id="idstatus" name="idstatus" style="min-width: 200px" onchange="filterStatus()">
             <option value="" disabled selected>Chọn trạng thái</option>
             <option value="true">Active</option>
             <option value="false">Block</option>
         </select>
+        <input type="button"
+               onclick="window.location.href='@Url.Action("Create")'"
+               value="Tạo tài khoản mới" class="btn btn-info btn-sm">
+        @* <a asp-action="Create" class="btn btn-primary"></a> *@
+        @*     <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminAccounts" asp-action="Index"> > Tạo tài khoản mới </a> *@
     </div>
 
     <div class="data_table_container">
@@ -33,35 +35,84 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>FullName</th>
-                    <th>Phone</th>
+                    <th>Họ Tên</th>
                     <th>Email</th>
-                    <th>Active</th>
+                    <th>Phone</th>
+                    <th>Lần đăng nhập cuối</th>
                     <th>Quyền truy cập</th>
-                    <th>CreateDate</th>
+                    <th>Trạng thái</th>
+                    <th></th>
                 </tr>
             </thead>
-            <tbody id="records_table">
-                @foreach (var item in Model)
+            <tbody>
+                @if (Model != null)
                 {
-                    <tr>
-                        <td>@Html.DisplayFor(modelItem => item.AccountId)</td>
-                        <td>@Html.DisplayFor(modelItem => item.FullName)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Phone)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Active)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Role.RoleName)</td>
-                        <td>@Html.DisplayFor(modelItem => item.CreateDate)</td>
-                        <td>
-                            <a asp-action="Details" asp-route-id="@item.AccountId">Details</a> |
-                            <a asp-action="Delete" asp-route-id="@item.AccountId">Delete</a>
-                        </td>
-                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.AccountId</td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-6"><strong>FullName:</strong></div>
+                                    <div class="col-md-6">@item.FullName</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-6"><strong>Email:</strong></div>
+                                    <div class="col-md-6">@item.Email</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-6"><strong>Phone:</strong></div>
+                                    <div class="col-md-6">@item.Phone</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-6"><strong>Phone:</strong></div>
+                                    <div class="col-md-6">@item.LastLogin</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-6"><strong>Password:</strong></div>
+                                    <div class="col-md-6">@item.Role.RoleName</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-6"><strong>Active:</strong></div>
+                                    <div class="col-md-6">@((item.Active.HasValue && item.Active.Value ? "Active" : "Block"))</div>
+
+                                </div>
+                            </td>
+                            <td>
+                                <div class="group_button another">
+                                    <input type="button" class="mod-btn"
+                                           onclick="window.location.href='@Url.Action("Edit", new { id = item.AccountId })'"
+                                           value="Sửa" class="btn btn-info btn-sm">
+
+                                    <input type="button" class="mod-btn"
+                                           onclick="window.location.href='@Url.Action("Details", new { id = item.AccountId })'"
+                                           value="Chi tiết" class="btn btn-info btn-sm">
+
+                                    <input type="button" class="mod-btn" id="delete"
+                                           onclick="if(confirm('Are you sure you want to delete?'))
+                    { window.location.href='@Url.Action("Delete", new { id = item.AccountId })' }"
+                                           value="Xóa" class="btn btn-danger btn-sm">
+                                </div>
+
+                            </td>
+                        </tr>
+                    }
                 }
             </tbody>
         </table>
     </div>
 </div>
+
 
 @section Scripts {
     <script>

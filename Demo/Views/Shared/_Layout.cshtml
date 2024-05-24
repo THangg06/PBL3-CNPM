@@ -79,8 +79,7 @@
                         <a href="/profile" id="HasLogin">Profile</a>
                         <a href="./OrderDetail.html">Lịch sử mua hàng</a>
                         <a href="/logout" id="HasLogin">Đăng Xuất</a>
-                                 <a href="/ChangePassword" id="HasLogin">Đổi mật khẩu
-                                 </a>
+                        <a asp-controller="Accounts" asp-action="ChangePassword" id="HasLogin">Đổi mật khẩu</a>
                       
 
                     }
@@ -118,10 +117,10 @@
     @RenderBody()
             <!------------------------------ Scripts ------------------------------------------------>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="./js/main.js" charset="utf-8"></script>  
+            <script src="./js/main.js" charset="utf-8"></script>
 
 
-
+   
     @RenderSection("Scripts", required: false)
 <script>
    $(document).ready(function(){

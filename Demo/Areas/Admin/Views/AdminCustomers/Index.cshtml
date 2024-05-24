@@ -2,7 +2,6 @@
 ﻿@using PagedList.Core.Mvc
 @model PagedList.Core.IPagedList<Demo.Data.Customer>
 
-
 @{
     int CurrentPage = ViewBag.CurrentPage;
     ViewData["Title"] = "Danh sách khách hàng " + CurrentPage;
@@ -10,7 +9,7 @@
 }
 
 <div class="content_box">
-    <div class="page-header">
+    <div class="nav_dir">
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
@@ -20,90 +19,111 @@
     </div>
 
 </div>
-<div class="filter-group">
+<div class="filter-box">
+    <label>Tìm kiếm</label>
     <input type="text" id="keyword" name="keyword" />
-        @*  <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc"> *@
-        @*  <option selected>Chọn Danh Mục</option> *@
-        @*  <option value="0">Chọn tất cả</option> *@
-    </select>
+@*     <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc"> 
+        <option selected>Chọn Danh Mục</option> 
+        <option value="0">Chọn tất cả</option> 
+    </select> *@
+    <input type="button" value="Tìm">
 </div>
 
 
-            <div class="data_table_container">
+    <div class="data_table_container">
+        <table class="data-table" id="sampleTable">
+            <thead>
+                <tr>
 
+                    <th>ID khách hàng</th>
+                    <th width="150">Họ tên</th>
+                    <th>Birthday</th>
 
-                <table class="data-table" id="sampleTable">
-                    <thead>
+                    <th width="200">Address</th>
+                    <th width="100">Email</th>
+                    <th>Phone</th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody id="records_table">
+                    @if (Model != null)
+                    {
+                        foreach (var item in Model)
+                        {
                         <tr>
 
-                            <th>ID khách hàng</th>
-                            <th width="150">FullName</th>
-                            <th>Birthday</th>
+                            <td>@item.CustomerId</td>
+                            <td>@item.FullName</td>
+                            <td>@item.Birthday</td>
 
-                            <th width="200">Address</th>
-                            <th width="100">Email</th>
-                            <th>Phone</th>
-                            <th></th>
+                            <td>@item.Address</td>
+                            <td>@item.Email</td>
+                            <td>@item.Phone</td>
 
+                            <td class="text-center">
+                                <div class="group_button another">
+                <input type="button" class ="mod-btn" 
+                onclick="window.location.href='@Url.Action("Details", new { id = item.CustomerId })'" 
+                value="Chi tiết" class="btn btn-info btn-sm">
+
+                <input type="button" class ="mod-btn" id="delete" 
+                onclick="if(confirm('Are you sure you want to delete?'))
+                { window.location.href='@Url.Action("Delete", new { id = item.CustomerId })' }" 
+                value="Xóa" class="btn btn-danger btn-sm">
+                                </div>
+                                                         
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody id="records_table">
-                            @if (Model != null)
-                            {
-                                foreach (var item in Model)
-                                {
-                                                <tr>
+                        }
+                    }
+            </tbody>
+        </table>
+        <div aria-label="Page navigation example">
+            <ul class="pagination">
+                <pager class="page-item" list="@Model" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index"></pager>
+            </ul>
 
-                                                    <td>@item.CustomerId</td>
-                                                    <td>@item.FullName</td>
-                                                    <td>@item.Birthday</td>
-
-                                                    <td>@item.Address</td>
-                                                    <td>@item.Email</td>
-                                                    <td>@item.Phone</td>
-
-                                                    <td class="text-center">
-                                                |
-                                                        <a asp-action="Details" asp-route-id="@item.CustomerId" class="btn btn-info btn-sm">Chi tiết</a> |
-                                                        <a asp-action="Delete" asp-route-id="@item.CustomerId" class="btn btn-danger btn-sm">Xóa</a>
-                                                    </td>
-                                                </tr>
-                                }
-                            }
-                    </tbody>
-                </table>
-                <div aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <pager class="page-item" list="@Model" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index"></pager>
-                    </ul>
-
-                </div>
-            </div>
+        </div>
+    </div>
 
 </div>
 
 
                                         
 @section Scripts {
-    <script>
-        $(document).ready(function () {
- $("#keyword").keyup(function () {
-                var strkeyword = $("#keyword").val();
+        <script>
+            $(document).ready(function () {
+                // Function to handle search
+                function search() {
+                    var strkeyword = $("#keyword").val();
 
-                $.ajax({
-                    url: '/Admin/Search/FindCustomer',
-                    dataType: "html",
-                    type: "POST",
-                    data: { keyword: strkeyword },
-                    async: true,
-                    success: function (results) {
-                        $("#records_table").html(results);
-                    },
-                    error: function (xhr, status, error) {
-                        console.error(`Lỗi AJAX: ${status} - ${error}`);
+                    $.ajax({
+                        url: '/Admin/Search/FindCustomer',
+                        dataType: "html",
+                        type: "POST",
+                        data: { keyword: strkeyword },
+                        async: true,
+                        success: function (results) {
+                            $("#records_table").html(results);
+                        },
+                        error: function (xhr, status, error) {
+                            console.error(`Lỗi AJAX: ${status} - ${error}`);
+                        }
+                    });
+                }
+
+                // Call search function when the button is clicked
+                $("input[type='button'][value='Tìm']").click(function () {
+                    search();
+                });
+
+                // Call search function when the Enter key is pressed
+                $("#keyword").keyup(function(event) {
+                    if (event.keyCode === 13) {
+                        search();
                     }
                 });
             });
-        });
-    </script>
+        </script>
 }

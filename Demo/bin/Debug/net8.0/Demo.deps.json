@@ -16,7 +16,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.4",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
-          "PagedList.Core.Mvc": "3.0.0"
+          "PagedList.Core.Mvc": "3.0.0",
+          "CKFinder": "2.4.0.2631"
         },
         "runtime": {
           "Demo.dll": {}
@@ -2112,6 +2113,14 @@
             "fileVersion": "7.0.22.51805"
           }
         }
+      },
+      "CKFinder/2.4.0.2631": {
+        "runtime": {
+          "CKFinder.dll": {
+            "assemblyVersion": "2.4.0.2631",
+            "fileVersion": "2.4.0.2631"
+          }
+        }
       }
     }
   },
@@ -3415,6 +3424,11 @@
       "sha512": "sha512-bR4qdCmssMMbo9Fatci49An5B1UaVJZHKNq70PRgzoLYIlitb8Tj7ns/Xt5Pz1CkERiTjcVBDU2y1AVrPBYkaw==",
       "path": "system.windows.extensions/7.0.0",
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
+    },
+    "CKFinder/2.4.0.2631": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

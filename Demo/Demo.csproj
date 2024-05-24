@@ -9,6 +9,7 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Content\ckfinder\userfiles\" />
     <Folder Include="wwwroot\.github\workflows\" />
     <Folder Include="wwwroot\MenuCss\LoadH\" />
   </ItemGroup>
@@ -153,6 +154,12 @@
     <None Include="wwwroot\vendors\js\vendor.bundle.base.js" />
     <None Include="wwwroot\vendors\mdi\css\materialdesignicons.min.css.map" />
     <None Include="wwwroot\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CKFinder">
+      <HintPath>..\..\..\Users\ASUS\Downloads\ckfinder\ckfinder\bin\Release\CKFinder.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

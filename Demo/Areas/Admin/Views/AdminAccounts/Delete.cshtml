@@ -5,7 +5,8 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<div class="page-header">
+<div class="content_box">
+    <div class="nav_dir">
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
@@ -14,9 +15,65 @@
         </nav>
     </div>
 
+    </div>
+
+    <div>
+
+    <hr />
+    <dl class="form_container">
+        <div class="title">Tài khoản</div>
+        <div class="content">
+        <div class="user-details">
+           <div class="input-box">
+            <label>Phone</label>
+            <input asp-for="Phone" class="form-control" readonly/>
+          </div>
+
+          <div class="input-box">
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" class="form-control" readonly/>
+          </div>
+
+          <div class="input-box">
+            <label asp-for="Password">Password</label>
+            <input asp-for="Password" class="form-control" readonly/>
+          </div>
+
+          <div class="input-box">
+            <label asp-for="LastLogin">Last Login</label>
+            <input asp-for="LastLogin" class="form-control" readonly/>
+          </div>
+
+           <div class="input-box">
+            <label asp-for="CreateDate">Create Date</label>
+            <input asp-for="CreateDate" class="form-control" readonly/>
+          </div>
+
+          <div class="input-box" id="special">
+            <label asp-for="RoleId" class="control-label">Role Type</label>
+            <input asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId" readonly/>
+          </div>
+        </div>
+
+        </div>
+
+    </dl>
+    </div>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="AccountId" />
+        <div class="group_button">
+            <input type="submit" id="delete" value="Delete" class="btn btn-danger" /> 
+             <input type="button" 
+    onclick="window.location.href='@Url.Action("Index")'" 
+    value="Back to List" class="btn btn-info btn-sm">
+        </div>
+    </form>
+
 </div>
 
-<h3>Are you sure you want to delete this?</h3>
+
+@* 
 <div>
     <h4>Account</h4>
     <hr />
@@ -71,9 +128,5 @@
         </dd>
     </dl>
     
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="AccountId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
-</div>
+    
+</div> *@

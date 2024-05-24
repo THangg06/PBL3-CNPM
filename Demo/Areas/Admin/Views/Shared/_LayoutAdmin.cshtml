@@ -62,7 +62,8 @@
                 </div>
                 <div class="option-box">
                     <div class="fa-solid fa-user-group"></div>
-                    <a asp-area="Admin" asp-controller="AdminCategories" asp-action="Index">Quản lý danh mục</a>
+                   @*  <a asp-area="Admin" asp-controller="AdminCategories" asp-action="Index">Quản lý danh mục</a> *@
+                    <a href="/admin/productcategory">Quản lý danh mục</a>
                 </div>
 
                 <div class="option-box">
@@ -113,5 +114,7 @@
 
     @await Component.InvokeAsync("Notyf")
     @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/content/ckeditor/ckeditor.js"></script>
+    <script src="~/content/ckfinder/ckfinder_v1.js"></script>
 </body>
 </html>

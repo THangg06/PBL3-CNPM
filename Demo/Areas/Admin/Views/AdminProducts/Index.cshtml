@@ -1,3 +1,6 @@
+﻿
+
+
 ﻿﻿﻿@using PagedList.Core.Mvc
 @model PagedList.Core.IPagedList<Demo.Data.Product>
 
@@ -33,7 +36,7 @@
     </select>
 </div>
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Add">Create New</a>
 </p>
 <div class="data_table_container">
     <table class="data-table">
@@ -41,6 +44,7 @@
             <tr>
                 <th>ProductId</th>
                 <th>ProductName</th>
+                <th>CatName</th>
                 <th>Description</th>
                 <th>Price</th>
                 <th>Unit</th>
@@ -54,30 +58,37 @@
             </tr>
         </thead>
         <tbody id="records_table">
-
-            @foreach (var item in Model)
+            @if (Model != null && Model.Any())
             {
-                <tr>
-                    <td>@Html.DisplayFor(modelItem => item.ProductId)</td>
-                    <td>@Html.DisplayFor(modelItem => item.ProductName)</td>
-                    <td>@Html.DisplayFor(modelItem => item.Description)</td>
-                    <td>@Html.DisplayFor(modelItem => item.Price)</td>
-                    <td>@Html.DisplayFor(modelItem => item.Unit)</td>
-                    <td>
+                var i = ((ViewBag.Page - 1) * ViewBag.PageSize) + 1;
 
-                        <img src="~/menucss/loadh/@item.Thumb" alt="Product Image" />
-                    </td>
-                    <td>@Html.DisplayFor(modelItem => item.DateCreated)</td>
-                    <td>@Html.DisplayFor(modelItem => item.BestSellers)</td>
-                    <td>@Html.DisplayFor(modelItem => item.HomeFlag)</td>
-                    <td>@Html.DisplayFor(modelItem => item.Active)</td>
-                    <td>@Html.DisplayFor(modelItem => item.Title)</td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
-                    </td>
-                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.ProductId)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ProductName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Cat.CatName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Unit)</td>
+
+                        <td>
+
+                            <img src="~/menucss/loadh/@item.Thumb" alt="Product Image" />
+                        </td>
+                        <td>@Html.DisplayFor(modelItem => item.DateCreated)</td>
+                        <td>@Html.DisplayFor(modelItem => item.BestSellers)</td>
+                        <td>@Html.DisplayFor(modelItem => item.HomeFlag)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Active)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+                        </td>
+                    </tr>
+                    
+                }
             }
         </tbody>
     </table>

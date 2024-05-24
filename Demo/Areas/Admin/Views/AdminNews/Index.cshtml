@@ -5,20 +5,16 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<div class="page-header">
-    <div class="header-sub-title">
-        <nav class="breadcrumb breadcrumb-dash">
-            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
-                <i class="anticon anticon-home m-r-5"></i>Trang chủ
-            </a>
-            <a asp-area="Admin" asp-controller="AdminNews" asp-action="Index" class="breadcrumb-item">
-                Danh sách liên hệ
-            </a>
-           
-        </nav>
+<br />
+<div class="content_box">
+    <div class="nav_dir">
+        <div class="header-sub-title">
+            <nav class="breadcrumb breadcrumb-dash">
+                <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+                <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminNews" asp-action="Index">Danh sách phản hồi </a>
+            </nav>
+        </div>
     </div>
-</div>
-
 
 <div class="data_table_container">
     <table class="data-table">
@@ -36,52 +32,64 @@
             </tr>
         </thead>
         <tbody id="records_table">
-
-            @foreach (var item in Model)
+            @if (Model != null)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.NewsID)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Title)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Content)
-                    </td>
-                    @* <td>
-                @Html.DisplayFor(modelItem => item.ShortDesc)
-                </td> *@
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DatePosted)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Email)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Phone)
-                    </td>
-                   
-                    @*  <td>
-                @if (item.Cat != null)
+                @foreach (var item in Model)
                 {
-                @Html.DisplayFor(modelItem => item.Cat.CatId)
+                    <tr>
+                        <td>@item.NewsID</td>
+                        <td>
+                            <div class="row">
+                              @*   <div class="col-md-6"><strong>Title:</strong></div> *@
+                                <div class="col-md-6">@item.Title</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                               @*  <div class="col-md-6"><strong>Content:</strong></div> *@
+                                <div class="col-md-6">@item.Content</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                               @*  <div class="col-md-6"><strong>DatePosted:</strong></div> *@
+                                <div class="col-md-6">@item.DatePosted</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                             @*    <div class="col-md-6"><strong>Email:</strong></div> *@
+                                <div class="col-md-6">@item.Email</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                              @*   <div class="col-md-6"><strong>Phone:</strong></div> *@
+                                <div class="col-md-6">@item.Phone</div>
+                            </div>
+                        </td>
+                       
+                        <td>
+                            <div class="group_button another">
+                               @*  <input type="button" class="mod-btn"
+                                       onclick="window.location.href='@Url.Action("Edit", new { id = item.NewsID })'"
+                                       value="Sửa" class="btn btn-info btn-sm"> *@
+
+                                <input type="button" class="mod-btn"
+                                       onclick="window.location.href='@Url.Action("Details", new { id = item.NewsID })'"
+                                       value="Chi tiết" class="btn btn-info btn-sm">
+
+                                <input type="button" class="mod-btn" id="delete"
+                                       onclick="if(confirm('Are you sure you want to delete?'))
+                    { window.location.href='@Url.Action("Delete", new { id = item.NewsID })' }"
+                                       value="Xóa" class="btn btn-danger btn-sm">
+                            </div>
+
+                        </td>
+                    </tr>
                 }
-                else
-                {
-                <span>N/A</span>
-                }
-                </td> *@
-                    <td>
-                        
-                        <a asp-action="Details" asp-route-id="@item.NewsID">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.NewsID">Delete</a>
-                    </td>
-                </tr>
             }
-
-
         </tbody>
     </table>
 </div>
-
+</div>

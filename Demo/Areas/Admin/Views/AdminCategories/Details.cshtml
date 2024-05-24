@@ -7,91 +7,119 @@
 
 <h1>Details</h1>
 
-<div>
-    <h4>Category</h4>
+<div class="content_box">
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CatName)
+    <dl class="form_container">
+        <div class="title">Category</div>
+        <div class="content">
+            <div class="user-details">
+                <div class="input-box">
+                    <label>Tên loại</label>
+                    <input asp-for="CatName" class="form-control" readonly />
+                </div>
+
+                <div class="input-box">
+                    <label asp-for="Title">Title</label>
+                    <input asp-for="Title" class="form-control" readonly />
+                </div>
+
+                <div class="input-box">
+                    <label asp-for="Alias">Alias</label>
+                    <input asp-for="Alias" class="form-control" readonly />
+                </div>
+
+            </div>
+        </div>
+        @*         <dt class = "col-sm-2">
+        @Html.DisplayNameFor(model => model.CatName)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CatName)
+        @Html.DisplayFor(model => model.CatName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
+        @Html.DisplayNameFor(model => model.Description)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
+        @Html.DisplayFor(model => model.Description)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ParentId)
+        @Html.DisplayNameFor(model => model.ParentId)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ParentId)
+        @Html.DisplayFor(model => model.ParentId)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Levels)
+        @Html.DisplayNameFor(model => model.Levels)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Levels)
+        @Html.DisplayFor(model => model.Levels)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ordering)
+        @Html.DisplayNameFor(model => model.Ordering)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ordering)
+        @Html.DisplayFor(model => model.Ordering)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Published)
+        @Html.DisplayNameFor(model => model.Published)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Published)
+        @Html.DisplayFor(model => model.Published)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Thumb)
+        @Html.DisplayNameFor(model => model.Thumb)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Thumb)
+        @Html.DisplayFor(model => model.Thumb)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
+        @Html.DisplayNameFor(model => model.Title)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
+        @Html.DisplayFor(model => model.Title)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Alias)
+        @Html.DisplayNameFor(model => model.Alias)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Alias)
+        @Html.DisplayFor(model => model.Alias)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MetaDesc)
+        @Html.DisplayNameFor(model => model.MetaDesc)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MetaDesc)
+        @Html.DisplayFor(model => model.MetaDesc)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MetaKey)
+        @Html.DisplayNameFor(model => model.MetaKey)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MetaKey)
+        @Html.DisplayFor(model => model.MetaKey)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cover)
+        @Html.DisplayNameFor(model => model.Cover)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cover)
+        @Html.DisplayFor(model => model.Cover)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SchemaMarkup)
+        @Html.DisplayNameFor(model => model.SchemaMarkup)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SchemaMarkup)
-        </dd>
+        @Html.DisplayFor(model => model.SchemaMarkup)
+        </dd>*@
     </dl>
+
+    <div class="group_button">
+        <input type="button"
+               onclick="window.location.href='@Url.Action("Index")'"
+               value="Back to List" class="btn btn-info btn-sm">
+        @{
+            var editUrl = Url.Action("Edit", new { id = Model?.CatId });
+        }
+
+        <input type="button" value="Edit"
+               onclick="window.location.href='@editUrl'" class="btn btn-primary btn-sm" />
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.CatId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+/div>
