@@ -229,46 +229,57 @@ namespace Demo.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, [Bind("ProductId,ProductName,ShortDesc,Description,CatId,Price,Unit,Thumb,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Tags,Title,Alias,MetaDesc,MetaKey")] Product product, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
+            Console.WriteLine("Hi");
             if (id != product.ProductId)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            try
             {
-                try
+                product.ProductName = MyUtil.ToTitleCase(product.ProductName);
+
+                // Kiểm tra xem có tệp được tải lên không
+                if (fThumb != null)
                 {
-                    product.ProductName = MyUtil.ToTitleCase(product.ProductName);
-                    if (fThumb != null)
+                    string extension = Path.GetExtension(fThumb.FileName);
+                    string image = MyUtil.SEOUrl(product.ProductName) + extension;
+                    product.Thumb = await MyUtil.UploadFile(fThumb, @"products", image.ToLower());
+                }
+
+                // Nếu không có tệp được tải lên, giữ nguyên hình ảnh của sản phẩm
+                if (string.IsNullOrEmpty(product.Thumb))
+                {
+                    var existingProduct = await _context.Products.FindAsync(product.ProductId);
+                    if (existingProduct != null)
                     {
-                        string extension = Path.GetExtension(fThumb.FileName);
-                        string image = MyUtil.SEOUrl(product.ProductName) + extension;
-                        product.Thumb = await MyUtil.UploadFile(fThumb, @"products", image.ToLower());
-
+                        product.Thumb = existingProduct.Thumb;
                     }
-                    if (string.IsNullOrEmpty(product.Thumb)) product.Thumb = "default.jpg";
-                    product.Alias = MyUtil.SEOUrl(product.ProductName);
-                    product.DateModified = DateTime.Now;
+                }
 
+                // Các thao tác cập nhật thông tin sản phẩm khác ở đây...
 
+                if (ModelState.IsValid)
+                {
                     _notyfService.Success("Cập nhật thành công");
                     _context.Update(product);
                     await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
                 }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ProductExists(product.ProductId))
-                    {
-                        _notyfService.Success("Có lỗi xảy ra");
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
             }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ProductExists(product.ProductId))
+                {
+                    _notyfService.Success("Có lỗi xảy ra");
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
             ViewData["Danhmuc"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
             return View(product);
         }
