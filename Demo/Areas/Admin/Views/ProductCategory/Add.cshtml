@@ -1,0 +1,115 @@
+﻿@model Demo.Data.Category
+@{
+    ViewData["Title"] = "Thêm mới danh mục sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
+                <i class="anticon anticon-home m-r-5"></i>Home >
+            </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="ProductCategory" asp-action="Index">Danh sách danh mục sản phẩm > </a>
+            <span class="breadcrumb-item active">Thêm danh mục sản phẩm </span>
+        </nav>
+    </div>
+</div>
+
+<section class="content">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">
+                Thông tin thêm mới danh mục sản phẩm
+            </h3>
+        </div>
+        <div class="card-body">
+            <div class="bs-stepper-content">
+                <div class="col-md-12">
+                    @using (Html.BeginForm("Add", "ProductCategory", FormMethod.Post, new { }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+
+                        <div class="card">
+                            <div id="logins-part" class="content active dsteooer-block" role="tabpanel">
+                                <div class="form-group">
+                                    <label for="exampleInput" class="control-label">Mã danh mục sản phẩm</label>
+                                    @Html.TextBoxFor(x => x.CatId, new { @class = "form_control", @placeholder = "Mã danh mục sản phẩm" })
+                                    @Html.ValidationMessageFor(x => x.CatId, null, new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInput" class="control-label">Tên danh mục sản phẩm</label>
+                                    @Html.TextBoxFor(x => x.CatName, new { @class = "form_control", @placeholder = "Tên danh mục sản phẩm" })
+                                    @Html.ValidationMessageFor(x => x.CatName, null, new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInput" class="control-label">Mô tả danh mục sản phẩm</label>
+                                    @Html.TextAreaFor(x => x.Description, new { @class = "form_control", @placeholder = "Mô tả danh mục sản phẩm" })
+                                    @Html.ValidationMessageFor(x => x.Description, null, new { @class = "text-danger" })
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="exampleInput" class="control-label">Tiêu đề danh mục sản phẩm</label>
+                                            @Html.TextBoxFor(x => x.Title, new { @class = "form_control", @placeholder = "Tiêu đề danh mục sản phẩm" })
+                                            @Html.ValidationMessageFor(x => x.Title, null, new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                   @*  <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="exampleInput" class="control-label">Đơn vị sản phẩm</label>
+                                            @Html.TextBoxFor(x => x.Unit, new { @class = "form_control", @placeholder = "Đơn vị sản phẩm" })
+                                            @Html.ValidationMessageFor(x => x.Unit, null, new { @class = "text-danger" })
+                                        </div>
+                                    </div> *@
+                                </div>
+                                <div class="row">
+                                    <div class="m-t-25">
+                                        <div class="form-group d-flex align-items-center">
+                                            <label>Public</label>
+                                            <div class="switch m-r-10">
+                                                @Html.CheckBoxFor(x => x.Published, new { @class = "custom-control-input", @id = "customCheckobox2" })
+                                                <label for="ActiveChecbox" class="custom-control-lable"> Active </label>
+                                            </div>
+                                        </div>
+                                      @*   <div class="form-group d-flex align-items-center">
+                                            <label>HomeFlag</label>
+                                            <div class="switch m-r-10">
+                                                @Html.CheckBoxFor(x => x.HomeFlag, new { @class = "custom-control-input", @id = "customCheckobox2" })
+                                                <label for="HomeFlagChecbox" class="custom-control-lable"> Active </label>
+                                            </div>
+                                        </div> *@
+                                    </div>
+                                  @*   <div class="form-group d-flex align-items-center">
+                                        <label>BestSellers</label>
+                                        <div class="switch m-r-10">
+                                            @Html.CheckBoxFor(x => x.BestSellers, new { @class = "custom-control-input", @id = "customCheckobox2" })
+                                            <label for="BestSellersChecbox" class="custom-control-lable"> Active </label>
+                                        </div>
+                                    </div> *@
+                                </div>
+                                @* <div class="form-group">
+                            <label class="font-weight-semibold" for="productBrand">Ảnh đại diện</label>
+                            <div class="input-group">
+                            <div class="custom-file">
+                            @Html.TextBoxFor(x => x.Thumb, new { @id = "txtImage", @class = "form-control" })
+                            </div>
+                            <div class="input-group-append">
+                            <input type="button" value="Tải ảnh" onclick="BrowseServer('txtImage')" />
+                            </div>
+                            </div>
+                            </div> *@
+                                
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -1,10 +1,16 @@
-﻿using AspNetCoreHero.ToastNotification.Abstractions;
-using Demo.Data;
-using Demo.Helper;
+﻿using Demo.Data;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PagedList.Core;
+
+using AspNetCoreHero.ToastNotification.Abstractions;
+
+using Demo.Helper;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace Demo.Areas.Admin.Controllers
@@ -27,8 +33,11 @@ namespace Demo.Areas.Admin.Controllers
         {
             var pageNumber = page;
             var pageSize = 30;
+            IQueryable<Product> query = _context.Products
+      .AsNoTracking()
+      .Include(x => x.Cat);
 
-            IQueryable<Product> query = _context.Products.AsNoTracking().Include(x => x.Cat);
+        //    IQueryable<Product> query = _context.Products.AsNoTracking().Include(x => x.Cat);
 
             // Sử dụng so sánh với CatID
             if (!string.IsNullOrEmpty(CatID))
@@ -40,6 +49,7 @@ namespace Demo.Areas.Admin.Controllers
             {
                 ProductId = p.ProductId,
                 ProductName = p.ProductName,
+                CatName = p.Cat != null ? p.Cat.CatName : "",
                 ShortDesc = p.ShortDesc,
                 Description = p.Description,
                 CatId = p.CatId,
@@ -61,6 +71,7 @@ namespace Demo.Areas.Admin.Controllers
 
             ViewBag.CurrentCatID = CatID;
             ViewBag.CurrentPage = pageNumber;
+          //  ViewBag.Danhmuc = _context.Categories.Select(c => new { CatId = c.CatId, CatName = c.CatName }).ToList();
 
             ViewData["Danhmuc"] = new SelectList(_context.Categories, "CatId", "CatName", CatID);
 
@@ -99,35 +110,75 @@ namespace Demo.Areas.Admin.Controllers
         {
             ViewData["Danhmuc"] = new SelectList(_context.Categories, "CatId", "CatName");
 
+            // In ra dữ liệu của ViewData["Danhmuc"]
+            var danhmuc = ViewData["Danhmuc"] as SelectList;
+            if (danhmuc != null)
+            {
+                Console.WriteLine("Dữ liệu của ViewData['Danhmuc']:");
+                foreach (var item in danhmuc)
+                {
+                    Console.WriteLine($"CatId: {item.Value}, CatName: {item.Text}");
+                }
+            }
+
+            Console.WriteLine("Hi");
+
             return View();
         }
 
-        // POST: Admin/AdminProducts/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
+     
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ShortDesc,Description,CatId,Price,Unit,Thumb,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Tags,Title,Alias,MetaDesc,MetaKey")] Product product, Microsoft.AspNetCore.Http.IFormFile fThumb)
+
+        public async Task<IActionResult> Create([Bind("ProductId,ProductName,CatName,ShortDesc,Description,CatId,Price,Unit,Thumb,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Tags,Title,Alias,MetaDesc,MetaKey")] Product product, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
+           
+            //ViewData["Danhmuc"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
+            //string selectedCatId = Request.Form["CatId"];
+            //var selectedCat = _context.Categories.FirstOrDefault(c => c.CatId == selectedCatId);
+            //if (selectedCat != null)
+            //{
+            //    product.CatName = selectedCat.CatName;
+            //}
+
+            //var danhmuc = ViewData["Danhmuc"] as SelectList;
+            //if (danhmuc != null)
+            //{
+            //    Console.WriteLine("Dữ liệu của ViewData['Danhmuc']:");
+            //    foreach (var item in danhmuc)
+            //    {
+            //        Console.WriteLine($"CatId: {item.Value}, CatName: {item.Text}");
+            //    }
+            //}
+            ////string selectedCatId = Request.Form["CatId"];
+
+            ////product.CatId = selectedCatId;
+            //foreach (var modelState in ModelState.Values)
+            //{
+            //    foreach (var error in modelState.Errors)
+            //    {
+            //        Console.WriteLine($"Error: {error.ErrorMessage}");
+            //    }
+            //}
+            //Console.WriteLine("Hieee");
             if (ModelState.IsValid)
             {
-
-                // Chuyển đổi ProductName thành dạng tiêu đề
                 product.ProductName = MyUtil.ToTitleCase(product.ProductName);
-
+             //   product.CatName = MyUtil.ToTitleCase(product.CatName);
+                Console.WriteLine("Hie");
                 // Xử lý tải lên tệp hình ảnh
                 if (fThumb != null)
                 {
                     string extension = Path.GetExtension(fThumb.FileName);
                     string image = MyUtil.SEOUrl(product.ProductName) + extension;
 
-                    product.Thumb = await MyUtil.UploadFile(fThumb, @"LoadH", image.ToLower());
+                    product.Thumb = await MyUtil.UploadFile(fThumb, @"loadh", image.ToLower());
 
 
 
                 }
 
-                // Kiểm tra và đặt Thumb nếu không có
                 if (string.IsNullOrEmpty(product.Thumb))
                 {
                     product.Thumb = "default.jpg";

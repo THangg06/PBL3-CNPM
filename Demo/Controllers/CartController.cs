@@ -6,16 +6,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
+using AspNetCoreHero.ToastNotification.Abstractions;
 
 namespace Demo.Controllers
 {
     public class CartController : Controller
     {
         private readonly Web01Context _db;
-
-        public CartController(Web01Context context)
-        {
+        //public INotyfService _notyfService { get; }
+        public CartController(Web01Context context) { 
             _db = context;
+            //_notyfService = notyfService;
         }
 
         private List<CartItem> Cart
@@ -104,7 +105,7 @@ namespace Demo.Controllers
         {
             if (ModelState.IsValid)
             {
-                var customerId = HttpContext.User.Claims.SingleOrDefault(p => p.Type == MySetting.CLAIM_CUSTOMERID)?.Value;
+                var customerId = HttpContext.User.Claims.FirstOrDefault(p => p.Type == MySetting.CLAIM_CUSTOMERID)?.Value;
                 var khachhang = model.GiongKhachHang ? _db.Customers.SingleOrDefault(kh => kh.CustomerId == customerId) : null;
 
                 var hoadon = new Order

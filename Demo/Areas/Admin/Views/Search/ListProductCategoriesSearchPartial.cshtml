@@ -1,0 +1,21 @@
+﻿@if (Model != null)
+{
+    @foreach (var category in Model)
+    {
+                <tr>
+            <td>@category.CatID</td>
+            <td>@category.CatName</td>
+
+            <td>@category.Description</td>
+                 
+                    <td>
+               
+                    </td>
+                    <td>
+                <a asp-action="Edit" asp-route-id="@category.CatID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@category.CatID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@@category.CatID" class="text-danger">Delete</a>
+                    </td>
+                </tr>
+    }
+}

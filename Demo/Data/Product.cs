@@ -6,14 +6,15 @@ namespace Demo.Data;
 public partial class Product
 {
     public string ProductId { get; set; }
+    
 
     public string? ProductName { get; set; }
-
+    public string? CatName { get; set; }
     public string? ShortDesc { get; set; }
 
     public string? Description { get; set; }
 
-    public string? CatId { get; set; }
+    public string? CatId { get; set; } = null;
 
     // public double? Price { get; set; }
     public decimal Price { get; set; }
@@ -43,7 +44,7 @@ public partial class Product
 
     public string? MetaKey { get; set; }
 
-    public virtual Category Cat { get; set; }
+    public virtual Category? Cat { get; set; }
 
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 }

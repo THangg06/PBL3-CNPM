@@ -106,14 +106,14 @@ namespace Demo.Helper
             return url;
         }
 
-        public static async Task<string> UploadFile(IFormFile file, string directory, string newName)
+        public static async Task<string> UploadFile(Microsoft.AspNetCore.Http.IFormFile file, string directory, string newName)
         {
             try
             {
                 if (newName == null) { newName = file.FileName; }
-                string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "MenuCss", directory);
+                string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "menucss", directory);
                 CreateIfMissing(path);
-                string pathFile = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "MenuCss", directory, newName);
+                string pathFile = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "menucss", directory, newName);
                 var supportedTypes = new[] { "jpg", "jpeg", "png", "gif", "jfif" };
                 var fileExt = System.IO.Path.GetExtension(file.FileName).Substring(1);
                 if (!supportedTypes.Contains(fileExt.ToLower()))

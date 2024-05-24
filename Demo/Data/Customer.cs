@@ -26,7 +26,9 @@ public partial class Customer
     public DateTime? LastLogin { get; set; }
 
     public bool? Active { get; set; }
+    public virtual Role? Role { get; set; }
     //public object Randomkey { get; internal set; }
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+
 
 }

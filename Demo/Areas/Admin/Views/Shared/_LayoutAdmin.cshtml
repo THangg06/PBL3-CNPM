@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400...lay=swap" rel="stylesheet">
-    <link href="~/css/dashboardad.css" rel="stylesheet" />
+    <link href="~/css/QLDM.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet"
@@ -33,8 +33,8 @@
 
     <header class="header">
         <div class="admin-box">
-            <img src="~/assets/admin/image.jfif" alt="">
-            <h3>Welcom @Context.User.Identity.Name</a></h3>
+            <img src="~/assets/admin/@User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value" alt="">
+            <h3>Welcom @Context.User.Identity.Name</h3>
             <a href="/logout" id="HasLogin">Đăng Xuất</a>
             <div class="fas fa-caret-down"></div>
         </div>
@@ -60,67 +60,35 @@
                     <div class="fa-solid fa-gauge"></div>
                     <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index">Dashboard</a>
                 </div>
-                <li class="nav-item dropdown">
-                    <div class="option-box">
-                        <div class="fa-solid fa-user-group"></div>
-                        <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index">Quản lý hệ thống</a>
-                    </div>
-                    <ul class="dropdown-menu">
-                        <li><a asp-area="Admin" asp-controller="AdminCategories" asp-action="Index">Quản lý danh mục</a>
+                <div class="option-box">
+                    <div class="fa-solid fa-user-group"></div>
+                   @*  <a asp-area="Admin" asp-controller="AdminCategories" asp-action="Index">Quản lý danh mục</a> *@
+                    <a href="/admin/productcategory">Quản lý danh mục</a>
+                </div>
 
-                        </li>
-                        <li>
-                            <a asp-area="Admin" asp-controller="AdminRoles" asp-action="Index">Quản lý quyền truy cập</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <div class="option-box">
-                        <div class="fa-solid fa-user-group"></div>
-                        <a asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index">Danh sách khách hàng</a>
-                    </div>
-                    <ul class="dropdown-menu">
-                        @*      <li>
-                        <a asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index">Danh sách khách hàng</a>
+                <div class="option-box">
+                    <div class="fa-solid fa-user-group"></div>
+                    <a asp-area="Admin" asp-controller="AdminRoles" asp-action="Index">Quản lý quyền truy cập</a>
+                </div>
 
-                        </li> *@
-                        @* <li>
-                        <a asp-area="Admin" asp-controller="AdminRoles" asp-action="Index">Tìm kiếm khách hàng</a>
-                        </li> *@
-                    </ul>
-                </li>
+                <div class="option-box">
+
+                    <div class="fa-solid fa-user-group"></div>
+                    <a asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index">Quản lý khách hàng</a>
+
+                   
+                </div>
 
 
-                <li class="nav-item dropdown">
-                    <div class="option-box">
-                        <div class="fa-solid fa-message"></div>
-                        <a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Danh sách sản phẩm</a>
-                    </div>
-                    <ul class="dropdown-menu">
-                        @*    <li>
+                <div class="option-box">
 
-                        <div class="fa-solid fa-message"></div>
-                        <a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Danh sách sản phẩm</a>
-                        </li> *@
-                        @*   <li>
-                        <a asp-area="Admin" asp-controller="AdminRoles" asp-action="Index">Tìm kiếm sản phẩm</a>
-                        </li> *@
-                    </ul>
-                </li>
+                    <div class="fa-solid fa-user-group"></div>
+                    <a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Quản lý sản phẩm</a>
 
-                @*        <li class="nav-item dropdown">
-                    <div class="option-box">
-                        <div class="fa-solid fa-message"></div>
-                        <a asp-area="Admin" asp-controller="AdminPages" asp-action="Index">Danh sách Pages</a>
-                    </div> *@
-                @*  <ul class="dropdown-menu">
-                    <li>
 
-                    <div class="fa-solid fa-message"></div>
-                    <a asp-area="Admin" asp-controller="AdminPages" asp-action="Index">Danh sách Pages</a>
-                    </li>
-
-                    </ul> *@
+                </div>
+          
+             
                 </li>
 
                 <div class="option-box">
@@ -129,12 +97,12 @@
                 </div>
 
                 <div class="option-box">
-                    <div class="fa-solid fa-message"></div><a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index">Thống kê</a>
+                    <div class="fa-solid fa-message"></div><a asp-area="Admin" asp-controller="Statistical" asp-action="Index">Thống kê</a>
                 </div>
 
                 <div class="option-box">
                     <div class="fa-solid fa-user-tie"></div>
-                    <a asp-area="Admin" asp-controller="AdminAccounts" asp-action="Index">Quản lý tài khoản</a>
+                    <a asp-area="Admin" asp-controller="AdminAccounts" asp-action="Index">Quản lý tài khoản quản trị</a>
                 </div>
             </div>
             @RenderBody()
@@ -146,5 +114,7 @@
 
     @await Component.InvokeAsync("Notyf")
     @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/content/ckeditor/ckeditor.js"></script>
+    <script src="~/content/ckfinder/ckfinder_v1.js"></script>
 </body>
 </html>

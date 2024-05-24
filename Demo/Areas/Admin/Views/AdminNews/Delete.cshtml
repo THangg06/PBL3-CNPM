@@ -1,0 +1,58 @@
+﻿@model Demo.Data.News
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content_box">
+    <dl class="form_container">
+        <div class="title">Category</div>
+        <div class="content">
+            <div class="user-details">
+                <div class="input-box">
+                    <label>NewsID</label>
+                    <input asp-for="NewsID" class="form-control" readonly />
+                </div>
+
+                <div class="input-box">
+                    <label asp-for="Title">Description</label>
+                    <input asp-for="Title" class="form-control" readonly />
+                </div>
+
+                <div class="input-box">
+                    <label asp-for="Content">ParentId</label>
+                    <input asp-for="Content" class="form-control" readonly />
+                </div>
+
+                <div class="input-box">
+                    <label asp-for="DatePosted">Levels</label>
+                    <input asp-for="DatePosted" class="form-control" readonly />
+                </div>
+
+                <div class="input-box">
+                    <label asp-for="Email">Create Date</label>
+                    <input asp-for="Email" class="form-control" readonly />
+                </div>
+
+                <div class="input-box">
+                    <label asp-for="Phone" class="control-label">Published</label>
+                    <input asp-for="Phone" class="form-control" readonly />
+                </div>
+
+            </div>
+
+        </div>
+
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="NewsID" />
+
+        <div class="group_button">
+            <input type="button"
+                   onclick="window.location.href='@Url.Action("Index")'"
+                   value="Back to List" class="btn btn-info btn-sm">
+            <input type="submit" id="delete" value="Delete" class="btn btn-danger" />
+        </div>
+    </form>
+</div>

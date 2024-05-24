@@ -1,0 +1,132 @@
+﻿@model IEnumerable<Demo.Data.Category>
+@{
+    ViewData["Title"] = "Danh mục sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<!-- Dẫn dắt Breadcrumb -->
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
+                <i class="anticon anticon-home m-r-5"></i>Trang chủ
+            </a>
+            <a asp-area="Admin" asp-controller="ProductCategory" asp-action="Index" class="breadcrumb-item">
+                Quản lý danh mục sản phẩm
+            </a>
+           
+        </nav>
+    </div>
+</div>
+
+<!-- Phần tìm kiếm và lọc -->
+
+<p>
+    <a asp-action="Add">Create New</a>
+</p>
+<div class="data_table_container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>CatID</th>
+                <th>CatName</th>
+           
+                <th>Description</th>
+               
+                <th>Thumb</th>
+                
+              
+                <th>Title</th>
+                @* <th>CatID</th> *@
+            </tr>
+        </thead>
+        <tbody id="records_table">
+            @if (Model != null && Model.Any())
+            {
+                var i = ((ViewBag.Page - 1) * ViewBag.PageSize) + 1;
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.CatId)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CatName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                        <td>
+
+                            <img src="~/menucss/loadh/@item.Thumb" alt="Product Image" />
+                        </td>
+                        <td>@Html.DisplayFor(modelItem => item.Title)</td>
+
+         
+                        
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.CatId">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.CatId">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.CatId">Delete</a>
+                        </td>
+                    </tr>
+
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Pagination Controls -->
+<div aria-label="Page navigation">
+    <pager class="pagination" list="@Model" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" asp-route-CatID="@ViewBag.CurrentCatID"></pager>
+</div>
+
+
+@* 
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Khi chọn danh mục
+            $("#txtCatID").change(function () {
+                var selectedCatID = $(this).val();
+
+                $.ajax({
+                    url: '/Admin/AdminProducts/Filtter',
+                    dataType: "json",
+                    type: "GET",
+                    data: {
+                        CatID: selectedCatID
+                    },
+                    async: true,
+                    success: function (results) {
+                        if (results.status === "success") {
+                            window.location.href = results.redirectUrl;
+                        }
+                    },
+                    error: function (xhr) {
+                        alert('Đã xảy ra lỗi');
+                    }
+                });
+            });
+
+            // Khi tìm kiếm sản phẩm
+            $("#keyword").keyup(function () {
+                var strkeyword = $("#keyword").val();
+
+                $.ajax({
+                    url: '/Admin/Search/FindProductCategory',
+                    dataType: "html",
+                    type: "POST",
+                    data: { keyword: strkeyword },
+                    async: true,
+                    success: function (results) {
+                        $("#records_table").html(results);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(`Lỗi AJAX: ${status} - ${error}`);
+                    }
+                });
+            });
+        });
+    </script> *@
+}
+

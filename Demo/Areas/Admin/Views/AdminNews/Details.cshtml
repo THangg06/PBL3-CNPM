@@ -1,0 +1,115 @@
+﻿@model Demo.Data.News
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content_box">
+    <div class="nav_dir">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminNews" asp-action="Index">Danh sách phản hồi> </a>
+            <span class="breadcrumb-item active">Xem chi tiết phản hồi</span <br />
+        </nav>
+    </div>
+
+</div>
+
+<div>
+
+  <hr />
+    <dl class="form_container">
+        <div class="title">Thông tin phản hồi</div>
+        <div class="content">
+        <div class="user-details">
+      <div class="input-box">
+            <label>NewsID</label>
+            <input asp-for="NewsID" class="form-control" readonly/>
+          </div>
+
+          <div class="input-box">
+            <label asp-for="Title">Title</label>
+            <input asp-for="Title" class="form-control" readonly/>
+          </div>
+
+           <div class="input-box">
+            <label asp-for="Content">Content</label>
+            <input asp-for="Content" class="form-control" readonly/>
+          </div>
+
+          <div class="input-box" id="special">
+            <label asp-for="DatePosted" class="control-label">DatePosted</label>
+            <input asp-for="DatePosted" class="form-control"  readonly/>
+          </div>
+           <div class="input-box" id="special">
+            <label asp-for="Email" class="control-label">Email</label>
+            <input asp-for="Email" class="form-control" readonly/>
+          </div>
+           <div class="input-box" id="special">
+            <label asp-for="Phone" class="control-label">Phone</label>
+            <input asp-for="Phone" class="form-control"readonly/>
+          </div>
+@*          <dt class = "input-box">
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class = "input-box">
+                            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "input-box">
+                            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt class = "input-box">
+                            @Html.DisplayNameFor(model => model.Salt)
+        </dt>
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.Salt)
+        </dd>
+        <dt class = "input-box">
+                            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.Active)
+        </dd>
+        <dt class = "input-box">
+                            @Html.DisplayNameFor(model => model.LastLogin)
+        </dt>
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.LastLogin)
+        </dd>
+        <dt class = "input-box">
+                            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+        <dt class = "input-box">
+                            @Html.DisplayNameFor(model => model.Role)
+        </dt>
+        <dd class = "input-box">
+                            @Html.DisplayFor(model => model.Role.RoleId)
+        </dd> *@
+        </div>
+
+        </div>
+
+    </dl>
+</div>
+
+<div class="group_button">
+        <input type="button" 
+    onclick="window.location.href='@Url.Action("Index")'" 
+    value="Back to List" class="btn btn-info btn-sm">
+      
+
+</div>

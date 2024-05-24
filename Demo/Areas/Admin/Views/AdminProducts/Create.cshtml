@@ -40,13 +40,19 @@
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label class="font-weight-semibold" for="productCategory">Danh mục sản phẩm</label>
-                <select class="custom-select" asp-for="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
-                    <option value="" disabled selected>Chọn danh mục</option>
-                </select>
+<div class="form-group">
+    <label class="font-weight-semibold" for="productCategory">Danh mục sản phẩm</label>
+    <select class="custom-select" asp-for="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
+        <option value="" disabled selected>Chọn danh mục</option>
+    </select>
+</div>
 
-            </div>
+@* 
+<div class="form-group">
+    <label asp-for="CatId" class="control-label"></label>
+    <input asp-for="CatId" class="form-control" />
+    <span asp-validation-for="CatId" class="text-danger"></span>
+</div> *@
            <div class="row" >
                 <div class="form-group" >
                     <label asp-for="Price" class="control-label"></label>
