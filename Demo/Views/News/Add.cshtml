@@ -1,0 +1,103 @@
+﻿@model Demo.Data.News
+
+@{
+    ViewData["Title"] = "Add News";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Style {
+        <link href="~/css/ContactUs.css" rel="stylesheet" />
+        <link href="~/css/header.css" rel="stylesheet" />
+        <link href="~/css/Footer.css" rel="stylesheet" />
+}
+
+
+
+<section class="contact" id="contact">
+    <div class="row">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.299195256761!2d108.26165987481052!3d15.997933084671237!2m3!1
+                            f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314210c0d44d55d1%3A0x8bb352fcc74bdbbd!2zMSBOZ3V54buFbiBEdXkgVHJpbmgsIEhv
+                            w6AgSOG6o2ksIE5nxakgSMOgbmggU8ahbiwgxJDDoCBO4bq1bmcgNTA1MDksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1713419323796!5m2!1svi!2s"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <form asp-action="Add" method="post">
+            <h3>Thông tin liên hệ</h3>
+                  <div class="contactInfo">
+                    <div class="res">
+                      <img src="https://ih1.redbubble.net/image.4909830114.2670/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="res-logo">
+                      <h5>Hee-Ho</h5>
+                    </div>
+                    <div class="res">
+                      <span class="fas fa-envelope"></span>
+                      <h5>Demo@gmail.com</h5>
+                    </div>
+                    <div class="res">
+                      <span class="fas fa-phone"></span>
+                      <h5>+84 123-456-789</h5>
+                    </div>
+                  </div>
+            <div class="inputBox">
+                <span asp-validation-for="Title" class="fas fa-user" class="text-danger" ></span>
+                <input asp-for="Title" class="form-control" placeholder="Tên" />
+            </div>
+@*             <div class="inputBox">
+                <label asp-for="DatePosted" class="control-label"></label>
+                <input asp-for="DatePosted" class="form-control" disabled />
+                <span asp-validation-for="DatePosted" class="text-danger"></span>
+            </div> *@
+            <div class="inputBox">
+                <span asp-validation-for="Email" class="fas fa-envelope" class="text-danger"></span>
+                <input asp-for="Email" class="form-control" placeholder="Email" />
+
+                <span asp-validation-for="Phone" class="fas fa-phone" class="text-danger"></span>
+                <input asp-for="Phone" maxlength="12" class="form-control" placeholder="Số điện thoại"/>
+            </div>
+
+            <div class="inputBox">
+                <span asp-validation-for="Content" class="fas fa-message" class="text-danger"></span>
+                <textarea asp-for="Content" class="form-control" rows="4" placeholder="Tin nhắn"></textarea>
+
+            </div>
+                <input type="submit" value="Gửi" class="btn">
+            
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Danh mục</h4>
+                <ul>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Hỗ trợ</h4>
+                <ul>
+                    <li><a href="#">Vận chuyển</a></li>
+                    <li><a href="#">Đơn hàng</a></li>
+                    <li><a href="#">Thanh toán</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Danh mục món ăn</h4>
+                <ul>
+                    <li><a href="#">Gà rán</a></li>
+                    <li><a href="#">Burger</a></li>
+                    <li><a href="#">Mì Ý</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Theo dõi</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fa-envelope fas"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
