@@ -1,180 +1,4 @@
-﻿@* <!DOCTYPE html>
-<html lang="vi">
-    <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-   
-        <link rel="stylesheet" type="text/css" href="./css/Homepage.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-        <!-- /* Monda Font */ -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
-         <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/css/site.css">
-    @RenderSection("Style", required: false)
-        
-        
-
-    </head>
-
-    <body>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="./js/main.js" charset="utf-8"></script>
-<!-------------------------- Section 1- -------------------------------------->
-       
-          <!-- <section class = "section1"> -->
-            <header class="header">
-        <a class="logo" asp-controller="Home" asp-action="Index">
-                <img src="./assets/animated_character_blue.png" alt="res-logo">
-                <h1 class="txt">HEE-HO</h1>
-              </a>
-              
-              <nav class="navbar">
-            <a class="menu-active" asp-controller="Home" asp-action="Index">Trang chủ</a>
-            <a asp-controller="HangHoa" asp-action="Index">Menu</a>
-            <a asp-controller="Home" asp-action="About"> Về chúng tôi</a>
-            <a asp-controller="Home" asp-action="contact">Liên hệ</a>
-              </nav>
-
-              @* <div class="icons">
-                <div class="fas fa-user" id="user-btn">
-                  <div class="dropdown-content">
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <a href="/profile" id="HasLogin">Profile</a>
-                        <a href="./OrderDetail.html">Lịch sử mua hàng</a>
-
-                        <a href="/logout" id="HasLogin">Đăng Xuất</a>
-                    }
-                    else
-                    {
-                        <a href="/Register.html" id="HasNotRegister">Đăng ký</a>
-                        <a href="/Login.html" id="HasNotLogin">Đăng Nhập</a>
-                        
-                    }
-                   
-                  </div>
-                </div>
-                <div class="fas fa-search" id="search-btn"></div>
-                
-                 <div class="fas fa-shopping-cart" id="cart-btn">
-               @*   <div class="cart-items-container">
-                    <div class="cart-item">
-                      <span class="fas fa-times"></span>
-                      <img src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
-                      <div class="content">
-                        <h3>Cart-item 01</h3>
-                        <div class="price">$15.99</div>
-                      </div>
-                    </div>
-    
-                    <div class="cart-item">
-                      <span class="fas fa-times"></span>
-                      <img src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
-                      <div class="content">
-                        <h3>Cart-item 02</h3>
-                        <div class="price">$14.99</div>
-                      </div>
-                    </div>
-    
-                    <div class="cart-item">
-                      <span class="fas fa-times"></span>
-                      
-                      <img src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
-                      <div class="content">
-                        <h3>Cart-item 03</h3>
-                        <div class="price">$10.99</div>
-                      </div>
-                    </div>
-                    <button href="./OrderDetail.html" class="btn">Xem ngay</button>
-                    
-                  </div> 
-                  <div class="icons">
-    <div class="fas fa-user" id="user-btn">
-        <div class="dropdown-content">
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                    <a href="/profile" id="HasLogin">Profile</a>
-                    <a href="./OrderDetail.html">Lịch sử mua hàng</a>
-                    <a href="/logout" id="HasLogin">Đăng Xuất</a>
-                        // <a asp-controller="AccountsController" asp-action="contact">Liên hệ</a>
-                     <a href="./ChangePassword.html" id="HasLogin">ChangePassword</a>
-                    <!-- Hiển thị phần shopping khi đăng nhập -->
-                   
-                    }
-                    else
-                    {
-                    <!-- Hiển thị liên kết "Đăng nhập" và "Đăng ký" khi chưa đăng nhập -->
-                    <a href="/Login.html" id="HasNotLogin">Đăng Nhập</a>
-                    <a href="/Register.html" id="HasNotRegister">Đăng ký</a>
-                    }
-        </div>
-    </div>
-    <div class="fas fa-search" id="search-btn"></div>
-     @await Component.InvokeAsync("Cart")
-    <div class="fas fa-bars" id="menu-btn"></div>
-</div>
-
-                </div>
-                <div class="fas fa-bars" id="menu-btn"></div>
-                
-              </div>
-
-            @*   <div class="search-form">
-                <input type="search" id="search-box" placeholder="Tìm kiếm tại đây">
-                <label for="search-box" class="fas fa-search"></label>
-              </div> 
-<!-- Phần tìm kiếm -->
-<div class="search-form">
-    <div id="search-btn" class="fas fa-search"></div>
-    <div class="search-box-container">
-        <input type="search" id="search-box" placeholder="Tìm kiếm tại đây">
-        <button id="close-search-btn" class="fas fa-times"></button>
-    </div>
-</div>
-
-              
-              </div>
-            </header>
-            @RenderBody()
-            <!------------------------------ Scripts ------------------------------------------------>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="./js/main.js" charset="utf-8"></script>  
-            
-            
-    
-@RenderSection("Scripts", required: false)
-<script>
-   $(document).ready(function(){
-    $("#search-btn").click(function(){
-        let query = $("#search-box").val().trim(); // Lấy giá trị từ ô nhập liệu
-        if(query !== "") {
-            let url = '/HangHoa/Search?query=' + query;
-            window.location.href = url;
-        }
-    });
-
-    $("#close-search-btn").click(function(){
-        $(".search-box-container").removeClass("active");
-    });
-});
-</script>
-
-
-    </body>
-</html> *@
+﻿
 <!DOCTYPE html>
 <html lang="vi">
     <head>
@@ -191,6 +15,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400...lay=swap" rel="stylesheet">
 
         <link rel="stylesheet" type="text/css" href="./css/Homepage.css" />
+        <link rel="stylesheet" type="text/css" href="./css/header.css" />
+        <link rel="stylesheet" type="text/css" href="./css/Footer.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -199,10 +25,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
          <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/css/site.css">
+@*     <link rel="stylesheet" href="~/css/site.css"> *@
+
     @RenderSection("Style", required: false)
-
-
 
     </head>
 
@@ -211,94 +36,64 @@
       <script src="./js/main.js" charset="utf-8"></script>
 <!-------------------------- Section 1- -------------------------------------->
 
+
           <!-- <section class = "section1"> -->
             <header class="header">
         <a class="logo" asp-controller="Home" asp-action="Index">
-                <img src="./assets/animated_character_blue.png" alt="res-logo">
+                <img src="https://images.gamebanana.com/img/ss/mods/5f56488b74d68.jpg" alt="res-logo">
                 <h1 class="txt">HEE-HO</h1>
-              </a>
-
+        </a>
+              
+        
               <nav class="navbar">
             <a class="menu-active" asp-controller="Home" asp-action="Index">Trang chủ</a>
             <a asp-controller="HangHoa" asp-action="Index">Menu</a>
             <a asp-controller="Home" asp-action="About"> Về chúng tôi</a>
             @if (User.Identity.IsAuthenticated)
             {
-                    <a>
-
+                    
+                         
                      <a asp-controller="News" asp-action="Add">Liên hệ</a>
-                        Welcom @Context.User.Identity.Name
-                    </a>
+                     
             }
 
               </nav>
 
-        @* <div class="icons">
-                <div class="fas fa-user" id="user-btn">
-                  <div class="dropdown-content">
-                    @if (User.Identity.IsAuthenticated)
-                    {/-strong/-heart:>:o:-((:-h<a href="/profile" id="HasLogin">Profile</a>
-                        <a href="./OrderDetail.html">Lịch sử mua hàng</a>
-
-                        <a href="/logout" id="HasLogin">Đăng Xuất</a>
-                    }
-                    else
-                    {
-                        <a href="/Register.html" id="HasNotRegister">Đăng ký</a>
-                        <a href="/Login.html" id="HasNotLogin">Đăng Nhập</a>
-
-                    }
-
-                  </div>
-                </div>
-                <div class="fas fa-search" id="search-btn"></div>
-
-                 <div class="fas fa-shopping-cart" id="cart-btn">
-               @*   <div class="cart-items-container">
-                    <div class="cart-item">
-                      <span class="fas fa-times"></span>
-                      <img src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
-                      <div class="content">
-                        <h3>Cart-item 01</h3>
-                        <div class="price">$15.99</div>
-                      </div>
-                    </div>
-
-                    <div class="cart-item">
-                      <span class="fas fa-times"></span>
-                      <img src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
-                      <div class="content">
-                        <h3>Cart-item 02</h3>
-                        <div class="price">$14.99</div>
-                      </div>
-                    </div>
-
-                    <div class="cart-item">
-                      <span class="fas fa-times"></span>
-
-                      <img src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="Beef Burger">
-                      <div class="content">
-                        <h3>Cart-item 03</h3>
-                        <div class="price">$10.99</div>
-                      </div>
-                    </div>
-                    <button href="./OrderDetail.html" class="btn">Xem ngay</button>
-
-                  </div> *@ 
+      
                   <div class="icons">
-    <div class="fas fa-user" id="user-btn">
+    <div id="user-btn" class="for_all_user">
+                @if (User.Identity.IsAuthenticated)
+                { 
+        <div class="user_img">
+            
+                <a href="/profile">
+                    <img src="~/assets/avt_cus/@User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value" alt="">
+                </a>
+                <span>@Context.User.Identity.Name</span>
+            
+        </div>
+                }
+                else
+                {
+                    <div class="user_img">
+                    <a href="/profile">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    </div>
+                }
         <div class="dropdown-content">
                     @if (User.Identity.IsAuthenticated)
                     {
                         <a href="/profile" id="HasLogin">Profile</a>
-                        <a href="./OrderDetail.html">Lịch sử mua hàng</a>
+                        <a asp-controller="Accounts" asp-action="PurchaseHistory">Lịch sử mua hàng</a>
                         <a href="/logout" id="HasLogin">Đăng Xuất</a>
-                        <!-- Hiển thị phần shopping khi đăng nhập -->
+                        <a asp-controller="Accounts" asp-action="ChangePassword" id="HasLogin">Đổi mật khẩu</a>
+                      
 
                     }
                     else
                     {
-                        <!-- Hiển thị liên kết "Đăng nhập" và "Đăng ký" khi chưa đăng nhập -->
+                       
                         <a href="/Login.html" id="HasNotLogin">Đăng Nhập</a>
                         <a href="/Register.html" id="HasNotRegister">Đăng ký</a>
                     }
@@ -314,10 +109,7 @@
 
               </div>
 
-        @*   <div class="search-form">
-                <input type="search" id="search-box" placeholder="Tìm kiếm tại đây">
-                <label for="search-box" class="fas fa-search"></label>
-              </div> *@
+
 <!-- Phần tìm kiếm -->
 <div class="search-form">
     <div id="search-btn" class="fas fa-search"></div>
@@ -333,10 +125,10 @@
     @RenderBody()
             <!------------------------------ Scripts ------------------------------------------------>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="./js/main.js" charset="utf-8"></script>  
+            <script src="./js/main.js" charset="utf-8"></script>
 
 
-
+   
     @RenderSection("Scripts", required: false)
 <script>
    $(document).ready(function(){
