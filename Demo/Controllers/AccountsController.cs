@@ -14,6 +14,7 @@ using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pag
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using System.Security.Claims;
 using Microsoft.Extensions.Logging;
+using AspNetCoreHero.ToastNotification.Abstractions;
 
 namespace Demo.Controllers
 {
@@ -24,11 +25,13 @@ namespace Demo.Controllers
         //  public INotyfService _notyfService {  get; }
         private readonly IMapper _mapper;
         private readonly ILogger<AccountsController> _logger;
+        private readonly INotyfService _notyfService;
 
-        public AccountsController(Web01Context context, IMapper mapper)
+        public AccountsController(Web01Context context, IMapper mapper, INotyfService notyfService)
         {
             _context = context;
             _mapper = mapper;
+            _notyfService = notyfService;
             //     _notyfService = notyfService;
             //_notyfService = notyfService;
         }
@@ -170,13 +173,14 @@ namespace Demo.Controllers
             customer.Salt = salt;
             customer.Password = (model.Password + salt.Trim()).ToMD5();
             customer.Active = true;
+            customer.RoleId = 2;
             customer.CreateDate = DateTime.Now;
             customer.Avatar = "images.png";
 
             // Thêm khách hàng mới vào cơ sở dữ liệu
             _context.Customers.Add(customer);
             await _context.SaveChangesAsync();
-
+            _notyfService.Success("Đăng ký thành công");
             // Chuyển hướng đến trang đăng nhập
             return RedirectToAction("Login");
         }
@@ -240,15 +244,18 @@ namespace Demo.Controllers
 
                 // Đăng nhập vào phiên làm việc
                 await HttpContext.SignInAsync(claimsPrincipal);
+               
                 HttpContext.Session.SetString("CustomerId", userCustomer.CustomerId);
                 Console.WriteLine("CustomerId cua ban là: " + userCustomer.CustomerId);
                 // Chuyển hướng dựa trên vai trò
                 if (Url.IsLocalUrl(ReturnUrl))
                 {
+                   
                     return Redirect(ReturnUrl);
                 }
                 else
                 {
+                  
                     return RedirectToAction("Index", "Home");
                 }
             }
@@ -414,8 +421,28 @@ namespace Demo.Controllers
             HttpContext.Session.Remove("CustomerId");
             return RedirectToAction("Index", "Home");
         }
-       
 
+        //[Authorize]
+        //[Route("profile", Name = "Profile")]
+        //public IActionResult Profile()
+        //{
+        //    var customerId = HttpContext.Session.GetString("CustomerId");
+        //    if (string.IsNullOrEmpty(customerId))
+        //    {
+        //        return RedirectToAction("Login");
+        //    }
+
+        //    var existingCustomer = _context.Customers.Find(customerId);
+        //    if (existingCustomer == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    // Trích xuất thông báo từ TempData (nếu có)
+        //    ViewBag.Message = TempData["Message"];
+
+        //    return View(existingCustomer);
+        //}
         [Authorize]
         [Route("profile", Name = "Profile")]
         public IActionResult Profile()
@@ -431,6 +458,9 @@ namespace Demo.Controllers
             {
                 return NotFound();
             }
+
+            // Trích xuất thông báo từ TempData (nếu có)
+            ViewBag.UpdateMessage = TempData["UpdateMessage"];
 
             return View(existingCustomer);
         }
@@ -466,7 +496,6 @@ namespace Demo.Controllers
 
             try
             {
-                // Kiểm tra xem đối tượng đã được theo dõi bởi DbContext chưa
                 var existingCustomer = await _context.Customers.FindAsync(customer.CustomerId);
                 if (existingCustomer == null)
                 {
@@ -483,7 +512,10 @@ namespace Demo.Controllers
                 // Cập nhật thông tin khách hàng
                 _context.Entry(existingCustomer).CurrentValues.SetValues(customer);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index", "Home");
+                _notyfService.Success("Chỉnh sửa thành công");
+                // Chuyển hướng đến trang profile với dữ liệu đã được cập nhật
+                TempData["Message"] = "Thông tin khách hàng đã được cập nhật thành công.";
+                return RedirectToAction("Profile");
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -492,8 +524,6 @@ namespace Demo.Controllers
                 ModelState.AddModelError("", "Đã xảy ra lỗi khi cập nhật thông tin khách hàng.");
                 return View(customer);
             }
-
-            return RedirectToAction("Login");
         }
 
 
@@ -523,7 +553,7 @@ namespace Demo.Controllers
 
                 _context.Update(existingCustomer);
                 await _context.SaveChangesAsync();
-
+                _notyfService.Success("Chỉnh sửa thành công");
                 TempData["UpdateMessage"] = "Thông tin của bạn đã được cập nhật thành công.";
                 return View(existingCustomer);
             }
@@ -541,6 +571,33 @@ namespace Demo.Controllers
         {
             return _context.Customers.Any(e => e.CustomerId == id);
         }
+        [HttpGet]
+        [Route("History")]
+        public async Task<IActionResult> PurchaseHistory()
+        {
+            var customerId = HttpContext.Session.GetString("CustomerId");
+            if (string.IsNullOrEmpty(customerId))
+            {
+                return RedirectToAction("Login");
+            }
+
+            var existingCustomer = await _context.Customers.FindAsync(customerId);
+            if (existingCustomer == null)
+            {
+                return NotFound();
+            }
+
+            var orders = await _context.Orders
+      .Include(o => o.OrderDetails)
+          .ThenInclude(od => od.Product) 
+      .Where(o => o.CustomerId == customerId)
+      .ToListAsync();
+
+            return View(orders);
+        }
+
+
+
 
     }
 }

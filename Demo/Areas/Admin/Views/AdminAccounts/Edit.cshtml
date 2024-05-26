@@ -25,6 +25,12 @@
         <input type="hidden" asp-for="AccountId" />
         <div class="user-details">
 
+            <div class="input-box">
+            <label asp-for="FullName">FullName</label>
+            <input asp-for="FullName" class="form-control" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+          </div>
+
           <div class="input-box">
             <label>Phone</label>
             <input asp-for="Phone" class="form-control" />
@@ -37,14 +43,27 @@
             <span asp-validation-for="Email" class="text-danger"></span>
           </div>
 
-          <div class="input-box">
-            <label asp-for="Password">Password</label>
-            <input asp-for="Password" class="form-control" type="password"/>
-            <span asp-validation-for="Password" class="text-danger"></span>
-          </div>
+       <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Password" />
+       
+            
+       <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Salt" />
+       
+         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Avatar" />
+
+         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="CreateDate" />
 
           <div class="input-box" id="special">
-            <label asp-for="RoleId" class="control-label">Role Type</label>
+            <label asp-for="Active" class="control-label">Active</label>
+            <select asp-for="Active" class="form-control" asp-items="ViewBag.TrangThai"></select>
+            <span asp-validation-for="Active" class="text-danger"></span>
+          </div>
+
+           <div class="input-box" id="special">
+            <label asp-for="RoleId" class="control-label">Role</label>
             <select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
             <span asp-validation-for="RoleId" class="text-danger"></span>
           </div>

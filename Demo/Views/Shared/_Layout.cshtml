@@ -47,9 +47,10 @@
             }
             else
             {
+
                 <img src="~/assets/avt_cus/@User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value" alt="">
               <h3>
-                    Welcom @Context.User.Identity.Name !
+                    Welcom @User.Claims.FirstOrDefault(c => c.Type == "CustomerId")?.Value!
 </h3>
             }  
            
@@ -77,7 +78,7 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <a href="/profile" id="HasLogin">Profile</a>
-                        <a href="./OrderDetail.html">Lịch sử mua hàng</a>
+                        <a href="/History">Lịch sử mua hàng</a>
                         <a href="/logout" id="HasLogin">Đăng Xuất</a>
                         <a asp-controller="Accounts" asp-action="ChangePassword" id="HasLogin">Đổi mật khẩu</a>
                       

@@ -34,6 +34,7 @@ namespace Demo.Controllers
             if (ModelState.IsValid)
             {
                 news.DatePosted = DateTime.Now;
+                news.Active = 0;
                 _context.Add(news);
                 await _context.SaveChangesAsync();
                 //_notyfService.Success("Gửi liên hệ thành công");

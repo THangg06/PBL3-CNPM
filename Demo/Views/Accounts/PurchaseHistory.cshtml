@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Demo.Data.Order>
+
+@{
+    ViewData["Title"] = "Lịch sử đơn hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="my-4">Lịch sử đơn hàng</h2>
+<style>
+    body {
+        margin-top: 150px;
+    }
+
+    th, td {
+        white-space: nowrap;
+        border: 1px solid #ddd; /* Định dạng đường viền cho cột và hàng */
+        padding: 8px; /* Định dạng padding cho cột và hàng */
+    }
+
+    .data-table {
+        width: 100%;
+        border-collapse: collapse; /* Gộp đường viền của các ô bảng */
+    }
+
+    th {
+        background-color: #f2f2f2; /* Màu nền cho tiêu đề cột */
+        color: black; /* Màu chữ cho tiêu đề cột */
+    }
+
+    .border-right {
+        border-right: none; /* Loại bỏ đường viền bên phải của ô */
+    }
+
+    .border-left {
+        border-left: none; /* Loại bỏ đường viền bên trái của ô */
+    }
+</style>
+@if (Model != null && Model.Any())
+{
+    <table class="table table-striped table-bordered data-table">
+        <thead class="thead-dark">
+            <tr>
+                <th class="border-right">Mã Đơn Hàng</th>
+                <th class="border-right">Ngày Đặt Hàng</th>
+                <th class="border-right">Ngày Giao Hàng</th>
+                <th class="border-right">Cách thanh toán</th>
+                <th class="border-right">Thời gian thanh toán</th>
+                <th>Chi Tiết Đơn Hàng</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td class="border-right">@order.OrderID</td>
+                    <td class="border-right">@order.OrderDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
+
+                    <td class="border-right">@(order.ShipDate.HasValue ? order.ShipDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy") : "")</td>
+                    <td class="border-right">@order.CachThanhToan</td>
+                    <td class="border-right">@order.PaymentDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
+                    <td>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Tên Sản Phẩm</th>
+                                    <th>Số Lượng</th>
+                                    <th>Giảm Giá</th>
+                                    <th>Tổng Tiền</th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var orderDetail in order.OrderDetails)
+                                {
+                                    <tr>
+                                        <td>@orderDetail.Product?.ProductName</td>
+                                        <td>@orderDetail.Quantity</td>
+                                        <td>@orderDetail.Discount</td>
+                                        <td>@orderDetail.Total</td>
+                                      
+                                  
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p class="alert alert-warning">Không có đơn hàng.</p>
+}

@@ -1323,3 +1323,5 @@ C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\CKFinder.dll
 C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\CKFinder.pdb
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\CKFinder.dll
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\CKFinder.pdb
+C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\PagedList.dll
+C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\PagedList.Mvc.dll

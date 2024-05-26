@@ -1,83 +1,42 @@
-
 <!DOCTYPE html>
-<html lang = "vi">
-    <head>
-        <meta charset="utf-8"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" type="text/css" href="./css/Loginpage.css" />
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-        <!-- /* Monda Font */ -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
-
-    </head>
-<body>
-    <div class="partial-code root">
-        <h1 class="hero_title">ĐĂNG NHẬP</h1>
-        <img class="image" src="./assets/Homepage/Login.png" alt="alt text" />
-        <div class="flex_col">
-            <input type="text" placeholder="Tài khoản" name="un" />
-            <input type="password" placeholder="Mật khẩu" name="pw" />
-            <button> Đăng nhập </button>
-            <div class="account">
-                <a href="Registerpage.html">Chưa có tài khoản? Đăng ký</a>
-                <a href="#">Quên mật khẩu</a> 
-            </div>
-            
-
-    <br>
-        </div>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Đăng nhập</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+      <link rel="stylesheet" href="../css/Loginpage.css">
+   </head>
+   <body>
+    <div class = "home">
+        <a href="../Homepage.html"><i class="fa-solid fa-house"></i></a>
     </div>
-</body>
-  
-=======
-<!DOCTYPE html>
-<html lang = "vi">
-    <head>
-        <meta charset="utf-8"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" type="text/css" href="./css/Loginpage.css" />
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-        <!-- /* Monda Font */ -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
-
-    </head>
-<body>
-    <div class="partial-code root">
-        <h1 class="hero_title">ĐĂNG NHẬP</h1>
-        <img class="image" src="/assets/fast_food_combo_meal.png" alt="alt text" />
-        <div class="flex_col">
-            <input type="text" placeholder="Tài khoản" name="un" />
-            <input type="password" placeholder="Mật khẩu" name="pw" />
-            <button> Đăng nhập </button>
-            <div class="account">
-                <a href="Registerpage.html">Chưa có tài khoản? Đăng ký</a>
-                <a href="#">Quên mật khẩu</a> 
+      <div class="wrapper">
+         <div class="title">
+            Đăng nhập
+         </div>
+         <form action="#">
+            <div class="field">
+               <input type="text" required>
+               <label>Tài khoản</label>
             </div>
-            
-
-    <br>
-        </div>
-    </div>
-</body>
-  
->>>>>>> master:Demo/wwwroot/Loginpage.html
+            <div class="field">
+               <input type="password" required>
+               <label>Mật khẩu</label>
+            </div>
+            <div class="content">
+               <div class="pass-link">
+                  <a href="Forgotpassword.html">Quên mật khẩu?</a>
+               </div>
+            </div>
+            <div class="field">
+               <input type="submit" value="Đăng nhập">
+            </div>
+            <div class="signup-link">  
+               Chưa có tài khoản? <a href="Registerpage.html">Đăng ký</a>
+            </div>
+         </form>
+      </div>
+   </body>
+</html>

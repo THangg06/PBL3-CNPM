@@ -32,7 +32,10 @@
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.5">-->
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageReference Include="PagedList" Version="1.17.0" />
+    <PackageReference Include="PagedList.Core" Version="1.17.4" />
     <PackageReference Include="PagedList.Core.Mvc" Version="3.0.0" />
+    <PackageReference Include="PagedList.Mvc" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -60,12 +63,6 @@
     <None Include="wwwroot\assets\Admin\vector42_x2.svg" />
     <None Include="wwwroot\assets\How-Many-Types-of-Fast-Food-Are-There.webp" />
     <None Include="wwwroot\css\css" />
-    <None Include="wwwroot\fonts\Ubuntu\Ubuntu-Bold.woff2" />
-    <None Include="wwwroot\fonts\Ubuntu\Ubuntu-Light.woff2" />
-    <None Include="wwwroot\fonts\Ubuntu\Ubuntu-Medium.woff2" />
-    <None Include="wwwroot\fonts\Ubuntu\Ubuntu-Regular.woff2" />
-    <None Include="wwwroot\js\main.js" />
-    <None Include="wwwroot\js\site.js" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />

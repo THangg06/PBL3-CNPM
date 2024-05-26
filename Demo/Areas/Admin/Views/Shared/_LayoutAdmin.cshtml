@@ -47,7 +47,7 @@
                     ">
             </div>
 
-            <div class="fa-solid fa-bell"></div>
+            <div class="fa-solid fa-bell" ></div>
         </div>
 
     </header>
@@ -78,6 +78,13 @@
 
                    
                 </div>
+                <div class="option-box">
+
+                    <div class="fa-solid fa-user-group"></div>
+                    <a asp-area="Admin" asp-controller="Order" asp-action="Index">Quản lý đơn hàng</a>
+
+
+                </div>
 
 
                 <div class="option-box">
@@ -104,17 +111,22 @@
                     <div class="fa-solid fa-user-tie"></div>
                     <a asp-area="Admin" asp-controller="AdminAccounts" asp-action="Index">Quản lý tài khoản quản trị</a>
                 </div>
+               
             </div>
-            @RenderBody()
 
+            @RenderBody()
         </div>
 
+       
 
     </section>
-
+ 
     @await Component.InvokeAsync("Notyf")
     @await RenderSectionAsync("Scripts", required: false)
     <script src="~/content/ckeditor/ckeditor.js"></script>
     <script src="~/content/ckfinder/ckfinder_v1.js"></script>
+    <!-- Thêm thẻ script từ CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </body>
 </html>

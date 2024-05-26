@@ -8,6 +8,12 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
+<style>
+    #modal-default {
+        display: none;
+    }
+</style>
+
 <div class="content_box">
     <div class="nav_dir">
     <div class="header-sub-title">
@@ -42,6 +48,7 @@
                     <th width="200">Address</th>
                     <th width="100">Email</th>
                     <th>Phone</th>
+                    <th>Trạng thái</th>
                     <th></th>
 
                 </tr>
@@ -60,7 +67,7 @@
                             <td>@item.Address</td>
                             <td>@item.Email</td>
                             <td>@item.Phone</td>
-
+                             <td>@(item.Active == true ? "Active" : "Block")</td>
                             <td class="text-center">
                                 <div class="group_button another">
                 <input type="button" class ="mod-btn" 
@@ -71,7 +78,10 @@
                 onclick="if(confirm('Are you sure you want to delete?'))
                 { window.location.href='@Url.Action("Delete", new { id = item.CustomerId })' }" 
                 value="Xóa" class="btn btn-danger btn-sm">
+
+                 <a href="#" class="btn btn-info btn-sm btnCapNhat" data-id="@item.CustomerId">Cập nhật</a>
                                 </div>
+
                                                          
                             </td>
                         </tr>
@@ -90,7 +100,40 @@
 </div>
 
 
-                                        
+       
+<div class="modal fade" id="modal-default">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Cập nhật trạng thái người dùng</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="txtOrderId" value="0"/>
+                <div class="form-group">
+                    <label>Trạng thái</label>
+                    <select class="form-control" id="ddTrangThai">
+                        <option value="True">Active</option>
+                        <option value="False">Block</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary btnLuu">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>                                 
 @section Scripts {
         <script>
             $(document).ready(function () {
@@ -125,5 +168,42 @@
                     }
                 });
             });
+        $(document).ready(function () {
+    $('body').on('click', '.btnCapNhat', function () {
+        var id = $(this).data("id");
+        $('#txtOrderId').val(id);
+        $('#modal-default').modal('show');
+    });
+
+    $('body').on('click', '.btnLuu', function () {
+        var id = $('#txtOrderId').val();
+        var tt = $('#ddTrangThai').val() === "True"; // Chuyển giá trị về boolean
+        $.ajax({
+            url: '/admin/admincustomers/UpdateTT',
+            type: 'POST',
+            data: { id: id, trangthai: tt }, 
+            success: function (res) {
+                if (res.Success) {
+                    location.reload();
+                } else {
+                    alert("Cập nhật thành công: " + res.message);
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("Có lỗi xảy ra: " + textStatus + " - " + errorThrown);
+            }
+        });
+    });
+});
+
+
+
         </script>
 }
+
+@* 
+@section scripts {
+    <script>
+       
+    </script>
+    } *@

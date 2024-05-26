@@ -42,8 +42,10 @@ namespace Demo.Data
                     .HasColumnName("AccountID");
                 entity.Property(e => e.CreateDate).HasColumnType("datetime");
                 entity.Property(e => e.Email).HasMaxLength(50);
+                entity.Property(e => e.FullName).HasMaxLength(255);
                 entity.Property(e => e.LastLogin).HasColumnType("datetime");
                 entity.Property(e => e.Password).HasMaxLength(50);
+                entity.Property(e => e.Avatar).HasMaxLength(255);
                 entity.Property(e => e.Avatar).HasMaxLength(255);
                 entity.Property(e => e.Phone)
                     .HasMaxLength(10)
@@ -97,6 +99,9 @@ namespace Demo.Data
                 entity.Property(e => e.Salt)
                     .HasMaxLength(8)
                     .IsFixedLength();
+                entity.Property(e => e.Phone)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
             });
 
 
@@ -148,20 +153,24 @@ namespace Demo.Data
                     .HasConstraintName("FK__OrderDeta__Produ__47DBAE45");
             });
 
-            modelBuilder.Entity<Page>(entity =>
+            modelBuilder.Entity<News>(entity =>
             {
-                entity.HasKey(e => e.PageId).HasName("PK__Pages__C565B12403AECA26");
+                //entity.HasKey(e => e.NewsID).HasName("PK__Pages__C565B12403AECA26");
 
-                entity.Property(e => e.PageId)
+                entity.Property(e => e.NewsID)
                     .ValueGeneratedNever()
-                    .HasColumnName("PageID");
-                entity.Property(e => e.Alias).HasMaxLength(250);
-                entity.Property(e => e.CreateDate).HasColumnType("datetime");
-                entity.Property(e => e.MetaDesc).HasMaxLength(250);
-                entity.Property(e => e.MetaKey).HasMaxLength(250);
-                entity.Property(e => e.PageName).HasMaxLength(250);
-                entity.Property(e => e.Thumb).HasMaxLength(250);
+                    .HasColumnName("NewsID");
                 entity.Property(e => e.Title).HasMaxLength(250);
+                entity.Property(e => e.DatePosted).HasColumnType("datetime");
+                entity.Property(e => e.Content).HasMaxLength(250);
+                entity.Property(e => e.Email)
+                      .HasMaxLength(50)
+                      .IsFixedLength();
+                entity.Property(e => e.Phone)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
+                entity.Property(e => e.Active).HasColumnName("Active");
+
             });
 
             modelBuilder.Entity<Product>(entity =>

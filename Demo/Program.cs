@@ -1,4 +1,5 @@
 using AspNetCoreHero.ToastNotification;
+using AspNetCoreHero.ToastNotification.Extensions;
 using AspNetCoreHero.ToastNotification.Notyf;
 using Demo.Controllers;
 using Demo.Data;
@@ -54,6 +55,7 @@ app.UseSession();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseNotyf();
 
 app.UseEndpoints(endpoints =>
 {

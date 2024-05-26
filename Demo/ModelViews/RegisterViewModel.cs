@@ -32,7 +32,12 @@ namespace Demo.ModelViews
         [Remote(action: "ValidatePhone", controller: "Accounts")]
         public string Phone { get; set; }
 
-       
+        [MaxLength(250)]
+        [Required(ErrorMessage = "*")]
+        [Display(Name = "Địa chỉ khách hàng")]
+        public string Address { get; set; }
+
+
         [DataType(DataType.Date)]
         [Display(Name = "Ngày sinh")]
         public DateTime? Birthday { get; set; }

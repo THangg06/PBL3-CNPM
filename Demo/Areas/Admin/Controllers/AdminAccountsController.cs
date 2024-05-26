@@ -88,7 +88,7 @@ namespace Demo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AccountId,Phone,Email,Password,Salt,Active,RoleId,LastLogin,CreateDate")] Account account)
+        public async Task<IActionResult> Create([Bind("AccountId,FullName,Phone,Email,Password,Salt,Active,Avatar,RoleId,LastLogin,CreateDate")] Account account)
         {
             if (ModelState.IsValid)
             {
@@ -114,6 +114,13 @@ namespace Demo.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            var trangThaiList = new List<SelectListItem>
+    {
+        new SelectListItem { Text = "Active", Value = "true" },
+        new SelectListItem { Text = "Inactive", Value = "false" }
+    };
+
+            ViewData["TrangThai"] = new SelectList(trangThaiList, "Value", "Text", account.Active);
             ViewData["RoleId"] = new SelectList(_context.Roles, "RoleId", "RoleId", account.RoleId);
             return View(account);
         }
@@ -123,7 +130,7 @@ namespace Demo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("AccountId,Phone,Email,Password,Salt,Active,RoleId,LastLogin,CreateDate")] Account account)
+        public async Task<IActionResult> Edit(string id, [Bind("AccountId,FullName,Phone,Email,Password,Salt,Avatar,Active,RoleId,LastLogin,CreateDate")] Account account)
         {
             if (id != account.AccountId)
             {

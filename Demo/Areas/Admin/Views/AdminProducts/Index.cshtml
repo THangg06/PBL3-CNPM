@@ -97,9 +97,14 @@
 
 
 <!-- Pagination Controls -->
-<div aria-label="Page navigation">
-    <pager class="pagination" list="@Model" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" asp-route-CatID="@ViewBag.CurrentCatID"></pager>
-</div>
+@* <div aria-label="Page navigation">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions { LiElementClasses = new[] { "page-item" }, PageClassesEnabled = true })
+</div> *@
+
+
+
+
+
 
 
 

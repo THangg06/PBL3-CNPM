@@ -10,7 +10,7 @@
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
             <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Danh sách sản phẩm > </a>
-            <span class="breadcrumb-item active">Thêm sản phẩm </span <br />
+            <span class="breadcrumb-item active">Thêm sản phẩm </span> <br />
         </nav>
     </div>
 
@@ -165,7 +165,7 @@
                 <input asp-for="Alias" class="form-control" />
                 <span asp-validation-for="Alias" class="text-danger"></span>
             </div> *@
-            <div class="form-group">
+         @*    <div class="form-group">
                 <label asp-for="MetaDesc" class="control-label"></label>
                 <input asp-for="MetaDesc" class="form-control" />
                 <span asp-validation-for="MetaDesc" class="text-danger"></span>
@@ -174,7 +174,7 @@
                 <label asp-for="MetaKey" class="control-label"></label>
                 <input asp-for="MetaKey" class="form-control" />
                 <span asp-validation-for="MetaKey" class="text-danger"></span>
-            </div>
+            </div> *@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

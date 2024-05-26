@@ -5,6 +5,11 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
+<style>
+    #modal-default {
+        display: none;
+    }
+</style>
 <br />
 <div class="content_box">
     <div class="nav_dir">
@@ -27,7 +32,7 @@
                 <th>DatePosted</th>
                 <th>Email</th>
                 <th>Phone</th>
-               
+                    <th>Trạng thái xử lý</th>
                 @* <th>CatID</th> *@
             </tr>
         </thead>
@@ -68,7 +73,12 @@
                                 <div class="col-md-6">@item.Phone</div>
                             </div>
                         </td>
-                       
+                            <td>
+                                <div class="row">
+                                    @*   <div class="col-md-6"><strong>Phone:</strong></div> *@
+                                    <div class="col-md-6">@(item.Active == 1 ? "Đã xử lý" : "Chờ xử lý")</div>
+                                </div>
+                            </td>
                         <td>
                             <div class="group_button another">
                                @*  <input type="button" class="mod-btn"
@@ -83,6 +93,8 @@
                                        onclick="if(confirm('Are you sure you want to delete?'))
                     { window.location.href='@Url.Action("Delete", new { id = item.NewsID })' }"
                                        value="Xóa" class="btn btn-danger btn-sm">
+
+                                    <a href="#" class="btn btn-info btn-sm btnCapNhat" data-id="@item.NewsID">Cập nhật</a>
                             </div>
 
                         </td>
@@ -93,3 +105,69 @@
     </table>
 </div>
 </div>
+
+<div class="modal fade" id="modal-default">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Cập nhật trạng thái xử lý phản hồi</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="txtOrderId" value="0"/>
+                <div class="form-group">
+                    <label>Trạng thái</label>
+                    <select class="form-control" id="ddTrangThai">
+                        <option value="1">
+                            Đã xử lý
+                        </option>
+                    </select>
+                </div>
+
+              
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary btnLuu">Lưu</button>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $('body').on('click', '.btnCapNhat', function () {
+                var id = $(this).data("id");
+                $('#txtOrderId').val(id);
+                $('#modal-default').modal('show');
+            });
+
+            $('body').on('click', '.btnLuu', function () {
+                var id = $('#txtOrderId').val();
+                var tt = $('#ddTrangThai').val();
+                $.ajax({
+                    url: '/admin/adminnews/UpdateTT',
+                    type: 'POST',
+                    data: { id: id, trangthai: tt }, 
+                    success: function (res) {
+                        if (res.Success) {
+                            location.reload();
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    }

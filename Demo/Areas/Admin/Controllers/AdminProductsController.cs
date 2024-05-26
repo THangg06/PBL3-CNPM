@@ -31,8 +31,9 @@ namespace Demo.Areas.Admin.Controllers
 
         public IActionResult Index(int page = 1, string CatID = "")
         {
+
             var pageNumber = page;
-            var pageSize = 30;
+            var pageSize = 30; // Số sản phẩm trên mỗi
             IQueryable<Product> query = _context.Products
       .AsNoTracking()
       .Include(x => x.Cat);
@@ -42,7 +43,7 @@ namespace Demo.Areas.Admin.Controllers
             // Sử dụng so sánh với CatID
             if (!string.IsNullOrEmpty(CatID))
             {
-                query = query.Where(x => x.CatId == CatID);
+                query = query.Where(x => x.CatId == CatID).OrderByDescending(x => x.ProductId);
             }
 
             var models = new PagedList<Product>(query.Select(p => new Product
@@ -186,6 +187,8 @@ namespace Demo.Areas.Admin.Controllers
 
                 // Thiết lập các trường còn lại
                 product.Alias = MyUtil.SEOUrl(product.ProductName);
+                product.MetaDesc = "Trống";
+                product.MetaKey = "Trống";
                 product.DateCreated = DateTime.Now;
                 product.DateModified = DateTime.Now;
 
@@ -237,30 +240,40 @@ namespace Demo.Areas.Admin.Controllers
 
             try
             {
-                product.ProductName = MyUtil.ToTitleCase(product.ProductName);
-
-                // Kiểm tra xem có tệp được tải lên không
-                if (fThumb != null)
-                {
-                    string extension = Path.GetExtension(fThumb.FileName);
-                    string image = MyUtil.SEOUrl(product.ProductName) + extension;
-                    product.Thumb = await MyUtil.UploadFile(fThumb, @"products", image.ToLower());
-                }
-
-                // Nếu không có tệp được tải lên, giữ nguyên hình ảnh của sản phẩm
-                if (string.IsNullOrEmpty(product.Thumb))
-                {
-                    var existingProduct = await _context.Products.FindAsync(product.ProductId);
-                    if (existingProduct != null)
-                    {
-                        product.Thumb = existingProduct.Thumb;
-                    }
-                }
+                
 
                 // Các thao tác cập nhật thông tin sản phẩm khác ở đây...
 
                 if (ModelState.IsValid)
                 {
+                    product.ProductName = MyUtil.ToTitleCase(product.ProductName);
+                    //   product.CatName = MyUtil.ToTitleCase(product.CatName);
+                    Console.WriteLine("Hie");
+                    // Xử lý tải lên tệp hình ảnh
+                    if (fThumb != null)
+                    {
+                        string extension = Path.GetExtension(fThumb.FileName);
+                        string image = MyUtil.SEOUrl(product.ProductName) + extension;
+
+                        product.Thumb = await MyUtil.UploadFile(fThumb, @"loadh", image.ToLower());
+
+
+
+                    }
+
+                    if (string.IsNullOrEmpty(product.Thumb))
+                    {
+                        product.Thumb = "default.jpg";
+                    }
+
+                    // Thiết lập các trường còn lại
+                    product.Alias = MyUtil.SEOUrl(product.ProductName);
+                    product.MetaDesc = "Trống";
+                    product.MetaKey = "Trống";
+                   
+                    product.DateModified = DateTime.Now;
+
+
                     _notyfService.Success("Cập nhật thành công");
                     _context.Update(product);
                     await _context.SaveChangesAsync();

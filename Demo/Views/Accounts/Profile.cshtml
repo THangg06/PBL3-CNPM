@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@model Demo.Data.Customer
+@{
+    ViewData["Title"] = "Trang cá nhân";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="utf-8" />
@@ -22,46 +28,44 @@
     </div>
     <div class="container">
 
-        @if (TempData["UpdateMessage"] != null)
+        @if (ViewBag.UpdateMessage != null)
         {
             <div class="alert alert-success" role="alert">
-                @TempData["UpdateMessage"]
+                @ViewBag.UpdateMessage
             </div>
         }
         <form asp-action="UpdateProfile" asp-controller="Accounts" method="post" id="profileForm">
             <div class="image-container">
-                <img src="~/assets/avt_cus/@User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value" alt="">
+                <img src="~/assets/avt_cus/@Model.Avatar" alt="">
                 <input type="file" accept="image/*" id="fileInput" hidden>
             </div>
 
             <div class="form-group" id="Name">
                 <label for="firstName">Họ và tên:</label>
-                <input type="text" id="firstName" name="firstName" class="form-control" required value="@User.Identity.Name" readonly>
+                <input type="text" id="firstName" name="firstName" class="form-control" required value="@Model.FullName" readonly>
             </div>
-
 
             <div class="form-group" id="Contact-info">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" class="form-control" required value="@User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Email)?.Value" readonly>
+                <input type="email" id="email" name="email" class="form-control" required value="@Model.Email" readonly>
             </div>
 
             <div class="form-group" id="Contact-info">
                 <label for="phone">Số điện thoại:</label>
-                <input type="tel" id="phone" name="phone" class="form-control" required maxlength="10" value="@User.Claims.FirstOrDefault(c => c.Type == "PhoneNumber")?.Value" readonly>
+                <input type="tel" id="phone" name="phone" class="form-control" required maxlength="10" value="@Model.Phone" readonly>
             </div>
 
             <div class="form-group" id="birth">
                 <label for="dateOfBirth">Ngày sinh:</label>
-                <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control" required value="@User.Claims.FirstOrDefault(c => c.Type == "DateOfBirth")?.Value" readonly>
+                <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control" required value="@Model.Birthday?.ToString("yyyy-MM-dd")" readonly>
             </div>
 
             <div class="form-group">
                 <label for="address">Địa chỉ:</label>
-                <input type="text" id="address" name="address" class="form-control" required value="@(User.Claims.FirstOrDefault(c => c.Type == "Address")?.Value ?? "Trống")" readonly>
+                <input type="text" id="address" name="address" class="form-control" required value="@Model.Address" readonly>
             </div>
 
-            <a asp-controller="Accounts" asp-action="EditProfile" asp-route-id="@((string)Context.Session.GetString("CustomerId"))">Chỉnh sửa tài khoản</a>
-
+            <a asp-controller="Accounts" asp-action="EditProfile" asp-route-id="@Model.CustomerId">Chỉnh sửa tài khoản</a>
         </form>
     </div>
 
