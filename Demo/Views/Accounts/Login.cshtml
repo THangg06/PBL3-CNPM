@@ -1,4 +1,5 @@
 ﻿@model Demo.ModelViews.LoginViewModel
+
 @{
     ViewData["Title"] = "Đăng nhập";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,45 +7,45 @@
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="UTF-8">
     <title> Đăng ký </title>
     <link rel="stylesheet" href="/css/Loginpage.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-   </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
 <body>
-  <div class="wrapper">
+    <div class="wrapper">
         <div class="title">Đăng Nhập</div>
-          <form asp-action="Login">
+        <form asp-action="Login">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="field">
-                            @*  @Html.TextBoxFor(x => x.Email, new{class="form-control", placeholder = "Username", required = "required"  ,autofocus = "autofocus" }) *@
-                    <input asp-for="Email" class="form-control" type="email" placeholder="Email" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
-                </div>
+            <div class="field">
+                @*  @Html.TextBoxFor(x => x.Email, new{class="form-control", placeholder = "Username", required = "required"  ,autofocus = "autofocus" }) *@
+                <input asp-for="Email" class="form-control" type="email" placeholder="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
 
-                <div class="field">
-                    <input asp-for="Password" class="form-control" type="password" placeholder="Password" />
-                    <span asp-validation-for="Password" class="text-danger"></span>
+            <div class="field">
+                <input asp-for="Password" class="form-control" type="password" placeholder="Password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="content">
+                <div class="pass-link">
+                    <a asp-controller="Accounts" asp-action="ChangePassword">Quên mật khẩu?</a>
                 </div>
-                <div class="content">
-                   <div class="pass-link">
-                      <a asp-controller ="Accounts" asp-action="ChangePassword">Quên mật khẩu?</a>
-                   </div>
-                </div>
-            
-                <div class="field">
-                    <input type="submit" value="Đăng nhập" class="btn btn-primary" />
-                </div>
+            </div>
 
-                <div class="signup-link">  
-               Chưa có tài khoản? <a asp-controller ="Accounts" asp-action="DangKyTaiKhoan">Đăng ký</a>
-                </div>
+            <div class="field">
+                <input type="submit" value="Đăng nhập" class="btn btn-primary" />
+            </div>
+
+            <div class="signup-link">
+                Chưa có tài khoản? <a asp-controller="Accounts" asp-action="DangKyTaiKhoan">Đăng ký</a>
+            </div>
         </form>
-</div>
+    </div>
 
 
 
@@ -58,9 +59,9 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
              <img class="image" src="~/assets/fast_food_combo_meal.png" alt="Combo Meal" />
             <h4 class="login-title"> Đăng nhập </h4>
-           
-            
-            
+
+
+
             <div class="form-group">
                 <input type="submit" value="Đăng nhập" class="btn btn-primary" />
                 <a asp-controller="Accounts" asp-action="DangKyTaiKhoan"> <p>Chưa có tài khoản? Đăng ký </p></a>
@@ -72,4 +73,3 @@
 <div>
     <a asp-controller="Home" asp-action="Index">Trở về trang chính</a>
 </div> *@
-
