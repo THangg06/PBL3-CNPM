@@ -1,259 +1,130 @@
-﻿@* <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Column Chart Example</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-    <canvas id="myChart" style="width: 650px; height: 400px;"></canvas>
-
-    <script>
-        // Lấy tham chiếu canvas
-        var ctx = document.getElementById('myChart').getContext('2d');
-
-        // Khởi tạo biểu đồ cột
-        var myChart = new Chart(ctx, {
-            type: 'bar', // Loại biểu đồ: cột
-            data: {
-                // labels: ['Thứ 2', 'Thứ 3', 'Thứ tư', 'Thứ 5', 'Thứ sáu', 'Thứ 7', 'CN'], // Nhãn của các cột
-                labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5'], // Nhãn của các cột
-                datasets: [{
-                    label: 'Doanh thu(Đơn)', // Nhãn của dữ liệu
-                    data: [ 40, 50, 60, 70, 80], // Dữ liệu của các cột
-                    backgroundColor: [
-                        'teal',
-                        'teal',
-                        'teal',
-                        'teal',
-                        'teal',
-                      
-
-                    ],
-                    borderColor: [
-                        'black',
-                        'black',
-                        'black',
-                        'black',
-                        'black',
-
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true // Bắt đầu trục y từ 0
-                    },
-                    xAxes: [{ // Thay đổi cho trục x
-                        ticks: {
-                            autoSkip: false // Hiển thị tất cả các nhãn
-                        },
-                        rotation: 45 // Xoay nhãn 45 độ
-                    }]
-                },
-                layout: {
-                    padding: {
-                        left: 10,
-                        right: 10,
-                        top: 10,
-                        bottom: 10
-                    }
-                },
-                indexAxis: 'x',
-                elements: {
-                    bar: {
-                        borderWidth: 2,
-                        borderSkipped: 'start',
-                        borderRadius: 1,
-                        borderAlign: 'center',
-                        barWidth: 0.6
-                    }
-                }
-            }
-        });
-    </script>
-</body>
-</html>
-
- *@
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Thống kê</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            height: 100%;
-            gap: 10px;
-        }
-
-        .chart-container {
-            width: 100%;
-            height: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        canvas {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    <link href="~/css/Statistical.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="container">
-        <div class="chart-container">
-            <canvas id="chart1"></canvas>
+    <div class="content_box">
+        <div class="nav_dir">
+            <div class="header-sub-title">
+                <nav class="breadcrumb breadcrumb-dash">
+                    <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+                    <a class="breadcrumb-item" asp-area="Admin" asp-controller="Statistical" asp-action="Index">Thống kê </a>
+                </nav>
+            </div>
         </div>
-        <div class="chart-container">
-            <canvas id="chart2"></canvas>
+        <div class="container">
+            <div class="chart-container">
+                <canvas id="chart2"></canvas>
+                <div class="chart-title">Tỷ lệ đặt loại món ăn</div>
+            </div>
+            <div class="chart-container">
+                <canvas id="chart3"></canvas>
+                <div class="chart-title">Doanh thu theo tháng</div>
+            </div>
+            <div class="chart-container">
+                <canvas id="chart4"></canvas>
+                <div class="chart-title">Số đơn theo tháng</div>
+            </div>
         </div>
-        <div class="chart-container">
-            <canvas id="chart3"></canvas>
-        </div>
-        <div class="chart-container">
-            <canvas id="chart4"></canvas>
-        </div>
-    </div>
 
-    <script>
-        // Biểu đồ 1: Biểu đồ đường
-        // var ctx1 = document.getElementById('chart1').getContext('2d');
-        // var chart1 = new Chart(ctx1, {
-        //     type: 'line',
-        //     data: {
-        //         labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6'],
-        //         datasets: [{
-        //             label: 'Doanh thu',
-        //             data: [5000, 2000, 4000, 8000, 9000, 1000],
-        //             borderColor: 'red',
-        //             backgroundColor: 'transparent',
-        //             borderWidth: 2
-        //         }]
-        //     },
-        //     options: {
-        //         title: {
-        //             display: true,
-        //             text: 'Doanh thu theo tháng (VND)'
-        //         },
-        //         scales: {
-        //             yAxes: [{
-        //                 ticks: {
-        //                     beginAtZero: true
-        //                 }
-        //             }]
-        //         }
-        //     }
-        // });
-
-        // Biểu đồ 2: Biểu đồ tròn
-        var ctx2 = document.getElementById('chart2').getContext('2d');
-        var chart2 = new Chart(ctx2, {
-            type: 'pie',
-            data: {
-                labels: ['Hamburger', 'Spagetti', 'Gà rán', 'Tráng miệng', 'Thức uống'],
-                datasets: [{
-                    data: [20, 30, 40, 25, 15],
-                    backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple'],
-                    borderColor: 'black',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                title: {
-                    display: true,
-                    text: 'Tỷ lệ đặt loại món ăn'
-                }
-            }
-        });
-
-        // Biểu đồ 3: Biểu đồ miền
-        var ctx3 = document.getElementById('chart3').getContext('2d');
-        var chart3 = new Chart(ctx3, {
-            type: 'line',
-            data: {
-                labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5'],
-                datasets: [{
-                    label: 'Doanh thu',
-                    data: [7000, 4000, 7000, 6000, 2000],
-                    backgroundColor: ['rgba(0, 0, 255, 0.2)', 'rgba(128, 128, 128, 0.2)'],
-                    borderColor: 'red',
-                    borderWidth: 2,
-                    pointRadius: 5,
-                    pointBackgroundColor: 'red',
-                    pointBorderColor: 'white',
-                    pointHoverRadius: 10,
-                    pointHoverBackgroundColor: 'yellow',
-                    pointHoverBorderColor: 'black'
-                }]
-            },
-            options: {
-                title: {
-                    display: true,
-                    text: 'Doanh thu theo tháng'
-                },
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
+        <script>
+            // Biểu đồ 1: Biểu đồ tròn
+            var ctx2 = document.getElementById('chart2').getContext('2d');
+            var chart2 = new Chart(ctx2, {
+                type: 'pie',
+                data: {
+                    labels: ['Hamburger', 'Spagetti', 'Gà rán', 'Tráng miệng', 'Thức uống'],
+                    datasets: [{
+                        data: [20, 30, 40, 25, 15],
+                        backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple'],
+                        borderColor: 'black',
+                        borderWidth: 1
                     }]
-                }
-            }
-        });
-
-
-        // Biểu đồ 4: Biểu đồ cột
-        var ctx4 = document.getElementById('chart4').getContext('2d');
-        var chart4 = new Chart(ctx4, {
-            type: 'bar',
-            data: {
-                labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5'],
-                datasets: [{
-                    label: 'Doanh thu(Đơn)',
-                    data: [40, 50, 60, 70, 80],
-                    backgroundColor: ['teal', 'teal', 'teal', 'teal', 'teal'],
-                    borderColor: 'black',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                title: {
-                    display: true,
-                    text: 'Doanh thu theo tháng (VND)'
                 },
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }],
-                    xAxes: [{
-                        ticks: {
-                            autoSkip: false,
-                            maxRotation: 45,
-                            minRotation: 45
-                        }
-                    }]
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Tỷ lệ đặt loại món ăn'
+                    }
                 }
-            }
-        });
-    </script>
+            });
+
+            // Biểu đồ 3: Biểu đồ đường
+            var ctx3 = document.getElementById('chart3').getContext('2d');
+            var chart3 = new Chart(ctx3, {
+                type: 'line',
+                data: {
+                    labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5'],
+                    datasets: [{
+                        label: 'Doanh thu',
+                        data: [7000, 4000, 7000, 6000, 2000],
+                        backgroundColor: ['rgba(0, 0, 255, 0.2)', 'rgba(128, 128, 128, 0.2)'],
+                        borderColor: 'red',
+                        borderWidth: 2,
+                        pointRadius: 5,
+                        pointBackgroundColor: 'red',
+                        pointBorderColor: 'white',
+                        pointHoverRadius: 10,
+                        pointHoverBackgroundColor: 'yellow',
+                        pointHoverBorderColor: 'black'
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Doanh thu theo tháng'
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+
+            // Biểu đồ 4: Biểu đồ cột
+            var ctx4 = document.getElementById('chart4').getContext('2d');
+            var chart4 = new Chart(ctx4, {
+                type: 'bar',
+                data: {
+                    labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5'],
+                    datasets: [{
+                        label: 'Doanh thu(Đơn)',
+                        data: [40, 50, 60, 70, 80],
+                        backgroundColor: ['teal', 'teal', 'teal', 'teal', 'teal'],
+                        borderColor: 'black',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Doanh thu theo tháng (VND)'
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }],
+                        xAxes: [{
+                            ticks: {
+                                autoSkip: false,
+                                maxRotation: 45,
+                                minRotation: 45
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
 </body>
 </html>
