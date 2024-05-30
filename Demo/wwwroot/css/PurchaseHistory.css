@@ -1,0 +1,41 @@
+body {
+    margin-top: 150px;
+}
+
+th, td {
+    white-space: nowrap;
+    border: 1px solid #ddd; /* ??nh d?ng ???ng vi?n cho c?t và hàng */
+    padding: 8px; /* ??nh d?ng padding cho c?t và hàng */
+}
+
+.my-4 {
+    font-size: 18px;
+    margin-left: 1.5rem;
+}
+
+.data-table {
+    margin-top: 5%;
+    font-size: 14px;
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+    border-collapse: collapse; /* G?p ???ng vi?n c?a các ô b?ng */
+    background-color: #dfffd4;
+}
+
+.table-striped {
+    margin: 0 auto;
+}
+
+th {
+    background-color: #f2f2f2; /* Màu n?n cho tiêu ?? c?t */
+    color: black; /* Màu ch? cho tiêu ?? c?t */
+}
+
+.border-right {
+    border-right: none; /* Lo?i b? ???ng vi?n bên ph?i c?a ô */
+}
+
+.border-left {
+    border-left: none; /* Lo?i b? ???ng vi?n bên trái c?a ô */
+}
