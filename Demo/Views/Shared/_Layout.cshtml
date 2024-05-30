@@ -64,7 +64,7 @@
         <div class="user_img">
             
                 <a href="/profile">
-                    <img src="@User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value" alt="">
+                    <img src="~/assets/avt_cus/@User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value" alt="">
                 </a>
                 <span>@Context.User.Identity.Name</span>
             
