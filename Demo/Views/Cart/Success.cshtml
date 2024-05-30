@@ -4,10 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Success</h1>
 
-<!DOCTYPE html>
-<html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +15,7 @@
     <link href="~/css/success.css" rel="stylesheet" />
 </head>
 <body>
-@*     <div class="container">
+    <div class="container">
         <h1>Đặt hàng thành công!</h1>
         <div class="order-info">
             <h2>Thông tin </h2>
@@ -55,19 +54,5 @@
                 <li><a asp-controller="News" asp-action="Add">Liên hệ hỗ trợ</a></li>
             </ul>
         </div>
-    </div> *@
-
-    <h1>Đặt hàng thành công</h1>
-    <div class="card">
-      <div class="content_card" style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
-        <i class="checkmark">✓</i>
-      </div>
-        <h1>Thành công</h1> 
-        <p>Cảm ơn bạn đã đặt hàng!<br/> Chúng tôi sẽ xử lý đơn hàng của bạn trong thời gian ngắn nhất.</p>
-        <div class="button">  
-            <a asp-controller="HangHoa" asp-action="Index">Tiếp tục mua sắm</a>
-            <a asp-controller="News" asp-action="Add">Liên hệ hỗ trợ</a>
-        </div>    
     </div>
 </body>
-</html>

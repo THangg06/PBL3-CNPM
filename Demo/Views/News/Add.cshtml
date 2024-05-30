@@ -6,9 +6,9 @@
 }
 
 @section Style {
-        <link href="~/css/ContactUs.css" rel="stylesheet" />
-        <link href="~/css/header.css" rel="stylesheet" />
-        <link href="~/css/Footer.css" rel="stylesheet" />
+    <link href="~/css/ContactUs.css" rel="stylesheet" />
+    <link href="~/css/header.css" rel="stylesheet" />
+    <link href="~/css/Footer.css" rel="stylesheet" />
 }
 
 
@@ -21,35 +21,35 @@
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <form asp-action="Add" method="post">
             <h3>Thông tin liên hệ</h3>
-                  <div class="contactInfo">
-                    <div class="res">
-                      <img src="https://ih1.redbubble.net/image.4909830114.2670/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="res-logo">
-                      <h5>Hee-Ho</h5>
-                    </div>
-                    <div class="res">
-                      <span class="fas fa-envelope"></span>
-                      <h5>Demo@gmail.com</h5>
-                    </div>
-                    <div class="res">
-                      <span class="fas fa-phone"></span>
-                      <h5>+84 123-456-789</h5>
-                    </div>
-                  </div>
+            <div class="contactInfo">
+                <div class="res">
+                    <img src="https://ih1.redbubble.net/image.4909830114.2670/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="res-logo">
+                    <h5>Hee-Ho</h5>
+                </div>
+                <div class="res">
+                    <span class="fas fa-envelope"></span>
+                    <h5>Demo@gmail.com</h5>
+                </div>
+                <div class="res">
+                    <span class="fas fa-phone"></span>
+                    <h5>+84 123-456-789</h5>
+                </div>
+            </div>
             <div class="inputBox">
-                <span asp-validation-for="Title" class="fas fa-user" class="text-danger" ></span>
+                <span asp-validation-for="Title" class="fas fa-user" class="text-danger"></span>
                 <input asp-for="Title" class="form-control" placeholder="Tên" />
             </div>
-@*             <div class="inputBox">
-                <label asp-for="DatePosted" class="control-label"></label>
-                <input asp-for="DatePosted" class="form-control" disabled />
-                <span asp-validation-for="DatePosted" class="text-danger"></span>
+            @*             <div class="inputBox">
+            <label asp-for="DatePosted" class="control-label"></label>
+            <input asp-for="DatePosted" class="form-control" disabled />
+            <span asp-validation-for="DatePosted" class="text-danger"></span>
             </div> *@
             <div class="inputBox">
                 <span asp-validation-for="Email" class="fas fa-envelope" class="text-danger"></span>
                 <input asp-for="Email" class="form-control" placeholder="Email" />
 
                 <span asp-validation-for="Phone" class="fas fa-phone" class="text-danger"></span>
-                <input asp-for="Phone" maxlength="12" class="form-control" placeholder="Số điện thoại"/>
+                <input asp-for="Phone" maxlength="12" class="form-control" placeholder="Số điện thoại" />
             </div>
 
             <div class="inputBox">
@@ -57,8 +57,8 @@
                 <textarea asp-for="Content" class="form-control" rows="4" placeholder="Tin nhắn"></textarea>
 
             </div>
-                <input type="submit" value="Gửi" class="btn">
-            
+            <input type="submit" value="Gửi" class="btn btn-primary">
+
         </form>
     </div>
 </section>
@@ -101,3 +101,4 @@
         </div>
     </div>
 </footer>
+

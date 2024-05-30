@@ -1,18 +1,21 @@
-﻿@model IEnumerable<Demo.ModelViews.MenuloaiVM> 
+﻿@model IEnumerable<Demo.ModelViews.MenuloaiVM>
 
-<div class="menu_set">
-    <ul>
-        @foreach (var item in Model)
-        {
-            <li>
-                <div class="d-flex justify-content-between food-name">
-                    <a asp-controller="HangHoa" asp-action="Index" asp-route-loai =" @item.CatId">
-                        <i class="fas fa-food-alt me-2"></i>
-                        @item.CatName
-                    </a>
-                    <span>(@item.SoLuong)</span> 
-                </div>
-            </li>
-        }
-    </ul>
+<div class="menu_set d-flex flex-nowrap">
+    @foreach (var item in Model)
+    {
+        <button class="choose_food" id="@item.CatName" onclick="filterMenu('@item.CatName')">@item.CatName</button>
+    }
 </div>
+
+<script>
+    function filterMenu(foodType) {
+        var productRows = document.getElementsByClassName("product_row");
+        for (var i = 0; i < productRows.length; i++) {
+            if (productRows[i].id === foodType) {
+                productRows[i].style.display = "grid"; // Changed from "block" to "grid"
+            } else {
+                productRows[i].style.display = "none";
+            }
+        }
+    }
+</script>
