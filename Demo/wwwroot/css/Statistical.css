@@ -1,0 +1,26 @@
+﻿body {
+    height:100%
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.chart-container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.chart-title {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
