@@ -12,7 +12,7 @@
       outline: none;
       border: none;
       text-decoration: none;
-      text-transform: capitalize;
+      text-transform: none;
       transition: .2s linear;
     }
     html{
@@ -46,12 +46,13 @@
       top:0; left: 0; right:0;
       z-index: 1000;
     }
-    .header .logo{
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      font-size: 1.4rem;
-    }
+        .header .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            font-size: 1.4rem;
+            font-family: 'Poppins',sans-serif;
+        }
   
     .header .logo img{
       height: 6rem;

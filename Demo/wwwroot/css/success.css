@@ -1,57 +1,61 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
     text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
+    padding: 40px 0;
+    background: #dcda88;
+    margin-top: 8rem;
+}
+    h1 {
+      color: #88B04B;
+      font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+      font-weight: 900;
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #404F5E;
+      font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+      font-size:20px;
+      margin: 0;
+    }
+  i {
+    color: #9ABC66;
+    font-size: 100px;
+    line-height: 200px;
+    margin-left:-15px;
   }
-  
-  .order-info {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
+  .card {
+    background: white;
+    padding: 60px;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px #C8D0D8;
+    display: inline-block;
+    margin: 0 auto;
   }
-  
-  .order-info h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .order-info p {
-    margin-bottom: 5px;
-  }
-  
-  .next-steps {
-    border: 1px solid #ccc;
-    padding: 20px;
-  }
-  
-  .next-steps h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .next-steps ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .next-steps li {
-    margin-bottom: 10px;
-  }
-  
-  .next-steps a {
+
+.button a {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    font-weight: 700;
     text-decoration: none;
-    color: #007bff;
+    background-color: transparent;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    padding: 13px 25px;
+    font-size: 18px;
+    border-radius: 40px;
+    margin: 7px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    opacity: 0.9;
+}
+
+.button a {
+    background-color:rgb(81, 145, 4);
+    border: 2px solid rgba(56, 55, 55, 0.9);
+    color: whitesmoke;
   }
   
+  .button a:hover{
+    background: rgb(94, 237, 79);
+    color: black;
+  }

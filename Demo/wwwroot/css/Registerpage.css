@@ -4,10 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+
 }
 
 body {
+    margin-top: 10rem;
     height: 100%;
     width: 100%;
     display: grid;
@@ -65,8 +66,8 @@ form .user-details .input-box {
     width: calc(100% / 2 - 20px);
 }
 
-form .input-box details {
-    font-size: 1.3rem;
+form .input-box label.details {
+    font-size: 1.6rem;
     display: block;
     font-weight: 500;
     margin-bottom: 5px;
@@ -148,6 +149,9 @@ form .button {
 
         form .button input:hover {
             background: #e7d05d;
+        }
+        .login{
+            font-size: 1.6rem;
         }
 
 @media(max-width: 584px) {
