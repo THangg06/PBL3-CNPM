@@ -11,12 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh toán</title>
     <link href="~/css/payment.css" rel="stylesheet" />
+    <link href="~/css/header.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="go-back">
-        <a href="Cart.html">Về giỏ hàng</a>
+        <a asp-controller="Cart" asp-action="Index">Về giỏ hàng</a>
+@*         <a href="Cart.html"></a> *@
     </div>
     <div class="wrapper">
     <h2>Thanh toán đơn hàng</h2>
@@ -29,11 +31,11 @@
                             <label class="form-check-label" for="GiongKhachHang">Giống thông tin khách hàng?</label>
                         </div>
        <div class="input_group delivery-info">
-    <div class="input_box">
-        <input type="text" name="FullName" placeholder="Họ và tên" class="name">
-        <i class="fa fa-user icon"></i>
-    </div>
-</div>
+            <div class="input_box">
+                <input type="text" name="FullName" placeholder="Họ và tên" class="name">
+                <i class="fa fa-user icon"></i>
+            </div>
+        </div>
 <div class="input_group delivery-info">
     <div class="input_box">
         <input type="text" name="Phone" placeholder="Số điện thoại" class="name">
@@ -48,21 +50,50 @@
 </div>
 
 
-        <h4>Phương thức thanh toán</h4>
         <div class="input_group">
-            <div class="input_box">
-                <input type="radio" name="paymentMethod" value="CreditCard" id="creditCard">
-                <label for="creditCard"><span><i class="fa fa-credit-card"></i> Thẻ tín dụng</span></label>
-                <input type="radio" name="paymentMethod" value="Cash" id="cash">
-                <label for="cash"><span><i class="fa fa-money"></i> Tiền mặt</span></label>
-            </div>
-        </div>
+                <div class="input_box">
+                    <h4>Phương thức thanh toán</h4>
+                    <input type="radio" name="paymentMethod" class="radio" value="CreditCard" id="creditCard" checked>
+                    <label for="creditCard">
+                        <span><i class="fa fa-credit-card"></i> Thẻ tín dụng</span>
+                    </label>
 
-        <div class="input_group detail" id="creditCardDetails">
-            <div class="input_box">
-                <!-- Phần nhập thông tin thẻ tín dụng -->
+                    <input type="radio" name="paymentMethod" class="radio" value="Cash" id="cash">
+
+                    <label for="cash">
+                        <span><i class="fa-solid fa-money-bill"></i> Tiền mặt</span>
+                    </label>
+                </div>
             </div>
-        </div>
+
+            <div class ="detail" id="creditCardDetails">
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="tel" name="" class="name" placeholder="1111-2222-3333-4444" required>
+                        <i class="fa fa-credit-card icon"></i>
+                    </div>
+                </div>
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="text" placeholder="Tên chủ thẻ" required class="name">
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                </div>
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="tel" name="" class="name" placeholder="CCV 632" required>
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                </div>
+                <div class="input_group">
+                    <div class="input_box">
+                        <div class="input_box">
+                            <input type="month" placeholder="MM-YYYY" required class="name">
+                            <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         <div class="input_group">
             <div class="input_box">
@@ -73,6 +104,29 @@
 </div>
 
 </body>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var creditCardRadio = document.getElementById("creditCard");
+            var cashRadio = document.getElementById("cash");
+            var paymentDetail = document.querySelector(".detail");
+
+            function handleRadioChange() {
+                if (cashRadio.checked) {
+                    paymentDetail.style.display = "none";
+                } else {
+                    paymentDetail.style.display = "block";
+                }
+            }
+
+            creditCardRadio.addEventListener("change", handleRadioChange);
+            cashRadio.addEventListener("change", handleRadioChange);
+
+            if (cashRadio.checked) {
+                paymentDetail.style.display = "none";
+            }
+        });
+    </script>
 @section Scripts {
     <script>
         $(document).ready(function () {

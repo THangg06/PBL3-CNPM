@@ -11,11 +11,13 @@
 
         <div class="item">
             <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="">
-             <a asp-action="Detail" asp-controller="HangHoa" asp-route-id=""> <img class="image" src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="alt text" />
+             <img class="image" src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="alt text" />
                 </a>
-        <div class="product_card"></a>
+        <div class="product_card">
 
-            <a asp-action="Detail" asp-controller="HangHoa" asp-route-id=""><a asp-action="Detail" asp-controller="HangHoa" asp-route-id=""><h4 class="food_title">@item.TenHH</h4></a></a>
+            <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="">
+               <h4 class="food_title">@item.TenHH</h4>
+            </a>
         <p class="desc_food">@item.MoTaNgan</p>
         <h5 class="price_tag">$@item.Dongia</h5>
       <a asp-action="AddToCart" asp-controller="Cart" asp-route-id=""> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>
@@ -28,9 +30,13 @@
      <div class="product_row" id="Burger">
 
                 <div class="item">
-                   <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P1"> <img class="image" src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="alt text" />
-                  <div class="product_card"></a>
-                    <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P1"><h4 class="food_title">Burger Bò</h4></a>
+                   <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P1"> 
+                       <img class="image" src="./assets/MenuAccess/Hamburger/Beef_Burger.jfif" alt="alt text" />
+                   </a>
+                  <div class="product_card">
+                    <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="P1">
+                        <h4 class="food_title">Burger Bò</h4>
+                        </a>
                     <p class="desc_food">Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service</p>
                     <h5 class="price_tag">40.000 Đ</h5>
                   <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="P1"> <button class="btn"><h5 class="highlight2">Add to cart</h5></button></a>

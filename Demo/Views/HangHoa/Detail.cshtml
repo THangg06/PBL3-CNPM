@@ -7,6 +7,7 @@
 }
 @section Style {
         <link href="~/css/OrderProductDetail.css" rel="stylesheet" />
+        <link href="~/css/header.css" rel="stylesheet" />
 }
 
     <tbody>
@@ -14,10 +15,11 @@
       <div class="orderProductDetailContainer">
           <a asp-action="Detail" asp-route-id="@Model.MaHH">
         <img class="image" src="~/assets/MenuAccess/@Model.Hinh" alt="alt text" />
+        </a>
         <div class="productInfoContainer">
           <div class="nameProduct">
             <h1>@Model.TenHH</h1>
-            </a>
+            
             <div class="status">
                 In Stock
             </div>
@@ -49,22 +51,20 @@
              ultrices et ipsum. Nulla varius magna a consequat pulvinar.
           </p>
           <form asp-action="AddToCart" asp-controller="Cart" asp-route-id="@Model.MaHH">
-          <div class="changingBox">
-            <button class="decrementBtn" type="button"><i class="fas fa-minus-circle"></i></button>
-    <input type="text" class="form-control form-control-sm text-center border-0" value="1" name="quantity" id="quantityInput">
-    <button class="incrementBtn" type="button"><i class="fa-solid fa-circle-plus"></i></button>
-    
-
-</div>
-
+            <div class="changingBox">
+                <button class="decrementBtn" type="button"><i class="fas fa-minus-circle"></i></button>
+                <input type="text" class="form-control form-control-sm text-center border-0" value="1" name="quantity" id="quantityInput">
+                <button class="incrementBtn" type="button"><i class="fa-solid fa-circle-plus"></i></button>
+            </div>
+            <hr/>
+                  <div class="categoryContainer">
+                    <div class="label">Category:</div>
+                    <div class="type">@Model.TenLoai</div>
+                  </div>
             <button class="btn">Add to Cart</button>
             </form>
           </div>
-          <hr/>
-          <div class="categoryContainer">
-            <div class="label">Category:</div>
-            <div class="type">@Model.TenLoai</div>
-          </div>
+
         </div>
       </div>
 

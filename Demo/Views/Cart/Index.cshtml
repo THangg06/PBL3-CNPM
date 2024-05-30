@@ -22,11 +22,17 @@
                             <img src="~/assets/MenuAccess/@item.Hinh" alt="@item.TenHH" />
                             <div class="content">
                                 <h3>@item.TenHH</h3>
-                                <h4 class="unit-price" data-unitprice="@item.Dongia">@item.Dongia.ToString("0.000")</h4>
+                                <div class="row">
+                                        <span class="tag_title"> Giá đơn thành: </span>
+                                    <h4 class="unit-price" data-unitprice="@item.Dongia">@item.Dongia.ToString("0.000")</h4>
+                                </div>
+            
                                 <p class="unit">
                                     Số lượng: <input name="quantity" type="number" min="1" max="100" value="@item.SoLuong" data-id="@item.MaHh" class="quantity-input" data-unitprice="@item.Dongia" />
                                 </p>
-                                <p class="mb-0 mt-4 item-total">@item.ThanhTien.ToString("0.000")</p>
+                                           <div class="row">
+                                                   <span class="tag_title">Tổng giá:</span> <p class="mb-0 mt-4 item-total"> @item.ThanhTien.ToString("0.000")</p>
+                                           </div>
                                 <a asp-action="RemoveCart" asp-controller="Cart" asp-route-id="@item.MaHh">
                                     <p class="btn-area">
                                         <i aria-hidden="true" class="fa fa-trash"></i>

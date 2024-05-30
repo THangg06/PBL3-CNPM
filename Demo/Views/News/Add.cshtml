@@ -6,9 +6,12 @@
 }
 
 @section Style {
-    <link href="~/css/contactus.css" rel="stylesheet" />
-    <link href="~/css/info.css" rel="stylesheet" />
+        <link href="~/css/ContactUs.css" rel="stylesheet" />
+        <link href="~/css/header.css" rel="stylesheet" />
+        <link href="~/css/Footer.css" rel="stylesheet" />
 }
+
+
 
 <section class="contact" id="contact">
     <div class="row">
@@ -17,35 +20,45 @@
                             w6AgSOG6o2ksIE5nxakgSMOgbmggU8ahbiwgxJDDoCBO4bq1bmcgNTA1MDksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1713419323796!5m2!1svi!2s"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <form asp-action="Add" method="post">
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
+            <h3>Thông tin liên hệ</h3>
+                  <div class="contactInfo">
+                    <div class="res">
+                      <img src="https://ih1.redbubble.net/image.4909830114.2670/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="res-logo">
+                      <h5>Hee-Ho</h5>
+                    </div>
+                    <div class="res">
+                      <span class="fas fa-envelope"></span>
+                      <h5>Demo@gmail.com</h5>
+                    </div>
+                    <div class="res">
+                      <span class="fas fa-phone"></span>
+                      <h5>+84 123-456-789</h5>
+                    </div>
+                  </div>
+            <div class="inputBox">
+                <span asp-validation-for="Title" class="fas fa-user" class="text-danger" ></span>
+                <input asp-for="Title" class="form-control" placeholder="Tên" />
             </div>
-            <div class="form-group">
-                <label asp-for="Content" class="control-label"></label>
-                <textarea asp-for="Content" class="form-control" rows="4"></textarea>
-                <span asp-validation-for="Content" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+@*             <div class="inputBox">
                 <label asp-for="DatePosted" class="control-label"></label>
                 <input asp-for="DatePosted" class="form-control" disabled />
                 <span asp-validation-for="DatePosted" class="text-danger"></span>
+            </div> *@
+            <div class="inputBox">
+                <span asp-validation-for="Email" class="fas fa-envelope" class="text-danger"></span>
+                <input asp-for="Email" class="form-control" placeholder="Email" />
+
+                <span asp-validation-for="Phone" class="fas fa-phone" class="text-danger"></span>
+                <input asp-for="Phone" maxlength="12" class="form-control" placeholder="Số điện thoại"/>
             </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+
+            <div class="inputBox">
+                <span asp-validation-for="Content" class="fas fa-message" class="text-danger"></span>
+                <textarea asp-for="Content" class="form-control" rows="4" placeholder="Tin nhắn"></textarea>
+
             </div>
-            <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">Save</button>
-                <a asp-action="Index" asp-controller="Home" class="btn btn-secondary">Cancel</a>
-            </div>
+                <input type="submit" value="Gửi" class="btn">
+            
         </form>
     </div>
 </section>
