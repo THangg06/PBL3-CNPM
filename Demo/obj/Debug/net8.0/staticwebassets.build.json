@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "knMbnuRyCoPUx5rFyI7upB+ey0jcep98D6qwNuCWTnM=",
+  "Hash": "GmocqNM+7L931onDor2sHLxGvnAmacQBrzzxXRlffGc=",
   "Source": "Demo",
   "BasePath": "_content/Demo",
   "Mode": "Default",
@@ -5050,6 +5050,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\MenuCss\\LoadH\\burger-c-chp.jfif"
+    },
+    {
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\LoadH\\burger-c-chp.jpg",
+      "SourceId": "Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
+      "BasePath": "_content/Demo",
+      "RelativePath": "MenuCss/LoadH/burger-c-chp.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MenuCss\\LoadH\\burger-c-chp.jpg"
     },
     {
       "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\LoadH\\burger-c-su.jfif",

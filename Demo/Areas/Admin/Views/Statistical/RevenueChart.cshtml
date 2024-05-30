@@ -1,0 +1,40 @@
+﻿@model List<dynamic>
+
+@{
+    ViewBag.Title = "Revenue Chart";
+}
+
+<h2>Doanh thu theo tháng</h2>
+<canvas id="revenueChart" width="800" height="400"></canvas>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var revenueData = @Html.Raw(Json.Serialize(Model));
+
+        var months = revenueData.map(item => item.month);
+        var totalRevenue = revenueData.map(item => item.totalRevenue);
+
+        var ctx = document.getElementById('revenueChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: months,
+                datasets: [{
+                    label: 'Doanh thu',
+                    data: totalRevenue,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+}

@@ -17,7 +17,8 @@ namespace Demo.Data
             : base(options)
         {
         }
-
+        public virtual DbSet<ReviewProduct> ReviewProduct { get; set; }
+        public virtual DbSet<ThongKe> ThongKe { get; set; }
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
@@ -115,9 +116,10 @@ namespace Demo.Data
                     .HasColumnName("OrderID");
                 //entity.HasKey(e => e.OrderID).HasName("PK__Orders__C3905BAFD28E05B5");
 
-                //entity.Property(e => e.OrderID)
-                //    .ValueGeneratedNever()
-                //    .HasColumnName("OrderID");
+                entity.Property(e => e.TongTien)
+     .HasColumnType("decimal(18, 2)")
+     .HasDefaultValue(0.00m);
+                base.OnModelCreating(modelBuilder);
                 entity.Property(e => e.CustomerId).HasColumnName("CustomerID");
                 entity.Property(e => e.OrderDate).HasColumnType("datetime");
                 entity.Property(e => e.PaymentDate).HasColumnType("datetime");
@@ -129,6 +131,27 @@ namespace Demo.Data
                     .HasForeignKey(d => d.CustomerId)
                     .HasConstraintName("FK__Orders__Customer__440B1D61");
             });
+
+            //modelBuilder.Entity<ReviewProduct>(entity =>
+            //{
+
+             
+
+            //    entity.Property(e => e.Id)
+            //        .ValueGeneratedOnAdd()
+            //        .HasColumnName("Id");
+            //    entity.Property(e => e.ProductId).HasColumnName("ProductID");
+            //    entity.Property(e => e.UserName).HasColumnName("UserName");
+            //    entity.Property(e => e.Email)
+            //       .HasMaxLength(50)
+            //       .IsFixedLength();
+            //    entity.Property(e => e.FullName).HasMaxLength(255);
+            //    entity.Property(e => e.Avatar).HasMaxLength(255);
+            //    entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+            //    entity.Property(e => e.Content).HasMaxLength(250);
+            //    entity.Property(e => e.Rate).HasColumnType("int");
+
+            //});
 
             modelBuilder.Entity<OrderDetail>(entity =>
             {
@@ -153,25 +176,25 @@ namespace Demo.Data
                     .HasConstraintName("FK__OrderDeta__Produ__47DBAE45");
             });
 
-            modelBuilder.Entity<News>(entity =>
-            {
-                //entity.HasKey(e => e.NewsID).HasName("PK__Pages__C565B12403AECA26");
+            //modelBuilder.Entity<News>(entity =>
+            //{
+            //    //entity.HasKey(e => e.NewsID).HasName("PK__Pages__C565B12403AECA26");
 
-                entity.Property(e => e.NewsID)
-                    .ValueGeneratedNever()
-                    .HasColumnName("NewsID");
-                entity.Property(e => e.Title).HasMaxLength(250);
-                entity.Property(e => e.DatePosted).HasColumnType("datetime");
-                entity.Property(e => e.Content).HasMaxLength(250);
-                entity.Property(e => e.Email)
-                      .HasMaxLength(50)
-                      .IsFixedLength();
-                entity.Property(e => e.Phone)
-                    .HasMaxLength(10)
-                    .IsUnicode(false);
-                entity.Property(e => e.Active).HasColumnName("Active");
+            //    entity.Property(e => e.NewsID)
+            //        .ValueGeneratedNever()
+            //        .HasColumnName("NewsID");
+            //    entity.Property(e => e.Title).HasMaxLength(250);
+            //    entity.Property(e => e.DatePosted).HasColumnType("datetime");
+            //    entity.Property(e => e.Content).HasMaxLength(250);
+            //    entity.Property(e => e.Email)
+            //          .HasMaxLength(50)
+            //          .IsFixedLength();
+            //    entity.Property(e => e.Phone)
+            //        .HasMaxLength(10)
+            //        .IsUnicode(false);
+            //    entity.Property(e => e.Active).HasColumnName("Active");
 
-            });
+            //});
 
             modelBuilder.Entity<Product>(entity =>
             {
@@ -182,6 +205,7 @@ namespace Demo.Data
                     .HasColumnName("ProductID");
                 entity.Property(e => e.Alias).HasMaxLength(255);
                 entity.Property(e => e.CatId).HasColumnName("CatID");
+               
                 entity.Property(e => e.DateCreated).HasColumnType("datetime");
                 entity.Property(e => e.DateModified).HasColumnType("datetime");
                 entity.Property(e => e.MetaDesc).HasMaxLength(255);

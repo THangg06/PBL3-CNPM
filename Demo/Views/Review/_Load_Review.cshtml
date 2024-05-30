@@ -1,0 +1,143 @@
+﻿@model IEnumerable<Demo.Data.ReviewProduct>
+
+<style>
+    .review-container {
+        width: 50%;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .review-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .avatar {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+    }
+
+    .review-content {
+        margin-top: 20px;
+    }
+
+    .review-footer {
+        margin-top: 10px;
+        font-size: 0.9em;
+        color: #555;
+    }
+
+    .star-rating {
+        color: #ffd700;
+    }
+
+    .user_star_rating {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+    }
+
+        .user_star_rating li {
+            margin-right: 5px;
+        }
+
+    .fa-star {
+        color: gold;
+    }
+
+    .fa-star-o {
+        color: gold;
+        background-color: white;
+    }
+
+    .username {
+        font-weight: bold;
+        font-size: 1.2em; /* Tăng cỡ chữ */
+        margin-bottom: 5px;
+    }
+</style>
+<div class="customerContainer">
+    <div class="btn-menu">
+        @* <button class="btn1">Review (@ViewBag.Count)</button> *@
+        <h4 class="btn1">Review (@ViewBag.Count)</h4>
+        @*   <button class="btn1">Customer Feedback</button> *@
+    </div>
+
+    @if(Model !=null && Model.Any())
+    {
+
+
+        foreach(var item in Model)
+        {
+            <!--User Review-->
+           @*  <div class="userCommentReview">
+
+                <div class="userReviewContainer">
+                    <div class="userReviewerBox">
+                        <img src="~/assets/avt_cus/@item.Avatar" alt="">
+                        <div class="user_review">
+                            <div class="username">@item.FullName</div>
+                            <div class="username">@item.Email</div>
+                            <div class="review">
+                                <div>
+
+                                    <ul class="user_star_rating">
+                                        @Html.Raw(Demo.Helper.MyUtil.HtmlRate(item.Rate))
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-comment">@item.CreatedDate.Value.ToString("dd/MM/yyyy")</div>
+                </div>
+                <p>@item.Content</p>
+
+            </div> *@
+
+
+
+
+            <div class="userCommentReview">
+
+                <div class="userReviewContainer">
+                    <div class="userReviewerBox">
+                        <img class="user-image" src="~/assets/avt_cus/@item.Avatar" alt="alt text" />
+                        <div class="user_review">
+                            <div class="username">@item.FullName</div>
+                            <div class="email">@item.Email</div>
+                            <div class="review">
+                                <ul class="user_star_rating">
+                                    @Html.Raw(Demo.Helper.MyUtil.HtmlRate(item.Rate))
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-comment">@item.CreatedDate.Value.ToString("dd/MM/yyyy")</div>
+                </div>
+                <p>@item.Content
+
+            </div>
+
+
+
+
+            <hr />
+        }
+
+
+
+       
+    }
+    else
+    {
+        <p>Hiện chưa có đánh giá nào.</p>
+    }
+
+
+
+

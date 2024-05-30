@@ -14,7 +14,8 @@ namespace Demo.Controllers
     {
         private readonly Web01Context _db;
         //public INotyfService _notyfService { get; }
-        public CartController(Web01Context context) { 
+        public CartController(Web01Context context)
+        {
             _db = context;
             //_notyfService = notyfService;
         }
@@ -107,7 +108,7 @@ namespace Demo.Controllers
             {
                 var customerId = HttpContext.User.Claims.FirstOrDefault(p => p.Type == MySetting.CLAIM_CUSTOMERID)?.Value;
                 var khachhang = model.GiongKhachHang ? _db.Customers.SingleOrDefault(kh => kh.CustomerId == customerId) : null;
-
+                var totalAmount = Cart.Sum(item => item.SoLuong * item.Dongia);
                 var hoadon = new Order
                 {
                     CustomerId = customerId,
@@ -117,6 +118,7 @@ namespace Demo.Controllers
                     PaymentDate = DateTime.Now,
                     OrderDate = DateTime.Now,
                     CachThanhToan = "COD",
+                    TongTien = totalAmount
                 };
 
                 using (var transaction = _db.Database.BeginTransaction())

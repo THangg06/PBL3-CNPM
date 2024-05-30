@@ -1325,3 +1325,8 @@ C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\CKFinder.dll
 C:\A2\LTNet\MD\Demo\bin\Debug\net8.0\CKFinder.pdb
 C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\PagedList.dll
 C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\PagedList.Mvc.dll
+C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\ProjectWF\PBL3\Demo\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

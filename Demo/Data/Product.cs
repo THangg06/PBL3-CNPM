@@ -17,6 +17,7 @@ public partial class Product
     public string? CatId { get; set; } = null;
 
     // public double? Price { get; set; }
+    
     public decimal Price { get; set; }
     public string? Unit { get; set; }
 
@@ -47,4 +48,5 @@ public partial class Product
     public virtual Category? Cat { get; set; }
 
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
+    public virtual ICollection<ReviewProduct> ReviewProduct { get; set; } = new List<ReviewProduct>();
 }

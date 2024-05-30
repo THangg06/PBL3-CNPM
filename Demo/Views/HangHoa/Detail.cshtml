@@ -1,4 +1,5 @@
-﻿
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+@using Demo.Data
 
  @model Demo.ModelViews.ChiTietHangHoaVM
 @{
@@ -31,7 +32,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
             </div>
-            <div class="num-of-review">4 Review</div>
+           @*  <div class="num-of-review">4 Review</div> *@
           </div>
 
           <div class="price">
@@ -69,123 +70,34 @@
       </div>
 
 
-      <div class="customerContainer">
-        <div class="btn-menu">
-            <button class="btn1">Customer Feedback</button>
-            <button class="btn1">Customer Feedback</button>
+      
+
+
+      
+@* 
+      <div class="UserFeedback">
+    @Html.RenderPartialAsync("~/Views/Review/_Load_Review.cshtml",new ReviewProduct { ProductId = Model.MaHH })
+</div>
+ *@
+
+
+    <div class="UserFeedback">
+        <div id="reviews-container"></div>
+    </div>
+        <div class="col-lg-6 add_review_col">
+
+             @await Html.PartialAsync("~/Views/Review/_Review.cshtml", new ReviewProduct { ProductId = Model.MaHH })
         </div>
 
-        <div class="UserFeedback">
-          <div class="userCommentReview">
 
-            <div class="userReviewContainer">
-              <div class="userReviewerBox">
-                <img class="user-image" src="https://t.vndb.org/ch/15/47315.jpg" alt="alt text" />
-                <div class="user_review">
-                  <div class="username">Kristin Watson</div>
-                  <div class="review">
-                    <div class="ratingStar">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="time-comment">2 min ago</div>
-            </div>
-            <p>Duis at ullamcorper nulla, eu dictum eros.
-
-            </div>
+       
 
 
 
-
-          <hr/>
-
-
-          <div class="userCommentReview">
-            <div class="userReviewContainer">
-              <div class="userReviewerBox">
-                <img class="user-image" src="https://i.ytimg.com/vi/G9WizAdztLc/maxresdefault.jpg" alt="alt text" />
-
-                <div class="user_review">
-                  <div class="username">Jane Cooper</div>
-                  <div class="review">
-                    <div class="ratingStar">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-
-
-              </div>
-              <div class="time-comment">30 Apr, 2021</div>
-            </div>
-            <p class="text2">Keep the soil evenly moist for the healthiest growth. If the sun gets too hot, Chinese cabbage tends to &quot;bolt&quot; or go to seed; in long periods of heat, some kind of shade may be helpful. Watch out for snails, as they will harm the plants.</p>
-          </div>
-
-
-          <hr/>
-
-
-          <div class="userCommentReview">
-            <div class="userReviewContainer">
-              <div class="userReviewerBox">
-                <img class="user-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-TrYjQcqeD_DlfoFVwNyIvD0yVwZPHCSCtbjoeOiGIQ&s" alt="alt text" />
-                <div class="user_review">
-                  <div class="username">Jacob Jones</div>
-                  <div class="review">
-                    <div class="ratingStar">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="time-comment">2 min ago</div>
-            </div>
-            <p>Vivamus eget euismod magna. Nam sed lacinia nibh, et lacinia lacus.</div>
-
-
-
-          <hr/>
-
-
-          <div class="userCommentReview">
-            <div class="userReviewContainer">
-              <div class="userReviewerBox">
-                <img class="user-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7eCScgYLCom91E7sEWkBKfZripGuNGsbq0D1hRZX4pA&s" alt="alt text" />
-                <div class="user_review">
-                  <div class="username">Ralph Edwards</div>
-                  <div class="review">
-                    <div class="ratingStar">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="time-comment">2 min ago</div>
-            </div>
-            <p>200+ Canton Pak Choi Bok Choy Chinese Cabbage Seeds Heirloom Non-GMO Productive Brassica rapa VAR. chinensis, a.k.a. Canton&#x27;s Choice, Bok Choi, from USA</p>
-          </div>
-        </div>
+@* 
     </div>
         <button class="btn1">Load More</button>
-      </div>
+      </div> *@
 
 
        <script>
@@ -214,84 +126,25 @@
     </tbody>
 </html>
 
-@* 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="css\OrderProductDetail.css" rel="stylesheet">
-</head>
-<body>
-    <div class="go-back">
-        <i class="fa-solid fa-arrow-left"></i>
-        <a href="Homepage.html">Back</a>
-    </div>
+@section scripts {
+    <script src="c:\projectwf\pbl3\demo\content\singer_custom.js"></script>
+@*     <script src="~/content/singer_custom.js"></script> *@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var productId = '@Model.MaHH'; // Lấy productId từ model
+            $.ajax({
+                url: '@Url.Action("_Load_Review", "Review")',
+                type: 'GET',
+                data: { productId: productId },
+                success: function (result) {
+                    $('#reviews-container').html(result);
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error loading reviews:", error);
+                }
+            });
+        });
+    </script>
+}
 
-    <div class="orderProductDetailContainer">
-        <a asp-action="Detail" asp-route-id ="@Model.MaHH">
-            <img class="img" src="~/assets/MenuAccess/fried chicken/@Model.Hinh" alt="alt text" />
-            <div class="productInfoContainer">
-                <div class="nameProduct">
-                    <h1>@Model.TenHH</h1>
-                </div>
-                <div class="status">
-                    In Stock
-                </div>
-            </div>
-        </a>
-        <div class="review">
-            <div class="ratingStar">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <div class="num-of-review">4 Review</div>
-        </div>
-
-        <div class="price">
-            <span class="original_price" type="line">@Model.Dongia</span>
-            <span class="new_price">$17.28</span>
-            <div class="discount">64% Off</div>
-        </div>
-
-        <hr/>
-
-        <p class="productDescribe">
-            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar.
-        </p>
-
-        <div class="changingBox">
-            <div class="addItemContainer">
-                <i class="fas fa-minus-circle"></i>
-                <h5>5</h5>
-                <!-- prettier-ignore -->
-                <i class="fa-solid fa-circle-plus"></i>
-            </div>
-            <button class="btn">Add to Cart</button>
-        </div>
-        <hr/>
-        <div class="categoryContainer">
-            <div class="label">Category:</div>
-            <div class="type">@Model.TenLoai</div>
-        </div>
-    </div>
-
-    <div class="customerContainer">
-        <div class="btn-menu">
-            <button class="btn1">Customer Feedback</button>
-            <button class="btn1">Customer Feedback</button>
-        </div>
-
-        <div class="UserFeedback">
-            <!-- Các đánh giá của khách hàng -->
-        </div>
-    </div>
-    <button class="btn1">Load More</button>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./js/site.js" charset="utf-8"></script>
-</body>
-</html>
- *@

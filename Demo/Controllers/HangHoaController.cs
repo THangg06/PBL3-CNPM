@@ -54,7 +54,7 @@ namespace Demo.Controllers
             if (data == null)
             {
                 TempData["Message"] = $"Không tìm thấy sản phẩm có mã {id}";
-                return RedirectToAction("/404"); // Redirect to a different action, like home page
+                return RedirectToAction("PageNotFound", "Home");
             }
 
             var result = new ChiTietHangHoaVM
@@ -92,60 +92,7 @@ namespace Demo.Controllers
             // For demonstration purposes, let's return a hardcoded value
             return 20; // Replace this with your actual logic to retrieve the quantity in stock
         }
-
-        //public IActionResult Search(string? query) {
-
-
-        //    return View(result);
-        //}
+       
 
     }
 }
-//using Demo.Data;
-//using Demo.ModelViews;
-//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.EntityFrameworkCore;
-//using System.Linq;
-
-//namespace Demo.Controllers
-//{
-//    public class HangHoaController : Controller
-//    {
-//        private readonly Web01Context _context;
-
-//        public HangHoaController(Web01Context context)
-//        {
-//            _context = context;
-//        }
-
-//        public IActionResult Index(string? loai)
-//        {
-//            IQueryable<Product> hanghoa = _context.Products.Include(p => p.Cat);
-
-//            if (!string.IsNullOrEmpty(loai))
-//            {
-//                hanghoa = hanghoa.Where(p => p.CatId == loai);
-//            }
-
-//            var result = hanghoa.Select(p => new HangHoaVM
-//            {
-//                MaHH = p.ProductId,
-//                TenHH = p.ProductName,
-//                Hinh = p.Thumb ?? "",
-//                Dongia = p.Price ?? 0,
-//                MoTaNgan = p.Unit ?? "",
-//                TenLoai = p.Cat != null ? p.Cat.CatName : ""
-//            }).ToList();
-
-//            return View(result);
-//        }
-//        public IActionResult Detail(int id)
-//        {
-//            var 
-//        }
-
-//        //public IActionResult Search(string? query) {
-//        //    return View(result);
-//        //}
-//    }
-//}

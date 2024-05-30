@@ -46,7 +46,7 @@ namespace Demo.Areas.Admin.Controllers
                 _context.Entry(item).Property(x => x.Active).IsModified = true;
                
                 _context.SaveChanges();
-                return Json(new { message = "Success", Success = true });
+                return RedirectToAction("Index", "AdminNews");
             }
             return Json(new { message = "UnSuccess", Success = false });
         }

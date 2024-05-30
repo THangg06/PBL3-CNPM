@@ -3,7 +3,10 @@ using AspNetCoreHero.ToastNotification.Extensions;
 using AspNetCoreHero.ToastNotification.Notyf;
 using Demo.Controllers;
 using Demo.Data;
+using Microsoft.AspNetCore.Identity;
+
 using Demo.Helper;
+using Demo.ModelViews;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
