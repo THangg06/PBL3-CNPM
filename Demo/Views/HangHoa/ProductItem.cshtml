@@ -4,28 +4,31 @@
 @{
 }
 @model IEnumerable<Demo.ModelViews.HangHoaVM>
+@*
+<H3>Có <b>@Model.Count()</b> sản phẩm</H3> *@
 
-<H3>Có <b>@Model.Count()</b> sản phẩm</H3>
-
-@* <div class="menu_set">
+@* Uncomment the below section if you need the filter buttons
+<div class="menu_set">
     <button class="choose_food" id="btn-Burger" onclick="filterMenu('Burger')">Burger</button>
     <button class="choose_food" id="btn-Spaghetti" onclick="filterMenu('Spaghetti')">Spaghetti</button>
     <button class="choose_food" id="btn-Dessert" onclick="filterMenu('Dessert')">Dessert</button>
     <button class="choose_food" id="btn-Fried_Chicken" onclick="filterMenu('Fried_Chicken')">Fried Chicken</button>
     <button class="choose_food" id="btn-Drinks" onclick="filterMenu('Drinks')">Drinks</button>
-</div> *@
-<div class="menu_set d-flex flex-nowrap">
-    @foreach (var group in Model.Select((item, index) => new { Item = item, Index = index })
-    .GroupBy(x => x.Index / 8))
+</div>
+*@
+
+<div class="menu_set d-flex flex-column">
+    @foreach (var group in Model.GroupBy(item => item.TenLoai).Select((group, index) => new { Group = group, Index = index }))
     {
-        <div class="menu_row d-flex flex-nowrap">
-            @foreach (var item in group.Select(x => x.Item).Take(8))
-            {
-                <div class="product_col">
-                    <div class="product_row" id="@item.TenLoai">
+        <div class="menu_row mb-4 category-group" id="@group.Group.Key" style="display:@(group.Index == 0 ? "block" : "none")">
+            @*   // <h4>@group.Group.Key</h4> *@
+            <div class="product_row d-flex flex-wrap">
+                @foreach (var item in group.Group)
+                {
+                    <div class="product_col">
                         <div class="item">
                             <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHH">
-                                <img class="image" src="~/assets/MenuAccess/@item.Hinh" alt="alt text" />
+                                <img class="image" src="~/assets/MenuAccess/@item.Hinh" alt="@item.TenHH" />
                             </a>
                             <div class="product_card">
                                 <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHH">
@@ -39,8 +42,21 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            }
+                }
+            </div>
         </div>
     }
 </div>
+
+<script>
+    function filterMenu(category) {
+        var groups = document.getElementsByClassName('category-group');
+        for (var i = 0; i < groups.length; i++) {
+            if (groups[i].id === category) {
+                groups[i].style.display = 'block';
+            } else {
+                groups[i].style.display = 'none';
+            }
+        }
+    }
+</script>
