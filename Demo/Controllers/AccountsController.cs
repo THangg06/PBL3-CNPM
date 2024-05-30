@@ -180,7 +180,7 @@ namespace Demo.Controllers
             // Thêm khách hàng mới vào cơ sở dữ liệu
             _context.Customers.Add(customer);
             await _context.SaveChangesAsync();
-            _notyfService.Success("Đăng ký thành công");
+            //_notyfService.Success("Đăng ký thành công");
             // Chuyển hướng đến trang đăng nhập
             return RedirectToAction("Login");
         }
@@ -512,7 +512,7 @@ namespace Demo.Controllers
                 // Cập nhật thông tin khách hàng
                 _context.Entry(existingCustomer).CurrentValues.SetValues(customer);
                 await _context.SaveChangesAsync();
-                _notyfService.Success("Chỉnh sửa thành công");
+                //_notyfService.Success("Chỉnh sửa thành công");
                 // Chuyển hướng đến trang profile với dữ liệu đã được cập nhật
                 TempData["Message"] = "Thông tin khách hàng đã được cập nhật thành công.";
                 return RedirectToAction("Profile");
@@ -596,7 +596,79 @@ namespace Demo.Controllers
             return View(orders);
         }
 
+        [HttpGet]
+        [AllowAnonymous]
+        [Route("ForgotPassword", Name = "ForgotPassword")]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("ForgotPassword", Name = "ForgotPasswordPost")]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var customer = _context.Customers.SingleOrDefault(c => c.Email == model.Email);
+            if (customer == null)
+            {
+                ModelState.AddModelError(string.Empty, "Email not found.");
+                return View(model);
+            }
+
+            // Redirect to a view for entering a new password, passing the email as a query parameter
+            return RedirectToAction("ResetPassword", new { email = model.Email });
+        }
+
+
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ForgotPasswordConfirmation()
+        {
+            return View();
+        }
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ResetPassword(string email)
+        {
+            var model = new ResetPasswordViewModel { Email = email };
+            return View(model);
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var customer = _context.Customers.SingleOrDefault(c => c.Email == model.Email);
+            if (customer == null)
+            {
+                ModelState.AddModelError(string.Empty, "Email not found.");
+                return View(model);
+            }
+
+            // Update the password for the user with the provided email
+            //customer.Password = model.NewPassword; // Update this with your password hashing logic
+            //await _context.SaveChangesAsync();
+            string passnew = (model.NewPassword.Trim() + customer.Salt.Trim()).ToMD5();
+            customer.Password = passnew;
+            _context.Customers.Update(customer);
+            await _context.SaveChangesAsync();
+
+
+            // Optionally, redirect the user to a login page or a page indicating successful password reset
+            return RedirectToAction("Login", "Accounts");
+        }
 
 
     }

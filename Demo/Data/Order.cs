@@ -22,7 +22,7 @@ public partial class Order
     public DateTime? ShipDate { get; set; }
 
     public string? CachThanhToan { get; set; } = null;
-    public decimal? TongTien { get; set; }
+    public decimal TongTien { get; set; }
     public int? TransactStatusId { get; set; }
 
     public bool? Deleted { get; set; }

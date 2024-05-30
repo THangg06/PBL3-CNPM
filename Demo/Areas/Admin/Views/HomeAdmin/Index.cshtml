@@ -1,70 +1,51 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Line Chart Example</title>
+﻿@{
+    ViewBag.Title = "Recent Revenue";
+}
+
+<h2>Doanh thu 5 ngày gần nhất</h2>
+<hr />
+<style>
+    canvas {
+        max-width: 1200px; /* Giới hạn chiều rộng của canvas */
+        max-height: 700px; /* Cho phép canvas điều chỉnh chiều cao tự động */
+        display: block; /* Đảm bảo canvas hiển thị đúng trên mọi thiết bị */
+        margin: 0 auto; /* Canh giữa canvas */
+    }
+</style>
+<canvas id="recentRevenueChart"></canvas>
+<hr />
+<h3 class="text-center">
+    Tổng doanh thu: @(ViewBag.CountsumRevenue)0 VNĐ
+
+</h3>
+
+@section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        canvas {
-            max-width: 2500px; /* Giới hạn chiều rộng của canvas */
-            max-height: 3000px; /* Cho phép canvas điều chỉnh chiều cao tự động */
-            display: block; /* Đảm bảo canvas hiển thị đúng trên mọi thiết bị */
-            margin: 0 auto; /* Canh giữa canvas */
-        }
-    </style>
-</head>
-<body>
-    <canvas id="myChart"></canvas>
-
     <script>
-        // Lấy tham chiếu canvas
-        var ctx = document.getElementById('myChart').getContext('2d');
+        var dates = @Html.Raw(Json.Serialize(ViewBag.RecentDates));
+        var revenue = @Html.Raw(Json.Serialize(ViewBag.RevenueByDate));
 
-        // Khởi tạo biểu đồ đường
+        var ctx = document.getElementById('recentRevenueChart').getContext('2d');
         var myChart = new Chart(ctx, {
-            type: 'line', // Loại biểu đồ: đường
+            type: 'line',
             data: {
-                labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6'], // Nhãn cho trục x
+                labels: dates,
                 datasets: [{
-                    label: 'Doanh thu', // Nhãn cho dữ liệu
-                    data: [5000, 2000, 4000, 8000, 9000, 1000], // Dữ liệu cho các điểm trên đường
-                    fill: false, // Bật/tắt tô màu vùng dưới đường
-                    borderColor: 'red', // Màu đường viền
-                    borderWidth: 2, // Độ rộng đường viền
-                    pointRadius: 5, // Bán kính điểm dữ liệu
-                    pointBackgroundColor: 'red', // Màu nền điểm dữ liệu
-                    pointBorderColor: 'white', // Màu viền điểm dữ liệu
-                    pointHoverRadius: 10, // Bán kính điểm dữ liệu khi di chuột qua
-                    pointHoverBackgroundColor: 'yellow', // Màu nền điểm dữ liệu khi di chuột qua
-                    pointHoverBorderColor: 'black' // Màu viền điểm dữ liệu khi di chuột qua
+                    label: 'Doanh thu theo ngày(Nghìn VNĐ)',
+                    data: revenue,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
                 }]
             },
             options: {
-                title: {
-                    display: true,
-                    text: 'Doanh thu theo tháng (VND)'
-                },
                 scales: {
                     y: {
-                        beginAtZero: true // Bắt đầu trục y từ 0
-                    }
-                },
-                layout: {
-                    padding: {
-                        left: 10,
-                        right: 10,
-                        top: 10,
-                        bottom: 10
+                        beginAtZero: true
                     }
                 }
             }
         });
+
     </script>
-</body>
-</html>
+}

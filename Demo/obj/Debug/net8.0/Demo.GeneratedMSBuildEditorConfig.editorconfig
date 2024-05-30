@@ -210,6 +210,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhdGlzdGljYWxcUmV2ZW51ZUNoYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/ProjectWF/PBL3/Demo/Areas/Admin/Views/Statistical/Statistical_Chart_Bar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhdGlzdGljYWxcU3RhdGlzdGljYWxfQ2hhcnRfQmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ProjectWF/PBL3/Demo/Areas/Admin/Views/Statistical/Statistical_Chart_Pie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhdGlzdGljYWxcU3RhdGlzdGljYWxfQ2hhcnRfUGllLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/ProjectWF/PBL3/Demo/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -242,6 +250,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRWRpdFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/ProjectWF/PBL3/Demo/Views/Accounts/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRm9yZ290UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/ProjectWF/PBL3/Demo/Views/Accounts/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -252,6 +264,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/ProjectWF/PBL3/Demo/Views/Accounts/PurchaseHistory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcUHVyY2hhc2VIaXN0b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ProjectWF/PBL3/Demo/Views/Accounts/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcUmVzZXRQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/ProjectWF/PBL3/Demo/Views/Cart/AddToCart.cshtml]

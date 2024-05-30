@@ -40,7 +40,7 @@
         </div>
 
 
-        <div class="search-bar">
+     @*    <div class="search-bar">
             <div class="search-box">
                 <label for="search-icon" class="fas fa-search"></label>
                 <input type="search" id="search-box" placeholder="Tìm kiếm tại đây" style="background-image: linear-gradient(to right, #cfe2ff, #c2d1E8);
@@ -48,7 +48,7 @@
             </div>
 
             <div class="fa-solid fa-bell" ></div>
-        </div>
+        </div> *@
 
     </header>
 
@@ -58,7 +58,7 @@
             <div class="nav-bar">
                 <div class="option-box" id="menu-active">
                     <div class="fa-solid fa-gauge"></div>
-                    <a asp-area="Admin" asp-controller="Statistical" asp-action="RevenueChart">Dashboard</a>
+                    <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index">Dashboard</a>
                 </div>
                 <div class="option-box">
                     <div class="fa-solid fa-user-group"></div>
@@ -104,7 +104,7 @@
                 </div>
 
                 <div class="option-box">
-                    <div class="fa-solid fa-message"></div><a asp-area="Admin" asp-controller="Statistical" asp-action="Index">Thống kê</a>
+                    <div class="fa-solid fa-message"></div><a asp-area="Admin" asp-controller="Statistical" asp-action="Statistical_Chart_Bar">Thống kê</a>
                 </div>
 
                 <div class="option-box">

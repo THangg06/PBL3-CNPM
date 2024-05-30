@@ -20,15 +20,90 @@ namespace Demo.Areas.Admin.Controllers
             return View();
         }
 
-        //public IActionResult RevenueChart()
-     //   {
-     ////       var revenueByMonth = _db.Orders
-     ////.GroupBy(p => DbFunctions.TruncateTime(p.OrderDate).Value.Month)
-     ////.Select(g => new { Month = g.Key, TotalRevenue = g.Sum(p => p.TongTien) })
-     ////.ToList();
+        public IActionResult RevenueChart()
+        {
+            var recentDates = _db.Orders
+                   .OrderByDescending(o => o.OrderDate)
+                   .Select(o => EF.Property<DateTime>(o, "OrderDate").Date)
+                   .Distinct()
+                   .Take(5)
+                   .ToList();
 
-     //       //ViewBag.RevenueData = revenueByMonth;
-     //       //return View(revenueByMonth);
-     //   }
+            var revenueByDate = new List<decimal>();
+            decimal Total = 0;
+            foreach (var date in recentDates)
+            {
+                decimal revenue = _db.Orders
+                    .Where(o => EF.Property<DateTime>(o, "OrderDate").Date == date)
+                    .Sum(o => o.TongTien);
+
+                revenueByDate.Add(revenue);
+                Total+= revenue;
+            }
+
+          
+
+            ViewBag.RecentDates = recentDates;
+            ViewBag.RevenueByDate = revenueByDate;
+            ViewBag.CountsumRevenue = Total;
+
+            return View();
+        }
+        public IActionResult Statistical_Chart_Pie()
+        {
+            var distinctRates = _db.ReviewProduct
+                .Select(r => EF.Property<int>(r, "Rate"))
+                .Distinct()
+                .ToList();
+
+            var rateCounts = new List<int>();
+
+            int countSumRate = (_db.ReviewProduct.Select(p => p.Rate)).Count(); 
+
+            foreach (var rate in distinctRates)
+            {
+                int countRate = _db.ReviewProduct
+                    .Where(o => EF.Property<int>(o, "Rate") == rate)
+                    .Count();
+
+                rateCounts.Add(countRate);
+            }
+
+            ViewBag.CountSumRate = countSumRate;
+            ViewBag.DistinctRates = distinctRates;
+            ViewBag.RateCounts = rateCounts;
+
+            return View();
+        }
+        public IActionResult Statistical_Chart_Bar()
+        {
+            var recentDates = _db.Orders
+                    .OrderByDescending(o => o.OrderDate)
+                    .Select(o => EF.Property<DateTime>(o, "OrderDate").Date)
+                    .Distinct()
+                    .Take(5)
+                    .ToList();
+
+            var revenueByDate = new List<int>();
+            int Total = 0;
+            foreach (var date in recentDates)
+            {
+                int revenue = (_db.Orders
+                    .Where(o => EF.Property<DateTime>(o, "OrderDate").Date == date)
+                    ).Count();
+
+                revenueByDate.Add(revenue);
+                Total ++;
+            }
+
+
+
+            ViewBag.RecentDates = recentDates;
+            ViewBag.RevenueByDate = revenueByDate;
+            ViewBag.CountsumRevenue = Total;
+
+            return View();
+        }
+
     }
 }

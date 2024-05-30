@@ -8,27 +8,30 @@
     <div style="align-content:center" class="col-md-4">
         <form asp-action="Login">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-             <img class="image" src="~/assets/fast_food_combo_meal.png" alt="Combo Meal" />
+            <img class="image" src="~/assets/fast_food_combo_meal.png" alt="Combo Meal" />
             <h4 class="login-title"> Đăng nhập </h4>
-           
+
             <div class="form-group">
-               @*  @Html.TextBoxFor(x => x.Email, new{class="form-control", placeholder = "Username", required = "required"  ,autofocus = "autofocus" }) *@
+                @*  @Html.TextBoxFor(x => x.Email, new{class="form-control", placeholder = "Username", required = "required"  ,autofocus = "autofocus" }) *@
                 <label asp-for="Email" class="control-label">UserName*</label>
                 <input asp-for="Email" class="form-control" type="email" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-           
-            
+
+
             <div class="form-group">
                 <label asp-for="Password" class="control-label">Mật khẩu*</label>
                 <input asp-for="Password" class="form-control" type="password" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-            
+
             <div class="form-group">
                 <input type="submit" value="Đăng nhập" class="btn btn-primary" />
                 <a asp-controller="Accounts" asp-action="DangKyTaiKhoan"> <p>Chưa có tài khoản? Đăng ký </p></a>
+
+                <a asp-controller="Accounts" asp-action="ForgotPassword"><p>Quên mật khẩu </p></a>
             </div>
+
         </form>
     </div>
 </div>
@@ -36,4 +39,3 @@
 <div>
     <a asp-controller="Home" asp-action="Index">Trở về trang chính</a>
 </div>
-
