@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Demo.Data.Category>
+@model IEnumerable<Demo.Data.Category>
 
 @{
     ViewData["Title"] = "Index";
@@ -6,8 +6,13 @@
 }
 
 
-
+<div class="group_button">
+    <input type="button"
+           onclick="window.location.href='@Url.Action("Create")'"
+           value="Tạo danh mục mới" class="btn btn-info btn-sm">
+</div>
 <div class="content_box">
+    
     <div class="data_table_container">
         <table class="data-table">
             <thead>
@@ -73,10 +78,6 @@
 
     </div>
 
-    <div class="group_button">
-        <input type="button"
-               onclick="window.location.href='@Url.Action("Create")'"
-               value="Tạo danh mục mới" class="btn btn-info btn-sm">
-    </div>
+    
 </div>
 iv>
