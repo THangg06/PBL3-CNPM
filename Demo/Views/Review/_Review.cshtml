@@ -1,0 +1,114 @@
+﻿@model Demo.Data.ReviewProduct
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/css/OrderProductDetail.css" rel="stylesheet" />
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="review-container add_review">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(function () {
+                $('#myForm').submit(function (e) {
+                    e.preventDefault(); // Prevent default form submission
+                    console.log("Form submitted!");
+                    $.ajax({
+                        url: '@Url.Action("PostReview", "Review")',
+                        type: 'POST',
+                        data: $(this).serialize(), // Send form data
+                        beforeSend: function () {
+                            $('#review_submit').attr("disabled", "disabled");
+                            $('#load_send').html('<h2>Đang gửi.....</h2>');
+                        },
+                
+                        success: function (res) {
+                            console.log("Success response: ", res);
+                            if (res.Success) {
+                        
+                                alert("Đánh giá của bạn đã được gửi thành công.");
+                                
+                            } else {
+                                console.log("Errors: ", res.Errors);
+                            }
+                        },
+                        error: function (error) {
+                            console.log("Error: ", error);
+                            // Handle error if needed
+                        }
+                    });
+                });
+            });
+
+            function OnSuccessRE(res) {
+                if(res.Success){
+                    $("review_form").reset();
+                }
+    
+}
+
+
+            function initStarRating() {
+                if ($('.user_star_rating li').length) {
+                    var stars = $('.user_star_rating li');
+                    var dem = 0;
+                    stars.each(function () {
+                        var star = $(this);
+                        star.on('click', function () {
+                            var i = star.index();
+                            dem = 0;
+                            stars.find('i').each(function () {
+                                $(this).removeClass('fa-star');
+                                $(this).addClass('fa-star-o');
+                            });
+                            for (var x = 0; x <= i; x++) {
+                                $(stars[x]).find('i').removeClass('fa-star-o');
+                                $(stars[x]).find('i').addClass('fa-star');
+                                dem++;
+                            }
+                            $('#txtRate').val(dem); // Setting the rating value to the clicked star index + 1
+                        });
+                    });
+                }
+            }
+
+            $(document).ready(function () {
+                initStarRating();
+            });
+        </script>
+        @using (Html.BeginForm("PostReview", "Review", FormMethod.Post@* , new { id = "myForm" } *@))
+        {
+            @Html.AntiForgeryToken()
+            <div>
+                <h1 style="margin-bottom: 1.3rem;">Add Review</h1>
+                @Html.TextBoxFor(x => x.FullName, new { @class = "form_input input_name", @placeholder = "Name*", @id = "review_name" })
+                @Html.TextBoxFor(x => x.Email, new { @class = "form_input input_email", @placeholder = "Email*", @id = "review_email" })
+                @Html.HiddenFor(x => x.UserName)
+                @Html.HiddenFor(x => x.ProductId) <!-- Dùng HTML helper để đảm bảo giá trị được bind -->
+                <input  type="text" id="txtRate" name="Rate" placeholder="Star Rating" value="4" style="visibility:hidden;">
+            </div>
+            <div>
+                    <h1 style="margin: 1.3rem 0px;">Your Rating:</h1>
+                <ul class="user_star_rating">
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                </ul>
+                @Html.TextAreaFor(x => x.Content, new { @class = "input_review", @rows = "4", @placeholder = "Your Review" })
+            </div>
+            <div class="text-left text-sm-right">
+                <button id="review_submit" type="submit" class="red_button review_submit_btn trans_300" value="Submit">Submit</button>
+            </div>
+        }
+
+    </div>
+</body>
+</html>

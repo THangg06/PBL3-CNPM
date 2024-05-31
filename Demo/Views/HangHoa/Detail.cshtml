@@ -8,11 +8,12 @@
 }
 @section Style {
         <link href="~/css/OrderProductDetail.css" rel="stylesheet" />
+        <link href="~/css/header.css" rel="stylesheet" />
 }
 
     <tbody>
    
-      <div class="orderProductDetailContainer">
+     <div class="orderProductDetailContainer">
           <a asp-action="Detail" asp-route-id="@Model.MaHH">
         <img class="image" src="~/assets/MenuAccess/@Model.Hinh" alt="alt text" />
         <div class="productInfoContainer">
@@ -32,13 +33,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
             </div>
-           @*  <div class="num-of-review">4 Review</div> *@
+        @*  <div class="num-of-review">4 Review</div> *@
           </div>
 
           <div class="price">
             <span class="original_price" type="line">@Model.Dongia</span>
             <span class="original_price"></span>
-          @*  <div class="discount">64% Off</div> *@
+        @*  <div class="discount">64% Off</div> *@
           </div>
 
           <hr/>
@@ -54,21 +55,21 @@
             <button class="decrementBtn" type="button"><i class="fas fa-minus-circle"></i></button>
     <input type="text" class="form-control form-control-sm text-center border-0" value="1" name="quantity" id="quantityInput">
     <button class="incrementBtn" type="button"><i class="fa-solid fa-circle-plus"></i></button>
-    
+
 
 </div>
+          <div class="categoryContainer">
+            <div class="label">Category:</div>
+            <div class="type">@Model.TenLoai</div>
+          </div>
 
             <button class="btn">Add to Cart</button>
             </form>
           </div>
           <hr/>
-          <div class="categoryContainer">
-            <div class="label">Category:</div>
-            <div class="type">@Model.TenLoai</div>
-          </div>
+
         </div>
       </div>
-
 
       
 
