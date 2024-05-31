@@ -19,13 +19,14 @@ namespace Demo.Areas.Admin.Controllers
         [Route("index")]
         public IActionResult Index()
         {
+            var today = DateTime.UtcNow.Date;
             var recentDates = _db.Orders
-                    .OrderByDescending(o => o.OrderDate)
-                    .Select(o => EF.Property<DateTime>(o, "OrderDate").Date)
-                    .Distinct()
-                    .Take(5)
-                    .ToList();
-
+       .Where(o => EF.Property<DateTime>(o, "OrderDate") >= today.AddDays(-4))
+       .OrderByDescending(o => o.OrderDate)
+       .Select(o => EF.Property<DateTime>(o, "OrderDate").Date)
+       .Distinct()
+       .Take(5)
+       .ToList();
             var revenueByDate = new List<decimal>();
             decimal Total = 0;
             foreach (var date in recentDates)

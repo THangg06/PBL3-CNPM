@@ -1001,6 +1001,10 @@
       "PackagePath": "staticwebassets\\css\\Payment.css"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\PurchaseHistory.css",
+      "PackagePath": "staticwebassets\\css\\PurchaseHistory.css"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\QLDM.css",
       "PackagePath": "staticwebassets\\css\\QLDM.css"
     },
@@ -1017,12 +1021,20 @@
       "PackagePath": "staticwebassets\\css\\Report.css"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Statistical.css",
+      "PackagePath": "staticwebassets\\css\\Statistical.css"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\canchinhonhap.css",
       "PackagePath": "staticwebassets\\css\\canchinhonhap.css"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\css",
       "PackagePath": "staticwebassets\\css"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\error404.css",
+      "PackagePath": "staticwebassets\\css\\error404.css"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\header.css",

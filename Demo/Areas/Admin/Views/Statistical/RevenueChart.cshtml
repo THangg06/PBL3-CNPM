@@ -1,32 +1,30 @@
-﻿@{
+﻿﻿@{
     ViewBag.Title = "Doanh thu gần đây";
 }
-<div class="nav_dir">
-    <div class="header-sub-title">
-        <nav class="breadcrumb breadcrumb-dash">
-            <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
-            <a class="breadcrumb-item" asp-area="Admin" asp-controller="Statistical" asp-action="RevenueChart">Thống kê doanh thu </a>
-        </nav>
+<div class="content_box">
+    <div class="nav_dir">
+        <div class="header-sub-title">
+            <nav class="breadcrumb breadcrumb-dash">
+                <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+                <a class="breadcrumb-item" asp-area="Admin" asp-controller="Statistical" asp-action="RevenueChart">Thống kê doanh thu </a>
+            </nav>
+        </div>
     </div>
-</div>
-<h2>Doanh thu 5 ngày gần nhất</h2>
-<hr />
-<style>
-    canvas {
-        max-width: 1200px; /* Giới hạn chiều rộng của canvas */
-        max-height: 700px; /* Cho phép canvas điều chỉnh chiều cao tự động */
-        display: block; /* Đảm bảo canvas hiển thị đúng trên mọi thiết bị */
-        margin: 0 auto; /* Canh giữa canvas */
-    }
-</style>
-<canvas id="recentRevenueChart" ></canvas> 
-<hr />
-<h3 class="text-center">
-    Tổng doanh thu: @(ViewBag.CountsumRevenue)0 VNĐ
+    <h2 class="title">Doanh thu 5 ngày gần nhất</h2>
+    <hr />
+    <canvas id="recentRevenueChart"></canvas>
+    <hr />
+    <h3 class="text-center">
+        Tổng doanh thu: @(ViewBag.CountsumRevenue)0 VNĐ
 
-</h3>
-<a asp-area="Admin" asp-controller="Statistical" asp-action="Statistical_Chart_Pie">Đánh giá tỉ lệ Rate</a>
-<a asp-area="Admin" asp-controller="Statistical" asp-action="Statistical_Chart_Bar">Thống kê tổng đơn hàng</a>
+    </h3>
+    <div class="group_button">
+        <a asp-area="Admin" asp-controller="Statistical" asp-action="Statistical_Chart_Pie">Đánh giá tỉ lệ Rate</a>
+        <a asp-area="Admin" asp-controller="Statistical" asp-action="Statistical_Chart_Bar">Thống kê tổng đơn hàng</a>
+    </div>
+
+</div>
+
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -35,7 +33,7 @@
 
         var ctx = document.getElementById('recentRevenueChart').getContext('2d');
         var myChart = new Chart(ctx, {
-            type: 'line', 
+            type: 'line',
             data: {
                 labels: dates,
                 datasets: [{

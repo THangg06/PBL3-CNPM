@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Demo.ModelViews.CartItem>
 @{
     ViewData["Title"] = "Checkout";
-   Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <html lang="en">
@@ -11,84 +11,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh toán</title>
     <link href="~/css/payment.css" rel="stylesheet" />
+    <link href="~/css/header.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="go-back">
-        <a href="Cart.html">Về giỏ hàng</a>
+        <a asp-controller="Cart" asp-action="Index">Về giỏ hàng</a>
     </div>
     <div class="wrapper">
-    <h2>Thanh toán đơn hàng</h2>
-    <form asp-action="Checkout" asp-controller="Cart">
- @*    <form action="" method="post" onsubmit="return validatePaymentMethod()"> *@
-     @*    <div class="col-md-12 col-lg-6 col-xl-7"> *@
-         <h4>Thông tin người nhận</h4>
-                        <div class="form-check my-3">
-                            <input type="checkbox" name="GiongKhachHang" class="form-check-input" id="GiongKhachHang" value="false">
-                            <label class="form-check-label" for="GiongKhachHang">Giống thông tin khách hàng?</label>
-                        </div>
-       <div class="input_group delivery-info">
-    <div class="input_box">
-        <input type="text" name="FullName" placeholder="Họ và tên" class="name">
-        <i class="fa fa-user icon"></i>
-    </div>
-</div>
-<div class="input_group delivery-info">
-    <div class="input_box">
-        <input type="text" name="Phone" placeholder="Số điện thoại" class="name">
-        <i class="fa fa-phone icon"></i>
-    </div>
-</div>
-<div class="input_group delivery-info">
-    <div class="input_box">
-        <input type="text" name="Address" placeholder="Địa chỉ" class="name">
-        <i class="fa fa-map-marker icon" aria-hidden="true"></i>
-    </div>
-</div>
-
-
-        <h4>Phương thức thanh toán</h4>
-        <div class="input_group">
-            <div class="input_box">
-                <input type="radio" name="paymentMethod" value="CreditCard" id="creditCard">
-                <label for="creditCard"><span><i class="fa fa-credit-card"></i> Thẻ tín dụng</span></label>
-                <input type="radio" name="paymentMethod" value="Cash" id="cash">
-                <label for="cash"><span><i class="fa fa-money"></i> Tiền mặt</span></label>
+        <h2>Thanh toán đơn hàng</h2>
+        <form asp-action="Checkout" asp-controller="Cart">
+            <h4>Thông tin người nhận</h4>
+            <div class="form-check my-3">
+                <input type="checkbox" name="GiongKhachHang" class="form-check-input" id="GiongKhachHang" value="false">
+                <label class="form-check-label" for="GiongKhachHang">Giống thông tin khách hàng?</label>
             </div>
-        </div>
-
-        <div class="input_group detail" id="creditCardDetails">
-            <div class="input_box">
-                <!-- Phần nhập thông tin thẻ tín dụng -->
+            <div class="input_group delivery-info">
+                <div class="input_box">
+                    <input type="text" name="FullName" placeholder="Họ và tên" class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
             </div>
-        </div>
-
-        <div class="input_group">
-            <div class="input_box">
-                <button type="submit">Thanh toán</button>
+            <div class="input_group delivery-info">
+                <div class="input_box">
+                    <input type="text" name="Phone" placeholder="Số điện thoại" class="name">
+                    <i class="fa fa-phone icon"></i>
+                </div>
             </div>
-        </div>
-    </form>
-</div>
+            <div class="input_group delivery-info">
+                <div class="input_box">
+                    <input type="text" name="Address" placeholder="Địa chỉ" class="name">
+                    <i class="fa fa-map-marker icon" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="input_payment">
+                <div class="input_box">
+                    <h4>Phương thức thanh toán</h4>
+                    <input type="radio" name="paymentMethod" class="radio" value="CreditCard" id="creditCard" checked>
+                    <label for="creditCard">
+                        <span><i class="fa fa-credit-card"></i> Thẻ tín dụng</span>
+                    </label>
+
+                    <input type="radio" name="paymentMethod" class="radio" value="Cash" id="cash">
+                    <label for="cash">
+                        <span><i class="fa fa-solid fa-money-bill"></i> Tiền mặt</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="detail" id="creditCardDetails">
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="tel" name="cardNumber" class="name credit-input" placeholder="1111-2222-3333-4444" required>
+                        <i class="fa fa-credit-card icon"></i>
+                    </div>
+                </div>
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="text" name="cardName" placeholder="Tên chủ thẻ" required class="name credit-input">
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                </div>
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="tel" name="ccv" class="name credit-input" placeholder="CCV 632" required>
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                </div>
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="month" name="expiryDate" placeholder="MM-YYYY" required class="name credit-input">
+                        <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input_group">
+                <div class="input_box">
+                    <button type="submit">Thanh toán</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var creditCardRadio = document.getElementById("creditCard");
+        var cashRadio = document.getElementById("cash");
+        var paymentDetail = document.querySelector(".detail");
+        var creditInputs = document.querySelectorAll(".credit-input");
+
+        function handleRadioChange() {
+            if (cashRadio.checked) {
+                paymentDetail.style.display = "none";
+                creditInputs.forEach(function (input) {
+                    input.removeAttribute("required");
+                });
+            } else {
+                paymentDetail.style.display = "block";
+                creditInputs.forEach(function (input) {
+                    input.setAttribute("required", "required");
+                });
+            }
+        }
+
+        creditCardRadio.addEventListener("change", handleRadioChange);
+        cashRadio.addEventListener("change", handleRadioChange);
+
+        handleRadioChange(); // Initial call to set the correct state on page load
+    });
+</script>
 @section Scripts {
     <script>
         $(document).ready(function () {
-                // Sự kiện change cho checkbox "GiongKhachHang"
-                $("#GiongKhachHang").change(function () {
-                    // Kiểm tra xem checkbox có được chọn hay không
-                    if ($(this).prop("checked")) {
-                        // Nếu được chọn, gán giá trị true cho checkbox và ẩn phần giao diện delivery-info
-                        $(this).val(true);
-                        $(".delivery-info").addClass("d-none");
-                    } else {
-                        // Nếu không được chọn, gán giá trị false cho checkbox và hiển thị phần giao diện delivery-info
-                        $(this).val(false);
-                        $(".delivery-info").removeClass("d-none");
-                    }
-                });
+            // Sự kiện change cho checkbox "GiongKhachHang"
+            $("#GiongKhachHang").change(function () {
+                // Kiểm tra xem checkbox có được chọn hay không
+                if ($(this).prop("checked")) {
+                    // Nếu được chọn, gán giá trị true cho checkbox và ẩn phần giao diện delivery-info
+                    $(this).val(true);
+                    $(".delivery-info").addClass("d-none");
+                } else {
+                    // Nếu không được chọn, gán giá trị false cho checkbox và hiển thị phần giao diện delivery-info
+                    $(this).val(false);
+                    $(".delivery-info").removeClass("d-none");
+                }
             });
-        </script>
+        });
+    </script>
 }

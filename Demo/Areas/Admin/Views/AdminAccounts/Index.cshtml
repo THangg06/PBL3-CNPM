@@ -38,7 +38,7 @@
                     <th>Họ Tên</th>
                     <th>Email</th>
                     <th>Phone</th>
-                  
+
                     <th>Quyền truy cập</th>
                     <th>Trạng thái</th>
                     <th></th>
@@ -53,32 +53,32 @@
                             <td>@item.AccountId</td>
                             <td>
                                 <div class="row">
-                                    
+
                                     <div class="col-md-6">@item.FullName</div>
                                 </div>
                             </td>
                             <td>
                                 <div class="row">
-                                   
+
                                     <div class="col-md-6">@item.Email</div>
                                 </div>
                             </td>
                             <td>
                                 <div class="row">
-                                 
+
                                     <div class="col-md-6">@item.Phone</div>
                                 </div>
                             </td>
-                         
+
                             <td>
                                 <div class="row">
-                                  
+
                                     <div class="col-md-6">@item.Role?.RoleName</div>
                                 </div>
                             </td>
                             <td>
                                 <div class="row">
-                                   
+
                                     <div class="col-md-6">@((item.Active.HasValue && item.Active.Value ? "Active" : "Block"))</div>
 
                                 </div>
@@ -132,4 +132,4 @@
             });
         }
     </script>
-}
+}}

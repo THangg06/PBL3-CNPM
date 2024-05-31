@@ -1,4 +1,4 @@
-﻿@*
+﻿﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -25,23 +25,22 @@
             <div class="product_row d-flex flex-wrap">
                 @foreach (var item in group.Group)
                 {
-                    <div class="product_col">
-                        <div class="item">
+                    <div class="item">
+                        <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHH">
+                            <img class="image" src="~/assets/MenuAccess/@item.Hinh" alt="@item.TenHH" />
+                        </a>
+                        <div class="product_card">
                             <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHH">
-                                <img class="image" src="~/assets/MenuAccess/@item.Hinh" alt="@item.TenHH" />
+                                <h4 class="food_title">@item.TenHH</h4>
                             </a>
-                            <div class="product_card">
-                                <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHH">
-                                    <h4 class="food_title">@item.TenHH</h4>
-                                </a>
-                                <p class="desc_food">@item.MoTaNgan</p>
-                                <h5 class="price_tag">@item.Dongia Đ</h5>
-                                <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@item.MaHH">
-                                    <button class="btn"><h5 class="highlight2">Add to cart</h5></button>
-                                </a>
-                            </div>
+                            <p class="desc_food">@item.MoTaNgan</p>
+                            <h5 class="price_tag">@item.Dongia Đ</h5>
+                            <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@item.MaHH">
+                                <button class="btn"><h5 class="highlight2">Add to cart</h5></button>
+                            </a>
                         </div>
                     </div>
+
                 }
             </div>
         </div>

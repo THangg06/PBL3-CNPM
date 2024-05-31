@@ -1,4 +1,4 @@
-﻿@using Microsoft.AspNetCore.Mvc.Rendering
+﻿﻿@using Microsoft.AspNetCore.Mvc.Rendering
 @using Demo.Data
 
  @model Demo.ModelViews.ChiTietHangHoaVM
@@ -7,111 +7,112 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section Style {
-        <link href="~/css/OrderProductDetail.css" rel="stylesheet" />
+    <link href="~/css/OrderProductDetail.css" rel="stylesheet" />
+    <link href="~/css/header.css" rel="stylesheet" />
 }
 
-    <tbody>
-   
-      <div class="orderProductDetailContainer">
-          <a asp-action="Detail" asp-route-id="@Model.MaHH">
-        <img class="image" src="~/assets/MenuAccess/@Model.Hinh" alt="alt text" />
-        <div class="productInfoContainer">
-          <div class="nameProduct">
-            <h1>@Model.TenHH</h1>
-            </a>
-            <div class="status">
-                In Stock
-            </div>
+<tbody>
 
-          </div>
-          <div class="review">
-            <div class="ratingStar">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-           @*  <div class="num-of-review">4 Review</div> *@
-          </div>
+    <div class="orderProductDetailContainer">
+        <a asp-action="Detail" asp-route-id="@Model.MaHH">
+            <img class="image" src="~/assets/MenuAccess/@Model.Hinh" alt="alt text" />
+            <div class="productInfoContainer">
+                <div class="nameProduct">
+                    <h1>@Model.TenHH</h1>
+        </a>
+        <div class="status">
+            In Stock
+        </div>
 
-          <div class="price">
-            <span class="original_price" type="line">@Model.Dongia</span>
-            <span class="original_price"></span>
-          @*  <div class="discount">64% Off</div> *@
-          </div>
+    </div>
+    <div class="review">
+        <div class="ratingStar">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        @*  <div class="num-of-review">4 Review</div> *@
+    </div>
 
-          <hr/>
+    <div class="price">
+        <span class="original_price" type="line">@Model.Dongia</span>
+        <span class="original_price"></span>
+        @*  <div class="discount">64% Off</div> *@
+    </div>
 
-          <p class="productDescribe">
-            Class aptent taciti sociosqu 
-            ad litora torquent per conubia nostra, 
-            per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec,
-             ultrices et ipsum. Nulla varius magna a consequat pulvinar.
-          </p>
-          <form asp-action="AddToCart" asp-controller="Cart" asp-route-id="@Model.MaHH">
-          <div class="changingBox">
+    <hr />
+
+    <p class="productDescribe">
+        Class aptent taciti sociosqu
+        ad litora torquent per conubia nostra,
+        per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec,
+        ultrices et ipsum. Nulla varius magna a consequat pulvinar.
+    </p>
+    <form asp-action="AddToCart" asp-controller="Cart" asp-route-id="@Model.MaHH">
+        <div class="changingBox">
             <button class="decrementBtn" type="button"><i class="fas fa-minus-circle"></i></button>
-    <input type="text" class="form-control form-control-sm text-center border-0" value="1" name="quantity" id="quantityInput">
-    <button class="incrementBtn" type="button"><i class="fa-solid fa-circle-plus"></i></button>
-    
+            <input type="text" class="form-control form-control-sm text-center border-0" value="1" name="quantity" id="quantityInput">
+            <button class="incrementBtn" type="button"><i class="fa-solid fa-circle-plus"></i></button>
 
-</div>
 
-            <button class="btn">Add to Cart</button>
-            </form>
-          </div>
-          <hr/>
-          <div class="categoryContainer">
+        </div>
+        <div class="categoryContainer">
             <div class="label">Category:</div>
             <div class="type">@Model.TenLoai</div>
-          </div>
         </div>
-      </div>
+
+        <button class="btn">Add to Cart</button>
+    </form>
+    </div>
+    <hr />
+
+    </div>
+    </div>
 
 
-      
 
 
-      
-@* 
-      <div class="UserFeedback">
+
+    @*
+    <div class="UserFeedback">
     @Html.RenderPartialAsync("~/Views/Review/_Load_Review.cshtml",new ReviewProduct { ProductId = Model.MaHH })
-</div>
- *@
+    </div>
+    *@
 
 
     <div class="UserFeedback">
         <div id="reviews-container"></div>
     </div>
-        <div class="col-lg-6 add_review_col">
+    <div class="col-lg-6 add_review_col">
 
-             @await Html.PartialAsync("~/Views/Review/_Review.cshtml", new ReviewProduct { ProductId = Model.MaHH })
-        </div>
-
-
-       
-
-
-
-@* 
+        @await Html.PartialAsync("~/Views/Review/_Review.cshtml", new ReviewProduct { ProductId = Model.MaHH })
     </div>
-        <button class="btn1">Load More</button>
-      </div> *@
 
 
-       <script>
+
+
+
+
+    @*
+    </div>
+    <button class="btn1">Load More</button>
+    </div> *@
+
+
+    <script>
         // Lấy phần tử input số lượng
         var quantityInput = document.getElementById("quantityInput");
 
         // Thiết lập sự kiện khi nút tăng được nhấn
-        document.querySelector(".incrementBtn").addEventListener("click", function() {
+        document.querySelector(".incrementBtn").addEventListener("click", function () {
             // Tăng giá trị số lượng lên 1
             quantityInput.value = parseInt(quantityInput.value) + 1;
         });
 
         // Thiết lập sự kiện khi nút giảm được nhấn
-        document.querySelector(".decrementBtn").addEventListener("click", function() {
+        document.querySelector(".decrementBtn").addEventListener("click", function () {
             // Đảm bảo giá trị số lượng không nhỏ hơn 1
             if (parseInt(quantityInput.value) > 1) {
                 // Giảm giá trị số lượng đi 1
@@ -121,14 +122,14 @@
     </script>
 
 
-     @*  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="./js/site.js" charset="utf-8"></script> *@
-    </tbody>
+    @*  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/site.js" charset="utf-8"></script> *@
+</tbody>
 </html>
 
 @section scripts {
     <script src="c:\projectwf\pbl3\demo\content\singer_custom.js"></script>
-@*     <script src="~/content/singer_custom.js"></script> *@
+    @*     <script src="~/content/singer_custom.js"></script> *@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -147,4 +148,3 @@
         });
     </script>
 }
-

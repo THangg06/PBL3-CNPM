@@ -1,11 +1,13 @@
 ﻿@model IEnumerable<Demo.Data.Product>
 
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Index</h1>
+<div class="content_box">
+    <h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -14,125 +16,128 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ProductName)
+                    @Html.DisplayNameFor(model => model.ProductName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ShortDesc)
+                    @Html.DisplayNameFor(model => model.ShortDesc)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                    @Html.DisplayNameFor(model => model.Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                    @Html.DisplayNameFor(model => model.Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Unit)
+                    @Html.DisplayNameFor(model => model.Unit)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Thumb)
+                    @Html.DisplayNameFor(model => model.Thumb)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Video)
+                    @Html.DisplayNameFor(model => model.Video)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DateCreated)
+                    @Html.DisplayNameFor(model => model.DateCreated)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DateModified)
+                    @Html.DisplayNameFor(model => model.DateModified)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BestSellers)
+                    @Html.DisplayNameFor(model => model.BestSellers)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.HomeFlag)
+                    @Html.DisplayNameFor(model => model.HomeFlag)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Active)
+                    @Html.DisplayNameFor(model => model.Active)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Tags)
+                    @Html.DisplayNameFor(model => model.Tags)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                    @Html.DisplayNameFor(model => model.Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Alias)
+                    @Html.DisplayNameFor(model => model.Alias)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MetaDesc)
+                    @Html.DisplayNameFor(model => model.MetaDesc)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MetaKey)
+                    @Html.DisplayNameFor(model => model.MetaKey)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cat)
+                    @Html.DisplayNameFor(model => model.Cat)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShortDesc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Unit)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Thumb)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Video)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateCreated)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateModified)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BestSellers)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HomeFlag)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Active)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tags)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Alias)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MetaDesc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MetaKey)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cat.CatId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
-            </td>
-        </tr>
-}
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.ShortDesc)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.Unit)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.Thumb)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.Video)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.DateCreated)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.DateModified)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.BestSellers)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.HomeFlag)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.Active)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.Tags)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.Alias)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.MetaDesc)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.MetaKey)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.Cat.CatId)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+                </td>
+            </tr>
+            }
     </tbody>
 </table>
+
+</div>

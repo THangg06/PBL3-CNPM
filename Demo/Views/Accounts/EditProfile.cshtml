@@ -1,88 +1,94 @@
 ﻿@model Demo.Data.Customer
 
+
+
 @{
     ViewData["Title"] = "EditProfile";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="~/css/site.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/Info.css" />
-    <link href="~/css/canchinhonhap.css" rel="stylesheet" />
+    <link href="./css/Info.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<body>
+    <hr />
+    <div class="container">
         @if (TempData["UpdateMessage"] != null)
         {
             <div class="alert alert-success" role="alert">
                 @TempData["UpdateMessage"]
             </div>
         }
-        <form asp-action="EditProfile" asp-controller="Accounts" method="post">
-      @*       <div class="image-container">
+        <div class="title">Chỉnh sửa thông tin</div>
+        <div class="content">
+            <form asp-action="EditProfile" asp-controller="Accounts" method="post">
+                @*       <div class="image-container">
                 <img src="~/assets/avt_cus/@User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value" alt="">
                 <input type="file" accept="image/*" id="fileInput" hidden>
-            </div> *@
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="CustomerId" />
-            <div class="form-group">
-                <label asp-for="FullName" class="control-label"></label>
-                <input asp-for="FullName" class="form-control" />
-                <span asp-validation-for="FullName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Birthday" class="control-label"></label>
-                <input asp-for="Birthday" class="form-control" />
-                <span asp-validation-for="Birthday" class="text-danger"></span>
-            </div>
-     @*        <div class="form-group">
-                <label asp-for="Avatar" class="control-label"></label>
-              
-                <input asp-for="Avatar" class="form-control" type="file" />
+                </div> *@
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="CustomerId" />
+                <div class="user-details">
+                    <div class="form-group">
+                        <label asp-for="FullName" class="control-label">Tên</label>
+                        <input asp-for="FullName" class="form-control" />
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Birthday" class="control-label">Ngày sinh</label>
+                        <input asp-for="Birthday" class="form-control" type="date" />
+                        <span asp-validation-for="Birthday" class="text-danger"></span>
+                    </div>
+                    @*  Thang avatar de ngoai giong image-container
+                    ma nho doi lop form-group thanh image-container luon
+                    <div class="form-group">
+                    <label asp-for="Avatar" class="control-label"></label>
 
-                <span asp-validation-for="Avatar" class="text-danger"></span>
-            </div> *@
-            <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
-            </div>
+                    <input asp-for="Avatar" class="form-control" type="file" />
 
+                    <span asp-validation-for="Avatar" class="text-danger"></span>
+                    </div> *@
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label">Email</label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Phone" class="control-label">Số điện thoại</label>
+                        <input asp-for="Phone" class="form-control" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" id="special">
+                        <label asp-for="Address" class="control-label">Địa chỉ</label>
+                        <input asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                </div>
 
+                <div class="button">
+                    <input type="submit" value="Save" />
+                    <input type="submit" value="Quay lại trang profile" onclick="window.location.href='/Accounts/Profile'" />
+                </div>
+            </form>
+        </div>
 
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
     </div>
-</div>
+    </div>
 
 
-<a asp-controller="Accounts" asp-action="Profile">Back to previous page</a>
-</div>
+</body>
+</html>

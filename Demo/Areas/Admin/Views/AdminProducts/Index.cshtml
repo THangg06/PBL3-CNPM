@@ -1,4 +1,4 @@
-﻿
+﻿﻿
 
 
 ﻿﻿﻿@using PagedList.Core.Mvc
@@ -11,89 +11,105 @@
 }
 
 <!-- Dẫn dắt Breadcrumb -->
-<div class="page-header">
-    <div class="header-sub-title">
-        <nav class="breadcrumb breadcrumb-dash">
-            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
-                <i class="anticon anticon-home m-r-5"></i>Trang chủ
-            </a>
-            <a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" class="breadcrumb-item">
-                Quản lý sản phẩm
-            </a>
-            <span class="breadcrumb-item active">
-                Danh sách sản phẩm: Trang @currentPage
-            </span>
-        </nav>
+<div class="content_box">
+    <div class="nav_dir">
+        <div class="header-sub-title">
+            <nav class="breadcrumb breadcrumb-dash">
+                <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
+                    <i class="anticon anticon-home m-r-5"></i>Trang chủ
+                </a>
+                <a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" class="breadcrumb-item">
+                    Quản lý sản phẩm
+                </a>
+                <span class="breadcrumb-item active">
+                    Danh sách sản phẩm: Trang @currentPage
+                </span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Phần tìm kiếm và lọc -->
+    <div class="filter-group">
+        <input type="text" id="keyword" name="keyword" />
+        <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
+            @*  <option selected>Chọn Danh Mục</option> *@
+            <option value="0">Chọn tất cả</option>
+        </select>
+    </div>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <div class="data_table_container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>ProductId</th>
+                    <th>ProductName</th>
+                    <th>CatName</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Unit</th>
+                    <th>Thumb</th>
+                    <th>DateCreated</th>
+                    <th>BestSellers</th>
+                    <th>HomeFlag</th>
+                    <th>Active</th>
+                    <th>Title</th>
+                    @* <th>CatID</th> *@
+                </tr>
+            </thead>
+            <tbody id="records_table">
+                @if (Model != null && Model.Any())
+                {
+                    var i = ((ViewBag.Page - 1) * ViewBag.PageSize) + 1;
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.ProductId)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ProductName)</td>
+                            <td>@Html.DisplayFor(modelItem => item.CatName)</td>
+
+                            <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Unit)</td>
+
+                            <td>
+
+                                <img src="~/menucss/loadh/@item.Thumb" alt="Product Image" />
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.DateCreated)</td>
+                            <td>@Html.DisplayFor(modelItem => item.BestSellers)</td>
+                            <td>@Html.DisplayFor(modelItem => item.HomeFlag)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Active)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                            <td>
+                                <div class="group_button another">
+                                    <input type="button" class="mod-btn"
+                                           onclick="window.location.href='@Url.Action("Edit", new { id = item.ProductId })'"
+                                           value="Sửa" class="btn btn-info btn-sm">
+
+                                    <input type="button" class="mod-btn"
+                                           onclick="window.location.href='@Url.Action("Details", new { id = item.ProductId })'"
+                                           value="Chi tiết" class="btn btn-info btn-sm">
+
+                                    <input type="button" class="mod-btn" id="delete"
+                                           onclick="window.location.href='@Url.Action("Delete", new { id = item.ProductId })'"
+                                           value="Xóa" class="btn btn-danger btn-sm">
+                                    @*                             <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a> *@
+                                </div>
+                            </td>
+                        </tr>
+
+                    }
+                }
+            </tbody>
+        </table>
     </div>
 </div>
 
-<!-- Phần tìm kiếm và lọc -->
-<div class="filter-group">
-    <input type="text" id="keyword" name="keyword" />
-    <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
-        @*  <option selected>Chọn Danh Mục</option> *@
-        <option value="0">Chọn tất cả</option>
-    </select>
-</div>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<div class="data_table_container">
-    <table class="data-table">
-        <thead>
-            <tr>
-                <th>ProductId</th>
-                <th>ProductName</th>
-                <th>CatName</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Unit</th>
-                <th>Thumb</th>
-                <th>DateCreated</th>
-                <th>BestSellers</th>
-                <th>HomeFlag</th>
-                <th>Active</th>
-                <th>Title</th>
-                @* <th>CatID</th> *@
-            </tr>
-        </thead>
-        <tbody id="records_table">
-            @if (Model != null && Model.Any())
-            {
-                var i = ((ViewBag.Page - 1) * ViewBag.PageSize) + 1;
-
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>@Html.DisplayFor(modelItem => item.ProductId)</td>
-                        <td>@Html.DisplayFor(modelItem => item.ProductName)</td>
-                                <td>@Html.DisplayFor(modelItem => item.CatName)</td>
-
-                        <td>@Html.DisplayFor(modelItem => item.Description)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Price)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Unit)</td>
-
-                        <td>
-
-                            <img src="~/menucss/loadh/@item.Thumb" alt="Product Image" />
-                        </td>
-                        <td>@Html.DisplayFor(modelItem => item.DateCreated)</td>
-                        <td>@Html.DisplayFor(modelItem => item.BestSellers)</td>
-                        <td>@Html.DisplayFor(modelItem => item.HomeFlag)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Active)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Title)</td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
-                            <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
-                            <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
-                        </td>
-                    </tr>
-                    
-                }
-            }
-        </tbody>
-    </table>
-</div>
 
 
 <!-- Pagination Controls -->

@@ -4,36 +4,11 @@
     ViewData["Title"] = "Lịch sử đơn hàng";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<head>
+    <link href="~/css/PurchaseHistory.css" rel="stylesheet" />
+</head>
 <h2 class="my-4">Lịch sử đơn hàng</h2>
 <style>
-    body {
-        margin-top: 150px;
-    }
-
-    th, td {
-        white-space: nowrap;
-        border: 1px solid #ddd; /* Định dạng đường viền cho cột và hàng */
-        padding: 8px; /* Định dạng padding cho cột và hàng */
-    }
-
-    .data-table {
-        width: 100%;
-        border-collapse: collapse; /* Gộp đường viền của các ô bảng */
-    }
-
-    th {
-        background-color: #f2f2f2; /* Màu nền cho tiêu đề cột */
-        color: black; /* Màu chữ cho tiêu đề cột */
-    }
-
-    .border-right {
-        border-right: none; /* Loại bỏ đường viền bên phải của ô */
-    }
-
-    .border-left {
-        border-left: none; /* Loại bỏ đường viền bên trái của ô */
-    }
 </style>
 @if (Model != null && Model.Any())
 {
@@ -66,7 +41,7 @@
                                     <th>Số Lượng</th>
                                     <th>Giảm Giá</th>
                                     <th>Tổng Tiền</th>
-                                   
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -77,8 +52,8 @@
                                         <td>@orderDetail.Quantity</td>
                                         <td>@orderDetail.Discount</td>
                                         <td>@orderDetail.Total</td>
-                                      
-                                  
+
+
                                     </tr>
                                 }
                             </tbody>

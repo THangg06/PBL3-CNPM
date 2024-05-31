@@ -51,42 +51,42 @@ namespace Demo.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Add([Bind("CatId,CatName,Description,ParentId,Levels,Ordering,Published,Thumb,Title,Alias,MetaDesc,MetaKey,Cover,SchemaMarkup")] Category category, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
-           
-                if (ModelState.IsValid)
+
+            if (ModelState.IsValid)
+            {
+                category.CatName = MyUtil.ToTitleCase(category.CatName);
+
+                // Xử lý tải lên tệp hình ảnh
+                if (fThumb != null)
                 {
-                    category.CatName = MyUtil.ToTitleCase(category.CatName);
+                    string extension = Path.GetExtension(fThumb.FileName);
+                    string image = MyUtil.SEOUrl(category.CatName) + extension;
 
-                    // Xử lý tải lên tệp hình ảnh
-                    if (fThumb != null)
-                    {
-                        string extension = Path.GetExtension(fThumb.FileName);
-                        string image = MyUtil.SEOUrl(category.CatName) + extension;
-
-                        category.Thumb = await MyUtil.UploadFile(fThumb, @"LoadH", image.ToLower());
-                    }
-
-
-                    // Kiểm tra và đặt Thumb nếu không có
-                    if (string.IsNullOrEmpty(category.Thumb))
-                    {
-                        category.Thumb = "default.jpg";
-                    }
-
-
-                    category.Published = true;
-                    category.ParentId = 1;
-                    category.Levels = 1;
-                    category.Ordering = 1;
-                    _context.Categories.Add(category);
-                    _context.SaveChanges();
-                    _notyfService.Success("Tạo mới thành công");
-                    return RedirectToAction("Index");
+                    category.Thumb = await MyUtil.UploadFile(fThumb, @"LoadH", image.ToLower());
                 }
 
-            
-                ViewData["Danhmuc"] = new SelectList(_context.Categories, "CatId", "CatName");
-                return View(category);
-            
+
+                // Kiểm tra và đặt Thumb nếu không có
+                if (string.IsNullOrEmpty(category.Thumb))
+                {
+                    category.Thumb = "default.jpg";
+                }
+
+
+                category.Published = true;
+                category.ParentId = 1;
+                category.Levels = 1;
+                category.Ordering = 1;
+                _context.Categories.Add(category);
+                _context.SaveChanges();
+                _notyfService.Success("Tạo mới thành công");
+                return RedirectToAction("Index");
+            }
+
+
+            ViewData["Danhmuc"] = new SelectList(_context.Categories, "CatId", "CatName");
+            return View(category);
+
         }
         public async Task<IActionResult> Edit(string id)
         {
@@ -122,7 +122,7 @@ namespace Demo.Areas.Admin.Controllers
                 {
                     category.CatName = MyUtil.ToTitleCase(category.CatName);
 
-                   
+
                     if (fThumb != null)
                     {
                         string extension = Path.GetExtension(fThumb.FileName);

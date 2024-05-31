@@ -49,17 +49,17 @@ namespace Demo.Areas.Admin.Controllers
             return View(order);
         }
         [HttpPost]
-       public ActionResult UpdateTT(int id, int trangthai)
+        public ActionResult UpdateTT(int id, int trangthai)
         {
             var item = _db.Orders.Find(id);
-            if(item != null)
+            if (item != null)
             {
                 _db.Orders.Attach(item);
                 item.TransactStatusId = trangthai;
                 _db.Entry(item).Property(x => x.TransactStatusId).IsModified = true;
                 item.ShipDate = DateTime.Now;
                 _db.SaveChanges();
-                return Json(new {message = "Success", Success= true});
+                return Json(new { message = "Success", Success = true });
             }
             return Json(new { message = "UnSuccess", Success = false });
         }

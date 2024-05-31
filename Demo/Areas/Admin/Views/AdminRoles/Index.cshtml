@@ -1,20 +1,23 @@
 ﻿@model IEnumerable<Demo.Data.Role>
 
+﻿
+
 @{
     ViewData["Title"] = "Quản lý quyền truy cập";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-<div class="page-header">
+
+<div class="content_box">
+    <div class="nav_dir">
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
             <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminRoles" asp-action="Index">Danh sách phân quyền </a>
-            
+
         </nav>
     </div>
 
 </div>
-<div class="content_box">
     <div class="data_table_container">
         <table class="data-table">
             <thead>
@@ -22,7 +25,7 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Mô tả</th>
-                    <th>Thao tác</th>
+                    <th class="action_button">Thao tác</th>
                 </tr>
             </thead>
             <tbody>

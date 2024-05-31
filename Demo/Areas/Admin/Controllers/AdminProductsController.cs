@@ -38,7 +38,7 @@ namespace Demo.Areas.Admin.Controllers
       .AsNoTracking()
       .Include(x => x.Cat);
 
-        //    IQueryable<Product> query = _context.Products.AsNoTracking().Include(x => x.Cat);
+            //    IQueryable<Product> query = _context.Products.AsNoTracking().Include(x => x.Cat);
 
             // Sử dụng so sánh với CatID
             if (!string.IsNullOrEmpty(CatID))
@@ -72,7 +72,7 @@ namespace Demo.Areas.Admin.Controllers
 
             ViewBag.CurrentCatID = CatID;
             ViewBag.CurrentPage = pageNumber;
-          //  ViewBag.Danhmuc = _context.Categories.Select(c => new { CatId = c.CatId, CatName = c.CatName }).ToList();
+            //  ViewBag.Danhmuc = _context.Categories.Select(c => new { CatId = c.CatId, CatName = c.CatName }).ToList();
 
             ViewData["Danhmuc"] = new SelectList(_context.Categories, "CatId", "CatName", CatID);
 
@@ -128,13 +128,13 @@ namespace Demo.Areas.Admin.Controllers
         }
 
 
-     
+
         [HttpPost]
         [ValidateAntiForgeryToken]
 
         public async Task<IActionResult> Create([Bind("ProductId,ProductName,CatName,ShortDesc,Description,CatId,Price,Unit,Thumb,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Tags,Title,Alias,MetaDesc,MetaKey")] Product product, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
-           
+
             //ViewData["Danhmuc"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
             //string selectedCatId = Request.Form["CatId"];
             //var selectedCat = _context.Categories.FirstOrDefault(c => c.CatId == selectedCatId);
@@ -166,7 +166,7 @@ namespace Demo.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 product.ProductName = MyUtil.ToTitleCase(product.ProductName);
-             //   product.CatName = MyUtil.ToTitleCase(product.CatName);
+                //   product.CatName = MyUtil.ToTitleCase(product.CatName);
                 Console.WriteLine("Hie");
                 // Xử lý tải lên tệp hình ảnh
                 if (fThumb != null)
@@ -240,7 +240,7 @@ namespace Demo.Areas.Admin.Controllers
 
             try
             {
-                
+
 
                 // Các thao tác cập nhật thông tin sản phẩm khác ở đây...
 
@@ -270,7 +270,7 @@ namespace Demo.Areas.Admin.Controllers
                     product.Alias = MyUtil.SEOUrl(product.ProductName);
                     product.MetaDesc = "Trống";
                     product.MetaKey = "Trống";
-                   
+
                     product.DateModified = DateTime.Now;
 
 

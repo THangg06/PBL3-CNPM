@@ -9,25 +9,27 @@ namespace Demo.Areas.Admin.Controllers
     {
         private readonly Web01Context _db;
 
-        public StatisticalController (Web01Context db)
+        public StatisticalController(Web01Context db)
         {
             _db = db;
         }
-       
+
         public IActionResult Index()
         {
-           
+
             return View();
         }
 
         public IActionResult RevenueChart()
         {
+            var today = DateTime.UtcNow.Date;
             var recentDates = _db.Orders
-                   .OrderByDescending(o => o.OrderDate)
-                   .Select(o => EF.Property<DateTime>(o, "OrderDate").Date)
-                   .Distinct()
-                   .Take(5)
-                   .ToList();
+       .Where(o => EF.Property<DateTime>(o, "OrderDate") >= today.AddDays(-4))
+       .OrderByDescending(o => o.OrderDate)
+       .Select(o => EF.Property<DateTime>(o, "OrderDate").Date)
+       .Distinct()
+       .Take(5)
+       .ToList();
 
             var revenueByDate = new List<decimal>();
             decimal Total = 0;
@@ -38,10 +40,10 @@ namespace Demo.Areas.Admin.Controllers
                     .Sum(o => o.TongTien);
 
                 revenueByDate.Add(revenue);
-                Total+= revenue;
+                Total += revenue;
             }
 
-          
+
 
             ViewBag.RecentDates = recentDates;
             ViewBag.RevenueByDate = revenueByDate;
@@ -58,7 +60,7 @@ namespace Demo.Areas.Admin.Controllers
 
             var rateCounts = new List<int>();
 
-            int countSumRate = (_db.ReviewProduct.Select(p => p.Rate)).Count(); 
+            int countSumRate = (_db.ReviewProduct.Select(p => p.Rate)).Count();
 
             foreach (var rate in distinctRates)
             {
@@ -77,12 +79,14 @@ namespace Demo.Areas.Admin.Controllers
         }
         public IActionResult Statistical_Chart_Bar()
         {
+            var today = DateTime.UtcNow.Date;
             var recentDates = _db.Orders
-                    .OrderByDescending(o => o.OrderDate)
-                    .Select(o => EF.Property<DateTime>(o, "OrderDate").Date)
-                    .Distinct()
-                    .Take(5)
-                    .ToList();
+       .Where(o => EF.Property<DateTime>(o, "OrderDate") >= today.AddDays(-4))
+       .OrderByDescending(o => o.OrderDate)
+       .Select(o => EF.Property<DateTime>(o, "OrderDate").Date)
+       .Distinct()
+       .Take(5)
+       .ToList();
 
             var revenueByDate = new List<int>();
             int Total = 0;
@@ -93,7 +97,7 @@ namespace Demo.Areas.Admin.Controllers
                     ).Count();
 
                 revenueByDate.Add(revenue);
-                Total ++;
+                Total++;
             }
 
 

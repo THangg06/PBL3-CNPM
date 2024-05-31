@@ -1,4 +1,4 @@
-{
+* {
 	margin: 0;
 	padding: 0px;
 	box-sizing: border-box;
@@ -40,7 +40,6 @@ body {
 .box {
 	display: flex;
 	width: 100%;
-	height: 200px;
 	overflow: hidden;
 	margin-bottom: 20px;
 	background: #fff;
@@ -66,18 +65,38 @@ body {
 }
 
 	.content h3 {
-		margin-bottom: 30px;
+		font-size: 2.5rem;
+		font-family: sans-serif;
+		margin-bottom: 10px;
 	}
 
-	.content h4 {
-		margin-bottom: 50px;
+	.content .row h4 {
+		font-size: 2rem;
+		font-weight: 500;
+		margin-left: 1rem;
+		font-family: sans-serif;
 	}
+
+	.content .row {
+		display: flex;
+		margin-bottom: 20px;
+	}
+
+		.content .row .mb-0 {
+			font-size: 20px;
+			margin-left: 1rem;
+		}
+
+		.content .row .tag_title {
+			font-size: 20px;
+		}
 
 .btn-area {
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
-	padding: 10px 25px;
+	font-size: 2rem;
+	padding: 1.5rem;
 	background-color: #3a71a9;
 	color: white;
 	cursor: pointer;
@@ -109,19 +128,33 @@ body {
 	font-weight: 600;
 }
 
-.unit input {
-	width: 60px;
-	padding: 5px;
-	text-align: center;
+.unit {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+	.unit input {
+		width: 80px;
+		font-size: 15px;
+		font-weight: 600;
+		border: 2px solid black;
+		padding: .5rem;
+		text-align: center;
+	}
+
+hr {
+	border: 1px solid #afafa2
 }
 
 .voucher input {
 	padding: 7px;
-	width: 400px;
+	border: 2px solid black;
+	width: 60%;
 	text-align: left;
 }
 
 .btn-area i {
+	font-size: 1.8rem;
 	margin-right: 5px;
 }
 

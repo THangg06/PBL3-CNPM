@@ -31,7 +31,7 @@ namespace Demo.Areas.Admin.Controllers
             var pageSize = 30;
             var lsNews = _context.News.AsNoTracking()
                 .OrderByDescending(x => x.NewsID);
-            PagedList<News> models = new PagedList<News>(lsNews, pageNumber,pageSize);
+            PagedList<News> models = new PagedList<News>(lsNews, pageNumber, pageSize);
             ViewBag.CurrentPage = pageNumber;
             return View(models);
         }
@@ -44,7 +44,7 @@ namespace Demo.Areas.Admin.Controllers
                 _context.News.Attach(item);
                 item.Active = trangthai;
                 _context.Entry(item).Property(x => x.Active).IsModified = true;
-               
+
                 _context.SaveChanges();
                 return RedirectToAction("Index", "AdminNews");
             }

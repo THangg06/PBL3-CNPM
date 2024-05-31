@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GmocqNM+7L931onDor2sHLxGvnAmacQBrzzxXRlffGc=",
+  "Hash": "hJUlpD3tsDY1dvGRcquC9MBFmPUgjJXH+u8BKGTINw0=",
   "Source": "Demo",
   "BasePath": "_content/Demo",
   "Mode": "Default",
@@ -2753,6 +2753,25 @@
       "OriginalItemSpec": "wwwroot\\css\\DashBoardAd.css"
     },
     {
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\error404.css",
+      "SourceId": "Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
+      "BasePath": "_content/Demo",
+      "RelativePath": "css/error404.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\error404.css"
+    },
+    {
       "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Footer.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
@@ -2943,6 +2962,25 @@
       "OriginalItemSpec": "wwwroot\\css\\Payment.css"
     },
     {
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\PurchaseHistory.css",
+      "SourceId": "Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
+      "BasePath": "_content/Demo",
+      "RelativePath": "css/PurchaseHistory.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\PurchaseHistory.css"
+    },
+    {
       "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\QLDM.css",
       "SourceId": "Demo",
       "SourceType": "Discovered",
@@ -3036,6 +3074,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\Statistical.css",
+      "SourceId": "Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
+      "BasePath": "_content/Demo",
+      "RelativePath": "css/Statistical.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Statistical.css"
     },
     {
       "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\css\\style.css",

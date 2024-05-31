@@ -1,0 +1,43 @@
+﻿﻿body {
+    margin-top: 150px;
+}
+
+th, td {
+    white-space: nowrap;
+    border: 1px solid #ddd; /* ??nh d?ng ???ng vi?n cho c?t v� h�ng */
+    padding: 8px; /* ??nh d?ng padding cho c?t v� h�ng */
+    border: 2px solid black;
+}
+
+.my-4 {
+    font-size: 18px;
+    margin-left: 1.5rem;
+}
+
+.data-table {
+    margin-top: 5%;
+    font-size: 1.8rem;
+    width: 90%;
+    margin-left: 5%;
+    border: 2px solid black;
+    text-align: center;
+    border-collapse: collapse; /* G?p ???ng vi?n c?a c�c � b?ng */
+    background-color: #dcdcc1;
+}
+
+.table-striped {
+    margin: 0 auto;
+}
+
+th {
+    background-color: #f2f2f2; /* M�u n?n cho ti�u ?? c?t */
+    color: black; /* M�u ch? cho ti�u ?? c?t */
+}
+
+.border-right {
+    border-right: 1px solid black; /* Lo?i b? ???ng vi?n b�n ph?i c?a � */
+}
+
+.border-left {
+    border-left: 1px solid black; /* Lo?i b? ???ng vi?n b�n tr�i c?a � */
+}
