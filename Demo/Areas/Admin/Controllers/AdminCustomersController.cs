@@ -33,6 +33,31 @@ namespace Demo.Areas.Admin.Controllers
             ViewBag.CurrentPage = pageNumber;
             return View(models);
         }
+        [HttpPost]
+        public JsonResult UpdateTT(string id, bool trangthai)
+        {
+            try
+            {
+                var item = _context.Customers.Find(id);
+                if (item == null)
+                {
+                    return Json(new { message = "Customer not found", Success = false });
+                }
+
+                item.Active = trangthai;
+                _context.Entry(item).Property(x => x.Active).IsModified = true; // Đánh dấu thuộc tính Active là đã sửa đổi
+                _context.SaveChanges();
+                return Json(new { message = "Success", Success = true });
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                // Example: log to a file, database, or logging service
+                System.Diagnostics.Debug.WriteLine("Error updating customer: " + ex.Message);
+                return Json(new { message = "Error: " + ex.Message, Success = false });
+            }
+        }
+
         public async Task<IActionResult> Details(string id)
         {
             if (id == null)

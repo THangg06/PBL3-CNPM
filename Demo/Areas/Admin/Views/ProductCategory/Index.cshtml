@@ -5,9 +5,9 @@
 }
 
 
-
-<!-- Dẫn dắt Breadcrumb -->
-<div class="page-header">
+<div class="content_box">
+    <!-- Dẫn dắt Breadcrumb -->
+<div class="nav_dir">
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
@@ -16,7 +16,7 @@
             <a asp-area="Admin" asp-controller="ProductCategory" asp-action="Index" class="breadcrumb-item">
                 Quản lý danh mục sản phẩm
             </a>
-           
+
         </nav>
     </div>
 </div>
@@ -32,44 +32,44 @@
             <tr>
                 <th>CatID</th>
                 <th>CatName</th>
-           
+
                 <th>Description</th>
-               
+
                 <th>Thumb</th>
-                
-              
+
+
                 <th>Title</th>
-                @* <th>CatID</th> *@
+                    @* <th>CatID</th> *@
             </tr>
         </thead>
         <tbody id="records_table">
-            @if (Model != null && Model.Any())
-            {
-                var i = ((ViewBag.Page - 1) * ViewBag.PageSize) + 1;
-
-                @foreach (var item in Model)
+                @if (Model != null && Model.Any())
                 {
-                    <tr>
-                        <td>@Html.DisplayFor(modelItem => item.CatId)</td>
-                        <td>@Html.DisplayFor(modelItem => item.CatName)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Description)</td>
-                        <td>
+                    var i = ((ViewBag.Page - 1) * ViewBag.PageSize) + 1;
 
-                            <img src="~/menucss/loadh/@item.Thumb" alt="Product Image" />
-                        </td>
-                        <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                    @foreach (var item in Model)
+                    {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.CatId)</td>
+                                <td>@Html.DisplayFor(modelItem => item.CatName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                                <td>
 
-         
-                        
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.CatId">Edit</a> |
-                            <a asp-action="Details" asp-route-id="@item.CatId">Details</a> |
-                            <a asp-action="Delete" asp-route-id="@item.CatId">Delete</a>
-                        </td>
-                    </tr>
+                                    <img src="~/menucss/loadh/@item.Thumb" alt="Product Image" />
+                                </td>
+                                <td>@Html.DisplayFor(modelItem => item.Title)</td>
 
+
+
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.CatId">Edit</a> |
+                                    <a asp-action="Details" asp-route-id="@item.CatId">Details</a> |
+                                    <a asp-action="Delete" asp-route-id="@item.CatId">Delete</a>
+                                </td>
+                            </tr>
+
+                    }
                 }
-            }
         </tbody>
     </table>
 </div>
@@ -79,6 +79,8 @@
 <div aria-label="Page navigation">
     <pager class="pagination" list="@Model" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" asp-route-CatID="@ViewBag.CurrentCatID"></pager>
 </div>
+</div>
+
 
 
 @* 

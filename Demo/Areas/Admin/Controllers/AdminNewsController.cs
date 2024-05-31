@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Demo.Data;
 using AspNetCoreHero.ToastNotification.Abstractions;
+using System.Net.WebSockets;
+using PagedList;
 
 namespace Demo.Areas.Admin.Controllers
 {
@@ -23,9 +25,30 @@ namespace Demo.Areas.Admin.Controllers
         }
 
         // GET: Admin/AdminNews
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page)
         {
-            return View(await _context.News.ToListAsync());
+            var pageNumber = page == null || page <= 0 ? 1 : page.Value;
+            var pageSize = 30;
+            var lsNews = _context.News.AsNoTracking()
+                .OrderByDescending(x => x.NewsID);
+            PagedList<News> models = new PagedList<News>(lsNews, pageNumber,pageSize);
+            ViewBag.CurrentPage = pageNumber;
+            return View(models);
+        }
+        [HttpPost]
+        public ActionResult UpdateTT(int id, int trangthai)
+        {
+            var item = _context.News.Find(id);
+            if (item != null)
+            {
+                _context.News.Attach(item);
+                item.Active = trangthai;
+                _context.Entry(item).Property(x => x.Active).IsModified = true;
+               
+                _context.SaveChanges();
+                return RedirectToAction("Index", "AdminNews");
+            }
+            return Json(new { message = "UnSuccess", Success = false });
         }
 
         // GET: Admin/AdminNews/Details/5

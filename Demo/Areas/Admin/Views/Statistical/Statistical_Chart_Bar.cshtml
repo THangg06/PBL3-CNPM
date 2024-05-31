@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Thống kê tổng đơn hàng theo ngày";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="nav_dir">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="Statistical" asp-action="Statistical_Chart_Bar">Thống kê đơn hàng </a>
+        </nav>
+    </div>
+</div>
+<h2>Thống kê đơn hàng theo ngày</h2>
+<canvas id="recentRevenueChart"></canvas>
+<hr />
+<h3 class="text-center">
+    Tổng đơn hàng: @(ViewBag.CountsumRevenue)
+</h3>
+<a asp-area="Admin" asp-controller="Statistical" asp-action="Statistical_Chart_Pie">Đánh giá tỉ lệ Rate</a>
+<a asp-area="Admin" asp-controller="Statistical" asp-action="RevenueChart">Thống kê doanh thu</a>
+<hr />
+
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var dates = @Html.Raw(Json.Serialize(ViewBag.RecentDates));
+        var revenue = @Html.Raw(Json.Serialize(ViewBag.RevenueByDate));
+        var sumOrder = @Html.Raw(Json.Serialize(ViewBag.CountsumRevenue));
+
+        var ctx = document.getElementById('recentRevenueChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: dates,
+                datasets: [{
+                    label: 'Doanh thu (Đơn)',
+                    data: revenue,
+                    backgroundColor: 'teal',
+                    borderColor: 'black',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Tổng đơn theo ngày'
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    },
+                    x: {
+                        ticks: {
+                            autoSkip: false,
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+}

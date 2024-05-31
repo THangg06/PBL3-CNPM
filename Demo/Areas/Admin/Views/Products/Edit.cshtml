@@ -5,25 +5,13 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<div class="page-header">
-    <div class="header-sub-title">
-        <nav class="breadcrumb breadcrumb-dash">
-            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
-                <i class="anticon anticon-home m-r-5"></i>Trang chủ
-            </a>
-            <a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" class="breadcrumb-item">
-                Quản lý sản phẩm
-            </a>
-            <span class="breadcrumb-item active">
-                Chỉnh sửa sản phẩm
-            </span>
-        </nav>
-    </div>
-</div>
+<h1>Edit</h1>
+
+<h4>Product</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-controller="AdminProducts" asp-action="Edit" method="post" enctype="multipart/form-data">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ProductId" />
             <div class="form-group">
@@ -42,11 +30,9 @@
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label class="font-weight-semibold" for="productCategory">Danh mục sản phẩm</label>
-                <select class="custom-select" asp-for="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
-                    <option value="" disabled selected>Chọn danh mục</option>
-                </select>
-
+                <label asp-for="CatId" class="control-label"></label>
+                <select asp-for="CatId" class="form-control" asp-items="ViewBag.CatId"></select>
+                <span asp-validation-for="CatId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Price" class="control-label"></label>
@@ -59,11 +45,25 @@
                 <span asp-validation-for="Unit" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label class="font-weight-semibold" for="productBrand">Ảnh đại diện</label>
-                <input name="fThumb" type="file" class="form-control" asp-for="Thumb" />
+                <label asp-for="Thumb" class="control-label"></label>
+                <input asp-for="Thumb" class="form-control" />
                 <span asp-validation-for="Thumb" class="text-danger"></span>
             </div>
-
+            <div class="form-group">
+                <label asp-for="Video" class="control-label"></label>
+                <input asp-for="Video" class="form-control" />
+                <span asp-validation-for="Video" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateCreated" class="control-label"></label>
+                <input asp-for="DateCreated" class="form-control" />
+                <span asp-validation-for="DateCreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateModified" class="control-label"></label>
+                <input asp-for="DateModified" class="form-control" />
+                <span asp-validation-for="DateModified" class="text-danger"></span>
+            </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="BestSellers" /> @Html.DisplayNameFor(model => model.BestSellers)
@@ -79,13 +79,31 @@
                     <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
                 </label>
             </div>
-
+            <div class="form-group">
+                <label asp-for="Tags" class="control-label"></label>
+                <input asp-for="Tags" class="form-control" />
+                <span asp-validation-for="Tags" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
-
+            <div class="form-group">
+                <label asp-for="Alias" class="control-label"></label>
+                <input asp-for="Alias" class="form-control" />
+                <span asp-validation-for="Alias" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MetaDesc" class="control-label"></label>
+                <input asp-for="MetaDesc" class="form-control" />
+                <span asp-validation-for="MetaDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MetaKey" class="control-label"></label>
+                <input asp-for="MetaKey" class="form-control" />
+                <span asp-validation-for="MetaKey" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

@@ -1,6 +1,6 @@
 ﻿using Demo.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace Demo.Areas.Admin.Controllers
 {
@@ -9,31 +9,44 @@ namespace Demo.Areas.Admin.Controllers
     [Route("Admin/HomeAdmin")]
     public class HomeAdminController : Controller
     {
-        private readonly Web01Context db;
+        private readonly Web01Context _db;
+        public HomeAdminController(Web01Context db)
+        {
+            _db = db;
+        }
+
         [Route("")]
         [Route("index")]
         public IActionResult Index()
         {
-            return View();
-        }
-        [Route("ThemSanPhamMoi")]
-        [HttpGet]
-        public IActionResult ThemSanPhamMoi()
-        {
-            ViewBag.Danhmuc = new SelectList(db.Categories.ToList(), "CatId", "CatName");
-            return View();
-        }
-        [Route("ThemSanPhamMoi")]
-        [ValidateAntiForgeryToken]
-        [HttpPost]
-        public IActionResult ThemSanPhamMoi(Category SanPham) {
-            if(ModelState.IsValid)
+            var recentDates = _db.Orders
+                    .OrderByDescending(o => o.OrderDate)
+                    .Select(o => EF.Property<DateTime>(o, "OrderDate").Date)
+                    .Distinct()
+                    .Take(5)
+                    .ToList();
+
+            var revenueByDate = new List<decimal>();
+            decimal Total = 0;
+            foreach (var date in recentDates)
             {
-                db.Categories.Add(SanPham);
-                db.SaveChanges();
-                return RedirectToAction("Index", "ProductCategory");
+                decimal revenue = _db.Orders
+                    .Where(o => EF.Property<DateTime>(o, "OrderDate").Date == date)
+                    .Sum(o => o.TongTien);
+
+                revenueByDate.Add(revenue);
+                Total += revenue;
             }
-            return View(SanPham);
+
+
+
+            ViewBag.RecentDates = recentDates;
+            ViewBag.RevenueByDate = revenueByDate;
+            ViewBag.CountsumRevenue = Total;
+
+            return View();
         }
+
+
     }
 }

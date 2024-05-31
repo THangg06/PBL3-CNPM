@@ -40,15 +40,15 @@
         </div>
 
 
-        <div class="search-bar">
+     @*    <div class="search-bar">
             <div class="search-box">
                 <label for="search-icon" class="fas fa-search"></label>
                 <input type="search" id="search-box" placeholder="Tìm kiếm tại đây" style="background-image: linear-gradient(to right, #cfe2ff, #c2d1E8);
                     ">
             </div>
 
-            <div class="fa-solid fa-bell"></div>
-        </div>
+            <div class="fa-solid fa-bell" ></div>
+        </div> *@
 
     </header>
 
@@ -78,6 +78,13 @@
 
                    
                 </div>
+                <div class="option-box">
+
+                    <div class="fa-solid fa-user-group"></div>
+                    <a asp-area="Admin" asp-controller="Order" asp-action="Index">Quản lý đơn hàng</a>
+
+
+                </div>
 
 
                 <div class="option-box">
@@ -97,29 +104,30 @@
                 </div>
 
                 <div class="option-box">
-                    <div class="fa-solid fa-message"></div><a asp-area="Admin" asp-controller="Statistical" asp-action="Index">Thống kê</a>
+                    <div class="fa-solid fa-message"></div><a asp-area="Admin" asp-controller="Statistical" asp-action="Statistical_Chart_Bar">Thống kê</a>
                 </div>
 
                 <div class="option-box">
                     <div class="fa-solid fa-user-tie"></div>
                     <a asp-area="Admin" asp-controller="AdminAccounts" asp-action="Index">Quản lý tài khoản quản trị</a>
                 </div>
+               
             </div>
-            @RenderBody()
 
+            @RenderBody()
         </div>
 
+       
 
     </section>
-
+ 
     @await Component.InvokeAsync("Notyf")
     @await RenderSectionAsync("Scripts", required: false)
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.ckeditor.com/4.16.2/standard-all/ckeditor.js"></script>
-    <script src="https://cdn.cksource.com/ckfinder/3.7.0/ckfinder.js"></script>
-
-    <!-- Không cần dòng này nếu đã tải CKEditor từ CDN
-    <script src="~/content/ckeditor/ckeditor.js"></script> -->
+    <script src="~/content/ckeditor/ckeditor.js"></script>
     <script src="~/content/ckfinder/ckfinder_v1.js"></script>
+    <!-- Thêm thẻ script từ CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
 </body>
 </html>

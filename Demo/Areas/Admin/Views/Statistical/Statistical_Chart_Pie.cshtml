@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "Tỉ lệ đánh giá sản phẩm";
+}
+<div class="nav_dir">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="Statistical" asp-action="Statistical_Chart_Bar">Thống kê tỉ lệ đánh giá </a>
+        </nav>
+    </div>
+</div>
+<h2>Tỉ lệ đánh giá sản phẩm</h2>
+<hr />
+
+<canvas id="recentRevenueChart" ></canvas> 
+<hr />
+<h3 class="text-center">
+    Tổng lượt đánh giá: @(ViewBag.CountSumRate)
+
+</h3>
+<a asp-area="Admin" asp-controller="Statistical" asp-action="RevenueChart">Thống kê doanh thu</a>
+<a asp-area="Admin" asp-controller="Statistical" asp-action="Statistical_Chart_Bar">Thống kê tổng đơn hàng</a>
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var rates = @Html.Raw(Json.Serialize(ViewBag.DistinctRates));
+        var ratecounts = @Html.Raw(Json.Serialize(ViewBag.RateCounts));
+        var countSum = @Html.Raw(Json.Serialize(ViewBag.CountSumRate));
+
+        // Tính tỷ lệ phần trăm của mỗi giá trị ratecount so với countSum
+        var percentageData = ratecounts.map(function (count) {
+            return (count / countSum) * 100;
+        });
+
+        var ctx = document.getElementById('recentRevenueChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: rates.map(rate => 'Rate ' + rate), // Gắn nhãn các giá trị Rate
+                datasets: [{
+                    label: 'Tỷ lệ đánh giá (%)',
+                    data: percentageData,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(100, 149, 237, 0.2)',
+                        'rgba(144, 238, 144, 0.2)',
+                        'rgba(255, 69, 0, 0.2)',
+                        'rgba(255, 140, 0, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(100, 149, 237, 1)',
+                        'rgba(144, 238, 144, 1)',
+                        'rgba(255, 69, 0, 1)',
+                        'rgba(255, 140, 0, 1)'
+                    ],
+                    borderWidth: 1.8
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                var label = context.label || '';
+                                if (label) {
+                                    label += (  ': ');
+                                }
+                                if (context.raw !== null) {
+                                    label += context.raw.toFixed(2) + '%';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+}

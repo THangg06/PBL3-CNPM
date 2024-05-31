@@ -1,144 +1,173 @@
-﻿@model IEnumerable<Demo.Data.Product>
+﻿
+
+
+﻿﻿﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<Demo.Data.Product>
 
 @{
-    ViewData["Title"] = "Index";
+    int currentPage = ViewBag.CurrentPage ?? 1;
+    ViewData["Title"] = "Quản lý sản phẩm";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Index</h1>
+<!-- Dẫn dắt Breadcrumb -->
+<div class="content_box">
+    <div class="nav_dir">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
+                <i class="anticon anticon-home m-r-5"></i>Trang chủ
+            </a>
+            <a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" class="breadcrumb-item">
+                Quản lý sản phẩm
+            </a>
+            <span class="breadcrumb-item active">
+                Danh sách sản phẩm: Trang @currentPage
+            </span>
+        </nav>
+    </div>
+</div>
 
+<!-- Phần tìm kiếm và lọc -->
+<div class="filter-group">
+    <input type="text" id="keyword" name="keyword" />
+    <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
+            @*  <option selected>Chọn Danh Mục</option> *@
+        <option value="0">Chọn tất cả</option>
+    </select>
+</div>
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ShortDesc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Unit)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Thumb)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Video)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateCreated)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateModified)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BestSellers)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HomeFlag)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Active)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Tags)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Alias)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MetaDesc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MetaKey)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cat)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProductId)
-                </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShortDesc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Unit)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Thumb)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Video)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateCreated)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateModified)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BestSellers)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HomeFlag)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Active)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tags)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Alias)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MetaDesc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MetaKey)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cat.CatId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
-            </td>
-        </tr>
+<div class="data_table_container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ProductId</th>
+                <th>ProductName</th>
+                <th>CatName</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Unit</th>
+                <th>Thumb</th>
+                <th>DateCreated</th>
+                <th>BestSellers</th>
+                <th>HomeFlag</th>
+                <th>Active</th>
+                <th>Title</th>
+                    @* <th>CatID</th> *@
+            </tr>
+        </thead>
+        <tbody id="records_table">
+            @if (Model != null && Model.Any())
+            {
+                var i = ((ViewBag.Page - 1) * ViewBag.PageSize) + 1;
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.ProductId)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ProductName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.CatName)</td>
+
+                        <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Unit)</td>
+
+                        <td>
+
+                            <img src="~/menucss/loadh/@item.Thumb" alt="Product Image" />
+                        </td>
+                        <td>@Html.DisplayFor(modelItem => item.DateCreated)</td>
+                        <td>@Html.DisplayFor(modelItem => item.BestSellers)</td>
+                        <td>@Html.DisplayFor(modelItem => item.HomeFlag)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Active)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                        <td>
+                                    <div class="group_button another">
+                        <input type="button" class="mod-btn"
+                                onclick="window.location.href='@Url.Action("Edit", new { id = item.ProductId })'"
+                                value="Sửa" class="btn btn-info btn-sm">
+
+                        <input type="button" class="mod-btn"
+                                onclick="window.location.href='@Url.Action("Details", new { id = item.ProductId })'"
+                                value="Chi tiết" class="btn btn-info btn-sm">
+
+                        <input type="button" class="mod-btn" id="delete"
+                                onclick="window.location.href='@Url.Action("Delete", new { id = item.ProductId })'"
+                                value="Xóa" class="btn btn-danger btn-sm">
+@*                             <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a> *@
+                            </div>
+                        </td>
+                    </tr>
+
+                }
+            }
+        </tbody>
+    </table>
+</div>
+</div>
+
+
+
+<!-- Pagination Controls -->
+@* <div aria-label="Page navigation">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions { LiElementClasses = new[] { "page-item" }, PageClassesEnabled = true })
+</div> *@
+
+
+
+
+
+
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Khi chọn danh mục
+            $("#txtCatID").change(function () {
+                var selectedCatID = $(this).val();
+
+                $.ajax({
+                    url: '/Admin/AdminProducts/Filtter',
+                    dataType: "json",
+                    type: "GET",
+                    data: {
+                        CatID: selectedCatID
+                    },
+                    async: true,
+                    success: function (results) {
+                        if (results.status === "success") {
+                            window.location.href = results.redirectUrl;
+                        }
+                    },
+                    error: function (xhr) {
+                        alert('Đã xảy ra lỗi');
+                    }
+                });
+            });
+
+            // Khi tìm kiếm sản phẩm
+            $("#keyword").keyup(function () {
+                var strkeyword = $("#keyword").val();
+
+                $.ajax({
+                    url: '/Admin/Search/FindProduct',
+                    dataType: "html",
+                    type: "POST",
+                    data: { keyword: strkeyword },
+                    async: true,
+                    success: function (results) {
+                        $("#records_table").html(results);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(`Lỗi AJAX: ${status} - ${error}`);
+                    }
+                });
+            });
+        });
+    </script>
 }
-    </tbody>
-</table>
