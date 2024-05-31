@@ -1,7 +1,9 @@
 ﻿@{
     ViewBag.Title = "Tỉ lệ đánh giá sản phẩm";
 }
-<div class="nav_dir">
+
+<div class="content_box">
+    <div class="nav_dir">
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
@@ -9,7 +11,7 @@
         </nav>
     </div>
 </div>
-<h2>Tỉ lệ đánh giá sản phẩm</h2>
+<h2 class="title">Tỉ lệ đánh giá sản phẩm</h2>
 <hr />
 
 <canvas id="recentRevenueChart" ></canvas> 
@@ -18,8 +20,13 @@
     Tổng lượt đánh giá: @(ViewBag.CountSumRate)
 
 </h3>
-<a asp-area="Admin" asp-controller="Statistical" asp-action="RevenueChart">Thống kê doanh thu</a>
+<div class="group_button">
+    <a asp-area="Admin" asp-controller="Statistical" asp-action="RevenueChart">Thống kê doanh thu</a>
 <a asp-area="Admin" asp-controller="Statistical" asp-action="Statistical_Chart_Bar">Thống kê tổng đơn hàng</a>
+</div>
+
+</div>
+
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
