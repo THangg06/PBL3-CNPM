@@ -67,10 +67,7 @@
                     <a href="/admin/productcategory">Quản lý danh mục</a>
                 </div>
 
-                <div class="option-box">
-                    <div class="fa-solid fa-user-group"></div>
-                    <a asp-area="Admin" asp-controller="AdminRoles" asp-action="Index">Quản lý quyền truy cập</a>
-                </div>
+              
 
                 <div class="option-box">
 
@@ -112,7 +109,10 @@
                     <div class="fa-solid fa-user-tie"></div>
                     <a asp-area="Admin" asp-controller="AdminAccounts" asp-action="Index">Quản lý tài khoản quản trị</a>
                 </div>
-
+                <div class="option-box">
+                    <div class="fa-solid fa-user-group"></div>
+                    <a asp-area="Admin" asp-controller="AdminRoles" asp-action="Index">Quản lý quyền truy cập</a>
+                </div>
             </div>
 
             @RenderBody()
