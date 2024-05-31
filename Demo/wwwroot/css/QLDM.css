@@ -1,4 +1,4 @@
-﻿* {
+﻿﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -46,8 +46,9 @@ body {
     .header .admin-box {
         display: flex;
         justify-content: space-between;
-        width: 15%;
+        width: 25%;
         padding: 0rem;
+        align-items: center;
     }
 
         .header .admin-box img {
@@ -576,7 +577,7 @@ canvas {
     padding: 3rem;
 }
 
-.action_button{
+.action_button {
     width: 200px;
 }
 
@@ -589,12 +590,18 @@ canvas {
     margin: 2rem 2rem 2rem 0px;
 }
 
-h2.title{
+h2.title {
     margin: 2rem 0px;
     font-size: 2rem;
 }
+
 h3.text-center {
     font-size: 2rem;
     text-align: center;
     margin: 2rem 0px;
+}
+
+.nav_dir .header-sub-title nav a{
+    text-decoration: none;
+    color: black;
 }
