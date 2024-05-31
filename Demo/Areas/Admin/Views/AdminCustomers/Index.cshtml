@@ -1,4 +1,4 @@
-﻿
+
 ﻿@using PagedList.Core.Mvc
 @model PagedList.Core.IPagedList<Demo.Data.Customer>
 
@@ -49,7 +49,7 @@
                     <th width="100">Email</th>
                     <th>Phone</th>
                     <th>Trạng thái</th>
-                    <th></th>
+                    <th class="action_button">Thao tác</th>
 
                 </tr>
             </thead>
@@ -70,18 +70,18 @@
                              <td>@(item.Active == true ? "Active" : "Block")</td>
                             <td class="text-center">
                                 <div class="group_button another">
-                <input type="button" class ="mod-btn" 
-                onclick="window.location.href='@Url.Action("Details", new { id = item.CustomerId })'" 
-                value="Chi tiết" class="btn btn-info btn-sm">
+                                    <input type="button" class="mod-btn"
+                                           onclick="window.location.href='@Url.Action("Edit", new { id = item.CustomerId })'"
+                                           value="Sửa" class="btn btn-info btn-sm">
 
-                <input type="button" class ="mod-btn" id="delete" 
-                onclick="if(confirm('Are you sure you want to delete?'))
-                { window.location.href='@Url.Action("Delete", new { id = item.CustomerId })' }" 
-                value="Xóa" class="btn btn-danger btn-sm">
+                                    <input type="button" class="mod-btn"
+                                           onclick="window.location.href='@Url.Action("Details", new { id = item.CustomerId })'"
+                                           value="Chi tiết" class="btn btn-info btn-sm">
 
-                 <a href="#" class="btn btn-info btn-sm btnCapNhat" data-id="@item.CustomerId">Cập nhật</a>
+                                    <input type="button" class="mod-btn" id="delete"
+                                           onclick="window.location.href='@Url.Action("Delete", new { id = item.CustomerId })'"
+                                           value="Xóa" class="btn btn-danger btn-sm">
                                 </div>
-
                                                          
                             </td>
                         </tr>
