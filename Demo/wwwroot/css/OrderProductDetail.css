@@ -50,7 +50,7 @@ body {
 
 .orderProductDetailContainer a {
     display: flex;
-    width: 50%;
+    width: auto;
 }
 
     .orderProductDetailContainer a img {
@@ -129,10 +129,10 @@ body {
 }
 
     .review .ratingStar {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         position: relative;
         display: flex;
-        color: #FF8A00;
+        color: #ff8a00;
         gap: 0px 4px;
         margin: 3px 0px 4px;
         width: 86px;
@@ -160,8 +160,8 @@ body {
 .original_price {
     position: relative;
     margin: 3px 0px;
-    font: 600 2rem/1.5 "Poppins", Helvetica, Arial, serif;
-    color: rgb(0 0 0);
+    font: 600 3rem/1.5 "Poppins", Helvetica, Arial, serif;
+    color: rgb(220 2 2);
     /* @include md {
       align-items: flex-start;
       font-size: 18px;
@@ -212,7 +212,7 @@ hr {
     position: relative;
     margin: 23px 0px 0px;
     width: 87.79%;
-    font: 400 1.4rem/1.5 "Poppins", Helvetica, Arial, serif;
+    font: 400 1.8rem/1.5 "Poppins", Helvetica, Arial, serif;
     color: rgb(50 46 46);
 }
 
@@ -285,6 +285,7 @@ hr {
     position: relative;
     display: flex;
     height: 50px;
+    align-items: center;
     justify-content: center;
     min-width: 200px;
     font: 600 16px/1.2 "Poppins", Helvetica, Arial, serif;
@@ -454,10 +455,10 @@ hr {
     }
 
 textarea {
-    width: 90%;
+    width: 100%;
     height: 200px;
-    margin: 22px auto 0px;
-    padding: 12px 20px;
+    margin: 2rem auto;
+    padding: 1.6rem;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -542,4 +543,103 @@ textarea {
 
 .btn1[type=submit] {
     margin: 1rem;
+}
+
+
+
+/*
+======================================Review user-==========================
+*/
+
+.review-container {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.review-content {
+    margin-top: 20px;
+}
+
+.review-footer {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.star-rating {
+    color: #ffd700;
+}
+
+.user_star_rating {
+    font-size: 3rem;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+    .user_star_rating li {
+        margin-right: 5px;
+    }
+
+.fa-star {
+    color: #ff9200;
+}
+
+.fa-star-o {
+    color: #ff9200;
+    background-color: rgb(253, 253, 199);
+}
+
+.form_input {
+    padding: .8rem;
+    margin-right: 2rem;
+    border: 1px solid black;
+}
+
+.text-left button[type=submit] {
+    margin: auto;
+    background: #00b207;
+    padding: 1rem;
+    border: 1px solid black;
+    color: white;
+}
+#review-container {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.review-content {
+    margin-top: 20px;
 }

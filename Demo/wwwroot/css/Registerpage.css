@@ -66,6 +66,10 @@ form .user-details .input-box {
     width: calc(100% / 2 - 20px);
 }
 
+.user-details .input-box#special {
+    width: 100%;
+}
+
 form .input-box label.details {
     font-size: 1.6rem;
     display: block;

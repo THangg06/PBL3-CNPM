@@ -1,11 +1,12 @@
-body {
+ï»¿body {
     margin-top: 150px;
 }
 
 th, td {
     white-space: nowrap;
-    border: 1px solid #ddd; /* ??nh d?ng ???ng vi?n cho c?t và hàng */
-    padding: 8px; /* ??nh d?ng padding cho c?t và hàng */
+    border: 1px solid #ddd; /* ??nh d?ng ???ng vi?n cho c?t vï¿½ hï¿½ng */
+    padding: 8px; /* ??nh d?ng padding cho c?t vï¿½ hï¿½ng */
+    border: 2px solid black;
 }
 
 .my-4 {
@@ -15,12 +16,13 @@ th, td {
 
 .data-table {
     margin-top: 5%;
-    font-size: 14px;
+    font-size: 1.8rem;
     width: 90%;
     margin-left: 5%;
+    border: 2px solid black;
     text-align: center;
-    border-collapse: collapse; /* G?p ???ng vi?n c?a các ô b?ng */
-    background-color: #dfffd4;
+    border-collapse: collapse; /* G?p ???ng vi?n c?a cï¿½c ï¿½ b?ng */
+    background-color: #dcdcc1;
 }
 
 .table-striped {
@@ -28,14 +30,15 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2; /* Màu n?n cho tiêu ?? c?t */
-    color: black; /* Màu ch? cho tiêu ?? c?t */
+    background-color: #f2f2f2; /* Mï¿½u n?n cho tiï¿½u ?? c?t */
+    color: black; /* Mï¿½u ch? cho tiï¿½u ?? c?t */
 }
 
 .border-right {
-    border-right: none; /* Lo?i b? ???ng vi?n bên ph?i c?a ô */
+    border-right: 1px solid black; /* Lo?i b? ???ng vi?n bï¿½n ph?i c?a ï¿½ */
 }
 
 .border-left {
-    border-left: none; /* Lo?i b? ???ng vi?n bên trái c?a ô */
+    border-left: 1px solid black; /* Lo?i b? ???ng vi?n bï¿½n trï¿½i c?a ï¿½ */
 }
+
