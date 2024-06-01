@@ -5,7 +5,10 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<div class="page-header">
+
+
+<div class="content_box">
+    <div class="nav_dir">
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
@@ -15,14 +18,12 @@
                 Danh mục sản phẩm > 
             </a>
             <a asp-area="Admin" asp-controller="ProductCategory" asp-action="Detail" class="breadcrumb-item">
-                Chi tiết danh mục sản phẩm >
+                Chi tiết danh mục sản phẩm
             </a>
 
         </nav>
     </div>
 </div>
-
-<div class="content_box">
     <hr />
     <dl class="form_container">
         <div class="title">Category</div>

@@ -29,12 +29,12 @@
 
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./js/main.js" charset="utf-8"></script>
+    <script src="~/js/main.js" charset="utf-8"></script>
 
     <header class="header">
         <div class="admin-box">
             <img src="~/assets/admin/@User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value" alt="">
-            <h3>Welcom @Context.User.Identity.Name</h3>
+            <h3>@Context.User.Identity.Name</h3>
             <a href="/logout" id="HasLogin">Đăng Xuất</a>
             <div class="fas fa-caret-down"></div>
         </div>
@@ -61,13 +61,13 @@
                     <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index">Dashboard</a>
                 </div>
                 <div class="option-box">
-                    <div class="fa-solid fa-user-group"></div>
+                    <div class="fa-solid fa-list"></div>
                    @*  <a asp-area="Admin" asp-controller="AdminCategories" asp-action="Index">Quản lý danh mục</a> *@
                     <a href="/admin/productcategory">Quản lý danh mục</a>
                 </div>
 
                 <div class="option-box">
-                    <div class="fa-solid fa-user-group"></div>
+                    <div class="fa-solid fa-universal-access"></div>
                     <a asp-area="Admin" asp-controller="AdminRoles" asp-action="Index">Quản lý quyền truy cập</a>
                 </div>
 
@@ -79,8 +79,7 @@
                    
                 </div>
                 <div class="option-box">
-
-                    <div class="fa-solid fa-user-group"></div>
+                    <div class="fa-solid fa-clipboard-list"></div>
                     <a asp-area="Admin" asp-controller="Order" asp-action="Index">Quản lý đơn hàng</a>
 
 
@@ -89,7 +88,7 @@
 
                 <div class="option-box">
 
-                    <div class="fa-solid fa-user-group"></div>
+                    <div class="fa-solid fa-box"></div>
                     <a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Quản lý sản phẩm</a>
 
 
@@ -104,7 +103,7 @@
                 </div>
 
                 <div class="option-box">
-                    <div class="fa-solid fa-message"></div><a asp-area="Admin" asp-controller="Statistical" asp-action="Statistical_Chart_Bar">Thống kê</a>
+                    <div class="fa-solid fa-chart-simple"></div><a asp-area="Admin" asp-controller="Statistical" asp-action="Statistical_Chart_Bar">Thống kê</a>
                 </div>
 
                 <div class="option-box">

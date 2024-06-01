@@ -1,4 +1,4 @@
-@model List<Demo.Data.Order>
+﻿@model List<Demo.Data.Order>
 
 @{
     ViewBag.Title = "Danh sách đơn hàng";
@@ -10,66 +10,86 @@
     #modal-default {
         display: none;
     }
+
+    th, td {
+        white-space: nowrap;
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .data-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        color: black;
+    }
+
+    .border-right {
+        border-right: none;
+    }
+
+    .border-left {
+        border-left: none;
+    }
 </style>
-
 <div class="content_box">
-    <!-- Dẫn dắt Breadcrumb -->
     <div class="nav_dir">
-        <div class="header-sub-title">
-            <nav class="breadcrumb breadcrumb-dash">
-                <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
-                    <i class="anticon anticon-home m-r-5"></i>Trang chủ > 
-                </a>
-                <a asp-area="Admin" asp-controller="Order" asp-action="Index" class="breadcrumb-item">
-                    Quản lí đơn hàng
-                </a>
-            </nav>
-        </div>
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
+                <i class="anticon anticon-home m-r-5"></i>Trang chủ >
+            </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="Order" asp-action="Index">Danh sách đơn hàng</a>
+        </nav>
     </div>
+</div>
 
-        <div class="data_table_container">
-            <table class="data-table">
+
+        <div class="data_table_container card-body">
+            <table class="table table-striped table-bordered data-table">
                 <thead class="thead-dark">
                     <tr>
-                        <th class="border-right">#</th>
+                    @*                         <th class="border-right">#</th> *@
                         <th class="border-right">Mã đơn hàng</th>
                         <th class="border-right">Tên khách hàng</th>
-                        <th class="border-right">Phone</th>
+                        <th class="border-right">Số điện thoại</th>
                         <th class="border-right">Cách thanh toán</th>
                         <th class="border-right">Thời gian thanh toán</th>
                         <th class="border-right">Trạng thái đơn hàng</th>
                         <th class="border-right">Ngày tạo</th>
                         <th class="border-right">Ngày giao hàng</th>
-                        <th class="border-right"> Thao tác</th>
+                        <th class="action_button"></th>
                     </tr>
                 </thead>
                 <tbody>
-                    @if (Model != null && Model.Any())
+                @if (Model != null && Model.Any())
+                {
+                    var i = (currentPage - 1) * 10;
+                    foreach (var item in Model)
                     {
-                        var i = (currentPage - 1) * 10;
-                        foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>@(++i)</td>
-                                <td>@item.OrderID</td>
-                                <td>@item.FullName</td>
-                                <td>@item.Phone</td>
-                                <td>@item.CachThanhToan</td>
-                                <td>@item.PaymentDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
-                                <td>@(item.TransactStatusId == 1 ? "Đã giao hàng" : "Chờ xác nhận")</td>
-                                <td>@item.OrderDate?.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
-                                <td>@item.ShipDate?.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
-                                <td>
-                                    <div class="group_button another">
-                                            <input type="button" class="mod-btn"
-                                                   onclick="window.location.href='/admin/order/view/@item.OrderID'"
-                                                   value="Chi tiết" class="btn btn-info btn-sm">
-                                    <a href="#" class="btn btn-info btn-sm btnCapNhat" data-id="@item.OrderID">Cập nhật</a>
-                                    </div>
-                                </td>
-                            </tr>
-                        }
+                                    <tr>
+                            @*                                 <td>@(++i)</td> *@
+                                        <td>@item.OrderID</td>
+                                        <td>@item.FullName</td>
+                                        <td>@item.Phone</td>
+                                        <td>@item.CachThanhToan</td>
+                                        <td>@item.PaymentDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
+                                        <td>@(item.TransactStatusId == 1 ? "Đã giao hàng" : "Chờ xác nhận")</td>
+                                        <td>@item.OrderDate?.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
+                                        <td>@item.ShipDate?.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
+                                        <td>
+                                            <div class="group_button">
+                                                    <a id="btn" href="/admin/order/view/@item.OrderID" class="btn btn-sm btn-success">Xem</a>
+                                                    <a id="btn" href="#" class="btn btn-info btn-sm btnCapNhat" data-id="@item.OrderID">Cập nhật</a>
+                                            </div>
+                                            
+                                        </td>
+                                    </tr>
                     }
+                }
                 </tbody>
             </table>
 
@@ -78,17 +98,18 @@
                 <div class="col-6" style="text-align:right;">
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
-                            @for (int i = 1; i <= totalPages; i++)
-                            {
-                                <li class="page-item @(i == currentPage ? "active" : "")">
-                                    <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
-                                </li>
-                            }
+                        @for (int i = 1; i <= totalPages; i++)
+                        {
+                                    <li class="page-item @(i == currentPage ? "active" : "")">
+                                        <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+                                    </li>
+                        }
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
+
 
 <div class="modal fade" id="modal-default">
     <div class="modal-dialog">
@@ -111,7 +132,7 @@
                     </select>
                 </div>
 
-              
+
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
@@ -123,6 +144,8 @@
     </div>
 
 </div>
+</div>
+
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

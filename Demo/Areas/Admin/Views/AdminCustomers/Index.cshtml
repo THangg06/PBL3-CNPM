@@ -1,4 +1,4 @@
-
+﻿
 ﻿@using PagedList.Core.Mvc
 @model PagedList.Core.IPagedList<Demo.Data.Customer>
 
@@ -35,80 +35,14 @@
     <input type="button" value="Tìm">
 </div>
 
-
-    <div class="data_table_container">
-        <table class="data-table" id="sampleTable">
-            <thead>
-                <tr>
-
-                    <th>ID khách hàng</th>
-                    <th width="150">Họ tên</th>
-                    <th>Birthday</th>
-
-                    <th width="200">Address</th>
-                    <th width="100">Email</th>
-                    <th>Phone</th>
-                    <th>Trạng thái</th>
-                    <th class="action_button">Thao tác</th>
-
-                </tr>
-            </thead>
-            <tbody id="records_table">
-                    @if (Model != null)
-                    {
-                        foreach (var item in Model)
-                        {
-                        <tr>
-
-                            <td>@item.CustomerId</td>
-                            <td>@item.FullName</td>
-                            <td>@item.Birthday</td>
-
-                            <td>@item.Address</td>
-                            <td>@item.Email</td>
-                            <td>@item.Phone</td>
-                             <td>@(item.Active == true ? "Active" : "Block")</td>
-                            <td class="text-center">
-                                <div class="group_button another">
-                                    <input type="button" class="mod-btn"
-                                           onclick="window.location.href='@Url.Action("Edit", new { id = item.CustomerId })'"
-                                           value="Sửa" class="btn btn-info btn-sm">
-
-                                    <input type="button" class="mod-btn"
-                                           onclick="window.location.href='@Url.Action("Details", new { id = item.CustomerId })'"
-                                           value="Chi tiết" class="btn btn-info btn-sm">
-
-                                    <input type="button" class="mod-btn" id="delete"
-                                           onclick="window.location.href='@Url.Action("Delete", new { id = item.CustomerId })'"
-                                           value="Xóa" class="btn btn-danger btn-sm">
-                                </div>
-                                                         
-                            </td>
-                        </tr>
-                        }
-                    }
-            </tbody>
-        </table>
-        <div aria-label="Page navigation example">
-            <ul class="pagination">
-                <pager class="page-item" list="@Model" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index"></pager>
-            </ul>
-
-        </div>
-    </div>
-
-</div>
-
-
-       
-<div class="modal fade" id="modal-default">
+    <div class="modal fade" id="modal-default">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Cập nhật trạng thái người dùng</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+@*                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button>
+                </button> *@
             </div>
             <div class="modal-body">
                 <input type="hidden" id="txtOrderId" value="0"/>
@@ -126,7 +60,74 @@
             </div>
         </div>
     </div>
+    </div>
+
+    <div class="data_table_container">
+        <table class="data-table" id="sampleTable">
+            <thead>
+                <tr>
+
+@*                     <th>ID khách hàng</th> *@
+                    <th width="150">Họ tên</th>
+@*                     <th>Birthday</th> *@
+
+                    <th width="200">Địa chỉ</th>
+                    <th width="100">Email</th>
+                    <th>Số điện thoại</th>
+                    <th>Trạng thái</th>
+                    <th class="action_button"></th>
+
+                </tr>
+            </thead>
+            <tbody id="records_table">
+                    @if (Model != null)
+                    {
+                        foreach (var item in Model)
+                        {
+                        <tr>
+
+@*                             <td>@item.CustomerId</td> *@
+                            <td>@item.FullName</td>
+@*                             <td>@item.Birthday.Value.ToString("dd/MM/yyyy")</td> *@
+
+                            <td>@item.Address</td>
+                            <td>@item.Email</td>
+                            <td>@item.Phone</td>
+                             <td>@(item.Active == true ? "Active" : "Block")</td>
+                            <td class="text-center">
+                            <div class="group_button another">
+                                    <input type="button" class ="mod-btn" 
+                                    onclick="window.location.href='@Url.Action("Details", new { id = item.CustomerId })'" 
+                                    value="Chi tiết" class="btn btn-info btn-sm">
+
+                                    <input type="button" class ="mod-btn" id="delete" 
+                                    onclick="if(confirm('Are you sure you want to delete?'))
+                            { window.location.href='@Url.Action("Delete", new { id = item.CustomerId })' }" 
+                                    value="Xóa" class="btn btn-danger btn-sm">
+
+                                     <a id="btn" class="btn btn-info btn-sm btnCapNhat" data-id="@item.CustomerId">Cập nhật</a>
+                            </div>
+                                                         
+                            </td>
+                        </tr>
+                        }
+                    }
+            </tbody>
+        </table>
+        <div aria-label="Page navigation example">
+            <ul class="pagination">
+                <pager class="page-item" list="@Model" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index"></pager>
+            </ul>
+
+        </div>
+    </div>
+
+
 </div>
+
+
+       
+
 
 
 <!-- jQuery -->
@@ -168,6 +169,7 @@
                     }
                 });
             });
+
         $(document).ready(function () {
     $('body').on('click', '.btnCapNhat', function () {
         var id = $(this).data("id");

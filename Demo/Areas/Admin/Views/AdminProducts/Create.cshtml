@@ -4,8 +4,8 @@
     ViewData["Title"] = "Create";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-
-<div class="page-header">
+<div class="content_box">
+    <div class="nav_dir">
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
@@ -16,58 +16,60 @@
 
 </div>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="form_container row">
+    <div class="content col-md-4">
         <form asp-controller="AdminProducts" asp-action="Create" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="ProductId" class="control-label"></label>
-                <input asp-for="ProductId" class="form-control" />
-                <span asp-validation-for="ProductId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProductName" class="control-label"></label>
-                <input asp-for="ProductName" class="form-control" />
-                <span asp-validation-for="ProductName" class="text-danger"></span>
-            </div>
-           @*  <div class="form-group">
+            <div class="user-details">
+                <div class="input-box">
+                    <label asp-for="ProductId" class="control-label"></label>
+                    <input asp-for="ProductId" class="form-control" />
+                    <span asp-validation-for="ProductId" class="text-danger"></span>
+                 </div>
+                <div class="input-box">
+                    <label asp-for="ProductName" class="control-label"></label>
+                    <input asp-for="ProductName" class="form-control" />
+                    <span asp-validation-for="ProductName" class="text-danger"></span>
+                </div>
+                    @*  <div class="input-box">
                 <label asp-for="ShortDesc" class="control-label"></label>
                 <input asp-for="ShortDesc" class="form-control" />
                 <span asp-validation-for="ShortDesc" class="text-danger"></span>
             </div> *@
-            <div class="form-group">
+            <div class="input-box" id="special">
                 <label asp-for="Description" class="control-label"></label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-<div class="form-group">
-    <label class="font-weight-semibold" for="productCategory">Danh mục sản phẩm</label>
+<div class="input-box" id="special">
+    <label for="productCategory">Danh mục sản phẩm</label>
     <select class="custom-select" asp-for="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
         <option value="" disabled selected>Chọn danh mục</option>
     </select>
 </div>
 
-@* 
+                    @* 
 <div class="form-group">
     <label asp-for="CatId" class="control-label"></label>
     <input asp-for="CatId" class="form-control" />
     <span asp-validation-for="CatId" class="text-danger"></span>
 </div> *@
-           <div class="row" >
-                <div class="form-group" >
+            <div class="row">
+
+                <div class="input-box" >
                     <label asp-for="Price" class="control-label"></label>
                     <input asp-for="Price" class="form-control" />
                     <span asp-validation-for="Price" class="text-danger"></span>
                 </div>
-                <div class="form-group">
+                <div class="input-box">
                     <label asp-for="Unit" class="control-label"></label>
                     <input asp-for="Unit" class="form-control" />
                     <span asp-validation-for="Unit" class="text-danger"></span>
                 </div>
-           </div>
 
+            </div>
 
-            @* <div class="form-group">
+                    @* <div class="form-group">
                 <label asp-for="Price" class="control-label"></label>
                 <input asp-for="Price" class="form-control" />
                 <span asp-validation-for="Price" class="text-danger"></span>
@@ -79,13 +81,13 @@
             </div> *@
 
 
-            <div class="form-group">
+            <div class="input-box">
                 <label class="font-weight-semibold" for="productBrand">Ảnh đại diện</label>
                 <input name="fThumb" type="file" class="form-control" asp-for="Thumb" />
                 <span asp-validation-for="Thumb" class="text-danger"></span>
             </div>
 
-           @*  <div class="form-group">
+                    @*  <div class="form-group">
                 <label asp-for="Video" class="control-label"></label>
                 <input asp-for="Video" class="form-control" />
                 <span asp-validation-for="Video" class="text-danger"></span>
@@ -100,7 +102,7 @@
                 <input asp-for="DateModified" class="form-control" />
                 <span asp-validation-for="DateModified" class="text-danger"></span>
             </div> *@
-           @*  <div class="form-group">
+                    @*  <div class="form-group">
                 <label asp-for="BestSellers" class="control-label"></label>
                 <input asp-for="BestSellers" class="form-control" />
                 <span asp-validation-for="BestSellers" class="text-danger"></span>
@@ -112,60 +114,57 @@
             </div> *@
 
             <div class="row">
-                <div class="m-t-25">
-                    <div class="form-group d-flex align-items-center">
+
+                    <div class="input-box d-flex align-items-center">
                         <label>Public</label>
-                   <div class="switch m-r-10">
-                       <input type="checkbox" asp-for="Active" checked="" />
+                       <div class="switch m-r-10">
+                           <input type="checkbox" asp-for="Active" checked="" />
                             <label for="Active"></label>
-                   </div>
-                  
+                       </div>
                     </div>
 
-                    <div class="form-group d-flex align-items-center">
-                        <label>HomeFlag</label>
-                        <div class="switch m-r-10">
-                            <input type="checkbox" asp-for="HomeFlag" checked="" />
-                            <label for="HomeFlag"></label>
-                        </div>
-                        
+                    <div class="input-box d-flex align-items-center">
+                            <label>HomeFlag</label>
+                            <div class="switch m-r-10">
+                                <input type="checkbox" asp-for="HomeFlag" checked="" />
+                                <label for="HomeFlag"></label>
+                            </div>
                     </div>
 
-                    <div class="form-group d-flex align-items-center">
+                    <div class="input-box d-flex align-items-center">
                         <label>BestSellers</label>
                         <div class="switch m-r-10">
                             <input type="checkbox" asp-for="BestSellers" checked="" />
                             <label for="BestSellers"></label>
                         </div>
-                       
                     </div>
-                </div>
+
 
             </div>
-          
-            <div class="form-group">
+
+            <div class="input-box">
                 <label asp-for="Tags" class="control-label"></label>
                 <input asp-for="Tags" class="form-control" />
                 <span asp-validation-for="Tags" class="text-danger"></span>
             </div>
 
-           
-          @*   <div class="form-group">
+
+                    @*   <div class="form-group">
                 <label asp-for="Active" class="control-label"></label>
                 <input type="text" asp-for="Active" class="form-control" />
                 <span asp-validation-for="Active" class="text-danger"></span>
             </div> *@
-            <div class="form-group">
+            <div class="input-box">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
-           @*  <div class="form-group">
+                    @*  <div class="form-group">
                 <label asp-for="Alias" class="control-label"></label>
                 <input asp-for="Alias" class="form-control" />
                 <span asp-validation-for="Alias" class="text-danger"></span>
             </div> *@
-         @*    <div class="form-group">
+                    @*    <div class="form-group">
                 <label asp-for="MetaDesc" class="control-label"></label>
                 <input asp-for="MetaDesc" class="form-control" />
                 <span asp-validation-for="MetaDesc" class="text-danger"></span>
@@ -175,14 +174,21 @@
                 <input asp-for="MetaKey" class="form-control" />
                 <span asp-validation-for="MetaKey" class="text-danger"></span>
             </div> *@
-            <div class="form-group">
+            </div>
+            
+            <div class="button">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="group_button">
+        <input type="button" 
+    onclick="window.location.href='@Url.Action("Index")'" 
+    value="Back to List" class="btn btn-info btn-sm">
+
+</div>
+
 </div>
 

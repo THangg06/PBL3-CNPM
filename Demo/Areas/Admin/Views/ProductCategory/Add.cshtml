@@ -3,18 +3,21 @@
     ViewData["Title"] = "Create";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-<div class="page-header">
+
+<div class="content_box">
+
+    <div class="nav_dir">
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
             <a class="breadcrumb-item" asp-area="Admin" asp-controller="ProductCategory" asp-action="Index">Danh sách danh mục sản phẩm > </a>
-            <a class="breadcrumb-item" asp-area="Admin" asp-controller="ProductCategory" asp-action="Add">Thêm danh mục sản phẩm > </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="ProductCategory" asp-action="Add">Thêm danh mục sản phẩm</a>
         </nav>
     </div>
 
 </div>
-<div class="content_box">
-    <div><h1>Create</h1></div>
+
+    <div><h1 style="margin: 2rem; font-size: 2rem">Create</h1></div>
 
     <hr />
 
@@ -42,11 +45,6 @@
                         <span asp-validation-for="Description" class="text-danger"></span>
                     </div>
 
-                    <div class="form-group">
-                        <label class="font-weight-semibold" for="productBrand">Ảnh đại diện</label>
-                        <input name="fThumb" type="file" class="form-control" asp-for="Thumb" />
-                        <span asp-validation-for="Thumb" class="text-danger"></span>
-                    </div>
                     <div class="input-box">
                         <label asp-for="Title" class="control-label">Title</label>
                         <input asp-for="Title" class="form-control" />
@@ -76,6 +74,11 @@
                         <label asp-for="SchemaMarkup" class="control-label">SchemaMarkup</label>
                         <input asp-for="SchemaMarkup" class="form-control" />
                         <span asp-validation-for="SchemaMarkup" class="text-danger"></span>
+                    </div>
+                    <div class="input-box" id="special">
+                        <label for="productBrand">Ảnh đại diện</label>
+                        <input name="fThumb" type="file" class="form-control" asp-for="Thumb" />
+                        <span asp-validation-for="Thumb" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="button">

@@ -1,4 +1,4 @@
-@model IEnumerable<Demo.Data.Role>
+﻿@model IEnumerable<Demo.Data.Role>
 
 @{
     ViewData["Title"] = "Quản lý quyền truy cập";
@@ -16,11 +16,6 @@
     </div>
 
 </div>
-    <div class="group_button">
-        <input type="button"
-               onclick="window.location.href='@Url.Action("Create")'"
-               value="Tạo phân quyền mới" class="btn btn-info btn-sm">
-    </div>
     <div class="data_table_container">
         <table class="data-table">
             <thead>
@@ -63,7 +58,80 @@
         </table>
     </div>
 
-    
+    <div class="group_button">
+        <input type="button"
+               onclick="window.location.href='@Url.Action("Create")'"
+               value="Tạo phân quyền mới" class="btn btn-info btn-sm">
+    </div>
 </div>
 
+
+@* <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Data Table</title>
+    <style>
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            /* Định dạng hàng tiêu đề */
+            .data-table thead {
+                background-color: #f4f4f4; /* Màu nền cho hàng tiêu đề */
+                font-weight: bold; /* Đậm chữ */
+            }
+
+            /* Định dạng hàng và ô */
+            .data-table th, .data-table td {
+                border: 1px solid #ddd; /* Đường viền cho ô */
+                padding: 8px; /* Khoảng cách giữa ô và văn bản */
+                text-align: left; /* Canh trái văn bản trong ô */
+            }
+
+            /* Định dạng hàng khi trỏ chuột */
+            .data-table tr:hover {
+                background-color: #f1f1f1; /* Màu nền khi trỏ chuột */
+            }
+    </style>
+</head>
+
+<body>
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Tạo mới</a>
+    </p>
+    <div class="data_table_container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Mô tả</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    foreach (var item in Model)
+                    {
+                                <tr>
+                                    <th scope="row">@item.RoleId</th>
+                                    <td>@item.RoleName</td>
+                                    <td>@item.Description</td>
+                                    <td>
+                                        <a class="btn btn-primary btn-tone m-r-5" asp-area="Admin" asp-controller="AdminRoles" asp-action="Details" asp-route-id="@item.RoleId">View</a>
+                                        <a class="btn btn-secondary btn-tone m-r-5" asp-area="Admin" asp-controller="AdminRoles" asp-action="Edit" asp-route-id="@item.RoleId">Edit</a>
+                                        <a class="btn btn-danger btn-tone m-r-5" asp-area="Admin" asp-controller="AdminRoles" asp-action="Delete" asp-route-id="@item.RoleId">Delete</a> <!-- Đổi màu nút xóa -->
+                                    </td>
+                                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html> *@
 
