@@ -6,19 +6,29 @@
     @foreach (var cus in Model)
     {
                 <tr>
-                    <td>@cus.CustomerId</td>
+
+@*                     <td>@cus.CustomerId</td> *@
                     <td>@cus.FullName</td>
-                    <td>@cus.Birthday</td>
+@*                     <td>@cus.Birthday</td> *@
                     <td>@cus.Address</td>
                     <td>@cus.Email</td>
-                    <td>@cus.Active</td>
                     <td>@cus.Phone</td>
+                    <td>@cus.Active</td>
 
 
                     <td>
-                       
-                        <a asp-action="Details" asp-route-id="@cus.CustomerId">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@cus.CustomerId"> class="text-danger">Delete</a>
+        <div class="group_button another">
+            <input type="button" class="mod-btn"
+                   onclick="window.location.href='@Url.Action("Details", "AdminCustomers", new { id = cus.CustomerId })'"
+                   value="Chi tiết" class="btn btn-info btn-sm">
+
+            <input type="button" class="mod-btn" id="delete"
+                   onclick="if(confirm('Are you sure you want to delete?')) { window.location.href='@Url.Action("Delete", "AdminCustomers", new { id = cus.CustomerId })' }"
+                   value="Xóa" class="btn btn-danger btn-sm">
+
+            <a id="btn" class="btn btn-info btn-sm btnCapNhat" data-id="@cus.CustomerId">Cập nhật</a>
+        </div>
+
                     </td>
                 </tr>
     }

@@ -3,15 +3,17 @@
     @foreach (var product in Model)
     {
                 <tr>
-                    <td>@product.ProductId</td>
-                    <td>@product.ProductName</td>
-                    <td>@product.ShortDesc</td>
-                    <td>@product.Description</td>
+                            <td class="name-product">
+                                <img src="~/menucss/loadh/@product.Thumb" alt="Product Image" />
+                                    @product.ProductName
+                            </td>
+@*                     <td>@product.ProductName</td> *@
+                    <td>@product.Cat.CatName</td>
                     <td>@product.Price</td>
                     <td>@product.Unit</td>
                     <td>@product.BestSellers</td>
                     <td>@product.Active</td>
-                    <td>
+@*                     <td>
                 @if (product.Cat != null)
                 {
                     @product.Cat.CatId
@@ -20,11 +22,22 @@
                 {
                     <text>N/A</text>
                 }
-                    </td>
+                    </td> *@
                     <td>
-                        <a asp-action="Edit" asp-route-id="@product.ProductId">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@product.ProductId">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@product.ProductId" class="text-danger">Delete</a>
+                <div class="group_button another">
+                    <input type="button" class="mod-btn"
+                           onclick="window.location.href='@Url.Action("Edit", "AdminProducts", new { id = product.ProductId })'"
+                           value="Chi tiết" class="btn btn-info btn-sm">
+
+                    <input type="button" class="mod-btn"
+                    onclick="window.location.href='@Url.Action("Details", "AdminProducts", new { id = product.ProductId })'"
+                    value="Chi tiết" class="btn btn-info btn-sm">
+
+                    <input type="button" class="mod-btn" id="delete"
+                    onclick="if(confirm('Are you sure you want to delete?')) { window.location.href='@Url.Action("Delete", "AdminProducts", new { id = product.ProductId })' }"
+                    value="Xóa" class="btn btn-danger btn-sm">
+
+                </div>
                     </td>
                 </tr>
     }
