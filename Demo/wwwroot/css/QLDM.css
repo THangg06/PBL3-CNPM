@@ -210,7 +210,6 @@ body {
 /*    overflow: scroll;*/
     margin-top: 10px;
 /*    width: 1200px;*/
-width: 1100px;
     display: flex;
 }
 
@@ -218,8 +217,9 @@ width: 1100px;
     .body .container .data_table_container.large {
         overflow: scroll;
         width: 1200px;
-        height: 680px;
+        max-height: 700px;
     }
+
 
 .data_table_container#small_info_table {
     max-width: 600px;
@@ -248,6 +248,8 @@ table.data-table {
         padding: 16px;
         text-align: left;
         font-size: 1.5rem;
+        height: 100px;
+        width: 200px;
         font-family: "Inter", Helvetica, Arial, serif;
     }
 
@@ -278,6 +280,7 @@ table.data-table {
 
     .group_button.another {
         justify-content: left;
+        width: 220px;
     }
 
 
@@ -661,7 +664,7 @@ h3.text-center {
 .modal-body .form-group select {
     font-size: 1.7rem;
     margin: 2rem 2rem 2rem 0;
-    width: 100px;
+    width: 140px;
 }
 
 .modal-footer {
