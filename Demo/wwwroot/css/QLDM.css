@@ -46,8 +46,9 @@ body {
     .header .admin-box {
         display: flex;
         justify-content: space-between;
-        width: 15%;
+        width: 25%;
         padding: 0rem;
+        align-items: center;
     }
 
         .header .admin-box img {
@@ -598,4 +599,9 @@ h3.text-center {
     font-size: 2rem;
     text-align: center;
     margin: 2rem 0px;
+}
+
+.nav_dir .header-sub-title nav a{
+    text-decoration: none;
+    color: black;
 }

@@ -33,7 +33,7 @@ namespace Demo.Areas.Admin.Controllers
         {
 
             var pageNumber = page;
-            var pageSize = 30; // Số sản phẩm trên mỗi
+            var pageSize = 100; // Số sản phẩm trên mỗi
             IQueryable<Product> query = _context.Products
       .AsNoTracking()
       .Include(x => x.Cat);
@@ -135,34 +135,7 @@ namespace Demo.Areas.Admin.Controllers
         public async Task<IActionResult> Create([Bind("ProductId,ProductName,CatName,ShortDesc,Description,CatId,Price,Unit,Thumb,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Tags,Title,Alias,MetaDesc,MetaKey")] Product product, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
 
-            //ViewData["Danhmuc"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
-            //string selectedCatId = Request.Form["CatId"];
-            //var selectedCat = _context.Categories.FirstOrDefault(c => c.CatId == selectedCatId);
-            //if (selectedCat != null)
-            //{
-            //    product.CatName = selectedCat.CatName;
-            //}
-
-            //var danhmuc = ViewData["Danhmuc"] as SelectList;
-            //if (danhmuc != null)
-            //{
-            //    Console.WriteLine("Dữ liệu của ViewData['Danhmuc']:");
-            //    foreach (var item in danhmuc)
-            //    {
-            //        Console.WriteLine($"CatId: {item.Value}, CatName: {item.Text}");
-            //    }
-            //}
-            ////string selectedCatId = Request.Form["CatId"];
-
-            ////product.CatId = selectedCatId;
-            //foreach (var modelState in ModelState.Values)
-            //{
-            //    foreach (var error in modelState.Errors)
-            //    {
-            //        Console.WriteLine($"Error: {error.ErrorMessage}");
-            //    }
-            //}
-            //Console.WriteLine("Hieee");
+           
             if (ModelState.IsValid)
             {
                 product.ProductName = MyUtil.ToTitleCase(product.ProductName);
@@ -172,9 +145,9 @@ namespace Demo.Areas.Admin.Controllers
                 if (fThumb != null)
                 {
                     string extension = Path.GetExtension(fThumb.FileName);
-                    string image = MyUtil.SEOUrl(product.ProductName) + extension;
+                    string image = Path.GetFileNameWithoutExtension(fThumb.FileName) + extension;
 
-                    product.Thumb = await MyUtil.UploadFile(fThumb, @"loadh", image.ToLower());
+                    product.Thumb = await MyUtil.UploadFile(fThumb, image.ToLower());
 
 
 
@@ -237,7 +210,7 @@ namespace Demo.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-
+            string tempThumb = product.Thumb;
             try
             {
 
@@ -250,17 +223,20 @@ namespace Demo.Areas.Admin.Controllers
                     //   product.CatName = MyUtil.ToTitleCase(product.CatName);
                     Console.WriteLine("Hie");
                     // Xử lý tải lên tệp hình ảnh
-                    if (fThumb != null)
+                    if (fThumb == null)
                     {
-                        string extension = Path.GetExtension(fThumb.FileName);
-                        string image = MyUtil.SEOUrl(product.ProductName) + extension;
-
-                        product.Thumb = await MyUtil.UploadFile(fThumb, @"loadh", image.ToLower());
+                        product.Thumb = tempThumb;
 
 
 
                     }
+                    else
+                    {
+                        string extension = Path.GetExtension(fThumb.FileName);
+                        string image = Path.GetFileNameWithoutExtension(fThumb.FileName) + extension;
 
+                        product.Thumb = await MyUtil.UploadFile(fThumb, image.ToLower());
+                    }
                     if (string.IsNullOrEmpty(product.Thumb))
                     {
                         product.Thumb = "default.jpg";

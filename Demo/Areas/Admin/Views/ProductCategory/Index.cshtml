@@ -11,7 +11,7 @@
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
-                <i class="anticon anticon-home m-r-5"></i>Trang chủ
+                <i class="anticon anticon-home m-r-5"></i>Trang chủ > 
             </a>
             <a asp-area="Admin" asp-controller="ProductCategory" asp-action="Index" class="breadcrumb-item">
                 Quản lý danh mục sản phẩm
@@ -23,23 +23,22 @@
 
 <!-- Phần tìm kiếm và lọc -->
 
-<p>
-    <a asp-action="Add">Create New</a>
-</p>
+
 <div class="data_table_container">
     <table class="data-table">
         <thead>
             <tr>
-                <th>CatID</th>
-                <th>CatName</th>
+@*                 <th>CatID</th> *@
+                <th>Tên Danh Mục</th>
 
-                <th>Description</th>
+@*                 <th>Description</th> *@
 
                 <th>Thumb</th>
 
 
                 <th>Title</th>
                     @* <th>CatID</th> *@
+                <th class="action_button"></th>
             </tr>
         </thead>
         <tbody id="records_table">
@@ -50,21 +49,31 @@
                     @foreach (var item in Model)
                     {
                             <tr>
-                                <td>@Html.DisplayFor(modelItem => item.CatId)</td>
+@*                                 <td>@Html.DisplayFor(modelItem => item.CatId)</td> *@
                                 <td>@Html.DisplayFor(modelItem => item.CatName)</td>
-                                <td>@Html.DisplayFor(modelItem => item.Description)</td>
+@*                                 <td>@Html.DisplayFor(modelItem => item.Description)</td> *@
                                 <td>
 
-                                    <img src="~/menucss/loadh/@item.Thumb" alt="Product Image" />
+                                    <img src="~/menucss/@item.Thumb" alt="Product Image" />
                                 </td>
                                 <td>@Html.DisplayFor(modelItem => item.Title)</td>
 
 
 
                                 <td>
-                                    <a asp-action="Edit" asp-route-id="@item.CatId">Edit</a> |
-                                    <a asp-action="Details" asp-route-id="@item.CatId">Details</a> |
-                                    <a asp-action="Delete" asp-route-id="@item.CatId">Delete</a>
+                                <div class="group_button another">
+                                    <input type="button" class="mod-btn"
+                                           onclick="window.location.href='@Url.Action("Edit", new { id = item.CatId })'"
+                                           value="Sửa" class="btn btn-info btn-sm">
+
+                                    <input type="button" class="mod-btn"
+                                           onclick="window.location.href='@Url.Action("Details", new { id = item.CatId })'"
+                                           value="Chi tiết" class="btn btn-info btn-sm">
+
+                                    <input type="button" class="mod-btn" id="delete"
+                                           onclick="window.location.href='@Url.Action("Delete", new { id = item.CatId })'"
+                                           value="Xóa" class="btn btn-danger btn-sm">
+                                </div>
                                 </td>
                             </tr>
 
@@ -74,6 +83,14 @@
     </table>
 </div>
 
+    <div class="group_button">
+        <input type="button"
+               onclick="window.location.href='@Url.Action("Add")'"
+               value="Tạo danh mục mới" class="btn btn-info btn-sm">
+@*         <p>
+            <a asp-action="Add">Create New</a>
+        </p> *@
+    </div>
 
 <!-- Pagination Controls -->
 <div aria-label="Page navigation">

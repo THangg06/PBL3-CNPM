@@ -4,17 +4,18 @@
     ViewData["Title"] = "Create";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-<div class="page-header">
-    <div class="header-sub-title">
-        <nav class="breadcrumb breadcrumb-dash">
-            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
-            <a class="breadcrumb-item" asp-area="Admin" asp-controller="ProductCategory" asp-action="Index">Danh sách danh mục sản phẩm > </a>
-            <a class="breadcrumb-item" asp-area="Admin" asp-controller="ProductCategory" asp-action="Add">Thêm danh mục sản phẩm > </a>
-        </nav>
-    </div>
 
-</div>
 <div class="content_box">
+    <div class="nav_dir">
+        <div class="header-sub-title">
+            <nav class="breadcrumb breadcrumb-dash">
+                <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+                <a class="breadcrumb-item" asp-area="Admin" asp-controller="ProductCategory" asp-action="Index">Danh sách danh mục sản phẩm > </a>
+                <a class="breadcrumb-item" asp-area="Admin" asp-controller="ProductCategory" asp-action="Add">Thêm danh mục sản phẩm > </a>
+            </nav>
+        </div>
+
+    </div>
     <div><h1>Create</h1></div>
 
     <hr />
@@ -27,9 +28,15 @@
             <form asp-controller="ProductCategory" asp-action="Add" method="post" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="user-details">
-                    <div class="input-box">
+                  @*   <div class="input-box">
                         <label asp-for="CatId" class="control-label">CatId</label>
                         <input asp-for="CatId" class="form-control" />
+                        <span asp-validation-for="CatId" class="text-danger"></span>
+                    </div> *@
+                    <div class="form-group" hidden>
+                        <label asp-for="CatId" class="control-label"></label>
+                        <input asp-for="CatId" class="form-control" value="CAT" />
+                        <!-- Đặt thuộc tính readonly để ngăn người dùng thay đổi giá trị -->
                         <span asp-validation-for="CatId" class="text-danger"></span>
                     </div>
                     <div class="input-box">
@@ -43,11 +50,6 @@
                         <span asp-validation-for="Description" class="text-danger"></span>
                     </div>
 
-                    <div class="form-group">
-                        <label class="font-weight-semibold" for="productBrand">Ảnh đại diện</label>
-                        <input name="fThumb" type="file" class="form-control" asp-for="Thumb" />
-                        <span asp-validation-for="Thumb" class="text-danger"></span>
-                    </div>
                     <div class="input-box">
                         <label asp-for="Title" class="control-label">Title</label>
                         <input asp-for="Title" class="form-control" />
@@ -77,6 +79,11 @@
                         <label asp-for="SchemaMarkup" class="control-label">SchemaMarkup</label>
                         <input asp-for="SchemaMarkup" class="form-control" />
                         <span asp-validation-for="SchemaMarkup" class="text-danger"></span>
+                    </div>
+                    <div class="input-box" id="special">
+                        <label class="font-weight-semibold" for="productBrand">Ảnh đại diện</label>
+                        <input name="fThumb" type="file" class="form-control" asp-for="Thumb" />
+                        <span asp-validation-for="Thumb" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="button">

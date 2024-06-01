@@ -81,6 +81,18 @@
       "PackagePath": "staticwebassets\\Menu.html"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\10-620x620-7.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\10-620x620-7.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\2w_ckscl-608x416f.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\2w_ckscl-608x416f.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\7up.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\7up.jpg"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Daco_4553104.png",
       "PackagePath": "staticwebassets\\MenuCss\\Daco_4553104.png"
     },
@@ -135,6 +147,22 @@
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\Vegan burger.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\Hamburger\\Vegan burger.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\pexels-daniel-reche-718241-3616956.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\Hamburger\\pexels-daniel-reche-718241-3616956.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\pexels-jonathanborba-2983098.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\Hamburger\\pexels-jonathanborba-2983098.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Hamburger\\pexels-myfoodie-2702674.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\Hamburger\\pexels-myfoodie-2702674.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\HotDog\\Hotdog.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\HotDog\\Hotdog.jpg"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\LoadH\\10-620x620-7.jpg",
@@ -349,6 +377,10 @@
       "PackagePath": "staticwebassets\\MenuCss\\Spagetti\\Spaghetti Veggie.jfif"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Spagetti\\mi-spaghetti-768x512.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\Spagetti\\mi-spaghetti-768x512.jpg"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Spagetti\\spaghetti bo bam.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\Spagetti\\spaghetti bo bam.jfif"
     },
@@ -361,6 +393,54 @@
       "PackagePath": "staticwebassets\\MenuCss\\Spagetti\\spaghetti-with-tuna-sauce-13068-1.jpeg"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\beef_burger.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\beef_burger.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\burger-b.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\burger-b.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\burger-c-mp-vt-bin.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\burger-c-mp-vt-bin.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\burger-c.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\burger-c.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\burger-chay.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\burger-chay.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\burger-g.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\burger-g.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\burger-tm.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\burger-tm.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\cach-lam-banh-hotdog-bang-noi-chien-khong-dau-2.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\cach-lam-banh-hotdog-bang-noi-chien-khong-dau-2.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\cheese fried chicken.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\cheese fried chicken.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\cupcake dau tay.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\cupcake dau tay.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\cupcake-du-ty.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\cupcake-du-ty.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\cupcake-socola.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\cupcake-socola.jpg"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\images.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\drinks\\images.jfif"
     },
@@ -371,6 +451,10 @@
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\drinks\\nuoc-ngot-7-up-vi-chanh-320ml.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\tac-dung-cua-tra-gung-va-cac-cach-pha-tra-gung-don-gian-tai-nha-1-1200x676.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\drinks\\tac-dung-cua-tra-gung-va-cac-cach-pha-tra-gung-don-gian-tai-nha-1-1200x676.jpg"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\tra-sua-tran-chau-vno.png",
@@ -399,6 +483,186 @@
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\fried chicken\\soybean chicken.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\fried chicken\\soybean chicken.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\g-nng.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\g-nng.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\g-rn-st-cay.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\g-rn-st-cay.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\g-rn-st-du.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\g-rn-st-du.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\g-rn-st-ph-mai.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\g-rn-st-ph-mai.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\g-rn.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\g-rn.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\ga ran.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\ga ran.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\ga-chien.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\ga-chien.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\grilled-chicken-horizontal-1532030541.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\grilled-chicken-horizontal-1532030541.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\hamburger_ca.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\hamburger_ca.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\hamburger_ga.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\hamburger_ga.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\hotdog.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\hotdog.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\images.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\images.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\img_2987-scaled.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\img_2987-scaled.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\kem-macha.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\kem-macha.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\kem-matcha-thumbnail-1.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\kem-matcha-thumbnail-1.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\kem-socola.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\kem-socola.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\kem-vaniilla.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\kem-vaniilla.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\mi-spaghetti-768x512.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\mi-spaghetti-768x512.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\mirinda-cam-330ml-sleek-lon-2-org.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\mirinda-cam-330ml-sleek-lon-2-org.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\mirinda.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\mirinda.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\mozzarella-burger.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\mozzarella-burger.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\mozzarella_burger.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\mozzarella_burger.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\nuoc-ngot-7-up-vi-chanh-320ml.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\nuoc-ngot-7-up-vi-chanh-320ml.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\pepsi.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\pepsi.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\pexels-jonathanborba-2983098.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\pexels-jonathanborba-2983098.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\pexels-myfoodie-2702674.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\pexels-myfoodie-2702674.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\shrimp_burger.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\shrimp_burger.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\soybean chicken.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\soybean chicken.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\spaghetti bo bam.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\spaghetti bo bam.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\spaghetti veggie.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\spaghetti veggie.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\spaghetti-b-bm.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\spaghetti-b-bm.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\spaghetti-boscaiola-74422-1.jpeg",
+      "PackagePath": "staticwebassets\\MenuCss\\spaghetti-boscaiola-74422-1.jpeg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\spaghetti-boscaiola.jpeg",
+      "PackagePath": "staticwebassets\\MenuCss\\spaghetti-boscaiola.jpeg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\spaghetti-chay.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\spaghetti-chay.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\spaghetti-hi-sn.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\spaghetti-hi-sn.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\spaghetti-tuna.jpeg",
+      "PackagePath": "staticwebassets\\MenuCss\\spaghetti-tuna.jpeg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\spaghetti-with-tuna-sauce-13068-1.jpeg",
+      "PackagePath": "staticwebassets\\MenuCss\\spaghetti-with-tuna-sauce-13068-1.jpeg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\spicy fried chicken.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\spicy fried chicken.jfif"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\tac-dung-cua-tra-gung-va-cac-cach-pha-tra-gung-don-gian-tai-nha-1-1200x676.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\tac-dung-cua-tra-gung-va-cac-cach-pha-tra-gung-don-gian-tai-nha-1-1200x676.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\tr-do.png",
+      "PackagePath": "staticwebassets\\MenuCss\\tr-do.png"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\tr-sa.png",
+      "PackagePath": "staticwebassets\\MenuCss\\tr-sa.png"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\tra-sua-tran-chau-vno.png",
+      "PackagePath": "staticwebassets\\MenuCss\\tra-sua-tran-chau-vno.png"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\unnamed.png",
+      "PackagePath": "staticwebassets\\MenuCss\\unnamed.png"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\vanilla ice cream.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\vanilla ice cream.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\vegan burger.jfif",
+      "PackagePath": "staticwebassets\\MenuCss\\vegan burger.jfif"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\Newpassword.html",

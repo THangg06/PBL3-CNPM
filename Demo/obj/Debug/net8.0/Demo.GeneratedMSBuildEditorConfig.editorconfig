@@ -270,28 +270,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcUmVzZXRQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Views/Cart/AddToCart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxBZGRUb0NhcnQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/ProjectWF/PBL3/Demo/Views/Cart/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Views/Cart/Checkoutt.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja291dHQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/ProjectWF/PBL3/Demo/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/ProjectWF/PBL3/Demo/Views/Cart/Index1.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleDEuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/ProjectWF/PBL3/Demo/Views/Cart/Index2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleDIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/ProjectWF/PBL3/Demo/Views/Cart/Success.cshtml]

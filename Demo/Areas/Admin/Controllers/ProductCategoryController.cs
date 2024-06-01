@@ -60,9 +60,9 @@ namespace Demo.Areas.Admin.Controllers
                 if (fThumb != null)
                 {
                     string extension = Path.GetExtension(fThumb.FileName);
-                    string image = MyUtil.SEOUrl(category.CatName) + extension;
+                    string image = Path.GetFileNameWithoutExtension(fThumb.FileName) + extension;
 
-                    category.Thumb = await MyUtil.UploadFile(fThumb, @"LoadH", image.ToLower());
+                    category.Thumb = await MyUtil.UploadFile(fThumb, image.ToLower());
                 }
 
 
@@ -126,9 +126,9 @@ namespace Demo.Areas.Admin.Controllers
                     if (fThumb != null)
                     {
                         string extension = Path.GetExtension(fThumb.FileName);
-                        string image = MyUtil.SEOUrl(category.CatName) + extension;
+                        string image = Path.GetFileNameWithoutExtension(fThumb.FileName) + extension;
 
-                        category.Thumb = await MyUtil.UploadFile(fThumb, @"LoadH", image.ToLower());
+                        category.Thumb = await MyUtil.UploadFile(fThumb, image.ToLower());
                     }
 
 
