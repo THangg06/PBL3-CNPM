@@ -61,8 +61,8 @@
     }
   
     .header .navbar a{
-      margin: 0 1rem;
-      font-size: 2rem;
+      margin: 0 1.5rem;
+      font-size: 2.5rem;
       color:#010103;
       font-weight: 500;
       padding: 0.5rem 1rem;
@@ -73,7 +73,23 @@
       transition: color 0.5s;
       z-index: 2;
     }
-  
+
+    @media(max-width: 1200px){
+        .header .navbar a {
+            margin: 0 1rem;
+            font-size: 2rem;
+            color: #010103;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            text-decoration: none;
+            position: relative;
+            display: inline;
+            transition: color 0.5s;
+            z-index: 2;
+        }
+    }
+    
   
     .header .navbar a:hover,
     .header .navbar .menu-active{

@@ -1,32 +1,39 @@
-const productRows = document.querySelectorAll('.product_row');
-const buttons = document.querySelectorAll('.choose_food');
+//const productRows = document.querySelectorAll('.product_row');
+//const buttons = document.querySelectorAll('.choose_food');
 
-// Ẩn tất cả các danh mục sản phẩm ban đầu (tùy chọn)
-productRows.forEach(productRow => productRow.style.display = 'none');
+//// Ẩn tất cả các danh mục sản phẩm ban đầu (tùy chọn)
+//productRows.forEach(productRow => productRow.style.display = 'none');
 
-// Hiển thị danh mục mặc định (tùy chọn, ví dụ: Burger)
-document.getElementById('Burger').style.display = 'grid';
+//// Hiển thị danh mục mặc định (tùy chọn, ví dụ: Burger)
+//document.getElementById('Burger').style.display = 'grid';
 
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    const productRowId = button.id.replace('btn-', '');
-    const productRow = document.getElementById(productRowId);
+//buttons.forEach(button => {
+//  button.addEventListener('click', () => {
+//    const productRowId = button.id.replace('btn-', '');
+//    const productRow = document.getElementById(productRowId);
 
-    // Ẩn tất cả các danh mục sản phẩm
-    productRows.forEach(productRow => productRow.style.display = 'none');
+//    // Ẩn tất cả các danh mục sản phẩm
+//    productRows.forEach(productRow => productRow.style.display = 'none');
 
-    // Hiển thị danh mục sản phẩm được chọn
-    productRow.style.display = 'grid';
-  });
-});
+//    // Hiển thị danh mục sản phẩm được chọn
+//    productRow.style.display = 'grid';
+//  });
+//});
 
-let navbar = document.querySelector('.navbar');
+function updateContainerClass() {
+    const container = document.querySelector('.body .container .data_table_container .data-table');
+    const containeradd = document.querySelector('.body .container .data_table_container');
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
 
-document.querySelector('#menu-btn').onclick = () =>{
-  navbar.classList.toggle('active');
+    if (containerWidth >= 1200 || containerHeight >= 650) {
+        containeradd.classList.add('large');
+
+    } else {
+
+        containeradd.classList.remove('large');
+    }
 }
 
-let cartItem = document.querySelector('.cart-items-container');
-document.querySelector('#cart-btn').onclick = () =>{
-  cartItem.classList.toggle('active')
-}
+window.addEventListener('resize', updateContainerClass);
+document.addEventListener('DOMContentLoaded', updateContainerClass);
