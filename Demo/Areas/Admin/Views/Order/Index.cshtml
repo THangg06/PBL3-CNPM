@@ -10,7 +10,8 @@
     #modal-default {
         display: none;
     }
-
+    </style>
+    @*
     th, td {
         white-space: nowrap;
         border: 1px solid #ddd;
@@ -34,7 +35,7 @@
     .border-left {
         border-left: none;
     }
-</style>
+</style> *@
 <div class="content_box">
     <div class="nav_dir">
     <div class="header-sub-title">
@@ -47,6 +48,37 @@
     </div>
 </div>
 
+<div class="modal fade" id="modal-default">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Cập nhật trạng thái giao hàng</h4>
+
+
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="txtOrderId" value="0"/>
+                <div class="form-group">
+                    <label>Trạng thái</label>
+                    <select class="form-control" id="ddTrangThai">
+                        <option value="1">
+                            Đã giao hàng
+                        </option>
+                    </select>
+                </div>
+
+
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary btnLuu">Lưu</button>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
 
         <div class="data_table_container card-body">
             <table class="table table-striped table-bordered data-table">
@@ -81,7 +113,7 @@
                                         <td>@item.OrderDate?.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
                                         <td>@item.ShipDate?.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
                                         <td>
-                                            <div class="group_button">
+                                            <div class="group_button another">
                                                     <a id="btn" href="/admin/order/view/@item.OrderID" class="btn btn-sm btn-success">Xem</a>
                                                     <a id="btn" href="#" class="btn btn-info btn-sm btnCapNhat" data-id="@item.OrderID">Cập nhật</a>
                                             </div>
@@ -111,39 +143,7 @@
         </div>
 
 
-<div class="modal fade" id="modal-default">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Cập nhật trạng thái giao hàng</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
 
-            </div>
-            <div class="modal-body">
-                <input type="hidden" id="txtOrderId" value="0"/>
-                <div class="form-group">
-                    <label>Trạng thái</label>
-                    <select class="form-control" id="ddTrangThai">
-                        <option value="1">
-                            Đã giao hàng
-                        </option>
-                    </select>
-                </div>
-
-
-            </div>
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-                <button type="button" class="btn btn-primary btnLuu">Lưu</button>
-
-            </div>
-        </div>
-
-    </div>
-
-</div>
 </div>
 
 <!-- jQuery -->
