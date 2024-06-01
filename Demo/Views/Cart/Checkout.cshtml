@@ -46,7 +46,7 @@
                 </div>
             </div>
 
-            <div class="input_payment">
+@*             <div class="input_payment">
                 <div class="input_box">
                     <h4>Phương thức thanh toán</h4>
                     <input type="radio" name="paymentMethod" class="radio" value="CreditCard" id="creditCard" checked>
@@ -86,7 +86,7 @@
                         <i class="fa fa-calendar icon" aria-hidden="true"></i>
                     </div>
                 </div>
-            </div>
+            </div> *@
 
             <div class="input_group">
                 <div class="input_box">
@@ -98,7 +98,7 @@
 
 </body>
 
-<script>
+@* <script>
     document.addEventListener("DOMContentLoaded", function() {
         var creditCardRadio = document.getElementById("creditCard");
         var cashRadio = document.getElementById("cash");
@@ -124,8 +124,27 @@
 
         handleRadioChange(); // Initial call to set the correct state on page load
     });
-</script>
+</script> *@
+
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const checkbox = document.getElementById("GiongKhachHang");
+            const deliveryInfo = document.querySelectorAll(".delivery-info");
+
+            checkbox.addEventListener("change", function() {
+                deliveryInfo.forEach(element => {
+                    if (this.checked) {
+                        element.classList.add("hidden");
+                    } else {
+                        element.classList.remove("hidden");
+                    }
+                });
+            });
+        });
+    </script>
+
 @section Scripts {
+  
         <script>
             $(document).ready(function () {
                 // Sự kiện change cho checkbox "GiongKhachHang"
@@ -144,3 +163,5 @@
             });
         </script>
 }
+
+
