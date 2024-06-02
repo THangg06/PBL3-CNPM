@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<Demo.Data.News>
 
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
@@ -20,104 +21,18 @@
             </nav>
         </div>
     </div>
-
-    <div class="data_table_container">
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Content</th>
-
-                    <th>DatePosted</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Trạng thái xử lý</th>
-                    @* <th>CatID</th> *@
-                </tr>
-            </thead>
-            <tbody id="records_table">
-                @if (Model != null)
-                {
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>@item.NewsID</td>
-                            <td>
-                                <div class="row">
-                                    @*   <div class="col-md-6"><strong>Title:</strong></div> *@
-                                    <div class="col-md-6">@item.Title</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="row">
-                                    @*  <div class="col-md-6"><strong>Content:</strong></div> *@
-                                    <div class="col-md-6">@item.Content</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="row">
-                                    @*  <div class="col-md-6"><strong>DatePosted:</strong></div> *@
-                                    <div class="col-md-6">@item.DatePosted</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="row">
-                                    @*    <div class="col-md-6"><strong>Email:</strong></div> *@
-                                    <div class="col-md-6">@item.Email</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="row">
-                                    @*   <div class="col-md-6"><strong>Phone:</strong></div> *@
-                                    <div class="col-md-6">@item.Phone</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="row">
-                                    @*   <div class="col-md-6"><strong>Phone:</strong></div> *@
-                                    <div class="col-md-6">@(item.Active == 1 ? "Đã xử lý" : "Chờ xử lý")</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="group_button another">
-                                    @*  <input type="button" class="mod-btn"
-                            onclick="window.location.href='@Url.Action("Edit", new { id = item.NewsID })'"
-                            value="Sửa" class="btn btn-info btn-sm"> *@
-
-                                    <input type="button" class="mod-btn"
-                                           onclick="window.location.href='@Url.Action("Details", new { id = item.NewsID })'"
-                                           value="Chi tiết" class="btn btn-info btn-sm">
-
-                                    <input type="button" class="mod-btn" id="delete"
-                                           onclick="if(confirm('Are you sure you want to delete?'))
-                    { window.location.href='@Url.Action("Delete", new { id = item.NewsID })' }"
-                                           value="Xóa" class="btn btn-danger btn-sm">
-
-                                    <a href="#" class="btn btn-info btn-sm btnCapNhat" data-id="@item.NewsID">Cập nhật</a>
-                                </div>
-
-                            </td>
-                        </tr>
-                    }
-                }
-            </tbody>
-        </table>
-    </div>
-</div>
-
 <div class="modal fade" id="modal-default">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Cập nhật trạng thái xử lý phản hồi</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    @*                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button>
+                </button> *@
 
             </div>
             <div class="modal-body">
-                <input type="hidden" id="txtOrderId" value="0" />
+                <input type="hidden" id="txtOrderId" value="0"/>
                 <div class="form-group">
                     <label>Trạng thái</label>
                     <select class="form-control" id="ddTrangThai">
@@ -139,6 +54,94 @@
     </div>
 
 </div>
+<div class="data_table_container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Content</th>
+
+                <th>DatePosted</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Trạng thái xử lý</th>
+                <th class="action_button"></th>
+                @* <th>CatID</th> *@
+            </tr>
+        </thead>
+        <tbody id="records_table">
+            @if (Model != null)
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.NewsID</td>
+                        <td>
+                            <div class="row">
+                              @*   <div class="col-md-6"><strong>Title:</strong></div> *@
+                                <div class="col-md-6">@item.Title</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                               @*  <div class="col-md-6"><strong>Content:</strong></div> *@
+                                <div class="col-md-6">@item.Content</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                               @*  <div class="col-md-6"><strong>DatePosted:</strong></div> *@
+                                <div class="col-md-6">@item.DatePosted</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                             @*    <div class="col-md-6"><strong>Email:</strong></div> *@
+                                <div class="col-md-6">@item.Email</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                              @*   <div class="col-md-6"><strong>Phone:</strong></div> *@
+                                <div class="col-md-6">@item.Phone</div>
+                            </div>
+                        </td>
+                            <td>
+                                <div class="row">
+                                    @*   <div class="col-md-6"><strong>Phone:</strong></div> *@
+                                    <div class="col-md-6">@(item.Active == 1 ? "Đã xử lý" : "Chờ xử lý")</div>
+                                </div>
+                            </td>
+                        <td>
+                            <div class="group_button another">
+                               @*  <input type="button" class="mod-btn"
+                                       onclick="window.location.href='@Url.Action("Edit", new { id = item.NewsID })'"
+                                       value="Sửa" class="btn btn-info btn-sm"> *@
+
+                                <input type="button" class="mod-btn"
+                                       onclick="window.location.href='@Url.Action("Details", new { id = item.NewsID })'"
+                                       value="Chi tiết" class="btn btn-info btn-sm">
+
+                                <input type="button" class="mod-btn" id="delete"
+                                       onclick="if(confirm('Are you sure you want to delete?'))
+                    { window.location.href='@Url.Action("Delete", new { id = item.NewsID })' }"
+                                       value="Xóa" class="btn btn-danger btn-sm">
+
+                                    <a id="btn" href="#" class="btn btn-info btn-sm btnCapNhat" data-id="@item.NewsID">Cập nhật</a>
+                            </div>
+
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+</div>
+
+
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -160,7 +163,7 @@
                 $.ajax({
                     url: '/admin/adminnews/UpdateTT',
                     type: 'POST',
-                    data: { id: id, trangthai: tt },
+                    data: { id: id, trangthai: tt }, 
                     success: function (res) {
                         if (res.Success) {
                             location.reload();
@@ -170,4 +173,4 @@
             });
         });
     </script>
-}}
+    }

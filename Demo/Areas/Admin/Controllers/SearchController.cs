@@ -12,7 +12,7 @@ namespace Demo.Areas.Admin.Controllers
         {
             _context = context;
         }
-        [HttpPost]
+    
         [HttpPost]
         public IActionResult FindProduct(string keyword)
         {

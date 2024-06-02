@@ -6,8 +6,21 @@
     ViewData["Title"] = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+<style>
+    .product-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
 
-<div class="page-header">
+
+    .product-image-preview {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+</style>
+<div class="content_box">
+    <div class="nav_dir">
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
@@ -23,80 +36,106 @@
     </div>
 </div>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="form_container">
+    <div class="content">
         <form asp-controller="AdminProducts" asp-action="Edit" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ProductId" />
-            <div class="form-group">
-                <label asp-for="ProductName" class="control-label"></label>
-                <input asp-for="ProductName" class="form-control" />
-                <span asp-validation-for="ProductName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ShortDesc" class="control-label"></label>
-                <input asp-for="ShortDesc" class="form-control" />
-                <span asp-validation-for="ShortDesc" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label class="font-weight-semibold" for="productCategory">Danh mục sản phẩm</label>
-                <select class="custom-select" asp-for="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
-                    <option value="" disabled selected>Chọn danh mục</option>
-                </select>
+            <div class="user-details">
+                 <div class="input-box">
+                    <label asp-for="ProductName" class="control-label"></label>
+                    <input asp-for="ProductName" class="form-control" />
+                    <span asp-validation-for="ProductName" class="text-danger"></span>
+                </div>
+                <div class="input-box">
+                    <label asp-for="ShortDesc" class="control-label"></label>
+                    <input asp-for="ShortDesc" class="form-control" />
+                    <span asp-validation-for="ShortDesc" class="text-danger"></span>
+                </div>
+                <div class="input-box" id="special">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="input-box" id="special">
+                    <label  for="productCategory">Danh mục sản phẩm</label>
+                    <select class="custom-select" asp-for="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
+                        <option value="" disabled selected>Chọn danh mục</option>
+                    </select>
 
-            </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Unit" class="control-label"></label>
-                <input asp-for="Unit" class="form-control" />
-                <span asp-validation-for="Unit" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label class="font-weight-semibold" for="productBrand">Ảnh đại diện</label>
-                <input name="fThumb" type="file" class="form-control" />
-                <span asp-validation-for="Thumb" class="text-danger"></span>
+                </div>
+                <div class="input-box">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="input-box">
+                    <label asp-for="Unit" class="control-label"></label>
+                    <input asp-for="Unit" class="form-control" />
+                    <span asp-validation-for="Unit" class="text-danger"></span>
+                </div>
+                    <div class="input-box" id="special">
+                        <label class="font-weight-semibold" for="productBrand">Ảnh đại diện</label>
+                        <input name="fThumb" type="file" class="form-control" asp-for="Thumb" onchange="previewImage(event)" />
+                        <span asp-validation-for="Thumb" class="text-danger"></span>
+
+                        <!-- Hiển thị hình ảnh hiện tại -->
+                        <img id="imagePreview" class="product-image-preview" src="~/menucss/@Model.Thumb" alt="Current Product Image" />
+
+                        <!-- Trường ẩn để giữ đường dẫn ảnh cũ -->
+                        <input type="hidden" name="ExistingThumb" value="@Model.Thumb" />
+                    </div>
+                <div class="row">
+                    <div class="input-box form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="BestSellers" /> @Html.DisplayNameFor(model => model.BestSellers)
+                    </label>
+                </div>
+                <div class="input-box form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="HomeFlag" /> @Html.DisplayNameFor(model => model.HomeFlag)
+                    </label>
+                </div>
+                <div class="input-box form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
+                    </label>
+                </div>
+                </div>
+                
+
+                <div class="input-box">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
             </div>
 
 
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="BestSellers" /> @Html.DisplayNameFor(model => model.BestSellers)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="HomeFlag" /> @Html.DisplayNameFor(model => model.HomeFlag)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
-                </label>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
+            <div class="button">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="group_button">
+        <input type="button" 
+    onclick="window.location.href='@Url.Action("Index")'" 
+    value="Back to List" class="btn btn-info btn-sm">
+
 </div>
 
+</div>
+
+<script>
+    function previewImage(event) {
+        var input = event.target;
+        var reader = new FileReader();
+        reader.onload = function () {
+            var imagePreview = document.getElementById('imagePreview');
+            imagePreview.src = reader.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+</script>

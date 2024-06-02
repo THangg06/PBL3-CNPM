@@ -4,91 +4,109 @@
     ViewData["Title"] = "View";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-<h2 class="my-4">Xem chi tiết đơn hàng</h2>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header">Thông tin đơn hàng</div>
-                <div class="card-body">
-                    <table class="table table-bordered">
-                        <tbody>
-                            <tr>
-                                <th scope="row">ID:</th>
-                                <td>@Model.OrderID</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Tên khách hàng:</th>
-                                <td>@Model.FullName</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Số điện thoại:</th>
-                                <td>@Model.Phone</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Địa chỉ nhận hàng:</th>
-                                <td>@Model.Address</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Ngày đặt hàng:</th>
-                                <td>@Model.OrderDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Cách thanh toán:</th>
-                                <td>@Model.CachThanhToan</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Thời gian thanh toán:</th>
-                                <td>@Model.PaymentDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Tình trạng giao hàng:</th>
-                                <td>@(Model.TransactStatusId == 1 ? "Đã giao hàng" : "Chờ xác nhận")</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header">Danh sách sản phẩm</div>
-                <div class="card-body">
-                    @if (Model.OrderDetails != null && Model.OrderDetails.Any())
-                    {
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Tên Sản Phẩm</th>
-                                    <th scope="col">Số Lượng</th>
-                                    <th scope="col">Giảm Giá</th>
-                                    <th scope="col">Tổng Tiền</th>
-                                    <th scope="col">Ngày Giao Hàng</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var item in Model.OrderDetails)
-                                {
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>@item.Product?.ProductName</td>
-                                        <td>@item.Quantity</td>
-                                        <td>@item.Discount</td>
-                                        <td>@item.Total</td>
-                                        <td>@(item.ShipDate.HasValue ? item.ShipDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy") : "")</td>
-                                    </tr>
-                                }
-                            </tbody>
-                        </table>
-                    }
-                    else
-                    {
-                        <p>Không có sản phẩm nào trong đơn hàng này.</p>
-                    }
-                </div>
-            </div>
+<div class="content_box">
+
+    <div class="nav_dir">
+        <div class="header-sub-title">
+            <nav class="breadcrumb breadcrumb-dash">
+                <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
+                    <i class="anticon anticon-home m-r-5"></i>Trang chủ >
+                </a>
+                <a asp-area="Admin" asp-controller="Order" asp-action="Index" class="breadcrumb-item">
+                    Quản lý đơn hàng >
+                </a>
+                <a asp-area="Admin" asp-controller="Order" asp-action="View" class="breadcrumb-item">
+                    Chi tiết đơn hàng
+                </a>
+
+            </nav>
         </div>
     </div>
+    <hr />
+        <div class="card-header">Thông tin đơn hàng</div>
+<div  class="data_table_container" id="small_info_table">
+
+    <div class="data-table">
+        <table class="data-table table-bordered">
+            <tbody>
+                <tr>
+                    <th scope="row">ID:</th>
+                    <td>@Model.OrderID</td>
+                </tr>
+                <tr>
+                    <th scope="row">Tên khách hàng:</th>
+                    <td>@Model.FullName</td>
+                </tr>
+                <tr>
+                    <th scope="row">Số điện thoại:</th>
+                    <td>@Model.Phone</td>
+                </tr>
+                <tr>
+                    <th scope="row">Địa chỉ nhận hàng:</th>
+                    <td>@Model.Address</td>
+                </tr>
+                <tr>
+                    <th scope="row">Ngày đặt hàng:</th>
+                    <td>@Model.OrderDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cách thanh toán:</th>
+                    <td>@Model.CachThanhToan</td>
+                </tr>
+                <tr>
+                    <th scope="row">Thời gian thanh toán:</th>
+                    <td>@Model.PaymentDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
+                </tr>
+                <tr>
+                    <th scope="row">Tình trạng giao hàng:</th>
+                    <td>@(Model.TransactStatusId == 1 ? "Đã giao hàng" : "Chờ xác nhận")</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="card-header">Danh sách sản phẩm</div>
+        <div class="data_table_container">
+
+                
+
+                @if (Model.OrderDetails != null && Model.OrderDetails.Any())
+                {
+                    var i = 0;
+                    <table class="data-table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Tên Sản Phẩm</th>
+                                <th scope="col">Hình ảnh</th>
+                                        <th scope="col">Số Lượng</th>
+                                        <th scope="col">Giảm Giá</th>
+                                        <th scope="col">Tổng Tiền</th>
+                                        <th scope="col">Ngày Giao Hàng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                            @foreach (var item in Model.OrderDetails)
+                            {
+                                            <tr>
+                                                <th scope="row">@(i+1)</th>
+                                                <td>@item.Product?.ProductName</td>
+                                    <td><img class="product-image" src="~/menucss/@item.Product?.Thumb" alt="Product Image" /></td>
+                                                <td>@item.Quantity</td>
+                                                <td>@item.Discount</td>
+                                                <td>@item.Total</td>
+                                                <td>@(item.ShipDate.HasValue ? item.ShipDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy") : "")</td>
+                                </tr>
+                                i++;
+                            }
+                                </tbody>
+                            </table>
+                }
+                else
+                {
+                            <p>Không có sản phẩm nào trong đơn hàng này.</p>
+                }
+
+        </div>
+    </div>
+</div>
 </div>

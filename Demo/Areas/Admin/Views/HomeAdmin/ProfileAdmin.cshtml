@@ -1,0 +1,102 @@
+﻿@model Demo.Data.Account
+
+@{
+    ViewData["Title"] = "Trang cá nhân Admin";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    .product-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
+</style>          ﻿
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/Info.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="go-back">
+        <i class="fa-solid fa-arrow-left"></i>
+        <a asp-controller="Home" asp-action="Index">Back</a>
+    </div>
+    <div class="container">
+        <div class="title">Thông tin tài khoản</div>
+        <div class="content">
+            @if (TempData["UpdateMessage"] != null)
+            {
+                <div class="alert alert-success" role="alert">
+                    @TempData["UpdateMessage"]
+                </div>
+            }
+            <form asp-area="Admin" asp-action="EditProfileAdmin" asp-controller="HomeAdmin" method="post">
+                <div class="image-container">
+                    @*                     <img src="@User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value" alt=""> *@
+                    <img class="product-image" src="~/assets/avt_cus/@Model.Avatar" alt=" " >
+                    <input type="file" accept="image/*" id="fileInput" hidden>
+                </div>
+                <div class="user-details">
+                    <div class="form-group" id="Name">
+                        <label for="firstName">Họ và tên:</label>
+                        <input type="text" id="firstName" name="firstName" class="form-control" required value="@Model.FullName" readonly>
+                    </div>
+
+
+                    <div class="form-group" id="Contact-info">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" required value="@Model.Email" readonly>
+                    </div>
+
+                    <div class="form-group" id="Contact-info">
+                        <label for="phone">Số điện thoại:</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" required maxlength="10" value="@Model.Phone" readonly>
+                    </div>
+
+                   @*  <div class="form-group" id="birth">
+                        <label for="dateOfBirth">Ngày sinh:</label>
+                        <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control" required value="@Model.Birthday?.ToString("yyyy-MM-dd")" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Địa chỉ:</label>
+                        <input type="text" id="address" name="address" class="form-control" required value="@Model.Address" readonly>
+                    </div> *@
+                </div>
+
+                <div class="button">
+                    @* <input type="button" id="special" value="Chỉnh sửa tài khoản" onclick="editProfile()" /> *@
+                    <a asp-area="Admin" asp-action="EditProfileAdmin" asp-controller="HomeAdmin" method="post">
+                        <input type="button" id="special" value="Chỉnh sửa tài khoản" onclick="editProfile()" />
+                    </a>
+                    
+                  @*   <script>
+                        function editProfile() {
+                            var accountId = @Model.AccountId;
+                            var url = '/EditProfileAdmin?id=' + encodeURIComponent(accountId);
+                            window.location.href = url;
+                        }
+                    </script> *@
+                </div>
+                @*                     <a asp-controller="Accounts" asp-action="EditProfile" asp-route-id="@((string)Context.Session.GetString("CustomerId"))">Chỉnh sửa tài khoản</a> *@
+
+            </form>
+        </div>
+
+
+    </div>
+
+    <script src="./js/site.js"></script>
+</body>
+</html>

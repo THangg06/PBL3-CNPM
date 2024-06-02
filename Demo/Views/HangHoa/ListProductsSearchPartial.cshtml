@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Demo.ModelViews.HangHoaVM>
+
+<div class="product-items">
+    @foreach (var product in Model)
+    {
+        <div class="product-item">
+            <h3>@product.TenHH</h3>
+            <p>@product.MoTaNgan</p>
+            <p>@product.Dongia</p>
+            <!-- Add more product details as needed -->
+        </div>
+    }
+</div>

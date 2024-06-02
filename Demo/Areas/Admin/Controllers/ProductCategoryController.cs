@@ -111,6 +111,7 @@ namespace Demo.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, [Bind("CatId,CatName,Description,ParentId,Levels,Ordering,Published,Thumb,Title,Alias,MetaDesc,MetaKey,Cover,SchemaMarkup")] Category category, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
+
             if (id != category.CatId)
             {
                 return NotFound();
@@ -118,6 +119,7 @@ namespace Demo.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
+
                 try
                 {
                     category.CatName = MyUtil.ToTitleCase(category.CatName);

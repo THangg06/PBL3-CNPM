@@ -92,7 +92,29 @@ namespace Demo.Controllers
             // For demonstration purposes, let's return a hardcoded value
             return 20; // Replace this with your actual logic to retrieve the quantity in stock
         }
-       
+        [HttpPost]
+        public IActionResult FindProduct(string keyword)
+        {
+            // Tạo danh sách sản phẩm rỗng
+            List<Product> ls = new List<Product>();
+
+            // Kiểm tra xem từ khóa có hợp lệ không
+            if (string.IsNullOrEmpty(keyword) || keyword.Length < 1)
+            {
+                return PartialView("ListProductsSearchPartial", null);
+            }
+
+            // Truy vấn cơ sở dữ liệu
+            ls = db.Products.AsNoTracking()
+                .Include(a => a.Cat)
+                .Where(x => x.ProductName.Contains(keyword))
+                .OrderByDescending(x => x.ProductName)
+                .Take(10)
+                .ToList();
+
+            // Trả về kết quả cho PartialView
+            return PartialView("ListProductsSearchPartial", ls);
+        }
 
     }
 }

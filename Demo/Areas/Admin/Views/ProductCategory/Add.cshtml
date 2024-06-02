@@ -4,19 +4,33 @@
     ViewData["Title"] = "Create";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+<style>
+    .product-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
 
+   
+    .product-image-preview {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+</style>
 <div class="content_box">
-    <div class="nav_dir">
-        <div class="header-sub-title">
-            <nav class="breadcrumb breadcrumb-dash">
-                <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
-                <a class="breadcrumb-item" asp-area="Admin" asp-controller="ProductCategory" asp-action="Index">Danh sách danh mục sản phẩm > </a>
-                <a class="breadcrumb-item" asp-area="Admin" asp-controller="ProductCategory" asp-action="Add">Thêm danh mục sản phẩm > </a>
-            </nav>
-        </div>
 
+    <div class="nav_dir">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="ProductCategory" asp-action="Index">Danh sách danh mục sản phẩm > </a>
+            <a class="breadcrumb-item" asp-area="Admin" asp-controller="ProductCategory" asp-action="Add">Thêm danh mục sản phẩm</a>
+        </nav>
     </div>
-    <div><h1>Create</h1></div>
+
+</div>
+
+    <div><h1 style="margin: 2rem; font-size: 2rem">Create</h1></div>
 
     <hr />
 
@@ -28,17 +42,13 @@
             <form asp-controller="ProductCategory" asp-action="Add" method="post" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="user-details">
-                  @*   <div class="input-box">
-                        <label asp-for="CatId" class="control-label">CatId</label>
-                        <input asp-for="CatId" class="form-control" />
-                        <span asp-validation-for="CatId" class="text-danger"></span>
-                    </div> *@
-                    <div class="form-group" hidden>
+                    <div class="input-box" hidden>
                         <label asp-for="CatId" class="control-label"></label>
                         <input asp-for="CatId" class="form-control" value="CAT" />
                         <!-- Đặt thuộc tính readonly để ngăn người dùng thay đổi giá trị -->
                         <span asp-validation-for="CatId" class="text-danger"></span>
                     </div>
+
                     <div class="input-box">
                         <label asp-for="CatName" class="control-label">CatName</label>
                         <input asp-for="CatName" class="form-control" />
@@ -60,7 +70,7 @@
                         <input asp-for="Alias" class="form-control" />
                         <span asp-validation-for="Alias" class="text-danger"></span>
                     </div>
-                    <div class="input-box">
+              @*       <div class="input-box">
                         <label asp-for="MetaDesc" class="control-label">MetaDesc</label>
                         <input asp-for="MetaDesc" class="form-control" />
                         <span asp-validation-for="MetaDesc" class="text-danger"></span>
@@ -74,16 +84,17 @@
                         <label asp-for="Cover" class="control-label">Cover</label>
                         <input asp-for="Cover" class="form-control" />
                         <span asp-validation-for="Cover" class="text-danger"></span>
-                    </div>
-                    <div class="input-box">
+                    </div> *@
+                 @*    <div class="input-box">
                         <label asp-for="SchemaMarkup" class="control-label">SchemaMarkup</label>
                         <input asp-for="SchemaMarkup" class="form-control" />
                         <span asp-validation-for="SchemaMarkup" class="text-danger"></span>
-                    </div>
+                    </div> *@
                     <div class="input-box" id="special">
-                        <label class="font-weight-semibold" for="productBrand">Ảnh đại diện</label>
-                        <input name="fThumb" type="file" class="form-control" asp-for="Thumb" />
+                        <label for="productBrand">Ảnh đại diện</label>
+                        <input name="fThumb" type="file" class="form-control" asp-for="Thumb" onchange="previewImage(event)" />
                         <span asp-validation-for="Thumb" class="text-danger"></span>
+                        <img id="imagePreview" class="product-image-preview product-image" src="#" alt="Product Image Preview" />
                     </div>
                 </div>
                 <div class="button">
@@ -103,3 +114,15 @@
     </div>
 </div>
 
+<script>
+    function previewImage(event) {
+        var input = event.target;
+        var reader = new FileReader();
+        reader.onload = function () {
+            var imagePreview = document.getElementById('imagePreview');
+            imagePreview.src = reader.result;
+            imagePreview.style.display = 'block';
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+</script>

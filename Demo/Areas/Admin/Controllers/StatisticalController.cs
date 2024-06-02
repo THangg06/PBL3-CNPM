@@ -89,7 +89,7 @@ namespace Demo.Areas.Admin.Controllers
        .ToList();
 
             var revenueByDate = new List<int>();
-            int Total = 0;
+            var Total = _db.Orders.Select(p=>p.OrderID).Count();
             foreach (var date in recentDates)
             {
                 int revenue = (_db.Orders

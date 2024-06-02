@@ -207,10 +207,19 @@ body {
 }
 
 .body .container .data_table_container {
-    overflow: inherit;
+    /*    overflow: scroll;*/
     margin-top: 10px;
+    /*    width: 1200px;*/
     display: flex;
 }
+
+
+    .body .container .data_table_container.large {
+        overflow: scroll;
+        width: 1200px;
+        max-height: 700px;
+    }
+
 
 .data_table_container#small_info_table {
     max-width: 600px;
@@ -220,7 +229,6 @@ body {
 /* ---------------------------dataTable------------------------------------ */
 table.data-table {
     border-collapse: collapse;
-    width: 90%;
     background-color: rgb(243, 236, 191);
     margin-bottom: 1rem;
 }
@@ -239,7 +247,9 @@ table.data-table {
         border: 1px solid #ddd;
         padding: 16px;
         text-align: left;
-        font-size: 14px;
+        font-size: 1.5rem;
+        height: 100px;
+        width: 200px;
         font-family: "Inter", Helvetica, Arial, serif;
     }
 
@@ -270,6 +280,7 @@ table.data-table {
 
     .group_button.another {
         justify-content: left;
+        width: 220px;
     }
 
 
@@ -280,7 +291,7 @@ table.data-table {
         color: #fff;
         font-size: 18px;
         cursor: pointer;
-        margin-top: 1.5rem;
+        /*margin-top: 1.5rem;*/
         margin-right: 10px;
     }
 
@@ -340,10 +351,16 @@ form .user-details .input-box {
         width: 100%;
     }
 
-    form .user-details .input-box input[type=date] {
-        display: flex;
-        width: 150px;
-    }
+.form_container .content .row {
+    width: 100%;
+    gap: 3rem;
+    display: flex;
+}
+
+form .user-details .input-box input[type=date] {
+    display: flex;
+    width: 150px;
+}
 
 form .input-box span.details {
     display: block;
@@ -578,7 +595,7 @@ canvas {
 }
 
 .action_button {
-    width: 200px;
+    width: 260px;
 }
 
 .group_button a {
@@ -589,6 +606,13 @@ canvas {
     cursor: pointer;
     margin: 2rem 2rem 2rem 0px;
 }
+
+    .group_button a#btn {
+        font-size: 15px;
+        width: auto;
+        padding: .6rem;
+        margin: 0 1rem 0 0;
+    }
 
 h2.title {
     margin: 2rem 0px;
@@ -601,7 +625,71 @@ h3.text-center {
     margin: 2rem 0px;
 }
 
-.nav_dir .header-sub-title nav a{
+.nav_dir .header-sub-title nav a {
     text-decoration: none;
     color: black;
+}
+
+
+.modal {
+    display: block;
+    position: absolute;
+    z-index: 1; /* Sit on top */
+    background: #fff;
+    padding: 2rem;
+    width: 400px;
+    height: 200px;
+    margin: 15rem 30rem;
+}
+
+.modal-title {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Poopins', sans-serif;
+}
+
+/*button.close {
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: red;
+    padding: 0 .5rem;
+}*/
+
+.modal-body .form-group label {
+    font-size: 2rem;
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+.modal-body .form-group select {
+    font-size: 1.7rem;
+    margin: 2rem 2rem 2rem 0;
+    width: 140px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+}
+
+    .modal-footer button {
+        margin-right: 1rem;
+        padding: 1rem;
+        width: 100px;
+        background: #f3d9b8;
+        font-size: 1.2rem;
+    }
+
+        .modal-footer button:hover {
+            background: rgba(172, 255, 47, 0.542);
+            font-weight: 600;
+        }
+
+.card-header {
+    font-size: 2rem;
+    max-width: 600px;
+    padding: 1rem;
+    margin: 2rem 0;
+    font-family: math;
+    /* display: flex; */
+    background: bisque;
 }

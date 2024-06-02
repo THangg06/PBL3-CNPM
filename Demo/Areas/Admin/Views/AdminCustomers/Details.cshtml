@@ -1,4 +1,5 @@
 ﻿@model Demo.Data.Customer
+
 @{
     ViewData["Title"] = "Delete";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
@@ -10,7 +11,7 @@
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
             <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index">Danh sách tài khoản khách hàng > </a>
-            <span class="breadcrumb-item active">Xóa tài khoản khách hàng </span <br />
+            <span class="breadcrumb-item active">Thông tin tài khoản khách hàng </span <br />
         </nav>
     </div>
 
@@ -35,7 +36,7 @@
 
                 <div class="input-box">
                 <label asp-for="Birthday">Ngày sinh</label>
-                <input asp-for="Birthday" class="form-control" readonly/>
+                <input asp-for="Birthday" class="form-control" type="date" readonly/>
                 </div>
 
                 <div class="input-box" id="special">
@@ -58,27 +59,17 @@
             </div>
     </dl>
 </div>
-       <form asp-action="Delete">
-            <input type="hidden" asp-for="CustomerId" />
+
 
             <div class="group_button">
                 <input type="button" 
             onclick="window.location.href='@Url.Action("Index")'" 
             value="Back to List" class="btn btn-info btn-sm">
-            <input type="submit" id="delete" value="Delete" class="btn btn-danger" />
             </div>
-        </form>
+        
 </div>
 </div>
 
-            <div class="content_box">
-    <dl class="form_container">
-            <div class="title">Category</div>
-
-
-        </dl>
-
-</div>
 @*         <dt class="col-sm-2">
     @Html.DisplayNameFor(model => model.CustomerId)
         </dt>

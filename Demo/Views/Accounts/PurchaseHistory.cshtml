@@ -22,10 +22,11 @@
 
 @if (Model != null && Model.Any())
 {
+    var i = 0;
     <table class="table table-striped table-bordered data-table">
         <thead class="thead-dark">
             <tr>
-                <th class="border-right">Mã Đơn Hàng</th>
+                <th class="border-right">#</th>
                 <th class="border-right">Ngày Đặt Hàng</th>
                 <th class="border-right">Ngày Giao Hàng</th>
                 <th class="border-right">Cách thanh toán</th>
@@ -37,11 +38,12 @@
             @foreach (var order in Model)
             {
                 <tr>
-                    <td class="border-right">@order.OrderID</td>
-                    <td class="border-right">@order.OrderDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
-                    <td class="border-right">@(order.ShipDate.HasValue ? order.ShipDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy") : "")</td>
+                    <td class="border-right">@(i+1)</td>
+                    <td class="border-right">@order.OrderDate.Value.ToString("HH\\:mm\\:ss dd/MM/yyyy")</td>
+
+                    <td class="border-right">@(order.ShipDate.HasValue ? order.ShipDate.Value.ToString("HH\\:mm\\:ss dd/MM/yyyy") : "")</td>
                     <td class="border-right">@order.CachThanhToan</td>
-                    <td class="border-right">@order.PaymentDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
+                    <td class="border-right">@order.PaymentDate.Value.ToString("HH\\:mm\\:ss dd/MM/yyyy")</td>
                     <td>
                         <table class="table table-striped">
                             <thead>
@@ -70,6 +72,7 @@
                         </table>
                     </td>
                 </tr>
+                i++;
             }
         </tbody>
     </table>

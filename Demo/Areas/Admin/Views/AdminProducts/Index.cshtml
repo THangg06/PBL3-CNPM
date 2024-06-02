@@ -30,31 +30,40 @@
 
     <!-- Phần tìm kiếm và lọc -->
     <div class="filter-group">
+    </div>
+
+    <div class="filter-box" id="editcbb">
+        <label style="font-size: 1.5rem">Tên sản phẩm: </label>
         <input type="text" id="keyword" name="keyword" />
         <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
             @*  <option selected>Chọn Danh Mục</option> *@
             <option value="0">Chọn tất cả</option>
         </select>
+        <input type="button"
+               onclick="window.location.href='@Url.Action("Create")'"
+               value="Tạo sản phẩm mới" class="btn btn-info btn-sm">
+        @* <a asp-action="Create" class="btn btn-primary"></a> *@
+        @*     <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminAccounts" asp-action="Index"> > Tạo tài khoản mới </a> *@
     </div>
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
+    @* <p>
+    <a asp-action="Create">Create New</a>
+    </p> *@
     <div class="data_table_container">
         <table class="data-table">
             <thead>
                 <tr>
-                    <th>ProductId</th>
-                    <th>ProductName</th>
-                    <th>CatName</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Unit</th>
-                    <th>Thumb</th>
-                    <th>DateCreated</th>
+                    @*                 <th>ProductId</th> *@
+                    <th>Tên sản phẩm</th>
+                    <th>Loại sản phẩm</th>
+                    @*                 <th>Description</th> *@
+                    <th>Giá</th>
+                    <th>Đơn vị</th>
+                    @*                 <th>Thumb</th> *@
+                    @*                 <th>DateCreated</th> *@
                     <th>BestSellers</th>
-                    <th>HomeFlag</th>
+                    @*                 <th>HomeFlag</th> *@
                     <th>Active</th>
-                    <th>Title</th>
+                    @*                 <th>Title</th> *@
                     @* <th>CatID</th> *@
                 </tr>
             </thead>
@@ -66,23 +75,26 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td>@Html.DisplayFor(modelItem => item.ProductId)</td>
-                            <td>@Html.DisplayFor(modelItem => item.ProductName)</td>
+                            @*                         <td>@Html.DisplayFor(modelItem => item.ProductId)</td> *@
+                            <td class="name-product">
+                                <img src="~/menucss/@item.Thumb" alt="Product Image" />
+                                @Html.DisplayFor(modelItem => item.ProductName)
+                            </td>
                             <td>@Html.DisplayFor(modelItem => item.CatName)</td>
 
-                            <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                            @*                         <td>@Html.DisplayFor(modelItem => item.Description)</td> *@
                             <td>@Html.DisplayFor(modelItem => item.Price)</td>
                             <td>@Html.DisplayFor(modelItem => item.Unit)</td>
 
-                            <td>
+                            @*                         <td>
 
-                                <img src="~/menucss/@item.Thumb" alt="Product Image" />
-                            </td>
-                            <td>@Html.DisplayFor(modelItem => item.DateCreated)</td>
+                    <img src="~/menucss/loadh/@item.Thumb" alt="Product Image" />
+                    </td> *@
+                            @*                         <td>@Html.DisplayFor(modelItem => item.DateCreated)</td> *@
                             <td>@Html.DisplayFor(modelItem => item.BestSellers)</td>
-                            <td>@Html.DisplayFor(modelItem => item.HomeFlag)</td>
+                            @*                         <td>@Html.DisplayFor(modelItem => item.HomeFlag)</td> *@
                             <td>@Html.DisplayFor(modelItem => item.Active)</td>
-                            <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                            @*                         <td>@Html.DisplayFor(modelItem => item.Title)</td> *@
                             <td>
                                 <div class="group_button another">
                                     <input type="button" class="mod-btn"

@@ -6,7 +6,7 @@
 
 body {
     margin-top: 14rem;
-    background-color: #dcda88;
+    /*    background-color: #dcda88;*/
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -39,7 +39,7 @@ body {
 
     .wrapper h4 {
         padding-bottom: 5px;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
 .input_group, input_payment {
@@ -149,3 +149,11 @@ body {
         cursor: pointer;
         background-color: #05b1a3;
     }
+
+label.form-check-label {
+    font-size: 1.6rem;
+}
+
+.hidden {
+    display: none;
+}

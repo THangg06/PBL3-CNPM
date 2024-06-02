@@ -5,7 +5,7 @@
 }
 
 body {
-	background: #f3e28d;
+	/*	background: #f3e28d;*/
 	font-family: montserrat;
 }
 
@@ -227,6 +227,25 @@ hr {
 		.box img {
 			height: 150px;
 			width: 200px;
+		}
+}
+
+@media screen and (max-width: 900px) {
+	.project {
+		flex-direction: column;
+	}
+
+	.right-bar {
+		margin-left: 0;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	.wrapper {
+		max-width: 95%;
+	}
+}width: 200px;
 		}
 }
 

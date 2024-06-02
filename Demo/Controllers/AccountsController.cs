@@ -303,6 +303,7 @@ namespace Demo.Controllers
                 if (claimsPrincipal.IsInRole("Admin"))
                 {
                     // Chuyển hướng đến trang HomeAdmin trong khu vực Admin
+                    //Console.WriteLine("ID Admin: "+ userAdmin.AccountId);
                     return RedirectToAction("Index", "HomeAdmin", new { area = "Admin" });
                 }
                 else

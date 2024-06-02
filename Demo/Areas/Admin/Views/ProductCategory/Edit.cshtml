@@ -8,6 +8,12 @@
     ViewData["Title"] = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+<style>
+    .product-image-preview {
+        max-width: 200px;
+        max-height: 200px;
+    }
+</style>
 <div class="content_box">
 
     <div class="nav_dir">
@@ -16,7 +22,7 @@
                 <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
                     <i class="anticon anticon-home m-r-5"></i>Trang chủ >
                 </a>
-                <a asp-area="Admin" asp-controller="AdminCategories" asp-action="Index" class="breadcrumb-item">
+                <a asp-area="Admin" asp-controller="ProductCategory" asp-action="Index" class="breadcrumb-item">
                      Quản lý danh mục sản phẩm >
                 </a>
                 <span class="breadcrumb-item active">
@@ -53,7 +59,7 @@
                         <input asp-for="Alias" class="form-control" />
                         <span asp-validation-for="Alias" class="text-danger"></span>
                     </div>
-                    <div class="input-box">
+                @*     <div class="input-box">
                         <label asp-for="MetaDesc" class="control-label">Meta Desc</label>
                         <input asp-for="MetaDesc" class="form-control" />
                         <span asp-validation-for="MetaDesc" class="text-danger"></span>
@@ -72,12 +78,18 @@
                         <label asp-for="SchemaMarkup" class="control-label">Schema Markup</label>
                         <input asp-for="SchemaMarkup" class="form-control" />
                         <span asp-validation-for="SchemaMarkup" class="text-danger"></span>
-                    </div>
+                    </div> *@
 
                     <div class="input-box" id="special">
                         <label class="font-weight-semibold" for="productBrand">Ảnh đại diện</label>
-                        <input name="fThumb" type="file" class="form-control" asp-for="Thumb" />
+                        <input name="fThumb" type="file" class="form-control" asp-for="Thumb" onchange="previewImage(event)" />
                         <span asp-validation-for="Thumb" class="text-danger"></span>
+
+                        <!-- Hiển thị hình ảnh hiện tại -->
+                        <img id="imagePreview" class="product-image-preview" src="~/menucss/@Model.Thumb" alt="Current Product Image" />
+
+                        <!-- Trường ẩn để giữ đường dẫn ảnh cũ -->
+                        <input type="hidden" name="ExistingThumb" value="@Model.Thumb" />
                     </div>
                 </div>
 
@@ -96,4 +108,15 @@
 
     </div>
 </div>
+<script>
+    function previewImage(event) {
+        var input = event.target;
+        var reader = new FileReader();
+        reader.onload = function () {
+            var imagePreview = document.getElementById('imagePreview');
+            imagePreview.src = reader.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+</script>
 

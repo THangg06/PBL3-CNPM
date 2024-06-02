@@ -2,30 +2,37 @@
 
 
 
+
 @{
     ViewData["Title"] = "Details";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
+<style>
+    .product-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
 
+</style>
 
 <div class="content_box">
     <div class="nav_dir">
-        <div class="header-sub-title">
-            <nav class="breadcrumb breadcrumb-dash">
-                <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
-                    <i class="anticon anticon-home m-r-5"></i>Trang chủ >
-                </a>
-                <a asp-area="Admin" asp-controller="ProductCategory" asp-action="Index" class="breadcrumb-item">
-                    Danh mục sản phẩm >
-                </a>
-                <a asp-area="Admin" asp-controller="ProductCategory" asp-action="Detail" class="breadcrumb-item">
-                    Chi tiết danh mục sản phẩm 
-                </a>
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item">
+                <i class="anticon anticon-home m-r-5"></i>Trang chủ > 
+            </a>
+            <a asp-area="Admin" asp-controller="ProductCategory" asp-action="Index" class="breadcrumb-item">
+                Danh mục sản phẩm > 
+            </a>
+            <a asp-area="Admin" asp-controller="ProductCategory" asp-action="Detail" class="breadcrumb-item">
+                Chi tiết danh mục sản phẩm
+            </a>
 
-            </nav>
-        </div>
+        </nav>
     </div>
+</div>
     <hr />
     <dl class="form_container">
         <div class="title">Category</div>
@@ -52,6 +59,10 @@
                 <div class="input-box">
                     <label asp-for="Alias">Alias</label>
                     <input asp-for="Alias" class="form-control" readonly />
+                </div>
+                <div class="input-box">
+                    <label asp-for="Thumb">Hình ảnh</label>
+                    <img class="product-image" src="~/menucss/@Model.Thumb" alt="Product Image" />
                 </div>
 
             </div>

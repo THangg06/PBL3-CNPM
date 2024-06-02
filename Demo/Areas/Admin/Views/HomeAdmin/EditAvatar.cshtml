@@ -1,0 +1,41 @@
+﻿@model Demo.Data.Account
+
+@{
+    ViewData["Title"] = "Edit Avatar";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    .product-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
+</style>
+
+<div class="container">
+    <h2>@ViewData["Title"]</h2>
+    <form asp-action="EditAvatar" asp-controller="HomeAdmin" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="@Model.AccountId" />
+        <div class="input-box">
+            <label class="font-weight-semibold" for="Avatar">Ảnh đại diện</label>
+            <input name="Avatar" type="file" class="form-control" onchange="previewImage(event)" />
+            <span asp-validation-for="Avatar" class="text-danger"></span>
+        </div>
+        <div class="image-preview">
+            <img id="imagePreview" class="product-image" src="~/assets/admin/@Model.Avatar" alt="Current Avatar" />
+        </div>
+        <button type="submit" class="btn btn-primary">Cập nhật</button>
+    </form>
+</div>
+
+<script>
+    function previewImage(event) {
+        var input = event.target;
+        var reader = new FileReader();
+        reader.onload = function() {
+            var imagePreview = document.getElementById('imagePreview');
+            imagePreview.src = reader.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+</script>

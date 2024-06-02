@@ -6,6 +6,12 @@
     ViewData["Title"] = "Delete";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+<style>
+    .product-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
+</style>
 <div class="content_box">
     <dl class="form_container">
         <div class="title">Category</div>
@@ -36,15 +42,15 @@
                     <input asp-for="Ordering" class="form-control" readonly />
                 </div>
 
-                <div class="input-box">
+              @*   <div class="input-box">
                     <label asp-for="Published" class="control-label">Published</label>
                     <input asp-for="Published" class="form-control" readonly />
-                </div>
+                </div> *@
 
-                <div class="input-box">
+              @*   <div class="input-box">
                     <label asp-for="Thumb" class="control-label">Thumb</label>
                     <input asp-for="Thumb" id="addimage" class="form-control" readonly />
-                </div>
+                </div> *@
 
                 <div class="input-box">
                     <label asp-for="Title" class="control-label">Title</label>
@@ -52,11 +58,11 @@
                 </div>
 
                 <div class="input-box">
-                    <label asp-for="Alias" class="control-label">Alias</label>
-                    <input asp-for="Alias" class="form-control" readonly />
+                    <label asp-for="Thumb">Hình ảnh</label>
+                    <img class="product-image" src="~/menucss/@Model.Thumb" alt="Product Image" />
                 </div>
 
-                <div class="input-box">
+     @*            <div class="input-box">
                     <label asp-for="MetaDesc" class="control-label">MetaDesc</label>
                     <input asp-for="MetaDesc" class="form-control" readonly />
                 </div>
@@ -74,7 +80,7 @@
                 <div class="input-box">
                     <label asp-for="SchemaMarkup" class="control-label">Schema Markup</label>
                     <input asp-for="SchemaMarkup" class="form-control" readonly />
-                </div>
+                </div> *@
 
             </div>
 

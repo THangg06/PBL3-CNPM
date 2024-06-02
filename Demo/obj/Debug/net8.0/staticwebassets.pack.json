@@ -165,6 +165,26 @@
       "PackagePath": "staticwebassets\\MenuCss\\HotDog\\Hotdog.jpg"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\HotDog\\hotdog_khoaitay.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\HotDog\\hotdog_khoaitay.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\HotDog\\hotdog_phomai.png",
+      "PackagePath": "staticwebassets\\MenuCss\\HotDog\\hotdog_phomai.png"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\HotDog\\hotdog_phomaidambong.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\HotDog\\hotdog_phomaidambong.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\HotDog\\hotdog_tamgiac.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\HotDog\\hotdog_tamgiac.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\HotDog\\hotdog_xucxichphomai.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\HotDog\\hotdog_xucxichphomai.jpg"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\LoadH\\10-620x620-7.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\LoadH\\10-620x620-7.jpg"
     },
@@ -369,6 +389,30 @@
       "PackagePath": "staticwebassets\\MenuCss\\LoadH\\unnamed.png"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Pizza\\pizza_domino's.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\Pizza\\pizza_domino's.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Pizza\\pizza_haisan.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\Pizza\\pizza_haisan.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Pizza\\pizza_huthaisansotcam.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\Pizza\\pizza_huthaisansotcam.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Pizza\\pizza_pestoXanh.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\Pizza\\pizza_pestoXanh.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Pizza\\pizza_phomai.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\Pizza\\pizza_phomai.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Pizza\\pizza_xucxich.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\Pizza\\pizza_xucxich.jpg"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\Spagetti\\IMG_2987-scaled.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\Spagetti\\IMG_2987-scaled.jpg"
     },
@@ -529,6 +573,26 @@
       "PackagePath": "staticwebassets\\MenuCss\\hotdog.jpg"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\hotdog_khoaitay.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\hotdog_khoaitay.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\hotdog_phomai.png",
+      "PackagePath": "staticwebassets\\MenuCss\\hotdog_phomai.png"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\hotdog_phomaidambong.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\hotdog_phomaidambong.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\hotdog_tamgiac.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\hotdog_tamgiac.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\hotdog_xucxichphomai.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\hotdog_xucxichphomai.jpg"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\images.jfif",
       "PackagePath": "staticwebassets\\MenuCss\\images.jfif"
     },
@@ -587,6 +651,30 @@
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\pexels-myfoodie-2702674.jpg",
       "PackagePath": "staticwebassets\\MenuCss\\pexels-myfoodie-2702674.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\pizza_domino's.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\pizza_domino's.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\pizza_haisan.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\pizza_haisan.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\pizza_huthaisansotcam.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\pizza_huthaisansotcam.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\pizza_pestoxanh.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\pizza_pestoxanh.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\pizza_phomai.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\pizza_phomai.jpg"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\pizza_xucxich.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\pizza_xucxich.jpg"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\shrimp_burger.jfif",
@@ -1327,6 +1415,18 @@
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\header(DaDangNhap).html",
       "PackagePath": "staticwebassets\\header(DaDangNhap).html"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\js\\chart.js",
+      "PackagePath": "staticwebassets\\js\\chart.js"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\lib\\bootstrap\\LICENSE",

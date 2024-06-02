@@ -3,130 +3,288 @@
 
 
 
-
-
 @{
     ViewData["Title"] = "Details";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+<style>
+    .product-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
 
-<h1>Details</h1>
 
-<div>
+    .product-image-preview {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+</style>
+<div class="content_box">
+
+        <dl class="form_container">
+        <div class="title">Thông tin tài khoản</div>
+        <div class="content">
+        <div class="user-details">
+            <div class="user-details">
+                <div class="input-box">
+                    <label asp-for="ProductId" class="control-label">ID</label>
+                    <input asp-for="ProductId" class="form-control" readonly />
+                    <span asp-validation-for="ProductId" class="text-danger" ></span>
+                 </div>
+                <div class="input-box">
+                    <label asp-for="ProductName" class="control-label">Tên sản phẩm</label>
+                    <input asp-for="ProductName" class="form-control" readonly/>
+                    <span asp-validation-for="ProductName" class="text-danger"></span>
+                </div>
+                    @*  <div class="input-box">
+                <label asp-for="ShortDesc" class="control-label"></label>
+                <input asp-for="ShortDesc" class="form-control" />
+                <span asp-validation-for="ShortDesc" class="text-danger"></span>
+            </div> *@
+            <div class="input-box" id="special">
+                <label asp-for="Description" class="control-label">Miêu tả</label>
+                <input asp-for="Description" class="form-control" readonly/>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+@* <div class="input-box" id="special">
+    <label for="productCategory">Danh mục sản phẩm</label>
+    <select class="custom-select" asp-for="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc">
+        <option value="" disabled selected>Chọn danh mục</option>
+    </select>
+</div> *@
+
+
+            <div class="row">
+
+                <div class="input-box" >
+                    <label asp-for="Price" class="control-label">Giá</label>
+                    <input asp-for="Price" class="form-control" readonly/>
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="input-box">
+                    <label asp-for="Unit" class="control-label">Đơn vị</label>
+                    <input asp-for="Unit" class="form-control" readonly/>
+                    <span asp-validation-for="Unit" class="text-danger"></span>
+                </div>
+
+            </div>
+
+                    @* <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unit" class="control-label"></label>
+                <input asp-for="Unit" class="form-control" />
+                <span asp-validation-for="Unit" class="text-danger"></span>
+            </div> *@
+
+
+            <div class="input-box">
+                <label class="font-weight-semibold" for="productBrand">Ảnh đại diện</label>
+                        <img class="product-image" src="~/menucss/@Model.Thumb" alt="Product Image" />
+            </div>
+
+                    @*  <div class="form-group">
+                <label asp-for="Video" class="control-label"></label>
+                <input asp-for="Video" class="form-control" />
+                <span asp-validation-for="Video" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateCreated" class="control-label"></label>
+                <input asp-for="DateCreated" class="form-control" />
+                <span asp-validation-for="DateCreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateModified" class="control-label"></label>
+                <input asp-for="DateModified" class="form-control" />
+                <span asp-validation-for="DateModified" class="text-danger"></span>
+            </div> *@
+                    @*  <div class="form-group">
+                <label asp-for="BestSellers" class="control-label"></label>
+                <input asp-for="BestSellers" class="form-control" />
+                <span asp-validation-for="BestSellers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HomeFlag" class="control-label"></label>
+                <input asp-for="HomeFlag" class="form-control" />
+                <span asp-validation-for="HomeFlag" class="text-danger"></span>
+            </div> *@
+
+            <div class="row">
+
+                    <div class="input-box d-flex align-items-center">
+                        <label>Public</label>
+                       <div class="switch m-r-10">
+                           <input type="checkbox" asp-for="Active" checked="" readonly/>
+                            <label for="Active"></label>
+                       </div>
+                    </div>
+
+                    <div class="input-box d-flex align-items-center">
+                            <label>HomeFlag</label>
+                            <div class="switch m-r-10">
+                                <input type="checkbox" asp-for="HomeFlag" checked="" readonly/>
+                                <label for="HomeFlag"></label>
+                            </div>
+                    </div>
+
+                    <div class="input-box d-flex align-items-center">
+                        <label>BestSellers</label>
+                        <div class="switch m-r-10">
+                            <input type="checkbox" asp-for="BestSellers" checked="" readonly/>
+                            <label for="BestSellers"></label>
+                        </div>
+                    </div>
+
+
+            </div>
+
+            <div class="input-box">
+                <label asp-for="Tags" class="control-label"></label>
+                <input asp-for="Tags" class="form-control" readonly/>
+                <span asp-validation-for="Tags" class="text-danger" ></span>
+            </div>
+
+            <div class="input-box">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" readonly/>
+                <span asp-validation-for="Title" class="text-danger" ></span>
+            </div>
+
+        </div>
+
+        </div>
+
+    </dl>
+@* <div>
     <h4>Product</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ProductName)
+                @Html.DisplayNameFor(model => model.ProductName)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ProductName)
+                @Html.DisplayFor(model => model.ProductName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ShortDesc)
+                @Html.DisplayNameFor(model => model.ShortDesc)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ShortDesc)
+                @Html.DisplayFor(model => model.ShortDesc)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
+                @Html.DisplayNameFor(model => model.Description)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
+                @Html.DisplayFor(model => model.Description)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Price)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Price)
+                @Html.DisplayFor(model => model.Price)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Unit)
+                @Html.DisplayNameFor(model => model.Unit)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Unit)
+                @Html.DisplayFor(model => model.Unit)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Thumb)
+                @Html.DisplayNameFor(model => model.Thumb)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Thumb)
+                @Html.DisplayFor(model => model.Thumb)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Video)
+                @Html.DisplayNameFor(model => model.Video)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Video)
+                @Html.DisplayFor(model => model.Video)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DateCreated)
+                @Html.DisplayNameFor(model => model.DateCreated)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DateCreated)
+                @Html.DisplayFor(model => model.DateCreated)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DateModified)
+                @Html.DisplayNameFor(model => model.DateModified)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DateModified)
+                @Html.DisplayFor(model => model.DateModified)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BestSellers)
+                @Html.DisplayNameFor(model => model.BestSellers)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BestSellers)
+                @Html.DisplayFor(model => model.BestSellers)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HomeFlag)
+                @Html.DisplayNameFor(model => model.HomeFlag)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HomeFlag)
+                @Html.DisplayFor(model => model.HomeFlag)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Active)
+                @Html.DisplayNameFor(model => model.Active)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Active)
+                @Html.DisplayFor(model => model.Active)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Tags)
+                @Html.DisplayNameFor(model => model.Tags)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Tags)
+                @Html.DisplayFor(model => model.Tags)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
+                @Html.DisplayNameFor(model => model.Title)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
+                @Html.DisplayFor(model => model.Title)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Alias)
+                @Html.DisplayNameFor(model => model.Alias)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Alias)
+                @Html.DisplayFor(model => model.Alias)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MetaDesc)
+                @Html.DisplayNameFor(model => model.MetaDesc)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MetaDesc)
+                @Html.DisplayFor(model => model.MetaDesc)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MetaKey)
+                @Html.DisplayNameFor(model => model.MetaKey)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MetaKey)
+                @Html.DisplayFor(model => model.MetaKey)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cat)
+                @Html.DisplayNameFor(model => model.Cat)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cat.CatId)
+                @Html.DisplayFor(model => model.Cat.CatId)
         </dd>
     </dl>
+</div> *@
+        <div class="group_button">
+        <input type="button" 
+    onclick="window.location.href='@Url.Action("Index")'" 
+    value="Back to List" class="btn btn-info btn-sm">
+        @{
+            var editUrl = Url.Action("Edit", new { id = Model?.ProductId });
+        }
+
+<input type="button" value="Edit" 
+    onclick="window.location.href='@editUrl'" class="btn btn-primary btn-sm" />
+
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.ProductId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
 </div>
+
+
