@@ -1,4 +1,4 @@
-﻿* {
+﻿﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -207,23 +207,34 @@ body {
 }
 
 .body .container .data_table_container {
-/*    overflow: scroll;*/
+    /*    overflow: scroll;*/
     margin-top: 10px;
-/*    width: 1200px;*/
+    /*    width: 1200px;*/
     display: flex;
 }
 
 
     .body .container .data_table_container.large {
         overflow: scroll;
-        width: 1200px;
+        max-width: 1300px;
         max-height: 700px;
     }
 
+    .body .container .data_table_container.largeH {
+        overflow-y: scroll;
+        max-height: 700px;
+    }
 
-.data_table_container#small_info_table {
-    max-width: 600px;
-}
+    .body .container .data_table_container.largeW{
+        overflow-x: scroll;
+        max-width: 1300px;
+    }
+
+
+
+        .data_table_container#small_info_table {
+            max-width: 600px;
+        }
 
 
 /* ---------------------------dataTable------------------------------------ */
@@ -607,12 +618,12 @@ canvas {
     margin: 2rem 2rem 2rem 0px;
 }
 
-.group_button a#btn {
-font-size: 15px;
-width: auto;
-padding: .6rem;
-margin:0 1rem 0 0;
-}
+    .group_button a#btn {
+        font-size: 15px;
+        width: auto;
+        padding: .6rem;
+        margin: 0 1rem 0 0;
+    }
 
 h2.title {
     margin: 2rem 0px;
@@ -640,7 +651,6 @@ h3.text-center {
     width: 400px;
     height: 200px;
     margin: 15rem 30rem;
-
 }
 
 .modal-title {
@@ -670,7 +680,6 @@ h3.text-center {
 .modal-footer {
     display: flex;
     justify-content: center;
-
 }
 
     .modal-footer button {
@@ -694,4 +703,29 @@ h3.text-center {
     font-family: math;
     /* display: flex; */
     background: bisque;
+}
+
+.nav_row {
+    display: flex;
+}
+
+.nav_row .nav_page_content ul {
+    background: #fff;
+    padding: 1rem;
+    display:flex;
+}
+
+.nav_row .nav_page_content ul li {
+    list-style: none;
+}
+
+.nav_row .nav_page_content ul li a {
+    text-decoration: none;
+    margin: 0 .5rem;
+    font-size: 1.6rem;
+    border: 1px solid black;
+    font-weight: 600;
+    color: rgb(81, 81, 159);
+    background: #d8f0ed6f;
+    padding: .5rem 1rem;
 }
