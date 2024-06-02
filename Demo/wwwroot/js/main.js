@@ -1,4 +1,4 @@
-//const productRows = document.querySelectorAll('.product_row');
+﻿//const productRows = document.querySelectorAll('.product_row');
 //const buttons = document.querySelectorAll('.choose_food');
 
 //// Ẩn tất cả các danh mục sản phẩm ban đầu (tùy chọn)
@@ -20,20 +20,49 @@
 //  });
 //});
 
-function updateContainerClass() {
-    const container = document.querySelector('.body .container .data_table_container .data-table');
-    const containeradd = document.querySelector('.body .container .data_table_container');
-    const containerWidth = container.offsetWidth;
-    const containerHeight = container.offsetHeight;
 
-    if (containerWidth >= 1200 || containerHeight >= 650) {
-        containeradd.classList.add('large');
+document.addEventListener('DOMContentLoaded', (event) => {
+    const searchBox = document.getElementById('search-box');
 
-    } else {
+    const resultBox = document.querySelector('.result-box');
 
-        containeradd.classList.remove('large');
+    const data = [
+        'Apple',
+        'Banana',
+        'Cherry',
+        'Date',
+        'Fig',
+        'Grape',
+        'Kiwi'
+    ];
+
+
+
+    searchBox.addEventListener('keyup', (event) => {
+        performSearch(searchBox.value);
+    });
+
+    function performSearch(keyword) {
+        if (keyword.trim() === '') {
+            resultBox.innerHTML = ''; // Clear results when input is empty
+            return;
+        }
+
+        const results = data.filter(item => item.toLowerCase().includes(keyword.toLowerCase()));
+        displayResults(results);
     }
-}
 
-window.addEventListener('resize', updateContainerClass);
-document.addEventListener('DOMContentLoaded', updateContainerClass);
+    function displayResults(results) {
+        if (results.length) {
+            const content = results.map(item => `<li onclick="selectResult('${item}')">${item}</li>`).join('');
+            resultBox.innerHTML = `<ul>${content}</ul>`;
+        } else {
+            resultBox.innerHTML = ''; // Clear results when no matches found
+        }
+    }
+
+    window.selectResult = function (item) {
+        searchBox.value = item; // Update input box with the selected result
+        resultBox.innerHTML = ''; // Clear results
+    }
+});
