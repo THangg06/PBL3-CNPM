@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Demo.ModelViews.HangHoaVM>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/Cart.css" rel="stylesheet">
+    <style>
+        body {
+            margin-top: 150px; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1> Kết quả tìm kiếm </h1>
+        <div class="project">
+            <div class="shop">
+            @foreach (var product in Model)
+            {
+                <div class="box">
+                    <img src="~/menucss/@product.Hinh" alt="@product.TenHH" />
+                    <div class="content">
+                        <h3>@product.TenHH</h3>
+                        <div class="row">
+                            <span class="tag_title"> Giá đơn thành: </span>
+                            <h4 class="unit-price" data-unitprice="@product.Dongia">@product.Dongia</h4>
+                        </div>
+                    </div>
+                </div>
+
+            }
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
