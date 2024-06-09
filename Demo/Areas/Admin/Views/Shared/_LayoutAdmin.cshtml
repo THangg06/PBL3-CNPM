@@ -53,12 +53,12 @@
 
     <header class="header">
         <div class="admin-box">
-            <div id="user-info-container">
+            <div id="user-info-container" onclick="editAvatar()">
 @*                 @await Html.PartialAsync("~/Areas/Admin/Views/HomeAdmin/Inf.cshtml", (Demo.Data.Account)Model)
  *@            </div>
 
-            <input type="button" id="special" value="Đổi Avatar" onclick="editAvatar()" />
-
+@*             <input type="button" id="special" value="Đổi Avatar" onclick="editAvatar()" />
+ *@
             
 
             <h3>@User.Claims.FirstOrDefault(c => c.Type == "AccountId")?.Value</h3>
