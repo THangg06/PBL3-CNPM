@@ -61,7 +61,7 @@
 
             
 
-            <h3>Welcome Admin @User.Claims.FirstOrDefault(c => c.Type == "AccountId")?.Value</h3>
+            <h3>@User.Claims.FirstOrDefault(c => c.Type == "AccountId")?.Value</h3>
             <a href="/logout" id="HasLogin" class="logout-button">Đăng Xuất</a>
             <div class="fas fa-caret-down"></div>
         </div>
@@ -140,6 +140,7 @@
     @await RenderSectionAsync("Scripts", required: false)
     <script src="~/content/ckeditor/ckeditor.js"></script>
     <script src="~/content/ckfinder/ckfinder_v1.js"></script>
+    <script src="~/js/QLDM.js" charset="utf-8"></script>
     <!-- Thêm thẻ script từ CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
