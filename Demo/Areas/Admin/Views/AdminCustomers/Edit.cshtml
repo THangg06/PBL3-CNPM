@@ -5,90 +5,63 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 <div class="content_box">
-<div class="nav_dir">
-    <div class="header-sub-title">
-        <nav class="breadcrumb breadcrumb-dash">
-            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
-            <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index">Danh sách tài khoản khách hàng > </a>
-            <span class="breadcrumb-item active">Chỉnh sửa thông tin tài khoản khách hàng </span <br />
-        </nav>
+    <div class="nav_dir">
+        <div class="header-sub-title">
+            <nav class="breadcrumb breadcrumb-dash">
+                <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
+                <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index">Danh sách tài khoản khách hàng > </a>
+                <span class="breadcrumb-item active">Chỉnh sửa quyền truy cập khách hàng </span> <!-- Fix lỗi tag đóng -->
+            </nav>
+        </div>
+    </div>
+    <hr />
+    <div class="form_container">
+        <div class="content">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="CustomerId" />
+                <div class="user-details">
+                    <div class="input-box">
+                       
+                        <input type="hidden" asp-for="FullName" class="form-control" value="@Model.FullName" />
+                       
+                    </div>
+                    <div class="input-box">
+                      
+                        <input type="hidden" asp-for="Email" class="form-control" value="@Model.Email" />
+                       
+                    </div>
+                    <div class="input-box">
+                       
+                        <input type="hidden" asp-for="Address" class="form-control" value="@Model.Address"></input>
+                     
+                    </div>
+
+                    <!-- Giữ nguyên các trường còn lại -->
+                    <input type="hidden" asp-for="Birthday" />
+                    <input type="hidden" asp-for="Active" />
+                    <input type="hidden" asp-for="Phone" />
+                    <input type="hidden" asp-for="CreateDate" />
+                    <input type="hidden" asp-for="Password" value="@Model.Password" />
+                    <input type="hidden" asp-for="Salt" value="@Model.Salt" />
+                    <input type="hidden" asp-for="Avatar" />
+
+                    <div class="input-box" id="special">
+                        <label asp-for="RoleId" class="control-label">Role</label>
+                        <select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
+                        <span asp-validation-for="RoleId" class="text-danger"></span>
+                    </div>
+
+                </div>
+
+                <div class="button">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
 
-</div>
-<hr />
-<div class="form_container">
-    <div class="content">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="CustomerId" />
-            <div class="user-details">
-                <div class="input-box">
-                    <label asp-for="FullName" class="control-label"></label>
-                    <input asp-for="FullName" class="form-control" />
-                    <span asp-validation-for="FullName" class="text-danger"></span>
-                </div>
-                <div class="input-box">
-                    <label asp-for="Birthday" class="control-label"></label>
-                    <input asp-for="Birthday" class="form-control" />
-                    <span asp-validation-for="Birthday" class="text-danger"></span>
-                </div>
-                <div class="input-box">
-                    <label asp-for="Avatar" class="control-label"></label>
-                    <input asp-for="Avatar" class="form-control" />
-                    <span asp-validation-for="Avatar" class="text-danger"></span>
-                </div>
-                <div class="input-box">
-                    <label asp-for="Address" class="control-label"></label>
-                    <input asp-for="Address" class="form-control" />
-                    <span asp-validation-for="Address" class="text-danger"></span>
-                </div>
-                <div class="input-box">
-                    <label asp-for="Email" class="control-label"></label>
-                    <input asp-for="Email" class="form-control" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
-                </div>
-                <div class="input-box">
-                    <label asp-for="Phone" class="control-label"></label>
-                    <input asp-for="Phone" class="form-control" />
-                    <span asp-validation-for="Phone" class="text-danger"></span>
-                </div>
-                <div class="input-box">
-                    <label asp-for="CreateDate" class="control-label"></label>
-                    <input asp-for="CreateDate" class="form-control" />
-                    <span asp-validation-for="CreateDate" class="text-danger"></span>
-                </div>
-                    @*    <div class="input-box">
-                    <label asp-for="Password" class="control-label"></label>
-                    <input asp-for="Password" class="form-control" /><span asp-validation-for="Password" class="text-danger"></span>
-                </div>
-                <div class="input-box">
-                    <label asp-for="Salt" class="control-label"></label>
-                    <input asp-for="Salt" class="form-control" />
-                    <span asp-validation-for="Salt" class="text-danger"></span>
-                </div> *@
-                <div class="input-box">
-                    <label asp-for="LastLogin" class="control-label"></label>
-                    <input asp-for="LastLogin" class="form-control" />
-                    <span asp-validation-for="LastLogin" class="text-danger"></span>
-                </div>
-                <div class="input-box">
-                    <label asp-for="Active" class="control-label"></label>
-                    <input asp-for="Active" class="form-control" />
-                    <span asp-validation-for="Active" class="text-danger"></span>
-                </div>
-            </div>
-            
-            <div class="button">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+    <div class="group_button">
+        <input type="button" onclick="window.location.href='@Url.Action("Index")'" value="Back to List" class="btn btn-info btn-sm">
     </div>
-</div>
-
-<div class="group_button">
-        <input type="button" 
-    onclick="window.location.href='@Url.Action("Index")'" 
-    value="Back to List" class="btn btn-info btn-sm">
-
-</div>
 </div>

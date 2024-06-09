@@ -33,7 +33,7 @@ namespace Demo.Areas.Admin.Controllers
         {
 
             var pageNumber = page;
-            var pageSize = 100; // Số sản phẩm trên mỗi
+            var pageSize = 10000; // Số sản phẩm trên mỗi
             IQueryable<Product> query = _context.Products
       .AsNoTracking()
       .Include(x => x.Cat);

@@ -109,12 +109,13 @@ namespace Demo.Controllers
                 .Include(a => a.Cat)
                 .Where(x => x.ProductName.Contains(keyword))
                 .OrderByDescending(x => x.ProductName)
-                .Take(10)
+           
                 .ToList();
 
             // Trả về kết quả cho PartialView
             return PartialView("ListProductsSearchPartial", ls);
         }
+
 
     }
 }

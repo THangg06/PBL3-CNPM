@@ -1,18 +1,19 @@
-﻿<style>
-    /* CSS for the logout button */
+﻿
+<style>
+  
     .logout-button {
         display: inline-block;
         padding: 10px 20px;
-        background-color: #007bff; /* Blue background */
-        color: white; /* White text */
-        text-decoration: none; /* Remove underline */
-        border-radius: 5px; /* Rounded corners */
-        font-weight: bold; /* Bold text */
-        transition: background-color 0.3s; /* Smooth transition for hover effect */
+        background-color: #007bff; 
+        color: white; 
+        text-decoration: none; 
+        border-radius: 5px; 
+        font-weight: bold;
+        transition: background-color 0.3s; 
     }
 
         .logout-button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: #0056b3; 
         }
 
 </style>﻿
@@ -43,6 +44,7 @@
 
 
 
+
 </head>
 
 <body>
@@ -51,41 +53,18 @@
 
     <header class="header">
         <div class="admin-box">
-            @*==============================================*@
-            <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="ProfileAdmin">
-                <img src="~/assets/admin/@User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value" alt="">
-                
-            </a>
-            @*==============================================*@
+            <div id="user-info-container">
+@*                 @await Html.PartialAsync("~/Areas/Admin/Views/HomeAdmin/Inf.cshtml", (Demo.Data.Account)Model)
+ *@            </div>
+
             <input type="button" id="special" value="Đổi Avatar" onclick="editAvatar()" />
 
-            <script>
-                function editAvatar() {
-                    var accountId = '@User.Claims.FirstOrDefault(c => c.Type == "AccountId")?.Value';
-                    var url = '/Admin/HomeAdmin/EditAvatar?id=' + encodeURIComponent(accountId);
-                    window.location.href = url;
-                }
-            </script>
+            
 
-
-            @*==============================================*@
-            <h3>Welcom Admin @Context.User.Identity.Name</h3>
+            <h3>Welcome Admin @User.Claims.FirstOrDefault(c => c.Type == "AccountId")?.Value</h3>
             <a href="/logout" id="HasLogin" class="logout-button">Đăng Xuất</a>
-
             <div class="fas fa-caret-down"></div>
         </div>
-
-
-        @*    <div class="search-bar">
-        <div class="search-box">
-        <label for="search-icon" class="fas fa-search"></label>
-        <input type="search" id="search-box" placeholder="Tìm kiếm tại đây" style="background-image: linear-gradient(to right, #cfe2ff, #c2d1E8);
-        ">
-        </div>
-
-        <div class="fa-solid fa-bell" ></div>
-        </div> *@
-
     </header>
 
     <section class="body">
@@ -167,3 +146,33 @@
 
 </body>
 </html>
+<script>
+    function editAvatar() {
+        var accountId = '@User.Claims.FirstOrDefault(c => c.Type == "AccountId")?.Value';
+        var url = '/Admin/HomeAdmin/EditAvatar?id=' + encodeURIComponent(accountId);
+        window.location.href = url;
+    }
+
+    function updateUserInfo() {
+        var accountId = '@User.Claims.FirstOrDefault(c => c.Type == "AccountId")?.Value';
+        if (!accountId) {
+            console.error("AccountId không tồn tại trong claims.");
+            return;
+        }
+
+        $.ajax({
+            url: '/Admin/HomeAdmin/Inf',
+            type: 'GET',
+            success: function (data) {
+                $('#user-info-container').html(data);
+            },
+            error: function (xhr, status, error) {
+                console.error(`Lỗi AJAX: ${status} - ${error}`);
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        updateUserInfo();
+    });
+</script>

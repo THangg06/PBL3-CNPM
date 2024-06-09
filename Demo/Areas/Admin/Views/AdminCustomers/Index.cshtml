@@ -25,7 +25,6 @@
         <nav class="breadcrumb breadcrumb-dash">
             <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home > </a>
             <a class="breadcrumb-item" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index">Quản lý khách hàng > </a>
-            <span class="breadcrumb-item active">Danh sách khách hàng : page @CurrentPage </span <br />
         </nav>
     </div>
 
@@ -107,6 +106,11 @@
                              <td>@(item.Active == true ? "Active" : "Block")</td>
                             <td class="text-center">
                             <div class="group_button another">
+
+                                    <input type="button" class="mod-btn"
+                                           onclick="window.location.href='@Url.Action("Edit", new { id = item.CustomerId })'"
+                                           value="Sửa" class="btn btn-info btn-sm">
+
                                     <input type="button" class ="mod-btn" 
                                     onclick="window.location.href='@Url.Action("Details", new { id = item.CustomerId })'" 
                                     value="Chi tiết" class="btn btn-info btn-sm">
@@ -196,11 +200,14 @@
             type: 'POST',
             data: { id: id, trangthai: tt }, 
             success: function (res) {
-                if (res.Success) {
-                    location.reload();
-                } else {
-                    alert("Cập nhật thành công: " + res.message);
-                }
+                        if (res.Success) {
+                            $('#modal-default').modal('hide'); // Close the modal
+                            location.reload(); // Reload the page to reset the order status
+                        } else {
+                            $('#modal-default').modal('hide');
+                            location.reload();
+                            alert('Cập nhật thành công!'); // Display an error message
+                        }
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 alert("Có lỗi xảy ra: " + textStatus + " - " + errorThrown);

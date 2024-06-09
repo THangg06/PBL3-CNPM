@@ -48,6 +48,7 @@ namespace Demo.Areas.Admin.Controllers
 
             return View(order);
         }
+      
         [HttpPost]
         public ActionResult UpdateTT(int id, int trangthai)
         {

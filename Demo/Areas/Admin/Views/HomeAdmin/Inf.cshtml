@@ -1,0 +1,27 @@
+﻿@model Demo.Data.Account
+
+
+@if (Model != null)
+{
+    <style>
+        .product-image {
+            max-width: 200px;
+            max-height: 200px;
+        }
+    </style>
+
+    <div class="user-info">
+        @if (!string.IsNullOrEmpty(Model.Avatar))
+        {
+            <img src="@Url.Content("~/assets/admin/" + Model.Avatar)" alt="Avatar" class="product-image" />
+        }
+        else
+        {
+            <img src="~/assets/admin/avatar_conmeoo.png" alt="Avatar" class="product-image" />
+        }
+    </div>
+}
+else
+{
+    <p>Không tìm thấy thông tin người dùng.</p>
+}

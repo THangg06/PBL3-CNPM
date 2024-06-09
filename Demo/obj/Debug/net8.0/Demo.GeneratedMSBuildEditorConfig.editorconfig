@@ -134,12 +134,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEVkaXRBdmF0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProjectWF/PBL3/Demo/Areas/Admin/Views/HomeAdmin/EditProfileAdmin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEVkaXRQcm9maWxlQWRtaW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/ProjectWF/PBL3/Demo/Areas/Admin/Views/HomeAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ProjectWF/PBL3/Demo/Areas/Admin/Views/HomeAdmin/Inf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEluZi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/ProjectWF/PBL3/Demo/Areas/Admin/Views/HomeAdmin/ProfileAdmin.cshtml]

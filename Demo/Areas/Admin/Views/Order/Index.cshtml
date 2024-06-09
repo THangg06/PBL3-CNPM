@@ -2,6 +2,8 @@
 
 
 
+
+
 @{
     ViewBag.Title = "Danh sách đơn hàng";
     int totalPages = ViewBag.TotalPages;
@@ -111,9 +113,9 @@
                                         <td>@item.Phone</td>
                                         <td>@item.CachThanhToan</td>
                                         <td>@item.PaymentDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
-                                        <td>@(item.TransactStatusId == 1 ? "Đã giao hàng" : "Chờ xác nhận")</td>
+                                        <td>@(item.TransactStatusId == 1 ? "Đã xác nhận" : "Chờ xác nhận")</td>
                                         <td>@item.OrderDate?.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
-                                        <td>@item.ShipDate?.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
+                                        <td>@item.ShipDate?.ToString("dd/MM/yyyy")</td>
                                         <td>
                                             <div class="group_button another">
                                                     <a id="btn" href="/admin/order/view/@item.OrderID" class="btn btn-sm btn-success">Xem</a>
@@ -127,22 +129,22 @@
                 </tbody>
             </table>
 
-            <div class="row">
-                <div class="col-6"></div>
-                <div class="col-6" style="text-align:right;">
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination">
+
+        </div>
+                <div class="nav_row">
+                    <div class="nav_page_content col-6" style="text-align:right;">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
                         @for (int i = 1; i <= totalPages; i++)
                         {
-                                    <li class="page-item @(i == currentPage ? "active" : "")">
-                                        <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
-                                    </li>
+                                            <li class="page-item @(i == currentPage ? "active" : "")">
+                                                <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+                                            </li>
                         }
-                        </ul>
-                    </nav>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-        </div>
 
 
 
@@ -169,11 +171,22 @@
                 $.ajax({
                     url: '/admin/order/UpdateTT',
                     type: 'POST',
-                    data: { id: id, trangthai: tt }, 
+                    data: { id: id, trangthai: tt },
                     success: function (res) {
                         if (res.Success) {
+                            $('#modal-default').modal('hide'); // Close the modal
                             location.reload();
+                            alert('Cập nhật thành công!');
+                            // Reload the page to reset the order status
+                        } else {
+                            $('#modal-default').modal('hide');
+                            location.reload();
+                            alert('Cập nhật thành công!');
+                            /* alert('Cập nhật thất bại!'); */ // Display an error message
                         }
+                    },
+                    error: function () {
+                        alert('Có lỗi xảy ra. Vui lòng thử lại sau.'); // Handle any errors
                     }
                 });
             });

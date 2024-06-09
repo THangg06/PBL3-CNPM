@@ -30,21 +30,21 @@
 <body>
     <div class="go-back">
         <i class="fa-solid fa-arrow-left"></i>
-        <a asp-controller="Home" asp-action="Index">Back</a>
+        <a asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index">Back</a>
     </div>
     <div class="container">
         <div class="title">Thông tin tài khoản</div>
         <div class="content">
-            @if (TempData["UpdateMessage"] != null)
+           @*  @if (TempData["UpdateMessage"] != null)
             {
                 <div class="alert alert-success" role="alert">
                     @TempData["UpdateMessage"]
                 </div>
-            }
-            <form asp-area="Admin" asp-action="EditProfileAdmin" asp-controller="HomeAdmin" method="post">
+            } *@
+            <form asp-area="Admin" asp-action="UpdateProfileAdmin" asp-controller="HomeAdmin" method="post">
                 <div class="image-container">
                     @*                     <img src="@User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value" alt=""> *@
-                    <img class="product-image" src="~/assets/avt_cus/@Model.Avatar" alt=" " >
+                    <img class="product-image" src="~/assets/admin/@Model.Avatar" alt=" ">
                     <input type="file" accept="image/*" id="fileInput" hidden>
                 </div>
                 <div class="user-details">
@@ -75,20 +75,17 @@
                     </div> *@
                 </div>
 
-                <div class="button">
-                    @* <input type="button" id="special" value="Chỉnh sửa tài khoản" onclick="editProfile()" /> *@
-                    <a asp-area="Admin" asp-action="EditProfileAdmin" asp-controller="HomeAdmin" method="post">
-                        <input type="button" id="special" value="Chỉnh sửa tài khoản" onclick="editProfile()" />
-                    </a>
-                    
-                  @*   <script>
+            @*     <div class="button">
+                    <input type="button" id="special" value="Chỉnh sửa tài khoản" onclick="editProfile()" />
+
+                    <script>
                         function editProfile() {
-                            var accountId = @Model.AccountId;
-                            var url = '/EditProfileAdmin?id=' + encodeURIComponent(accountId);
+                            var customerId = '@((string)@User.Claims.FirstOrDefault(c => c.Type == "AccountId")?.Value)';
+                            var url = '/Admin/HomeAdminn/EditProfileAdmin?id=' + encodeURIComponent(customerId);
                             window.location.href = url;
                         }
-                    </script> *@
-                </div>
+                    </script>
+                </div> *@
                 @*                     <a asp-controller="Accounts" asp-action="EditProfile" asp-route-id="@((string)Context.Session.GetString("CustomerId"))">Chỉnh sửa tài khoản</a> *@
 
             </form>

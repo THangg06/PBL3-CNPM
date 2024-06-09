@@ -27,34 +27,47 @@
             <div class="user-details">
                 <div class="input-box">
                 <label>ID</label>
-                <input asp-for="CustomerId" class="form-control" readonly/>
+                <input asp-for="CustomerId" class="form-control" value="@Model.CustomerId" readonly/>
                 </div>
 
                 <div class="input-box">
                 <label asp-for="FullName">Họ và tên</label>
-                <input asp-for="FullName" class="form-control" readonly/>
+                <input asp-for="FullName" value="@Model.FullName" class="form-control" readonly/>
                 </div>
 
                 <div class="input-box">
                 <label asp-for="Birthday">Ngày sinh</label>
-                <input asp-for="Birthday" class="form-control" type="date" readonly/>
+                <input asp-for="Birthday" class="form-control" type="date" value="@Model.Birthday" readonly/>
                 </div>
 
                 <div class="input-box" id="special">
                 <label asp-for="Address">Địa chỉ</label>
-                <input asp-for="Address" class="form-control" readonly/>
+                <input asp-for="Address" class="form-control" value="@Model.Address" readonly/>
                 </div>
 
                 <div class="input-box">
                 <label asp-for="Email">Email</label>
-                <input asp-for="Email" class="form-control" readonly/>
+                <input asp-for="Email" class="form-control" value="@Model.Email" readonly/>
                 </div>
 
                 <div class="input-box">
                 <label asp-for="Phone" class="control-label">Số điện thoại</label>
-                <input asp-for="Phone" class="form-control" readonly/>
+                <input asp-for="Phone" class="form-control"value="@Model.Phone" readonly/>
                 </div>
 
+             
+              
+                <input asp-for="Password" class="form-control"value="@Model.Password" readonly/>
+               
+
+              
+              
+                <input asp-for="Salt" class="form-control"value="@Model.Salt" readonly/>
+           
+
+                <input asp-for="RoleId" class="form-control"value="@Model.RoleId" readonly/>
+                 <input asp-for="Active" class="form-control"value="false" readonly/>
+               
             </div>
 
             </div>

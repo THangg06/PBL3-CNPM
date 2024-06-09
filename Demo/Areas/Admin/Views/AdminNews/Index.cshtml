@@ -166,7 +166,12 @@
                     data: { id: id, trangthai: tt }, 
                     success: function (res) {
                         if (res.Success) {
+                            $('#modal-default').modal('hide'); // Close the modal
+                            location.reload(); // Reload the page to reset the order status
+                        } else {
+                            $('#modal-default').modal('hide');
                             location.reload();
+                            /* alert('Cập nhật thất bại!'); */ // Display an error message
                         }
                     }
                 });

@@ -1,13 +1,41 @@
-﻿@model IEnumerable<Demo.ModelViews.HangHoaVM>
+﻿﻿@using Demo.Data
+@model List<Product>
 
-<div class="product-items">
-    @foreach (var product in Model)
-    {
-        <div class="product-item">
-            <h3>@product.TenHH</h3>
-            <p>@product.MoTaNgan</p>
-            <p>@product.Dongia</p>
-            <!-- Add more product details as needed -->
+
+@if (Model != null && Model.Any())
+{
+    <div class="menu_set d-flex flex-column">
+        <div class="product_row d-flex flex-wrap">
+            @foreach (var item in Model)
+            {
+                <div class="item" data-category="@item.CatId">
+                    <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.ProductId">
+                        <img class="image" src="~/menucss/@item.Thumb" alt="@item.ProductName" />
+                    </a>
+                    <div class="product_card">
+                        <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.ProductId">
+                            <h4 class="food_title">@item.ProductName</h4>
+                        </a>
+                        <p class="desc_food">@item.Description</p>
+                        <h5 class="price_tag">@item.Price Đ</h5>
+                        <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@item.ProductId">
+                            <button class="btn"><h5 class="highlight2">Add to cart</h5></button>
+                        </a>
+                    </div>
+                </div>
+            }
         </div>
-    }
-</div>
+    </div>
+}
+<script>
+        function filterMenu(category) {
+            var items = document.getElementsByClassName('item');
+            for (var i = 0; i < items.length; i++) {
+                if (items[i].getAttribute('data-category') === category) {
+                    items[i].style.display = 'block';
+                } else {
+                    items[i].style.display = 'none';
+                }
+            }
+        }
+    </script>

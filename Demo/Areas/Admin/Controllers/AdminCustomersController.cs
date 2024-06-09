@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Demo.Data;
 using PagedList.Core;
 using AspNetCoreHero.ToastNotification.Abstractions;
+using Microsoft.Identity.Client;
 
 namespace Demo.Areas.Admin.Controllers
 {
@@ -26,7 +27,7 @@ namespace Demo.Areas.Admin.Controllers
         public IActionResult Index(int? page)
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
-            var pageSize = 20;
+            var pageSize = 100000;
             var IsCustomers = _context.Customers.AsNoTracking().
                 OrderByDescending(x => x.CreateDate);
             PagedList<Customer> models = new PagedList<Customer>(IsCustomers, pageNumber, pageSize);
@@ -111,13 +112,15 @@ namespace Demo.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            ViewData["RoleId"] = new SelectList(_context.Roles, "RoleId", "Description", customer.RoleId);
+
             return View(customer);
         }// POST: Admin/AdminCustomers/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+         // To protect from overposting attacks, enable the specific properties you want to bind to.
+         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("CustomerId,FullName,Birthday,Avatar,Address,Email,Phone,CreateDate,Password,Salt,LastLogin,Active")] Customer customer)
+        public async Task<IActionResult> Edit(string id, [Bind("CustomerId,FullName,Address,Birthday,Avatar,RoleId,Email,Phone,CreateDate,Password,Salt,LastLogin,Active")] Customer customer)
         {
             if (id != customer.CustomerId)
             {
@@ -128,9 +131,47 @@ namespace Demo.Areas.Admin.Controllers
             {
                 try
                 {
-                    _context.Update(customer);
-                    await _context.SaveChangesAsync();
-                    _notyfService.Success("Chỉnh sửa thành công");
+                    // Check if RoleId is 1
+                    if (customer.RoleId == 1)
+                    {
+                        // Create a new account for the customer
+                        var newAccount = new Account
+                        {
+                            AccountId = customer.CustomerId,
+                            FullName = customer.FullName,
+                            Phone = customer.Phone,
+                            Email = customer.Email,
+                            Password = customer.Password,
+                            Salt = customer.Salt,
+                            Avatar = customer.Avatar,
+                            Active = customer.Active,
+                            RoleId = customer.RoleId,
+                            CreateDate = customer.CreateDate,
+                        };
+
+                        _context.Accounts.Add(newAccount);
+
+                        var customerOrders = _context.Orders.Where(o => o.CustomerId == customer.CustomerId);
+
+                        foreach (var order in customerOrders.ToList())
+                        {
+                            var orderDetails = _context.OrderDetails.Where(od => od.OrderID == order.OrderID).ToList();
+                            _context.OrderDetails.RemoveRange(orderDetails);
+                        }
+
+                        _context.Orders.RemoveRange(customerOrders);
+
+                        await _context.SaveChangesAsync();
+
+                        var existingCustomer = await _context.Customers.FindAsync(customer.CustomerId);
+                        if (existingCustomer != null)
+                        {
+                            _context.Customers.Remove(existingCustomer);
+                            await _context.SaveChangesAsync();
+                        }
+
+                        _notyfService.Success("Chỉnh sửa thành công");
+                    }
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -146,8 +187,14 @@ namespace Demo.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+
+            ViewData["RoleId"] = new SelectList(_context.Roles, "RoleId", "Description", customer.RoleId);
+
             return View(customer);
         }
+
+
+
 
         // GET: Admin/AdminCustomers/Delete/5
         public async Task<IActionResult> Delete(string id)
@@ -172,14 +219,31 @@ namespace Demo.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
+
             var customer = await _context.Customers.FindAsync(id);
+           
+
             if (customer != null)
             {
+                var customerOrders = _context.Orders.Where(o => o.CustomerId == customer.CustomerId);
+
+                foreach (var order in customerOrders.ToList())
+                {
+                    var orderDetails = _context.OrderDetails.Where(od => od.OrderID == order.OrderID).ToList();
+                    _context.OrderDetails.RemoveRange(orderDetails);
+                }
+
+                _context.Orders.RemoveRange(customerOrders);
+
+                await _context.SaveChangesAsync();
+
                 _context.Customers.Remove(customer);
+                //customer.Active = false;
+                //customer.LastLogin = DateTime.Now;
             }
 
             await _context.SaveChangesAsync();
-            _notyfService.Success("Xóa thành công");
+            _notyfService.Success("Tài khoản khách hàng khóa thành công");
             return RedirectToAction(nameof(Index));
         }
 

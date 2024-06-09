@@ -1,10 +1,11 @@
 ﻿﻿@* @model Demo.ViewComponents.MenuLoaiViewComponent *@
 @model IEnumerable<Demo.ModelViews.HangHoaVM>
-@{
+
+@* @{
     ViewData["Title"] = "Index";
     Layout = "Danhsachhanghoa";
 }
-
+ *@
 
 @{
     ViewData["Title"] = "MenuHome";
@@ -28,10 +29,22 @@
     @*  <button href="#" class="btn">Xem ngay</button> *@
 
     <div class="search-form">
-        <input type="search" id="keyword" name="keyword" placeholder="Tìm kiếm tại đây">
-        <button type="button" class="fas fa-search" id="search-button"></button>
+        <div class="row">
+            <input type="search" id="keyword" name="keyword" placeholder="Tìm kiếm tại đây">
+            <button type="button" id="search-button">
+                <i class="fas fa-search"></i> 
+            </button>
+        </div>
+
+        <div class="result-box">
+@*             <ul>
+                <li>Burger</li>
+                <li>Burger</li>
+                <li>Burger</li>
+            </ul> *@
+        </div>
     </div>
-    <div id="records_table"></div>
+   
 
     <section class="grid">
         <div class="content">
@@ -57,9 +70,12 @@
 
 
 
-    
 
-    @await Html.PartialAsync("ProductItem", Model);
+    <div id="records_table">
+
+        @await Html.PartialAsync("ProductItem", Model);
+    </div>
+  
 
     
 
@@ -122,13 +138,6 @@
     <!------------------------------ Scripts ------------------------------------------------>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./js/main.js" charset="utf-8"></script>
-
-
-</body>
-</html>
-
-
-@section Scripts {
     <script>
         $(document).ready(function () {
             // Khi nhấn nút tìm kiếm
@@ -157,6 +166,12 @@
                 }
             });
         });
+
+
     </script>
-}
+
+</body>
+</html>
+
+
 
