@@ -1,10 +1,9 @@
 ﻿﻿
-﻿@using PagedList.Core.Mvc
-@model PagedList.Core.IPagedList<Demo.Data.Customer>
+@model IEnumerable<Demo.Data.Customer>
 
 @{
-    int CurrentPage = ViewBag.CurrentPage;
-    ViewData["Title"] = "Danh sách khách hàng " + CurrentPage;
+    // int CurrentPage = ViewBag.CurrentPage;
+    // ViewData["Title"] = "Danh sách khách hàng " + CurrentPage;
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
@@ -29,14 +28,15 @@
     </div>
 
 </div>
-<div class="filter-box">
+    <div class="filter-box" id="editcbb">
     <label>Tìm kiếm</label>
     <input type="text" id="keyword" name="keyword" />
-@*     <select class="custom-select" id="txtCatID" name="CatId" style="min-width: 200px" asp-items="ViewBag.Danhmuc"> 
-        <option selected>Chọn Danh Mục</option> 
-        <option value="0">Chọn tất cả</option> 
-    </select> *@
     <input type="button" value="Tìm">
+        <select class="custom-select" id="idstatus" name="idstatus" style="min-width: 200px" onchange="filterStatus()">
+            <option value="" disabled selected>Chọn trạng thái</option>
+            <option value="true">Active</option>
+            <option value="false">Block</option>
+        </select>
 </div>
 
     <div class="modal fade" id="modal-default">
@@ -44,9 +44,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Cập nhật trạng thái người dùng</h4>
-@*                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button> *@
+
             </div>
             <div class="modal-body">
                 <input type="hidden" id="txtOrderId" value="0"/>
@@ -129,13 +127,13 @@
                     }
             </tbody>
         </table>
-        <div aria-label="Page navigation example">
+@*         <div aria-label="Page navigation example">
             <ul class="pagination">
                 <pager class="page-item" list="@Model" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index"></pager>
             </ul>
 
         </div>
-    </div>
+ *@    </div>
 
 
 </div>
@@ -153,7 +151,7 @@
 @section Scripts {
         <script>
             $(document).ready(function () {
-                // Function to handle search
+         
                 function search() {
                     var strkeyword = $("#keyword").val();
 
@@ -172,12 +170,12 @@
                     });
                 }
 
-                // Call search function when the button is clicked
+               
                 $("input[type='button'][value='Tìm']").click(function () {
                     search();
                 });
 
-                // Call search function when the Enter key is pressed
+                
                 $("#keyword").keyup(function(event) {
                     if (event.keyCode === 13) {
                         search();
@@ -194,19 +192,19 @@
 
     $('body').on('click', '.btnLuu', function () {
         var id = $('#txtOrderId').val();
-        var tt = $('#ddTrangThai').val() === "True"; // Chuyển giá trị về boolean
+        var tt = $('#ddTrangThai').val() === "True"; 
         $.ajax({
             url: '/admin/admincustomers/UpdateTT',
             type: 'POST',
             data: { id: id, trangthai: tt }, 
             success: function (res) {
                         if (res.Success) {
-                            $('#modal-default').modal('hide'); // Close the modal
-                            location.reload(); // Reload the page to reset the order status
+                            $('#modal-default').modal('hide'); 
+                            location.reload(); 
                         } else {
                             $('#modal-default').modal('hide');
                             location.reload();
-                            alert('Cập nhật thành công!'); // Display an error message
+                            alert('Cập nhật thành công!');
                         }
             },
             error: function (jqXHR, textStatus, errorThrown) {
@@ -216,14 +214,27 @@
     });
 });
 
+        function filterStatus() {
+            var selectedStatus = $("#idstatus").val();
 
+            $.ajax({
+                url: '/Admin/AdminCustomers/Filtter',
+                dataType: "json",
+                type: "GET",
+                data: {
+                    active: selectedStatus
+                },
+                success: function (results) {
+                    if (results.status === "success") {
+                        window.location.href = results.redirectUrl;
+                    }
+                },
+                error: function (xhr) {
+                    alert('Đã xảy ra lỗi');
+                }
+            });
+        }
 
         </script>
 }
 
-@* 
-@section scripts {
-    <script>
-       
-    </script>
-    } *@

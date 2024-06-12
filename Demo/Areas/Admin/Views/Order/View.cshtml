@@ -60,7 +60,7 @@
                 </tr>
                 <tr>
                     <th scope="row">Tình trạng giao hàng:</th>
-                    <td>@(Model.TransactStatusId == 1 ? "Đã giao hàng" : "Chờ xác nhận")</td>
+                    <td>@(Model.TransactStatusId == 1 ? "Đã xác nhận" : "Chờ xác nhận")</td>
                 </tr>
             </tbody>
         </table>
@@ -80,8 +80,8 @@
                                 <th scope="col">Hình ảnh</th>
                                         <th scope="col">Số Lượng</th>
                                         <th scope="col">Giảm Giá</th>
-                                        <th scope="col">Tổng Tiền</th>
-                                        <th scope="col">Ngày Giao Hàng</th>
+                                        <th scope="col">Thành Tiền</th>
+                                      @*   <th scope="col">Ngày Giao Hàng</th> *@
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -92,12 +92,15 @@
                                                 <td>@item.Product?.ProductName</td>
                                     <td><img class="product-image" src="~/menucss/@item.Product?.Thumb" alt="Product Image" /></td>
                                                 <td>@item.Quantity</td>
-                                                <td>@item.Discount</td>
+                                                <td>0</td>
                                                 <td>@item.Total</td>
-                                                <td>@(item.ShipDate.HasValue ? item.ShipDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy") : "")</td>
-                                </tr>
+@*                                                 <td>@(item.ShipDate.HasValue ? item.ShipDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy") : "")</td>
+ *@                                </tr>
                                 i++;
                             }
+                            <tr class="custom-row">
+                                <td class="custom-cell">Tổng Tiền : @Model.TongTien 0VNĐ</td>
+                            </tr>
                                 </tbody>
                             </table>
                 }

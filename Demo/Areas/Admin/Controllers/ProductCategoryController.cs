@@ -56,7 +56,6 @@ namespace Demo.Areas.Admin.Controllers
             {
                 category.CatName = MyUtil.ToTitleCase(category.CatName);
 
-                // Xử lý tải lên tệp hình ảnh
                 if (fThumb != null)
                 {
                     string extension = Path.GetExtension(fThumb.FileName);
@@ -65,8 +64,6 @@ namespace Demo.Areas.Admin.Controllers
                     category.Thumb = await MyUtil.UploadFile(fThumb, image.ToLower());
                 }
 
-
-                // Kiểm tra và đặt Thumb nếu không có
                 if (string.IsNullOrEmpty(category.Thumb))
                 {
                     category.Thumb = "default.jpg";
@@ -104,9 +101,7 @@ namespace Demo.Areas.Admin.Controllers
             return View(category);
         }
 
-        // POST: Admin/AdminCategories/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, [Bind("CatId,CatName,Description,ParentId,Levels,Ordering,Published,Thumb,Title,Alias,MetaDesc,MetaKey,Cover,SchemaMarkup")] Category category, Microsoft.AspNetCore.Http.IFormFile fThumb)
@@ -133,8 +128,6 @@ namespace Demo.Areas.Admin.Controllers
                         category.Thumb = await MyUtil.UploadFile(fThumb, image.ToLower());
                     }
 
-
-                    // Kiểm tra và đặt Thumb nếu không có
                     if (string.IsNullOrEmpty(category.Thumb))
                     {
                         category.Thumb = "default.jpg";
@@ -179,7 +172,6 @@ namespace Demo.Areas.Admin.Controllers
             return View(category);
         }
 
-        // POST: Admin/AdminCategories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)

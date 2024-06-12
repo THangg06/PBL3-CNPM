@@ -1,19 +1,19 @@
-﻿
+﻿﻿
 <style>
-  
+
     .logout-button {
         display: inline-block;
         padding: 10px 20px;
-        background-color: #007bff; 
-        color: white; 
-        text-decoration: none; 
-        border-radius: 5px; 
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
         font-weight: bold;
-        transition: background-color 0.3s; 
+        transition: background-color 0.3s;
     }
 
         .logout-button:hover {
-            background-color: #0056b3; 
+            background-color: #0056b3;
         }
 
 </style>﻿
@@ -54,12 +54,13 @@
     <header class="header">
         <div class="admin-box">
             <div id="user-info-container" onclick="editAvatar()">
-@*                 @await Html.PartialAsync("~/Areas/Admin/Views/HomeAdmin/Inf.cshtml", (Demo.Data.Account)Model)
- *@            </div>
+                @*                 @await Html.PartialAsync("~/Areas/Admin/Views/HomeAdmin/Inf.cshtml", (Demo.Data.Account)Model)
+                *@
+            </div>
 
-@*             <input type="button" id="special" value="Đổi Avatar" onclick="editAvatar()" />
- *@
-            
+            @*             <input type="button" id="special" value="Đổi Avatar" onclick="editAvatar()" />
+            *@
+
 
             <h3>@User.Claims.FirstOrDefault(c => c.Type == "AccountId")?.Value</h3>
             <a href="/logout" id="HasLogin" class="logout-button">Đăng Xuất</a>
@@ -81,7 +82,7 @@
                     <a href="/admin/productcategory">Quản lý danh mục</a>
                 </div>
 
-               
+
                 <div class="option-box">
 
                     <div class="fa-solid fa-user-group"></div>

@@ -24,7 +24,6 @@ namespace Demo.Areas.Admin.Controllers
             _notyfService = notyfService;
         }
 
-        // GET: Admin/AdminNews
         public async Task<IActionResult> Index(int? page)
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
@@ -51,7 +50,6 @@ namespace Demo.Areas.Admin.Controllers
             return Json(new { message = "UnSuccess", Success = false });
         }
 
-        // GET: Admin/AdminNews/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -69,15 +67,12 @@ namespace Demo.Areas.Admin.Controllers
             return View(news);
         }
 
-        // GET: Admin/AdminNews/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/AdminNews/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+      
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("NewsID,Title,Content,DatePosted,Email,Phone")] News news)
@@ -91,7 +86,6 @@ namespace Demo.Areas.Admin.Controllers
             return View(news);
         }
 
-        // GET: Admin/AdminNews/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -107,9 +101,6 @@ namespace Demo.Areas.Admin.Controllers
             return View(news);
         }
 
-        // POST: Admin/AdminNews/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("NewsID,Title,Content,DatePosted,Email,Phone")] News news)
@@ -141,8 +132,6 @@ namespace Demo.Areas.Admin.Controllers
             }
             return View(news);
         }
-
-        // GET: Admin/AdminNews/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -160,7 +149,6 @@ namespace Demo.Areas.Admin.Controllers
             return View(news);
         }
 
-        // POST: Admin/AdminNews/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

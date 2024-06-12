@@ -15,6 +15,7 @@ using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pag
 using System.Security.Claims;
 using Microsoft.Extensions.Logging;
 using AspNetCoreHero.ToastNotification.Abstractions;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Demo.Controllers
 {
@@ -33,7 +34,6 @@ namespace Demo.Controllers
             _mapper = mapper;
             _notyfService = notyfService;
             //     _notyfService = notyfService;
-            //_notyfService = notyfService;
         }
         [HttpGet]
         [AllowAnonymous]
@@ -41,21 +41,17 @@ namespace Demo.Controllers
         {
             try
             {
-                // Kiểm tra xem số điện thoại đã tồn tại hay chưa
                 var customer = _context.Customers.AsNoTracking().SingleOrDefault(x => x.Phone == phone);
 
                 if (customer != null)
                 {
-                    // Nếu số điện thoại đã tồn tại, trả về thông báo lỗi
                     return Json(new { success = false, message = $"Số điện thoại {phone} đã được sử dụng." });
                 }
 
-                // Nếu số điện thoại chưa tồn tại, trả về true
                 return Json(new { success = true });
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi nếu có và trả về thông báo lỗi
                 return Json(new { success = false, message = $"Có lỗi xảy ra khi kiểm tra số điện thoại: {ex.Message}" });
             }
         }
@@ -67,21 +63,17 @@ namespace Demo.Controllers
 
             try
             {
-                // Kiểm tra xem email đã tồn tại hay chưa
                 var customer = _context.Customers.AsNoTracking().SingleOrDefault(x => x.Email == email);
 
                 if (customer != null)
                 {
-                    // Nếu email đã tồn tại, trả về thông báo lỗi
                     return Json(new { success = false, message = $"Email {email} đã được sử dụng." });
                 }
 
-                // Nếu email chưa tồn tại, trả về true
                 return Json(new { success = true });
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi nếu có và trả về thông báo lỗi
                 return Json(new { success = false, message = $"Có lỗi xảy ra khi kiểm tra email: {ex.Message}" });
             }
         }
@@ -89,23 +81,17 @@ namespace Demo.Controllers
         [Route("TaiKhoancuatoi.html", Name = "Dashboard")]
         public IActionResult Dashboard()
         {
-            // Lấy CustomerId từ session
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
 
-            // Kiểm tra nếu CustomerId tồn tại và không null
             if (!string.IsNullOrEmpty(taikhoanID))
             {
-                // Tìm khách hàng trong cơ sở dữ liệu theo CustomerId
                 var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.CustomerId == taikhoanID);
 
-                // Nếu tìm thấy khách hàng, trả về view với thông tin khách hàng
                 if (khachhang != null)
                 {
                     return View(khachhang);
                 }
             }
-
-            // Nếu không tìm thấy khách hàng hoặc CustomerId không hợp lệ, chuyển hướng đến trang đăng nhập
             return RedirectToAction("Login");
         }
 
@@ -114,16 +100,11 @@ namespace Demo.Controllers
         [Route("Login.html", Name = "Login")]
         public IActionResult Login()
         {
-            // Lấy CustomerId từ session
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
-
-            // Nếu CustomerId tồn tại, chuyển hướng đến trang Dashboard
             if (!string.IsNullOrEmpty(taikhoanID))
             {
                 return RedirectToAction("Dashboard");
             }
-
-            // Trả về trang đăng nhập nếu chưa đăng nhập
             return View();
         }
 
@@ -154,8 +135,6 @@ namespace Demo.Controllers
             {
                 return View(model);
             }
-
-            // Kiểm tra email và số điện thoại đã sử dụng hay chưa
             if (IsEmailInUse(model.Email))
             {
                 ModelState.AddModelError(string.Empty, "Email đã được sử dụng.");
@@ -166,8 +145,6 @@ namespace Demo.Controllers
                 ModelState.AddModelError(string.Empty, "Số điện thoại đã được sử dụng.");
                 return View(model);
             }
-
-            // Tạo đối tượng khách hàng mới và thêm vào cơ sở dữ liệu
             var customer = _mapper.Map<Customer>(model);
             string salt = MyUtil.GenerateRandomKey();
             customer.Salt = salt;
@@ -176,12 +153,9 @@ namespace Demo.Controllers
             customer.RoleId = 2;
             customer.CreateDate = DateTime.Now;
             customer.Avatar = "images.png";
-
-            // Thêm khách hàng mới vào cơ sở dữ liệu
             _context.Customers.Add(customer);
             await _context.SaveChangesAsync();
             //_notyfService.Success("Đăng ký thành công");
-            // Chuyển hướng đến trang đăng nhập
             return RedirectToAction("Login");
         }
 
@@ -191,45 +165,77 @@ namespace Demo.Controllers
         public async Task<IActionResult> Login(LoginViewModel model, string? ReturnUrl)
         {
             ViewBag.ReturnUrl = ReturnUrl;
-
-            // Kiểm tra xem ModelState có hợp lệ không
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
-            // Kiểm tra khách hàng (Customer) dựa trên email
-            Customer? userCustomer = _context.Customers.SingleOrDefault(kh => kh.Email == model.Email);
+           
+//Admin
+            Account? userAdmin = _context.Accounts.SingleOrDefault(ac => ac.Email == model.Email);
 
-            if (userCustomer != null)
+            if (userAdmin != null)
             {
-                // Xử lý đăng nhập cho khách hàng
-                if (!userCustomer.Active.HasValue || !userCustomer.Active.Value)
+                if (!userAdmin.Active.HasValue || !userAdmin.Active.Value)
                 {
                     ModelState.AddModelError("loi", "Tài khoản đã bị khóa.");
                     return View(model);
                 }
 
-                // Mã hóa mật khẩu và so sánh với mật khẩu đã nhập
+                string hashedPassword = (model.Password + userAdmin.Salt?.Trim()).ToMD5();
+                if (userAdmin.Password != hashedPassword)
+                {
+                    ModelState.AddModelError("loi", "Sai thông tin đăng nhập.");
+                    return View(model);
+                }
+                Role? userRole = _context.Roles.SingleOrDefault(role => role.RoleId == userAdmin.RoleId);
+                var claims = new List<Claim>
+{
+                new Claim(ClaimTypes.Email, userAdmin.Email),
+                new Claim(ClaimTypes.Name, userAdmin.FullName ?? ""),
+                new Claim("AccountId", userAdmin.AccountId ?? ""),
+                new Claim("Avatar", userAdmin.Avatar ?? ""),
+                new Claim(ClaimTypes.Role, userRole?.RoleName ?? "Admin"),
+                };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+                await HttpContext.SignInAsync(claimsPrincipal);
+                //if (claimsPrincipal.IsInRole("Admin"))
+                //{
+                //    //Console.WriteLine("ID Admin: "+ userAdmin.AccountId);
+                //    return RedirectToAction("Index", "HomeAdmin", new { area = "Admin" });
+                //}
+                //else
+                //{
+                //    return RedirectToAction("Index", "HomeAdmin", new { area = "Admin" });
+                //}
+
+                return RedirectToAction("Index", "HomeAdmin", new { area = "Admin" });
+
+            }
+
+            Customer? userCustomer = _context.Customers.SingleOrDefault(kh => kh.Email == model.Email);
+
+            if (userCustomer != null)
+            {
+                if (!userCustomer.Active.HasValue || !userCustomer.Active.Value)
+                {
+                    ModelState.AddModelError("loi", "Tài khoản đã bị khóa.");
+                    return View(model);
+                }
                 string hashedPassword = (model.Password + userCustomer.Salt?.Trim()).ToMD5();
                 if (userCustomer.Password != hashedPassword)
                 {
                     ModelState.AddModelError("loi", "Sai thông tin đăng nhập.");
                     return View(model);
                 }
-
-                // Lấy vai trò của khách hàng
                 Role? userRole = _context.Roles.SingleOrDefault(role => role.RoleId == userCustomer.RoleId);
-
-
-                // Tạo claims cho phiên đăng nhập
                 var claims = new List<Claim>
 {
 
     new Claim(ClaimTypes.Email, userCustomer.Email),
     new Claim(ClaimTypes.Name, userCustomer.FullName ?? ""),
-
-    //new Claim(ClaimTypes.Name, userCustomer.FullName ?? ""),
    new Claim("CustomerId", userCustomer.CustomerId),
     new Claim(MySetting.CLAIM_CUSTOMERID, userCustomer.CustomerId),
     new Claim(ClaimTypes.Role, userRole?.RoleName ?? "Customer"),
@@ -241,78 +247,21 @@ namespace Demo.Controllers
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-
-                // Đăng nhập vào phiên làm việc
                 await HttpContext.SignInAsync(claimsPrincipal);
-               
+
                 HttpContext.Session.SetString("CustomerId", userCustomer.CustomerId);
                 Console.WriteLine("CustomerId cua ban là: " + userCustomer.CustomerId);
-                // Chuyển hướng dựa trên vai trò
                 if (Url.IsLocalUrl(ReturnUrl))
                 {
-                   
+
                     return Redirect(ReturnUrl);
                 }
                 else
                 {
-                  
+
                     return RedirectToAction("Index", "Home");
                 }
             }
-
-            // Nếu không tìm thấy khách hàng, kiểm tra quản trị viên (Account)
-            Account? userAdmin = _context.Accounts.SingleOrDefault(ac => ac.Email == model.Email);
-
-            if (userAdmin != null)
-            {
-                // Xử lý đăng nhập cho quản trị viên
-                if (!userAdmin.Active.HasValue || !userAdmin.Active.Value)
-                {
-                    ModelState.AddModelError("loi", "Tài khoản đã bị khóa.");
-                    return View(model);
-                }
-
-                // Mã hóa mật khẩu và so sánh với mật khẩu đã nhập
-                string hashedPassword = (model.Password + userAdmin.Salt?.Trim()).ToMD5();
-                if (userAdmin.Password != hashedPassword)
-                {
-                    ModelState.AddModelError("loi", "Sai thông tin đăng nhập.");
-                    return View(model);
-                }
-
-                // Lấy vai trò của quản trị viên
-                Role? userRole = _context.Roles.SingleOrDefault(role => role.RoleId == userAdmin.RoleId);
-
-                // Tạo claims cho phiên đăng nhập
-                var claims = new List<Claim>
-{
-    new Claim(ClaimTypes.Email, userAdmin.Email),
- new Claim(ClaimTypes.Name, userAdmin.FullName ?? ""),
- new Claim("AccountId", userAdmin.AccountId ?? ""),
- new Claim("Avatar", userAdmin.Avatar ?? ""),
- new Claim(ClaimTypes.Role, userRole?.RoleName ?? "Admin"),
-};
-
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-
-                // Đăng nhập vào phiên làm việc
-                await HttpContext.SignInAsync(claimsPrincipal);
-
-                // Chuyển hướng dựa trên vai trò
-                if (claimsPrincipal.IsInRole("Admin"))
-                {
-                    // Chuyển hướng đến trang HomeAdmin trong khu vực Admin
-                    //Console.WriteLine("ID Admin: "+ userAdmin.AccountId);
-                    return RedirectToAction("Index", "HomeAdmin", new { area = "Admin" });
-                }
-                else
-                {
-                    return RedirectToAction("Index", "Home");
-                }
-            }
-
-            // Nếu không tìm thấy người dùng
             ModelState.AddModelError("loi", "Không tìm thấy người dùng.");
             return View(model);
         }
@@ -324,16 +273,9 @@ namespace Demo.Controllers
         [AllowAnonymous]
         public IActionResult ChangePassword()
         {
-            // Lấy CustomerId từ session
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
-            Console.WriteLine("CustomerId cuâ abạn là: " + taikhoanID);
-            // Nếu CustomerId tồn tại, chuyển hướng đến trang Dashboard
-            //if (!string.IsNullOrEmpty(taikhoanID))
-            //{
-            //    return RedirectToAction("DangKyTaiKhoan");
-            //}
-
-            // Trả về trang đăng nhập nếu chưa đăng nhập
+            Console.WriteLine("CustomerId của bạn là: " + taikhoanID);
+           
             return View();
         }
 
@@ -382,7 +324,6 @@ namespace Demo.Controllers
                     return RedirectToAction("DangKyTaiKhoan", "Accounts");
                 }
 
-                // Verifying the current password
                 var pass = (model.CurrentPassword.Trim() + taikhoan.Salt.Trim()).ToMD5();
             
 
@@ -394,7 +335,6 @@ namespace Demo.Controllers
                     return View(model);
                 }
 
-                // Updating with the new password
                 string passnew = (model.NewPassword.Trim() + taikhoan.Salt.Trim()).ToMD5();
                 taikhoan.Password = passnew;
                 _context.Customers.Update(taikhoan);
@@ -405,7 +345,6 @@ namespace Demo.Controllers
             }
             catch (Exception ex)
             {
-                // Ghi log lỗi
                 Console.WriteLine("Lỗi: " + ex.Message);
                 ModelState.AddModelError(string.Empty, "An error occurred while changing the password. Please try again later.");
                 return View(model);
@@ -439,7 +378,6 @@ namespace Demo.Controllers
         //        return NotFound();
         //    }
 
-        //    // Trích xuất thông báo từ TempData (nếu có)
         //    ViewBag.Message = TempData["Message"];
 
         //    return View(existingCustomer);
@@ -460,7 +398,6 @@ namespace Demo.Controllers
                 return NotFound();
             }
 
-            // Trích xuất thông báo từ TempData (nếu có)
             ViewBag.UpdateMessage = TempData["UpdateMessage"];
 
             return View(existingCustomer);
@@ -503,24 +440,20 @@ namespace Demo.Controllers
                     return NotFound();
                 }
 
-                // Cập nhật các trường không nên được chỉnh sửa
                 customer.Password = existingCustomer.Password;
                 customer.Salt = existingCustomer.Salt;
                 customer.Active = existingCustomer.Active;
                 customer.CreateDate = existingCustomer.CreateDate;
                 customer.Avatar = existingCustomer.Avatar;
 
-                // Cập nhật thông tin khách hàng
                 _context.Entry(existingCustomer).CurrentValues.SetValues(customer);
                 await _context.SaveChangesAsync();
                 //_notyfService.Success("Chỉnh sửa thành công");
-                // Chuyển hướng đến trang profile với dữ liệu đã được cập nhật
                 TempData["Message"] = "Thông tin khách hàng đã được cập nhật thành công.";
                 return RedirectToAction("Profile");
             }
             catch (DbUpdateConcurrencyException ex)
             {
-                // Xử lý ngoại lệ và hiển thị thông báo lỗi cho người dùng
                 Console.WriteLine(ex);
                 ModelState.AddModelError("", "Đã xảy ra lỗi khi cập nhật thông tin khách hàng.");
                 return View(customer);
@@ -545,7 +478,6 @@ namespace Demo.Controllers
                 {
                     return NotFound();
                 }
-                //  Cập nhật thông tin từ form
                 existingCustomer.FullName = customer.FullName;
                 existingCustomer.Email = customer.Email;
                 existingCustomer.Phone = customer.Phone;
@@ -590,9 +522,14 @@ namespace Demo.Controllers
 
             var orders = await _context.Orders
       .Include(o => o.OrderDetails)
-          .ThenInclude(od => od.Product) 
+      
+          .ThenInclude(od => od.Product)
+          .OrderByDescending(o => o.OrderID)
       .Where(o => o.CustomerId == customerId)
-      .ToListAsync();
+            .ToListAsync();
+
+
+          
 
             return View(orders);
         }
@@ -622,7 +559,6 @@ namespace Demo.Controllers
                 return View(model);
             }
 
-            // Redirect to a view for entering a new password, passing the email as a query parameter
             return RedirectToAction("ResetPassword", new { email = model.Email });
         }
 
@@ -658,8 +594,7 @@ namespace Demo.Controllers
                 return View(model);
             }
 
-            // Update the password for the user with the provided email
-            //customer.Password = model.NewPassword; // Update this with your password hashing logic
+        
             //await _context.SaveChangesAsync();
             string passnew = (model.NewPassword.Trim() + customer.Salt.Trim()).ToMD5();
             customer.Password = passnew;
@@ -667,7 +602,6 @@ namespace Demo.Controllers
             await _context.SaveChangesAsync();
 
 
-            // Optionally, redirect the user to a login page or a page indicating successful password reset
             return RedirectToAction("Login", "Accounts");
         }
 

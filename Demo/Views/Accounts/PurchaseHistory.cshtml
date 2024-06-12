@@ -1,20 +1,31 @@
 ﻿@model IEnumerable<Demo.Data.Order>
 
-
-
 @{
     ViewData["Title"] = "Lịch sử đơn hàng";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <head>
     <link href="~/css/PurchaseHistory.css" rel="stylesheet" />
     <style>
         body {
             margin-top: 100px;
         }
+
         .product-image {
             max-width: 100px;
             max-height: 100px;
+        }
+
+        .custom-row {
+            background-color: #f2f2f2;
+        }
+
+        .custom-cell {
+            width: 100px;
+            height: 100px;
+            font-size: 14px;
+            color: #333;
         }
     </style>
 </head>
@@ -27,20 +38,23 @@
         <thead class="thead-dark">
             <tr>
                 <th class="border-right">#</th>
-                <th class="border-right">Ngày Đặt Hàng</th>
-                <th class="border-right">Ngày Giao Hàng</th>
+                <th class="border-right">Thời Gian Đặt Hàng</th>
+                <th class="border-right">Trạng thái đơn hàng</th>
+
+                <th class="border-right">Thời Gian Giao Hàng</th>
                 <th class="border-right">Cách thanh toán</th>
-                <th class="border-right">Thời gian thanh toán</th>
+                <th class="border-right">Thời Gian Thanh Toán</th>
                 <th>Chi Tiết Đơn Hàng</th>
+                <th>Hành Động</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var order in Model)
             {
                 <tr>
-                    <td class="border-right">@(i+1)</td>
+                    <td class="border-right">@(i + 1)</td>
                     <td class="border-right">@order.OrderDate.Value.ToString("HH\\:mm\\:ss dd/MM/yyyy")</td>
-
+                    <td class="border-right">@(order.TransactStatusId == 1 ? "Đã xác nhận" : "Chờ xác nhận")</td>
                     <td class="border-right">@(order.ShipDate.HasValue ? order.ShipDate.Value.ToString("HH\\:mm\\:ss dd/MM/yyyy") : "")</td>
                     <td class="border-right">@order.CachThanhToan</td>
                     <td class="border-right">@order.PaymentDate.Value.ToString("HH\\:mm\\:ss dd/MM/yyyy")</td>
@@ -52,7 +66,7 @@
                                     <th>Hình ảnh</th>
                                     <th>Số Lượng</th>
                                     <th>Giảm Giá</th>
-                                    <th>Tổng Tiền</th>
+                                    <th>Thành Tiền</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -64,12 +78,27 @@
                                             <img src="~/menucss/@orderDetail.Product?.Thumb" alt="Product Image" class="product-image" />
                                         </td>
                                         <td>@orderDetail.Quantity</td>
-                                        <td>@orderDetail.Discount</td>
-                                        <td>@orderDetail.Total</td>
+                                        <td>0</td>
+                                        <td>@orderDetail.Total 0 VNĐ</td>
                                     </tr>
+                                 
                                 }
+                                <tr class="custom-row">
+                                    <td class="custom-cell">Tổng Tiền : @order.TongTien 0VNĐ</td>
+                                </tr>
+
                             </tbody>
                         </table>
+                    </td>
+                    <td>
+                        @if (!order.ShipDate.HasValue)  
+                        {
+                            <button type="button" class="btn btn-danger" onclick="cancelOrder('@order.OrderID')">Hủy</button>
+                        }
+                        else
+                        {
+                            <button type="button" class="btn btn-secondary" disabled>Hủy</button>
+                        }
                     </td>
                 </tr>
                 i++;
@@ -81,3 +110,34 @@ else
 {
     <p class="alert alert-warning">Không có đơn hàng.</p>
 }
+
+<script>
+    function cancelOrder(orderId) {
+        if (!confirm("Bạn có chắc chắn muốn hủy đơn hàng này không?")) {
+            return; 
+        }
+
+        fetch(`/Admin/Order/CancelOrder?orderId=${orderId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '@Html.AntiForgeryToken()'
+            }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    return response.text().then(text => { throw new Error(text) });
+                }
+                return response.text();
+            })
+            .then(data => {
+                alert(data);
+                window.location.reload();
+            })
+            .catch(error => {
+                alert("Không thể hủy đơn hàng: " + error.message);
+            });
+    }
+
+
+</script>

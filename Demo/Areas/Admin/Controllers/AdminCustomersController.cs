@@ -23,16 +23,40 @@ namespace Demo.Areas.Admin.Controllers
             _notyfService = notyfService;
         }
 
-        // GET: Admin/AdminCustomers
-        public IActionResult Index(int? page)
+
+        //public IActionResult Index(int? page)
+        //{
+        //    var pageNumber = page == null || page <= 0 ? 1 : page.Value;
+        //    var pageSize = 100000;
+        //    var IsCustomers = _context.Customers.AsNoTracking().
+        //        OrderByDescending(x => x.CreateDate);
+        //    PagedList<Customer> models = new PagedList<Customer>(IsCustomers, pageNumber, pageSize);
+        //    ViewBag.CurrentPage = pageNumber;
+        //    return View(models);
+        //}
+
+        public async Task<IActionResult> Index(bool? active)
         {
-            var pageNumber = page == null || page <= 0 ? 1 : page.Value;
-            var pageSize = 100000;
-            var IsCustomers = _context.Customers.AsNoTracking().
-                OrderByDescending(x => x.CreateDate);
-            PagedList<Customer> models = new PagedList<Customer>(IsCustomers, pageNumber, pageSize);
-            ViewBag.CurrentPage = pageNumber;
-            return View(models);
+            var accountsQuery = _context.Customers.AsNoTracking();
+
+            if (active.HasValue)
+            {
+                accountsQuery = _context.Customers.Where(a => a.Active == active.Value).Include(a => a.Role);
+            }
+            else
+            {
+                accountsQuery = accountsQuery.Include(a => a.Role);
+            }
+
+            var web01Context = await accountsQuery.ToListAsync();
+            return View(web01Context);
+        }
+
+        public IActionResult Filtter(bool? active)
+        {
+            var url = active.HasValue ? $"/Admin/AdminCustomers?active={active}" : "/Admin/AdminCustomers";
+
+            return Json(new { status = "success", redirectUrl = url });
         }
         [HttpPost]
         public JsonResult UpdateTT(string id, bool trangthai)
@@ -46,14 +70,13 @@ namespace Demo.Areas.Admin.Controllers
                 }
 
                 item.Active = trangthai;
-                _context.Entry(item).Property(x => x.Active).IsModified = true; // Đánh dấu thuộc tính Active là đã sửa đổi
+                _context.Entry(item).Property(x => x.Active).IsModified = true; 
                 _context.SaveChanges();
                 return Json(new { message = "Success", Success = true });
             }
             catch (Exception ex)
             {
-                // Log the exception
-                // Example: log to a file, database, or logging service
+               
                 System.Diagnostics.Debug.WriteLine("Error updating customer: " + ex.Message);
                 return Json(new { message = "Error: " + ex.Message, Success = false });
             }
@@ -76,15 +99,11 @@ namespace Demo.Areas.Admin.Controllers
             return View(customer);
         }
 
-        // GET: Admin/AdminCustomers/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/AdminCustomers/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CustomerId,FullName,Birthday,Avatar,Address,Email,Phone,CreateDate,Password,Salt,LastLogin,Active")] Customer customer)
@@ -99,7 +118,7 @@ namespace Demo.Areas.Admin.Controllers
             return View(customer);
         }
 
-        // GET: Admin/AdminCustomers/Edit/5
+    
         public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
@@ -115,9 +134,7 @@ namespace Demo.Areas.Admin.Controllers
             ViewData["RoleId"] = new SelectList(_context.Roles, "RoleId", "Description", customer.RoleId);
 
             return View(customer);
-        }// POST: Admin/AdminCustomers/Edit/5
-         // To protect from overposting attacks, enable the specific properties you want to bind to.
-         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, [Bind("CustomerId,FullName,Address,Birthday,Avatar,RoleId,Email,Phone,CreateDate,Password,Salt,LastLogin,Active")] Customer customer)
@@ -131,10 +148,10 @@ namespace Demo.Areas.Admin.Controllers
             {
                 try
                 {
-                    // Check if RoleId is 1
+                   
                     if (customer.RoleId == 1)
                     {
-                        // Create a new account for the customer
+                       
                         var newAccount = new Account
                         {
                             AccountId = customer.CustomerId,
@@ -151,22 +168,22 @@ namespace Demo.Areas.Admin.Controllers
 
                         _context.Accounts.Add(newAccount);
 
-                        var customerOrders = _context.Orders.Where(o => o.CustomerId == customer.CustomerId);
+                        //var customerOrders = _context.Orders.Where(o => o.CustomerId == customer.CustomerId);
 
-                        foreach (var order in customerOrders.ToList())
-                        {
-                            var orderDetails = _context.OrderDetails.Where(od => od.OrderID == order.OrderID).ToList();
-                            _context.OrderDetails.RemoveRange(orderDetails);
-                        }
+                        //foreach (var order in customerOrders.ToList())
+                        //{
+                        //    var orderDetails = _context.OrderDetails.Where(od => od.OrderID == order.OrderID).ToList();
+                        //    _context.OrderDetails.RemoveRange(orderDetails);
+                        //}
 
-                        _context.Orders.RemoveRange(customerOrders);
+                        //_context.Orders.RemoveRange(customerOrders);
 
-                        await _context.SaveChangesAsync();
+                        //await _context.SaveChangesAsync();
 
                         var existingCustomer = await _context.Customers.FindAsync(customer.CustomerId);
                         if (existingCustomer != null)
                         {
-                            _context.Customers.Remove(existingCustomer);
+                            existingCustomer.Active = false;
                             await _context.SaveChangesAsync();
                         }
 
@@ -196,7 +213,6 @@ namespace Demo.Areas.Admin.Controllers
 
 
 
-        // GET: Admin/AdminCustomers/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
@@ -214,7 +230,7 @@ namespace Demo.Areas.Admin.Controllers
             return View(customer);
         }
 
-        // POST: Admin/AdminCustomers/Delete/5
+      
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)

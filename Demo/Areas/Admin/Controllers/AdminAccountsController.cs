@@ -21,7 +21,6 @@ namespace Demo.Areas.Admin.Controllers
             _notyfService = notyfService;
         }
 
-        // GET: Admin/AdminAccounts
         public async Task<IActionResult> Index(bool? active)
         {
             ViewData["QuyenTruyCap"] = new SelectList(_context.Roles, "RoleId", "Description");
@@ -50,14 +49,12 @@ namespace Demo.Areas.Admin.Controllers
 
         public IActionResult Filtter(bool? active)
         {
-            // Xây dựng URL dựa trên trạng thái
             var url = active.HasValue ? $"/Admin/AdminAccounts?active={active}" : "/Admin/AdminAccounts";
 
             return Json(new { status = "success", redirectUrl = url });
         }
 
 
-        // GET: Admin/AdminAccounts/Details/5
         public async Task<IActionResult> Details(string id)
         {
             if (id == null)
@@ -76,16 +73,13 @@ namespace Demo.Areas.Admin.Controllers
             return View(account);
         }
 
-        // GET: Admin/AdminAccounts/Create
         public IActionResult Create()
         {
             ViewData["RoleId"] = new SelectList(_context.Roles, "RoleId", "RoleId");
             return View();
         }
 
-        // POST: Admin/AdminAccounts/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+      
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("AccountId,FullName,Phone,Email,Password,Salt,Active,Avatar,RoleId,LastLogin,CreateDate")] Account account)
@@ -101,7 +95,6 @@ namespace Demo.Areas.Admin.Controllers
             return View(account);
         }
 
-        // GET: Admin/AdminAccounts/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
@@ -125,9 +118,7 @@ namespace Demo.Areas.Admin.Controllers
             return View(account);
         }
 
-        // POST: Admin/AdminAccounts/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+    
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, [Bind("AccountId,FullName,Phone,Email,Password,Salt,Avatar,Active,RoleId,LastLogin,CreateDate")] Account account)
@@ -163,7 +154,7 @@ namespace Demo.Areas.Admin.Controllers
             return View(account);
         }
 
-        // GET: Admin/AdminAccounts/Delete/5
+      
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
@@ -181,7 +172,6 @@ namespace Demo.Areas.Admin.Controllers
             return View(account);
         }
 
-        // POST: Admin/AdminAccounts/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
@@ -189,11 +179,12 @@ namespace Demo.Areas.Admin.Controllers
             var account = await _context.Accounts.FindAsync(id);
             if (account != null)
             {
-                _context.Accounts.Remove(account);
+                account.Active = false;
+                //_context.Accounts.Remove(account);
             }
 
             await _context.SaveChangesAsync();
-            _notyfService.Success("Xóa tài khoản thành công");
+            _notyfService.Success("Khóa tài khoản thành công");
             return RedirectToAction(nameof(Index));
         }
 

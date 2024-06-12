@@ -13,13 +13,7 @@ namespace Demo.Controllers
         {
             db = context;
         }
-        //public async Task<IActionResult> Detail(string ID)
-        //{
-        //    if(ID == null) return RedirectToAction("Index");
-        //    var Prid = db.Products.Where(p => p.ProductId  == ID ).FirstOrDefault();
-        //    return View(Prid);
-        //}
-
+       
         public IActionResult Index(string? loai)
         {
 
@@ -66,45 +60,35 @@ namespace Demo.Controllers
                 ChiTiet = data.Description ?? string.Empty ,
                 MoTaNgan = data.Unit ?? "",
                 TenLoai = data.Cat != null ? data.Cat.CatName : "",
-                // Here you can retrieve SoLuongTon and DiemDanhGia from another data source if needed
-                SoLuongTon =10, // Example method, replace with your logic
-                DiemDanhGia = 5 // Example method, replace with your logic
+         
+                SoLuongTon =10, 
+                DiemDanhGia = 5 
             };
 
             return View(result);
         }
         private int GetSoLuongTonFromAnotherSource(string productId)
         {
-            // Example implementation:
-            // Assuming you have another data source or service that provides the quantity in stock for a given product ID
-            // You would query that data source here and return the quantity in stock
-
-            // For demonstration purposes, let's return a hardcoded value
-            return 20; // Replace this with your actual logic to retrieve the quantity in stock
+          
+            return 20; 
         }
 
         private int GetDiemDanhGiaFromAnotherSource(string productId)
         {
-            // Example implementation:
-            // Assuming you have another data source or service that provides the quantity in stock for a given product ID
-            // You would query that data source here and return the quantity in stock
-
-            // For demonstration purposes, let's return a hardcoded value
-            return 20; // Replace this with your actual logic to retrieve the quantity in stock
+           
+            return 20; 
         }
         [HttpPost]
         public IActionResult FindProduct(string keyword)
         {
-            // Tạo danh sách sản phẩm rỗng
+     
             List<Product> ls = new List<Product>();
 
-            // Kiểm tra xem từ khóa có hợp lệ không
             if (string.IsNullOrEmpty(keyword) || keyword.Length < 1)
             {
                 return PartialView("ListProductsSearchPartial", null);
             }
 
-            // Truy vấn cơ sở dữ liệu
             ls = db.Products.AsNoTracking()
                 .Include(a => a.Cat)
                 .Where(x => x.ProductName.Contains(keyword))
@@ -112,7 +96,6 @@ namespace Demo.Controllers
            
                 .ToList();
 
-            // Trả về kết quả cho PartialView
             return PartialView("ListProductsSearchPartial", ls);
         }
 

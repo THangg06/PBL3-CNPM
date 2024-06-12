@@ -10,8 +10,8 @@ namespace Demo.Controllers
     public class NewsController : Controller
     {
         private readonly Web01Context _context;
-        //private readonly INotyfService _notyfService; // Sử dụng interface thay vì lớp cụ thể
-        public NewsController(Web01Context context) // Sửa đổi ở đây
+        //private readonly INotyfService _notyfService; //  
+        public NewsController(Web01Context context) 
         {
             _context = context;
             //_notyfService = notyfService;

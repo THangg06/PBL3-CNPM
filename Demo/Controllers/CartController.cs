@@ -126,7 +126,7 @@ namespace Demo.Controllers
                     try
                     {
                         _db.Add(hoadon);
-                        _db.SaveChanges(); // Save the order to get a generated OrderId
+                        _db.SaveChanges(); 
 
                         var orderId = hoadon.OrderID;
 
@@ -136,19 +136,19 @@ namespace Demo.Controllers
                             Quantity = item.SoLuong,
                             Total = item.Dongia,
                             ProductId = item.MaHh,
-                            // Không thiết lập OrderDetailID, nó sẽ tự động tăng
+                    
                         }).ToList();
 
                         _db.AddRange(cthds);
-                        _db.SaveChanges(); // Save changes to OrderDetails
+                        _db.SaveChanges(); 
 
-                        transaction.Commit(); // Commit the transaction as everything is successful
+                        transaction.Commit(); 
                         ClearCart();
                         return View("Success");
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback(); // Rollback the transaction if an error occurs
+                        transaction.Rollback(); 
                         TempData["Error"] = "Có lỗi xảy ra khi thanh toán đơn hàng. Vui lòng thử lại sau.";
                         Console.WriteLine(ex.Message);
                     }

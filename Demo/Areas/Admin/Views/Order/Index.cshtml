@@ -94,9 +94,10 @@
                         <th class="border-right">Số điện thoại</th>
                         <th class="border-right">Cách thanh toán</th>
                         <th class="border-right">Thời gian thanh toán</th>
-                        <th class="border-right">Trạng thái đơn hàng</th>
                         <th class="border-right">Ngày tạo</th>
                         <th class="border-right">Ngày giao hàng</th>
+                    <th class="border-right">Trạng thái đơn hàng</th>
+
                         <th class="action_button"></th>
                     </tr>
                 </thead>
@@ -113,9 +114,10 @@
                                         <td>@item.Phone</td>
                                         <td>@item.CachThanhToan</td>
                                         <td>@item.PaymentDate.Value.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
-                                        <td>@(item.TransactStatusId == 1 ? "Đã xác nhận" : "Chờ xác nhận")</td>
                                         <td>@item.OrderDate?.ToString("hh\\:mm\\:ss dd/MM/yyyy")</td>
                                         <td>@item.ShipDate?.ToString("dd/MM/yyyy")</td>
+                            <td>@(item.TransactStatusId == 1 ? "Đã xác nhận" : "Chờ xác nhận")</td>
+
                                         <td>
                                             <div class="group_button another">
                                                     <a id="btn" href="/admin/order/view/@item.OrderID" class="btn btn-sm btn-success">Xem</a>

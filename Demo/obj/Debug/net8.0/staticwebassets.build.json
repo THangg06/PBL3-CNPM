@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jWoe9daPREVj+uaTHFty5e1ZaHGR4IifMJviHc//Pxs=",
+  "Hash": "NjbpHA40Pvqva9R2E+1NiDZU5OyNmQoTz1hPgK/MkMI=",
   "Source": "Demo",
   "BasePath": "_content/Demo",
   "Mode": "Default",
@@ -5451,6 +5451,25 @@
       "OriginalItemSpec": "wwwroot\\MenuCss\\drinks\\travai.png"
     },
     {
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\tra-vai-hong-cam-vang-1.jpg",
+      "SourceId": "Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
+      "BasePath": "_content/Demo",
+      "RelativePath": "MenuCss/drinks/tra-vai-hong-cam-vang-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MenuCss\\drinks\\tra-vai-hong-cam-vang-1.jpg"
+    },
+    {
       "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\unnamed.png",
       "SourceId": "Demo",
       "SourceType": "Discovered",
@@ -9097,6 +9116,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\MenuCss\\travai.png"
+    },
+    {
+      "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\tra-vai-hong-cam-vang-1.jpg",
+      "SourceId": "Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\",
+      "BasePath": "_content/Demo",
+      "RelativePath": "MenuCss/tra-vai-hong-cam-vang-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MenuCss\\tra-vai-hong-cam-vang-1.jpg"
     },
     {
       "Identity": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\tr-do.png",

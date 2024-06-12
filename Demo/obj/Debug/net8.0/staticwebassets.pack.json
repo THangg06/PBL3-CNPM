@@ -613,6 +613,10 @@
       "PackagePath": "staticwebassets\\MenuCss\\drinks\\tra-sua-tran-chau-vno.png"
     },
     {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\tra-vai-hong-cam-vang-1.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\drinks\\tra-vai-hong-cam-vang-1.jpg"
+    },
+    {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\drinks\\tradau.png",
       "PackagePath": "staticwebassets\\MenuCss\\drinks\\tradau.png"
     },
@@ -1023,6 +1027,10 @@
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\tra-sua-tran-chau-vno.png",
       "PackagePath": "staticwebassets\\MenuCss\\tra-sua-tran-chau-vno.png"
+    },
+    {
+      "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\tra-vai-hong-cam-vang-1.jpg",
+      "PackagePath": "staticwebassets\\MenuCss\\tra-vai-hong-cam-vang-1.jpg"
     },
     {
       "Id": "C:\\ProjectWF\\PBL3\\Demo\\wwwroot\\MenuCss\\tradau.png",

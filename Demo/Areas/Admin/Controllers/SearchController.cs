@@ -16,16 +16,13 @@ namespace Demo.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult FindProduct(string keyword)
         {
-            // Tạo danh sách sản phẩm rỗng
             List<Product> ls = new List<Product>();
 
-            // Kiểm tra xem từ khóa có hợp lệ không
             if (string.IsNullOrEmpty(keyword) || keyword.Length < 1)
             {
                 return PartialView("ListProductsSearchPartial", null);
             }
 
-            // Truy vấn cơ sở dữ liệu
             ls = _context.Products.AsNoTracking()
                 .Include(a => a.Cat)
                 .Where(x => x.ProductName.Contains(keyword))
@@ -33,22 +30,17 @@ namespace Demo.Areas.Admin.Controllers
                 .Take(10)
                 .ToList();
 
-            // Trả về kết quả cho PartialView
             return PartialView("ListProductsSearchPartial", ls);
         }
         [HttpPost]
         public IActionResult FindProductCategory(string keyword)
         {
-            // Tạo danh sách sản phẩm rỗng
             List<Category> ls = new List<Category>();
 
-            // Kiểm tra xem từ khóa có hợp lệ không
             if (string.IsNullOrEmpty(keyword) || keyword.Length < 1)
             {
                 return PartialView("ListProductsSearchPartial", null);
             }
-
-            // Truy vấn cơ sở dữ liệu
             ls = _context.Categories.AsNoTracking()
                 .Include(a => a.CatId)
                 .Where(x => x.CatName.Contains(keyword))
@@ -56,16 +48,13 @@ namespace Demo.Areas.Admin.Controllers
                 .Take(10)
                 .ToList();
 
-            // Trả về kết quả cho PartialView
             return PartialView("ListProductCategoriesSearchPartial", ls);
         }
         [HttpPost]
         public IActionResult FindCustomer(string keyword)
         {
-            // Tạo danh sách sản phẩm rỗng
             List<Customer> ls = new List<Customer>();
 
-            // Kiểm tra xem từ khóa có hợp lệ không
             if (string.IsNullOrEmpty(keyword) || keyword.Length < 1)
             {
                 return PartialView("ListCustomersSearchPartial", null);
@@ -77,8 +66,6 @@ namespace Demo.Areas.Admin.Controllers
       .Take(10)
       .ToList();
 
-
-            // Trả về kết quả cho PartialView
             return PartialView("ListCustomersSearchPartial", ls);
         }
 
